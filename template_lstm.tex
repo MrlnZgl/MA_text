@@ -1,0 +1,460 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bachelorarbeit/Projektarbeit/Masterarbeit
+% Lehrstuhl für Strömungsmechanik (LSTM)
+% Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pakete laden
+% UTF-8
+
+
+\newif\ifenglish
+\englishtrue % \englishfalse or englishtrue
+\newif\ifnomenklatur
+\nomenklaturfalse
+% Layout des Dokuments
+\documentclass[
+% a4paper,             					% Benutzt DIN-A4-Papier-Format (=default)
+ 	11pt,                 				% Schriftgröße 11 Punkte
+  	notitlepage,          				% Kein Titelblatt wird erstellt
+  	twoside, 			   				% Es werden Vorder- und Rückseite der Blätter benutzt
+ 	% openright,           				% Kapitel beginnen auf rechter Seite
+	% onecolumn,           				% Der Text ist einspaltig (=default)
+ 	% bibtotoc,            				% Das Literaturverzeichnis wird als nummeriertes Kapitel in das Inhaltsverzeichnis aufgenommen
+ 	bibliography=totoc,
+ 	%liststotoc,          				% Tabellen- und Abbildungsverzeichnisse werden als Kapitel in das Inhaltsverzeichnis aufgenommen
+  	listof=totoc,
+  	headsepline,         				% Die Kopfzeile wird durch eine horizontale Linie vom Text getrennt
+  	footsepline,         				% Die Fußzeile wird durch eine horizontale Linie vom Text getrennt
+%  	chapterprefix,       				%	 Über den Kapitelüberschriften steht immer das Wort "Kapitel" mit der entsprechenden Nummer
+  	%pointlessnumbers     				% Die Abschnittsnummerierungen werden immer ohne den letzten Punkt dargestellt, also "1.2.3" statt "1.2.3."
+  cleardoublepage=empty,				% leere Füllseiten sind leer
+  numbers=noenddot,
+]{scrreprt}
+
+\setkomafont{sectioning}{\rmfamily\bfseries} % Überschriften mit Serifen
+
+
+%\usepackage[english]{babel}
+
+\ifenglish
+\usepackage[ngerman,english]{babel}	    		% Überschriften werden von LaTeX in der korrekten Sprache erzeugt
+\else
+\usepackage[ngerman]{babel}	    		% Überschriften werden von LaTeX in der korrekten Sprache erzeugt
+\fi
+
+%\usepackage[ansinew]{inputenc}			% Umlaute
+%\usepackage[utf8]{inputenc}
+\usepackage[small,bf]{caption}
+\usepackage{subfig}
+%\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{preview}
+\newcommand{\kreis}[1]{\unitlength1ex\begin{picture}(2.5,2.5)\put(0.75,0.75){\circle{2.5}}\put(0.75,0.75){\makebox(0,0){#1}}\end{picture}}
+\usepackage{diagbox}
+\usepackage{colortbl}
+\usepackage[T1]{fontenc}		        % Schriftart
+\usepackage[utf8]{inputenc}	  		% Direkte Eingabe der Sonderzeichen über die Tastatur 
+%\usepackage{lmodern}					% schönere Schrift
+%\usepackage{ae}							% schöne Schrift
+%\usepackage[final]{microtype}			% mikrotypografische Schriftanpassung
+\usepackage{lipsum}
+%\DisableLigatures{}
+
+\usepackage{fixltx2e}
+\usepackage{graphicx}	
+\usepackage{epstopdf}		       		% Ermöglicht die Einbindung von Bildern
+\usepackage{makeidx}		          	% Erzeugt Verzeichnisse
+\usepackage{array}
+\usepackage{float}		             	% Erzwingt Positionierung von Floatobjekten mit "`H"'
+\usepackage{tabularx}		          	% Tabellen mit Spalten gleicher Breite
+%\usepackage{tabu}						% sehr flexible Tabellen mit mehr Möglichkeiten
+%\usepackage{dcolumn}		          	% Tabellen mit ausgerichteten Einträgen
+\usepackage{amssymb,amsmath}	    	% Um Texte in mathematischen Gleichungen zu schreiben mit dem Befehl \text{}
+%\usepackage[figuresright]{rotating}	% Damit können Bilder, Tabellen, usw. in landscape Format angezeigt werden
+\usepackage{bibgerm}		           	% Ermöglicht das Einbinden deutschsprachiger Literaturverzeichnisse
+%\usepackage{subfig}		            % Mehrere Bilder nebeneinander, unter gleicher Bildunterschrift und -nummer
+\usepackage{booktabs}		          	% Hochwertige Tabellen
+\usepackage{longtable}	        		% Tabellen über mehrere Seiten
+\usepackage{url}			            % Weblinks
+\usepackage{pdfpages}					% PDF einbinden
+%\usepackage{eurosans}
+\usepackage[bookmarks,pagebackref=false,pdftex,bookmarksopen=true,bookmarksnumbered]{hyperref}	% PDF-Bookmarks, Angabe im Literaturverzeichnis auf welcher Seite Einordnungsformel steht momentan auf false gesetzt
+\usepackage{multirow}
+%\usepackage[square]{natbib}         	% nützliches Paket, falls man die Gestaltung des Literaturverzeichnisse und der Referenzen selbst übernehmen möchte
+\usepackage{wrapfig}
+\usepackage{tocvsec2}
+\usepackage{ifthen}
+\usepackage{xspace}						%Leerzeichen nach Anführungszeichen
+%\usepackage[decimalsymbol=comma, expproduct=cdot]{siunitx}				%Einheiten im Mathemodus
+%\usepackage{microtype,textcomp}			% bei siunitx
+\usepackage{bm}
+\usepackage{pgfplots}					%Matlab Diagramme in Latex
+\def\rb#1{\rotatebox{90}{$\xleftarrow{#1}$}}
+\newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \coordinate (#1);}
+
+%\usepackage{subfigure} 
+%\usepgfplotslibrary{external}
+%\usetikzlibrary{external}              % external tikz library
+%\tikzsetexternalprefix{tikzext/}
+%\tikzexternalize
+%\tikzexternalize[prefix=tikzext/]		% folder for tikz
+%\tikzexternalize{main}
+%\tikzexternalize[up to date check=md5]
+%\tikzset{external/force remake}
+%\tikzsetnextfilename{\tikzexternalrealjob-mypic}
+
+\usetikzlibrary{plotmarks}
+\usepackage{cancel}				%Terme durchstreichen
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.4, every axis legend/.style={
+	y tick label style={/pgf/number format/1000 sep=},					
+	x tick label style={/pgf/number format/1000 sep=},},
+	legend style={font=\scriptsize}}
+	\newlength\figureheight  \newlength\figurewidth 
+\usepackage{nicefrac} 										% erstellt schräggestelle Brüche
+\tikzset{every picture/.style={line width=1pt}}				% Linewidth global für Tikz
+\tikzset{every picture/.style={mark size=2}}				% Markersize global für Tikz
+%\usepgfplotslibrary{external} 
+%\tikzexternalize[prefix=TikzPictures/]
+%\usepackage{notoccite}										% Quellen in den Verzeichnissen werden nicht mitgezählt		
+\usepackage{array}
+% \hyphenation{Turbulenz-intensität}                          % spezielle Silbentrennung, je nach Bedarf
+% \hyphenation{Pegel-anhebungen}
+% \hyphenation{Sensor-abstände}
+% \hyphenation{Signal-erzeugung}
+% \hyphenation{Kon-ti-nu-i-täts-}
+%[mark size = 2]
+
+
+%\usepackage[angle]{natbib}									% naturwissenschaftliche Zitate
+%\usepackage{natbib}	
+%\usepackage[numeric]{natbib}
+\usepackage[round]{natbib} 
+%\usepackage[style=authoryear,natbib=true,sorting=nyt,block=space]{biblatex}
+%\usepackage{cite}											% Zum Zitieren
+%\renewcommand{\citeleft}{(}								% runde Klammern bei Zitaten
+%\renewcommand{\citeright}{)}								% runde Klammern bei Zitaten
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% folgende Pakete für tikz-Bilder
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{shapes,arrows,patterns,decorations.markings}
+%\usepackage{color}
+\usepackage[margin=0cm,nohead]{geometry}
+% needed for BB
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+% alle Pfeile global ändern
+%\tikzset{>=triangle 45}
+\tikzset{>=latex}
+% Strich-Punkt-Linie
+\tikzset{dashdot/.style={dash pattern=on .8pt off 3pt on 10pt off 3pt}}	
+%Kreuz		
+\tikzset{cross/.style={cross out, draw=black, fill=none, minimum size=4pt, inner sep=0pt, outer sep=0pt}, cross/.default=2.5pt}
+%Strichstärken einstellen															
+\tikzstyle{thin} = [line width=0.5pt]
+\tikzstyle{semithick} = [line width=0.7pt]
+% Manuelles Pattern erstellen
+\pgfdeclarepatternformonly[\LineSpace]{my north east lines}{\pgfqpoint{-1pt}{-1pt}}{\pgfqpoint{\LineSpace}{\LineSpace}}{\pgfqpoint{\LineSpace}{\LineSpace}}%
+{
+	\pgfsetlinewidth{1pt}
+	\pgfpathmoveto{\pgfqpoint{0pt}{0pt}}
+	\pgfpathlineto{\pgfqpoint{\LineSpace + 0.1pt}{\LineSpace + 0.1pt}}
+	\pgfusepath{stroke}
+}
+\newdimen\LineSpace
+\tikzset{
+	line space/.code={\LineSpace=#1},
+	line space=3pt
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Nomenklatur erstellen
+\usepackage[german,norefeq]{nomencl}
+\setlength{\nomitemsep}{-0.5\parsep}
+\makenomenclature
+\makeindex
+%% define nomenclature groups
+\ifenglish
+\renewcommand{\nomgroup}[1]{\vspace{0.5cm}
+	\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek letters}]}{%
+		\ifthenelse{\equal{#1}{L}}{\item[\textbf{Latin letters}]}{%
+			\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indexes}]}{%
+				\ifthenelse{\equal{#1}{A}}{\item[\textbf{Abbreviations}]}{%
+					\ifthenelse{\equal{#1}{O}}{\item[\textbf{Operators}]}{}
+				}
+			}
+		}
+	}
+	\hspace*{-\leftmargin}\vspace{0.25cm} 
+}
+
+\else
+
+\renewcommand{\nomgroup}[1]{\vspace{0.5cm}
+	\ifthenelse{\equal{#1}{G}}{\item[\textbf{Griechische Symbole}]}{%
+		\ifthenelse{\equal{#1}{L}}{\item[\textbf{Lateinische Symbole}]}{%
+			\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indizes}]}{%
+				\ifthenelse{\equal{#1}{A}}{\item[\textbf{Abkürzungen}]}{%
+					\ifthenelse{\equal{#1}{O}}{\item[\textbf{Operatoren}]}{}
+				}
+			}
+		}
+	}
+	\hspace*{-\leftmargin}\vspace{0.25cm} 
+}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PDF-Erstellung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{pdftitle = {Titel der Arbeit},
+pdfauthor = {Vorname Nachname}}
+
+\hypersetup{
+	pdfstartview=FitV,
+	bookmarksopen=true,
+	bookmarksnumbered=true,
+	breaklinks=true,
+   	colorlinks = true,
+   	linkcolor = black,
+   	anchorcolor = black,
+   	citecolor = black,
+   	filecolor = black,
+   	pagecolor = black,
+   	urlcolor = black}
+
+
+\newcommand{\comment}[1]{}		          % Um einen ganzen Textblock auszukommentieren 
+\newcommand{\Rey}{\mathrm{Re}}   		  % Reynoldszahl
+\renewcommand{\baselinestretch}{1.15}	  % Zeilenabstand 115%
+\renewcommand{\belowcaptionskip}{5pt}	  % Abstand von Bildunterschriften zum Bild?
+\renewcommand{\abovecaptionskip}{8pt}
+\pagestyle{headings}		              % Die Kapitelüberschrift wird in der Kopfzeile angezeigt
+%\frenchspacing                  	      % Kein Mehrabstand nach Satzende
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}		          % Kapitelnummerierung nur bis zur Ebene "subsection" durchgeführt
+\let\endgraph\endgraf			          % falls nicht die neueste Version installiert ist, würde endgraf eine Fehlermeldung produzieren
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bestimmung des Textfeldes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Die Vorlage ist so gedacht, dass der Text doppelseitig gedruckt wird!
+\setlength{\topmargin}{-15mm}	   	% Abstand zwischen dem oberen Rand jeder logischen Seite und der Oberkante der Kopfzeile.
+\setlength{\headheight}{11mm}	   	% Höhe Kopfzeile
+\setlength{\headsep}{7mm}	       	% Abstand zwischen Unterkante Kopfzeile und Rumpf
+\setlength{\textheight}{237mm}	 	% Definiert die GesamtHöhe des Textrumpfes für alle nachfolgenden Seiten.
+\setlength{\footskip}{10mm}	     	% Abstand zwischen Rumpf der Seite und Unterkante Fußzeile
+\setlength{\topskip}{0mm}	       	% Abstand fest, der am oberen Rand des Seitenrumpfes zusätzlich eingefügt wird.
+\setlength{\oddsidemargin}{+4mm} 	% bei zweiseitiger Format. den linken Rand der Seiten mit ungerader Seitennummer.
+\setlength{\evensidemargin}{-4mm} 	% bei zweiseitiger Format. linken Randes der Seiten mit gerader Seitennummer.
+\setlength{\textwidth}{160mm}	   	% Definiert die GesamtBreite des Textrumpfes für alle nachfolgenden Seiten.
+\setlength{\parindent}{0mm}	   		% keine Einrückung bei neuem Absatz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%\bibliographystyle{alphadin}
+
+%=============================================================================%
+
+%\setcounter{page}{1}
+\pagestyle{empty}
+
+
+\includepdf[pages=-]{digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf}
+
+
+
+\begin{titlepage}
+	\begin{center}
+
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=75mm]{bilder/LSTM_Logo.pdf} 		
+\end{figure}
+		\ifenglish
+		\vspace{25mm}
+		 		
+		\LARGE {\textbf{Title \\ of your \\ thesis}}\\ [25mm]
+		\huge {\textbf{Master's Thesis, Bachelor's Thesis, Project Thesis}} \\ [14mm]
+		 by \\ [2mm]
+		\LARGE \textbf{NAME}\\[5mm]
+		\LARGE Stud.reg.no. XXXXXXXX\\[5mm]
+		\LARGE Erlangen, xx.xx.xxxx\\
+		\vfill
+		\rule{15cm}{0.02mm}\\
+		\Large Institute of Fluid Mechanics\\
+		Faculty of Engineering\\
+		Friedrich--Alexander--University Erlangen--N\"urnberg\\
+		Prof.\ Dr.\ Philipp Schlatter\\
+		\else
+		
+		\vspace{25mm}
+		
+		\LARGE {\textbf{Titel \\ der \\ Arbeit}} \\ [25mm]
+		\huge {\textbf{Masterthesis, Bachelorthesis, Projektarbeit}} \\ [14mm]
+		von \\ [2mm]
+		\LARGE \textbf{Vorname Nachname}\\[5mm]
+		\LARGE Matr.-Nr. 12345678\\[5mm]
+		\LARGE Erlangen, xx.xx.xxxx\\
+		\vfill
+		\rule{15cm}{0.02mm}\\
+		\Large Lehrstuhl für Strömungsmechanik\\
+		Technische Fakultät\\
+		Friedrich--Alexander-Universität Erlangen-Nürnberg\\
+		Prof.\ Dr.\ Philipp Schlatter\\
+		\fi
+  		\end{center}
+\end{titlepage}
+
+
+  	\thispagestyle{empty}	
+	\cleardoublepage
+	
+	\ifenglish
+	
+	\begin{tabular}[H]{ll}
+	  Author:& NAME \\
+	  Student Registration Number: & XXXXXXXXX \\
+	  Institute: & Institute of Fluid Mechanics\\
+	  Head of Institute: & Prof.\ Dr.\ Techn. Philipp Schlatter\\ 
+	  Group and Supervisor:& Prof.\ Dr.-Ing.\ habil.\ Stefan Becker \\
+	  & Felix Czwielong \\		
+	  Assigned: & dd.mm.yyyy \\
+	  Submitted: & dd.mm.yyyy \\
+	  \\
+	  LSTM Technical Report: & 01/2025
+	\end{tabular}	
+
+	\else
+
+	\begin{tabular}[H]{ll}
+	Bearbeiter:& Vorname Nachname \\
+	Matrikelnummer: & XXXXXXXXX \\
+	Lehrstuhl: & Lehrstuhl für Strömungsmechanik (LSTM) \\
+	Lehrstuhlinhaber: & Prof.\ Dr.\ Philipp Schlatter\\ 
+	Arbeitsgruppe und Betreuer:& Prof.\ Dr.-Ing.\ habil.\ Stefan Becker \\
+	& Felix Czwielong\\		
+	Ausgegeben: & dd.mm.yyyy \\
+	Abgegeben: & dd.mm.yyyy \\
+	\\
+	LSTM Technical Report: & 01/2025
+	\end{tabular}
+	
+	\fi	
+
+\thispagestyle{empty}
+\cleardoublepage
+
+\ifenglish
+\chapter*{Declaration}
+
+I hereby declare formally that I have developed and written the enclosed thesis entirely by myself and without help of third parties and have not used sources or means without declaration in the text. Any thoughts or quotations, inferred (literally or analogously) from the sources, are marked as such. This thesis was not submitted in the same or substantially similar version to any other authority to achieve an academic grade.
+
+The Friedrich--Alexander--Universität (FAU), represented by the Institute of Fluid Mechanics (LSTM), is granted a simple, free of charge, temporally and geographically unrestricted right to use the results of the work, including any protective rights and rights of use, for the purposes of research and teaching.
+\\ [35mm]
+Erlangen, the DATE \hspace{4cm} \rule{5cm}{0.02mm}
+\else
+\chapter*{Erklärung}
+
+Hiermit versichere ich eidesstattlich, dass die vorliegende Arbeit von mir selbstständig, ohne Hilfe Dritter und ausschließlich unter Verwendung der angegebenen Quellen angefertigt wurde. Alle Stellen, die wörtlich oder sinngemäß aus den Quellen entnommen sind, habe ich als solche kenntlich gemacht. Die Arbeit wurde bisher in gleicher oder ähnlicher Form keiner anderen Prüfungsbehörde vorgelegt.
+
+Der Friedrich--Alexander--Universität (FAU), vertreten durch den Lehrstuhl für Strömungsmechanik (LSTM), wird für Zwecke der Forschung und Lehre ein einfaches, kostenloses, zeitlich und örtlich unbeschränktes Nutzungsrecht an den Arbeitsergebnissen der Arbeit einschließlich etwaiger Schutz- und Nutzungsrechte eingeräumt.
+\\ [35mm]
+Erlangen, den DATUM \hspace{4cm} \rule{5cm}{0.02mm}
+\fi	
+
+%=============================================================================%
+
+\thispagestyle{empty}
+%\cleardoublepage
+
+%\chapter*{Danksagung}
+   
+%\include{kapitel/kurzfassung}
+%\cleardoublepage
+
+
+
+
+%=============================================================================%
+\cleardoublepage
+\phantomsection
+\thispagestyle{empty}
+\cleardoublepage
+\pagestyle{plain}
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+
+
+%=============================================================================%
+%\newpage
+\pagestyle{headings}
+
+\ifenglish
+\addcontentsline{toc}{chapter}{Contents}
+\else
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+\fi
+%\pdfbookmark[1]{Inhaltsverzeichnis}{toc}
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+%\printnomenclature
+%=============================================================================%
+%\addcontentsline{toc}{chapter}{Nomenklatur}
+%\newpage
+%
+\include{kapitel/nomenklatur}
+%
+%\pagestyle{headings}
+
+%=============================================================================%
+
+%\thispagestyle{empty}
+%\pagestyle{headings}
+%\cleardoublepage
+\pagenumbering{arabic}
+%
+%\cleardoublepage
+%
+%\include{kapitel/auslegung}
+%\include{kapitel/konstruktion}
+%\include{kapitel/inbetriebnahme}
+%
+%\include{kapitel/abstract}
+\include{kapitel/einleitung}
+% \include{kapitel/theoretische_grundlagen}
+% \include{kapitel/stroemungsmechanische_grundlagen}
+%\include{kapitel/stroemungsmechanische_grundlagen_kopie}
+%\include{Kapitel3}
+%\include{Kapitel4}
+\include{kapitel/literaturverzeichnis}
+%%
+
+%
+\newpage
+%
+
+\begin{appendix}                    % Anhang einfügen
+%
+\include{kapitel/anhang1}
+%\include{kapitel/anhang2}
+
+\end{appendix}
+%
+\end{document}
+

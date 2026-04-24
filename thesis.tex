@@ -1,0 +1,277 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bachelorarbeit/Projektarbeit/Masterarbeit
+% Lehrstuhl für Strömungsmechanik (LSTM)
+% Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pakete laden
+% UTF-8
+
+
+\newif\ifenglish
+\englishtrue % \englishfalse or englishtrue
+\newif\ifnomenklatur
+\nomenklaturfalse
+% Layout des Dokuments
+\documentclass[
+% a4paper,             					% Benutzt DIN-A4-Papier-Format (=default)
+ 	11pt,                 				% Schriftgröße 11 Punkte
+  	notitlepage,          				% Kein Titelblatt wird erstellt
+  	twoside, 			   				% Es werden Vorder- und Rückseite der Blätter benutzt
+ 	% openright,           				% Kapitel beginnen auf rechter Seite
+	% onecolumn,           				% Der Text ist einspaltig (=default)
+ 	% bibtotoc,            				% Das Literaturverzeichnis wird als nummeriertes Kapitel in das Inhaltsverzeichnis aufgenommen
+ 	bibliography=totoc,
+ 	%liststotoc,          				% Tabellen- und Abbildungsverzeichnisse werden als Kapitel in das Inhaltsverzeichnis aufgenommen
+  	listof=totoc,
+  	headsepline,         				% Die Kopfzeile wird durch eine horizontale Linie vom Text getrennt
+  	footsepline,         				% Die Fußzeile wird durch eine horizontale Linie vom Text getrennt
+%  	chapterprefix,       				%	 Über den Kapitelüberschriften steht immer das Wort "Kapitel" mit der entsprechenden Nummer
+  	%pointlessnumbers     				% Die Abschnittsnummerierungen werden immer ohne den letzten Punkt dargestellt, also "1.2.3" statt "1.2.3."
+  cleardoublepage=empty,				% leere Füllseiten sind leer
+  numbers=noenddot,
+]{scrreprt}
+\input{preamble.tex}
+\setkomafont{sectioning}{\rmfamily\bfseries} % Überschriften mit Serifen
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PDF-Erstellung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{pdftitle = {Titel der Arbeit},
+pdfauthor = {Vorname Nachname}}
+
+\hypersetup{
+	pdfstartview=FitV,
+	bookmarksopen=true,
+	bookmarksnumbered=true,
+	breaklinks=true,
+   	colorlinks = true,
+   	linkcolor = black,
+   	anchorcolor = black,
+   	citecolor = black,
+   	filecolor = black,
+   	pagecolor = black,
+   	urlcolor = black}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bestimmung des Textfeldes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Die Vorlage ist so gedacht, dass der Text doppelseitig gedruckt wird!
+\setlength{\topmargin}{-15mm}	   	% Abstand zwischen dem oberen Rand jeder logischen Seite und der Oberkante der Kopfzeile.
+\setlength{\headheight}{11mm}	   	% Höhe Kopfzeile
+\setlength{\headsep}{7mm}	       	% Abstand zwischen Unterkante Kopfzeile und Rumpf
+\setlength{\textheight}{237mm}	 	% Definiert die GesamtHöhe des Textrumpfes für alle nachfolgenden Seiten.
+\setlength{\footskip}{10mm}	     	% Abstand zwischen Rumpf der Seite und Unterkante Fußzeile
+\setlength{\topskip}{0mm}	       	% Abstand fest, der am oberen Rand des Seitenrumpfes zusätzlich eingefügt wird.
+\setlength{\oddsidemargin}{+4mm} 	% bei zweiseitiger Format. den linken Rand der Seiten mit ungerader Seitennummer.
+\setlength{\evensidemargin}{-4mm} 	% bei zweiseitiger Format. linken Randes der Seiten mit gerader Seitennummer.
+\setlength{\textwidth}{160mm}	   	% Definiert die GesamtBreite des Textrumpfes für alle nachfolgenden Seiten.
+\setlength{\parindent}{0mm}	   		% keine Einrückung bei neuem Absatz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%\bibliographystyle{alphadin}
+
+%=============================================================================%
+
+%\setcounter{page}{1}
+\pagestyle{empty}
+
+
+\includepdf[pages=-]{digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf}
+
+
+
+\begin{titlepage}
+	\begin{center}
+
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=75mm]{images/LSTM_Logo.pdf} 		
+\end{figure}
+		\ifenglish
+		\vspace{25mm}
+		 		
+		\LARGE {\textbf{Title \\ of your \\ thesis}}\\ [25mm]
+		\huge {\textbf{Master's Thesis, Bachelor's Thesis, Project Thesis}} \\ [14mm]
+		 by \\ [2mm]
+		\LARGE \textbf{NAME}\\[5mm]
+		\LARGE Stud.reg.no. XXXXXXXX\\[5mm]
+		\LARGE Erlangen, xx.xx.xxxx\\
+		\vfill
+		\rule{15cm}{0.02mm}\\
+		\Large Institute of Fluid Mechanics\\
+		Faculty of Engineering\\
+		Friedrich--Alexander--University Erlangen--N\"urnberg\\
+		Prof.\ Dr.\ Philipp Schlatter\\
+		\else
+		
+		\vspace{25mm}
+		
+		\LARGE {\textbf{Titel \\ der \\ Arbeit}} \\ [25mm]
+		\huge {\textbf{Masterthesis, Bachelorthesis, Projektarbeit}} \\ [14mm]
+		von \\ [2mm]
+		\LARGE \textbf{Vorname Nachname}\\[5mm]
+		\LARGE Matr.-Nr. 12345678\\[5mm]
+		\LARGE Erlangen, xx.xx.xxxx\\
+		\vfill
+		\rule{15cm}{0.02mm}\\
+		\Large Lehrstuhl für Strömungsmechanik\\
+		Technische Fakultät\\
+		Friedrich--Alexander-Universität Erlangen-Nürnberg\\
+		Prof.\ Dr.\ Philipp Schlatter\\
+		\fi
+  		\end{center}
+\end{titlepage}
+
+
+  	\thispagestyle{empty}	
+	\cleardoublepage
+	
+	\ifenglish
+	
+	\begin{tabular}[H]{ll}
+	  Author:& NAME \\
+	  Student Registration Number: & XXXXXXXXX \\
+	  Institute: & Institute of Fluid Mechanics\\
+	  Head of Institute: & Prof.\ Dr.\ Techn. Philipp Schlatter\\ 
+	  Group and Supervisor:& Prof.\ Dr.-Ing.\ habil.\ Stefan Becker \\
+	  & Felix Czwielong \\		
+	  Assigned: & dd.mm.yyyy \\
+	  Submitted: & dd.mm.yyyy \\
+	  \\
+	  LSTM Technical Report: & 01/2025
+	\end{tabular}	
+
+	\else
+
+	\begin{tabular}[H]{ll}
+	Bearbeiter:& Vorname Nachname \\
+	Matrikelnummer: & XXXXXXXXX \\
+	Lehrstuhl: & Lehrstuhl für Strömungsmechanik (LSTM) \\
+	Lehrstuhlinhaber: & Prof.\ Dr.\ Philipp Schlatter\\ 
+	Arbeitsgruppe und Betreuer:& Prof.\ Dr.-Ing.\ habil.\ Stefan Becker \\
+	& Felix Czwielong\\		
+	Ausgegeben: & dd.mm.yyyy \\
+	Abgegeben: & dd.mm.yyyy \\
+	\\
+	LSTM Technical Report: & 01/2025
+	\end{tabular}
+	
+	\fi	
+
+\thispagestyle{empty}
+\cleardoublepage
+
+\ifenglish
+\chapter*{Declaration}
+
+I hereby declare formally that I have developed and written the enclosed thesis entirely by myself and without help of third parties and have not used sources or means without declaration in the text. Any thoughts or quotations, inferred (literally or analogously) from the sources, are marked as such. This thesis was not submitted in the same or substantially similar version to any other authority to achieve an academic grade.
+
+The Friedrich--Alexander--Universität (FAU), represented by the Institute of Fluid Mechanics (LSTM), is granted a simple, free of charge, temporally and geographically unrestricted right to use the results of the work, including any protective rights and rights of use, for the purposes of research and teaching.
+\\ [35mm]
+Erlangen, the DATE \hspace{4cm} \rule{5cm}{0.02mm}
+\else
+\chapter*{Erklärung}
+
+Hiermit versichere ich eidesstattlich, dass die vorliegende Arbeit von mir selbstständig, ohne Hilfe Dritter und ausschließlich unter Verwendung der angegebenen Quellen angefertigt wurde. Alle Stellen, die wörtlich oder sinngemäß aus den Quellen entnommen sind, habe ich als solche kenntlich gemacht. Die Arbeit wurde bisher in gleicher oder ähnlicher Form keiner anderen Prüfungsbehörde vorgelegt.
+
+Der Friedrich--Alexander--Universität (FAU), vertreten durch den Lehrstuhl für Strömungsmechanik (LSTM), wird für Zwecke der Forschung und Lehre ein einfaches, kostenloses, zeitlich und örtlich unbeschränktes Nutzungsrecht an den Arbeitsergebnissen der Arbeit einschließlich etwaiger Schutz- und Nutzungsrechte eingeräumt.
+\\ [35mm]
+Erlangen, den DATUM \hspace{4cm} \rule{5cm}{0.02mm}
+\fi	
+
+%=============================================================================%
+
+\thispagestyle{empty}
+%\cleardoublepage
+
+%\chapter*{Danksagung}
+   
+%\include{kapitel/kurzfassung}
+%\cleardoublepage
+
+
+
+
+%=============================================================================%
+\cleardoublepage
+\phantomsection
+\thispagestyle{empty}
+\cleardoublepage
+\pagestyle{plain}
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+
+
+%=============================================================================%
+%\newpage
+\pagestyle{headings}
+
+\ifenglish
+\addcontentsline{toc}{chapter}{Contents}
+\else
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+\fi
+%\pdfbookmark[1]{Inhaltsverzeichnis}{toc}
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+%\printnomenclature
+%=============================================================================%
+%\addcontentsline{toc}{chapter}{Nomenklatur}
+%\newpage
+%
+\include{chapters/nomenklatur}
+%
+%\pagestyle{headings}
+
+%=============================================================================%
+
+%\thispagestyle{empty}
+%\pagestyle{headings}
+%\cleardoublepage
+\pagenumbering{arabic}
+%
+%\cleardoublepage
+%
+%\include{kapitel/auslegung}
+%\include{kapitel/konstruktion}
+%\include{kapitel/inbetriebnahme}
+%
+%\include{kapitel/abstract}
+\include{chapters/introduction}
+% \include{kapitel/theory}
+
+
+% \include{kapitel/stroemungsmechanische_grundlagen}
+%\include{kapitel/stroemungsmechanische_grundlagen_kopie}
+%\include{Kapitel3}
+%\include{Kapitel4}
+\include{chapters/literaturverzeichnis}
+%%
+
+%
+\newpage
+%
+
+\begin{appendix}                    % Anhang einfügen
+%
+\include{chapters/anhang1}
+%\include{kapitel/anhang2}
+
+\end{appendix}
+%
+\end{document}
+

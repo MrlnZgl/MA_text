@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Schlatter and {\"O}rl{\"u}(2010)]{schlatter_orlu_2010}
+P.~Schlatter and R.~{\"O}rl{\"u}.
+\newblock Assessment of direct numerical simulation data of turbulent boundary layers.
+\newblock \emph{Journal of Fluid Mechanics}, 659:\penalty0 116--126, 2010.
+
+\end{thebibliography}

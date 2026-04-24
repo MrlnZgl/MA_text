@@ -1,0 +1,119 @@
+
+
+
+
+
+
+%\thispagestyle{empty}
+
+%\printnomenclature
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenn Symbolverzeichnis automatisch erzeugt werdenn soll
+
+\ifnomenklatur
+%\ifenglish
+%\printnomenclature\addcontentsline{toc}{chapter}{Notation}
+%\else
+%\printnomenclature\addcontentsline{toc}{chapter}{Nomenklatur}
+%\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\else
+%% Wenn man das Symbolverzeichnis selber machen will
+%\ifenglish
+%\chapter*{Notation}\addcontentsline{toc}{chapter}{Notation}
+%\else
+\chapter*{List of Symbols}\addcontentsline{toc}{chapter}{List of Symbols}
+%\fi
+%
+%
+%
+%
+%%\thispagestyle{empty}
+%\ifenglish
+%\section*{Abbrevations}
+%\else
+%\section*{Abkürzungen}
+%\fi
+%
+\begin{longtable}[t]{p{0.1\textwidth}p{0.1\textwidth}p{0.8\textwidth}}
+	\textbf{Variable}  & \textbf{Einheit} & \textbf{Beschreibung}\\
+	\midrule
+	$c_0$ & $m/s$ & Schallgeschwindigkeit in Luft \\
+	$\nabla$ & $1/m$ & Nabla-Operator \\
+
+	
+	%
+\end{longtable}
+
+
+%\chapter*{Abkürzungsverzeichnis}\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+{\let\clearpage\relax \chapter*{List of Abbreviations}}\addcontentsline{toc}{chapter}{List of Abbreviations}
+
+\begin{longtable}[t]{p{0.25\textwidth}p{0.8\textwidth}}
+	\textbf{Abkürzung}  & \textbf{Bedeutung}\\
+	\midrule
+	APE & Aeroacoustic Perturbation Equations \\
+	SST & Shear Stress Transport \\
+	
+	
+	%
+\end{longtable}
+%%\ifenglish
+%%\section*{Greek letters}
+%%\else
+%\section*{Griechische Buchstaben}
+%%\fi
+%\begin{longtable}[t]{p{0.15\textwidth}p{0.93\textwidth}}
+%%	$\beta_{m,m}$ & Faktor zum Skalieren der Besselfunktion \\
+%\end{longtable}	
+%
+%\ifenglish
+%\section*{Indexes}
+%\else
+%\section*{Indizes}
+%\fi
+%%
+%\begin{longtable}[t]{p{0.15\textwidth}p{0.93\textwidth}}
+%	$ 0 $ & Umgebungsbedingungen \\
+%	$a$ & beliebige Position im Rohr \\
+%	
+%\end{longtable}
+%%
+%
+%
+%\ifenglish
+%\section*{Latin letters}
+%\else
+%\section*{Lateinische Buchstaben}
+%\fi
+%%%\begin{longtable}[l]{ll}
+%\begin{longtable}[t]{p{0.15\textwidth}p{0.93\textwidth}}
+%%
+%$ A $ & Konstante \\
+%
+%%
+%\end{longtable}
+%%
+%
+%
+%
+%%
+%\ifenglish
+%\section*{Operators}
+%\else
+%\section*{Operatoren}
+%\fi
+%\begin{longtable}[t]{p{0.15\textwidth}p{0.93\textwidth}}
+%%
+%$ \triangledown $ & Nabla Operator \\
+%
+%%
+%\end{longtable}
+%%
+%%
+
+
+\fi	
+\cleardoublepage

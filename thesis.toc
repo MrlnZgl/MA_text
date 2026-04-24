@@ -1,0 +1,14 @@
+
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Contents}{I}{section*.3}%
+\contentsline {chapter}{\nonumberline List of Figures}{II}{chapter*.5}%
+\contentsline {chapter}{\nonumberline List of Tables}{III}{chapter*.6}%
+\contentsline {chapter}{List of Symbols}{IV}{chapter*.7}%
+\contentsline {chapter}{List of Abbreviations}{IV}{chapter*.8}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Important stuff}{1}{section.1.1}%
+\contentsline {chapter}{\nonumberline Bibliography}{4}{chapter*.11}%
+\contentsline {chapter}{\numberline {A}Einleitung}{5}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Important stuff}{5}{section.A.1}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
