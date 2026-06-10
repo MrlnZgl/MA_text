@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  15 APR 2026 17:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  10 JUN 2026 15:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/marleneziegler/Desktop/5. Semester/Masterarbeit/LaTeX-Template-LSTM-master/thesis.tex"
-(/Users/marleneziegler/Desktop/5. Semester/Masterarbeit/LaTeX-Template-LSTM-master/thesis.tex
+**"/Users/marleneziegler/Desktop/5. Semester/Masterarbeit/MA_text/thesis.tex"
+(/Users/marleneziegler/Desktop/5. Semester/Masterarbeit/MA_text/thesis.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrreprt.cls
@@ -977,7 +977,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 58.
 
 Package hyperref Warning: Option `pagecolor' is not available anymore.
 
-(./thesis.aux (./chapters/nomenklatur.aux) (./chapters/introduction.aux) (./chapters/literaturverzeichnis.aux) (./chapters/anhang1.aux
+(./thesis.aux (./chapters/nomenklatur.aux) (./chapters/introduction.aux) (./chapters/theory.aux) (./chapters/methods.aux) (./chapters/literaturverzeichnis.aux) (./chapters/anhang1.aux
 
 LaTeX Warning: Label `eq:sum' multiply defined.
 
@@ -1263,6 +1263,65 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has b
                    \relax 
 l.254 \include{chapters/introduction}
                                       [3]
+\openout2 = `chapters/theory.aux'.
+
+ (./chapters/theory.tex
+chapter 2.
+)
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.255 \include{chapters/theory}
+                                [4
+
+
+
+
+]
+\openout2 = `chapters/methods.aux'.
+
+ (./chapters/methods.tex
+chapter 3.
+<images/flowchart_workflow.pdf, id=202, 378.76636pt x 563.68129pt>
+File: images/flowchart_workflow.pdf Graphic file (type pdf)
+<use images/flowchart_workflow.pdf>
+Package pdftex.def Info: images/flowchart_workflow.pdf  used on input line 20.
+(pdftex.def)             Requested size: 386.96024pt x 575.89343pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.24 
+      [5
+
+
+
+
+]
+Underfull \vbox (badness 7613) has occurred while \output is active []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 
+      [6 <./images/flowchart_workflow.pdf>])
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.256 \include{chapters/methods}
+                                 [7]
 \openout2 = `chapters/literaturverzeichnis.aux'.
 
  (./chapters/literaturverzeichnis.tex (./thesis.bbl
@@ -1270,11 +1329,11 @@ chapter without number
 ))
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 \include{chapters/literaturverzeichnis}
-                                              [4
+l.263 \include{chapters/literaturverzeichnis}
+                                              [8
 
 
 
@@ -1292,7 +1351,7 @@ Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrreprt)              inconsistent.
 (scrreprt)              Because of this, you should remove `\end{appendix}'
 (scrreprt)              and replace `\begin{appendix}' by command
-(scrreprt)              `\appendix' on input line 269.
+(scrreprt)              `\appendix' on input line 270.
 
 \openout2 = `chapters/anhang1.aux'.
 
@@ -1300,12 +1359,7 @@ Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 chapter A.
 
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.17 
-      [5
+[9
 
 
 
@@ -1317,19 +1371,9 @@ Package pdftex.def Info: images/LSTM_Logo.pdf  used on input line 21.
 (pdftex.def)             Requested size: 364.19664pt x 131.29648pt.
 )
 
+[10]
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.271 \include{chapters/anhang1}
-                                 [6]
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.271 \include{chapters/anhang1}
-                                 [7] (./thesis.aux (./chapters/nomenklatur.aux) (./chapters/introduction.aux) (./chapters/literaturverzeichnis.aux) (./chapters/anhang1.aux))
+[11] (./thesis.aux (./chapters/nomenklatur.aux) (./chapters/introduction.aux) (./chapters/theory.aux) (./chapters/methods.aux) (./chapters/literaturverzeichnis.aux) (./chapters/anhang1.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1342,18 +1386,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 43372 strings out of 473190
- 1001844 string characters out of 5715800
- 1751228 words of memory out of 5000000
- 65773 multiletter control sequences out of 15000+600000
- 575499 words of font info for 75 fonts, out of 8000000 for 9000
+ 43477 strings out of 473190
+ 1004414 string characters out of 5715800
+ 1751248 words of memory out of 5000000
+ 65849 multiletter control sequences out of 15000+600000
+ 576951 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,17n,109p,11005b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on thesis.pdf (19 pages, 479721 bytes).
+ 108i,17n,109p,10986b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on thesis.pdf (23 pages, 559635 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 34 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 408 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
