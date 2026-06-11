@@ -1,5 +1,5 @@
 
-\chapter{Methodology} \label{chap:methods}
+\chapter{Methods} \label{chap:methods}
 
 In the following chapter the methods used in this thesis are presented. In the beginning the used tools are introduced. Then the workflow of the handled project is described and in the end the used optimization method is discussed briefly.
 
@@ -8,6 +8,14 @@ In the following chapter the methods used in this thesis are presented. In the b
 \section{plane TBL simulaitons}
 
 \section{curved TBL simulations}
+
+- meshing
+- imposing bc
+- case settings
+
+
+
+
 In the next part of the 
 
 up to this moment, the TBL has no ZPG.
@@ -61,13 +69,26 @@ As described earlier the domain used in \name{OpenFOAM} is higher than the one f
 The usage of this higher domain would lead to interpolation conflicts since there are no data for the upper interpolation points. 
 To avoid these conflicts the interpolation is performed on an \name{OpenFOAM} domain which has the same height as the \name{neko} domain. 
 The values for $U$ can be extracted directly, whereas $k$ and $\omega$ need to be computed. 
+To use these fields in the higher \name{OpenFOAM} domain additional values for the upper part of the inflow are manually added. 
+For this part of the inflow the last interpolated value is copied and added in the remaining cells.
 
 
+\subsection{Optimization settings}
+
+- how many design varibales
+- where are they located
+- why? 
+how many iterations
+- all settings done for the optimization
 
 
 The results of this simulation are used as inflow conditino for the following RANS simulations in \name{OpenFOAM}. 
 More precisely the measure of U, k and omega at the positoin of $Re_theta = 1000 $ are extracted. Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta = 1000$ from the DNS is used as boundary condition at the inflow of the domain in the RANS simulation. XX hier noch das OPenfoma domain höher ist XX
  With this simulation setup the optimization process is started. The first step of the optimization loop is to ste new boundary points q. In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range. in the next step. The domiain is build with the new boundary points and the \name{OpenFOAM} simulation is started. When the simulation is finished, the postprocessing is performed to compute the current Clauser parameter $\beta$ and the residual R. As a last step the files and XX are updated. If the optimization was performed for a certain number of steps the new boundary points q are selected with the bayesian optmization. <the optimization runs until ???XX, sich that the ZPG is ensured. In the next step the velocity profile for the optimized domain is extracted. The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
+
+\subsection{data extraction}
+- how to extract data from openfoam and impose them on neko domain?
+
 
 \section{simulations with ZPG}
 
