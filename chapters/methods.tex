@@ -1,19 +1,82 @@
 
-\chapter{Methods} \label{chap:methods}
+\chapter{Methodology} \label{chap:methods}
 
 In the following chapter the methods used in this thesis are presented. In the beginning the used tools are introduced. Then the workflow of the handled project is described and in the end the used optimization method is discussed briefly.
 
-\section{Tools}
-To work on this project multiple tools were used. Most of the fluid-flow simulations (korrekte bezeichnung??) were performed with DNS (see XX \autoref{sec:DNSbasics}). To perform these simulations the spectral element code \name{neko} was used. Blabla über neko
-When running simulaitons with \name{neko} it is possible to take statistics of the simulated flow during run time. Multiple settings about how the statistics should be recorded can be defined in the case file of the simulation. For example it is possible to define one or two axis along which the statistics should be averaged. These statistics are used to extract and compute certain measures of the flow. To do this some postprocessing of the recorded statistics is necessary. This is done in \name{python} where the package \name{pysemtools} is included. With this package data recorded in \name{neko} simulaitons can be extracted and interpolated from an SEM mesh into any arbitrary points (zu nah an github description). Then multiple statistical measures like the budget terms can be calculated. 
-In addition to the DNS, some RANS simulations were performed as well. To run these simulations the open source software \name{OpenFOAM} is used. THis software is able to perform RANS simulations of fluid flows with diffenret turbulence models. To extract velocity fields etc from the simulation \name{Python} is used. 
-All simulations are performed on the cluster of the RRZE of the FAU. Blabla über cluster
+\section{Channel simulations/cooler name für 'Anfangssimulationen'}
+
+\section{plane TBL simulaitons}
+
+\section{curved TBL simulations}
+In the next part of the 
+
+up to this moment, the TBL has no ZPG.
+
+\section{ZPG Generation}
+
+In the next step the procedure to generate a ZPG in the curved TBL domain is introduced. 
+This procedure is done on \name{OpeFOAM} using the Bayesion optmizer code (ref: Eman etc XX, ref: basics XX). 
+As described in XX the code is able to optimize the shape of the domain to achieve a given pressure gradient function, which in this case is ZPG. 
+To do this the simulaiton setup has to be transferred to \name{OpenFOAM}. 
+In the following paragraph the necessary steps are described in detail. 
+
+
+\subsection{OpenFOAM setup}\label{subsec: methodsOFsetup}
+
+
+\paragraph{General settings}
+RNAS model
+
+\paragraph{Mesh Generation}
+The transfer of the curved TBL simulation setup to \name{OpenFOAM} includes some adaptations which will be presented here. 
+First, the mesh has to be regenerated. 
+It is not possible to use a mesh created in \name{gmsh} and transfer it to \name{OpenFOAM}, since the code has to adapt the domain and the mesh after every iteration of the optimization.
+Therefore, the domain has to be regenerated in every iteration with \verb|blockMesh|.
+As a consequence the domain has to be defined in \verb|blockMeshDict|.
+The plane part is meshed with rectangular blocks.
+The domain close to the lower wall has a progression factor included such that the resolution increases towards the wall. 
+In the curved part the lower wall is defined through a circle arc similar to the \name{gmsh} mesh used in \name{neko}. 
+The upper wall is determined by a spline. 
+The points defining the spline are the coordinates $x_{\theta_i}$, $y_{\theta_i}$ of the \benennung{design parameters} $\theta_i$ whose position is modified to minimize the \benennung{objective function}.  
+The optimization code is constructed such that it modifies position of the \benennung{design parameters} in wall-normal direction. 
+Since the \benennung{design space} is curved, the wall-normal direction does not correspond to a fixed axis. 
+Hence, their position has to be transformed in $x-$ and $y-$ coordinates to define the spline correctly in space.
+Compared to the domain used for the DNS, the height of the domain is increased to $\delta_{99}*XX = XX$.
+This modification brings some simplifications when the results of the optimized \name{OpenFOAM} simulation are transferred to the DNS domain which will be described later (see XX).
+
+XX HIER BILD VON MESH XX
+
+
+\paragraph{Initial conditions or boundary condition ??XX}
+The quantities that need predefined initial conditions depend on the chosen RANS model (XXQuelle). 
+Since in this project the $k-\omega-sst$-model is used, it is necessary to define initial conditions for turbulent kinetic energy $k$, dissipation $\omega$ and velocity $U$. 
+This is done due to the imposition of an initial field at the inflow of the domain which is extracted from the previous DNS simulation of the curved TBL (see XX).
+In the postprocessing of the DNS simulaiton the streamwise position in the plane part of the domain where $Re_{theta} = 1000$ is reached is identified. 
+At this streamwise position the fields of $U$, $k$ and $\omega$ are extracted along the height of the domain.
+In order to do this the postprocessing of the DNS simulation data is repeated for the plane at $Re_{theta} = 1000$. 
+With the \name{Python} package \benennung{fluidfoam} it is possible to read an \name{OpenFOAM} mesh. 
+This is used to extract the points of the \name{OpenFOAM} mesh at inflow.
+These points are used as interpolation points to perform the postprocessing. 
+As described earlier the domain used in \name{OpenFOAM} is higher than the one for the DNS simulations.
+The usage of this higher domain would lead to interpolation conflicts since there are no data for the upper interpolation points. 
+To avoid these conflicts the interpolation is performed on an \name{OpenFOAM} domain which has the same height as the \name{neko} domain. 
+The values for $U$ can be extracted directly, whereas $k$ and $\omega$ need to be computed. 
+
+
+
+
+The results of this simulation are used as inflow conditino for the following RANS simulations in \name{OpenFOAM}. 
+More precisely the measure of U, k and omega at the positoin of $Re_theta = 1000 $ are extracted. Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta = 1000$ from the DNS is used as boundary condition at the inflow of the domain in the RANS simulation. XX hier noch das OPenfoma domain höher ist XX
+ With this simulation setup the optimization process is started. The first step of the optimization loop is to ste new boundary points q. In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range. in the next step. The domiain is build with the new boundary points and the \name{OpenFOAM} simulation is started. When the simulation is finished, the postprocessing is performed to compute the current Clauser parameter $\beta$ and the residual R. As a last step the files and XX are updated. If the optimization was performed for a certain number of steps the new boundary points q are selected with the bayesian optmization. <the optimization runs until ???XX, sich that the ZPG is ensured. In the next step the velocity profile for the optimized domain is extracted. The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
+
+\section{simulations with ZPG}
 
 \section{General workflow}
 
 In this section the general workflow followed during this project is presented.
 
 XX Hier noch allgemeines Vorgehesn beschreiben sonst zu detailiert im folgenden XX
+
 
 \begin{figure}[H]
     \centering
@@ -25,8 +88,7 @@ XX Hier noch allgemeines Vorgehesn beschreiben sonst zu detailiert im folgenden 
 To get familiar with the \name{neko} software an example case of the neko example is simulated. We decided to use the channel case since there are some similarities compared to the TBL (see \autoref{chap:basics}). The obtained simulation results as well as the postprocessing procedure are verified and then validated with reference data. 
 In the following step the set up is switched inot a TBL. To do this a new domain with a new mesh is created. At this point a plane TBL is analysed first.
 A detailed description of the setup can be found in XX. This setup is validated with reference data of other plane TBL simulations eg XX XX. As with the cahnnel simulations, these simulations are used to validate the simulation setup and the postprocessing procedure. 
-IN the final part of the project the curved TBL is analysed. Therefore it is necessary to build a simulation setup where a ZPG is ensured such that only curvature effects can be analysed. To create such a setup multiple steps are necessary which are depicted in \autoref{fig:workflow}. First a working setup of a curved TBL without pressure modification is established in \name{neko} including the domain size, case settings, vector rotations etc. which are descriped in detail at XX. With this setup a simulation is performed. The results of this simulation are used as inflow conditino for the following RANS simulations in \name{OpenFOAM}. More precisely the measure of U, k and omega at the positoin of $Re_theta = 1000 $are extracted. Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta = 1000$ from the DNS is used as boundary condition at the inflow of the domain in the RANS simulation. XX hier noch das OPenfoma domain höher ist XX
- With this simulation setup the optimization process is started. The first step of the optimization loop is to ste new boundary points q. In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range. in the next step. The domiain is build with the new boundary points and the \name{OpenFOAM} simulation is started. When the simulation is finished, the postprocessing is performed to compute the current Clauser parameter $\beta$ and the residual R. As a last step the files and XX are updated. If the optimization was performed for a certain number of steps the new boundary points q are selected with the bayesian optmization. <the optimization runs until ???XX, sich that the ZPG is ensured. In the next step the velocity profile for the optimized domain is extracted. The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
+IN the final part of the project the curved TBL is analysed. Therefore it is necessary to build a simulation setup where a ZPG is ensured such that only curvature effects can be analysed. To create such a setup multiple steps are necessary which are depicted in \autoref{fig:workflow}. First a working setup of a curved TBL without pressure modification is established in \name{neko} including the domain size, case settings, vector rotations etc. which are descriped in detail at XX. With this setup a simulation is performed. 
 
 - einarbeiten in neko software
 --> channel simulations
@@ -50,4 +112,3 @@ IN the final part of the project the curved TBL is analysed. Therefore it is nec
 - do this for different domains: why these domains?
 
 
-\section{Optimization Methods}

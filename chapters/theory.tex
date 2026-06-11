@@ -25,3 +25,12 @@
 why is it important?
 
 \section{Optimization??}
+
+\section{Tools}
+
+XX das hier vlt in Basics?? XX
+
+To work on this project multiple tools were used. Most of the fluid-flow simulations (korrekte bezeichnung??) were performed with DNS (see XX \autoref{sec:DNSbasics}). To perform these simulations the spectral element code \name{neko} was used. Blabla über neko
+When running simulaitons with \name{neko} it is possible to take statistics of the simulated flow during run time. Multiple settings about how the statistics should be recorded can be defined in the case file of the simulation. For example it is possible to define one or two axis along which the statistics should be averaged. These statistics are used to extract and compute certain measures of the flow. To do this some postprocessing of the recorded statistics is necessary. This is done in \name{python} where the package \name{pysemtools} is included. With this package data recorded in \name{neko} simulaitons can be extracted and interpolated from an SEM mesh into any arbitrary points (zu nah an github description). Then multiple statistical measures like the budget terms can be calculated. 
+In addition to the DNS, some RANS simulations were performed as well. To run these simulations the open source software \name{OpenFOAM} is used. THis software is able to perform RANS simulations of fluid flows with diffenret turbulence models. To extract velocity fields etc from the simulation \name{Python} is used. 
+All simulations are performed on the cluster of the RRZE of the FAU. Blabla über cluster
