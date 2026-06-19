@@ -14,11 +14,37 @@ In the following chapter the methods used in this thesis are presented. In the b
 - case settings
 
 
+In the next step to derive the curved \acrshort{zpg} \acrshort{tbl} we first need to create a general setup for the curved \acrshort{tbl}. 
+As a basis we use the setup of the plane \acrshort{tbl} and add a curved part at the end of the domain of the plane \acrshort{tbl}. 
+The plane part is necessary such that the \acrshort{tbl} can develop properly since we want $Re_{\theta} \approx 1000$ when the curvature starts. 
+The curved part has a constant radius and develops in negative wall-normal direction. 
+Therefore, the \acrshort{tbl} experiences a convex curvature. 
+At the end of the curvature another straight domain part is added which is called \benennung{\acrlong{so}}.
+There is a smooth transition between the curved part and the \acrlong{so} because it follows the tangential direction of the end of the curved part. 
+The complete set up is shown in fig XX.
+The \acrlong{so} is applied to reduce the impact of the \acrlong{bc} at the outflow. 
+The pressure \acrshort{bc} as the outflow forces the pressure to be zero.
+Since the pressure does XX in the curvature, this outflow condition would impact its behaviour and therefore the development of the \acrshort{tbl}.
+To reduce this impact the \acrlong{so} is added.
+XX general dimension of domain XX
+The mesh is generated similar to the one used for the plane \acrshort{tbl} and adapted to the shape of the domain.
+In the \acrlong{so} the mesh is coarsened since this part of the domain is not relevant for the study of the curved \acrshort{tbl}. \\
+
+The imposed boundary and initial conditions are the same used for the plane \acrshort{tbl}. 
+However, they need some modifications due to the curvature.
+The boundary conditions are summarized in the following table: XXXXXXXX
+As initial condition the blasius boundary layer was used similar as for the plane \acrshort{tbl}.
+In the curved part the blasius profile is rotated such that it is formed in wall-normal direction. 
 
 
-In the next part of the 
 
-up to this moment, the TBL has no ZPG.
+This setup was used to created different variations of curved \acrshort{tbl}.
+We tested two different radii such that we can study the impact of the amplitude of the curvature. 
+To do this we the radii of $R_1 = 100 * \delta_{99}$ and $R_2 = 500 * \delta_{99}$ with $\delta_{99}$ measured in the plane \acrshort{tbl} at $Re_{\theta} = 1000$. 
+For both radii we tested the angles of $30$° and $90$° of a circular arc.
+
+XX Tabelle mit Fällen XX
+
 
 \section{ZPG Generation}
 

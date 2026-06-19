@@ -5,9 +5,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Schlatter and {\"O}rl{\"u}(2010)]{schlatter_orlu_2010}
-P.~Schlatter and R.~{\"O}rl{\"u}.
-\newblock Assessment of direct numerical simulation data of turbulent boundary layers.
-\newblock \emph{Journal of Fluid Mechanics}, 659:\penalty0 116--126, 2010.
+\bibitem[Schlichting and Gersten(2017)]{schlichting_boundary-layer_2017}
+H.~Schlichting and K.~Gersten.
+\newblock \emph{Boundary-{Layer} {Theory}}.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2017.
+\newblock ISBN 978-3-662-52917-1 978-3-662-52919-5.
+\newblock \doi{10.1007/978-3-662-52919-5}.
+\newblock URL \url{http://link.springer.com/10.1007/978-3-662-52919-5}.
 
 \end{thebibliography}

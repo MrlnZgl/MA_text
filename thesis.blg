@@ -1,52 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
-A level-1 auxiliary file: chapters/nomenklatur.aux
 A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/theory.aux
 A level-1 auxiliary file: chapters/methods.aux
 A level-1 auxiliary file: chapters/literaturverzeichnis.aux
 The style file: abbrvnat.bst
 A level-1 auxiliary file: chapters/anhang1.aux
-Database file #1: literature.bib
+Database file #1: bibliography_MA.bib
+Warning--I didn't find a database entry for "schlatter_orlu_2010"
 You've used 1 entry,
             2773 wiz_defined-function locations,
-            606 strings with 4894 characters,
-and the built_in function-call counts, 484 in all, are:
-= -- 44
+            607 strings with 4944 characters,
+and the built_in function-call counts, 435 in all, are:
+= -- 38
 > -- 21
 < -- 1
 + -- 7
 - -- 6
-* -- 36
-:= -- 78
-add.period$ -- 3
+* -- 31
+:= -- 77
+add.period$ -- 6
 call.type$ -- 1
-change.case$ -- 5
+change.case$ -- 4
 chr.to.int$ -- 1
 cite$ -- 2
 duplicate$ -- 20
-empty$ -- 40
+empty$ -- 33
 format.name$ -- 9
-if$ -- 96
+if$ -- 86
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 13
+missing$ -- 2
+newline$ -- 16
 num.names$ -- 4
-pop$ -- 8
+pop$ -- 9
 preamble$ -- 1
 purify$ -- 4
 quote$ -- 0
-skip$ -- 17
+skip$ -- 16
 stack$ -- 0
-substring$ -- 27
+substring$ -- 2
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 11
+type$ -- 6
 warning$ -- 0
-while$ -- 5
+while$ -- 3
 width$ -- 0
-write$ -- 20
+write$ -- 26
+(There was 1 warning)
