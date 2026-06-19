@@ -19,18 +19,77 @@
 - corresponding Reynolds numbers
 - shape factor
 
+
 Turbulent boundary layers .....
 boundary layers occur when fluids with non-zero viscosity stream over a wall that is not moving. IN these setups the so called \benennung{no-slip} boundary condition impacts the stream which states that the velocity of the fluid in wall-normal direction and in streamwise direction need to be zero directly at the wall \cite{schlichting_boundary-layer_2017} since there is no relative movement between the wall and the fluid. 
 The velocity far away from the wall, the so called \benennung{free-stream velocity}, is usually much higher than zero which implies the existence of a transition region where an acceleration of the fluid occurs.
 This so-called \benennung{boundary layer} is placed close to the wall. 
 Depending on the Reynolds number the thickness of the boundary layer varies such that the boundary layer decreases with increasing Reynolds number \cite{schlichting_boundary-layer_2017}. 
 The flow in the boundary layer can behave laminar or turbulent, whereas in this thesis we will focus on \acrfull{tbl}.
+The boundary layer grows in streamwise direction and can be described via multiple characteristic quantities. 
+The introduction of these quantities requires a consistent coordinate system: 
+We define $x$ as the streamwise direction with its corresponding velocity $u$, $y$ represents the wall-normal direction with velocity component $v$ and $z$ describes the spanwise direction with velocity component $w$.
+In the free stream far away from the wall we assume $U_0$ being the dominant velocity component. 
+For simplicity this free-stream velocity is often set to be 1.
+The velocity component in streamwise direction inside the boundary layer is named as $u(x,y)$.
+To describe the thickness of a boundary layer mainly three different parameters are used: 
+the boundary-layer thickness $\delta_{99}(x)$, which describes the distance from the wall at which the velocity $u(x,y)$ derives $99\%$ of the free-stream velocity;
+the displacement thickness $\delta^*$, which defines the displacement of an inviscid fluid to preserve the same mass flow;
+and the momentum thickness $\theta$  which define the displacement of an inviscid fluid to fullfill the conservation of momentum.
+These quantities can be derived with the following equations
+\begin{gather}\label{eq: tblThickness}
+    u (x, \delta_{99}(x)) = 0.99 U_0 \\
+    \delta^*(x) = \int_0^\infty \left( 1 - \frac{u(x,y)}{U_0} \right) \mathrm{d}y \hspace{0.8cm}
+     \theta(x) = \int_0^\infty \frac{u(x,y)}{U_0} \left( 1 - \frac{u(x,y)}{U_0} \right) \mathrm{d}y
+\end{gather}
+
+In this thesis we use the momentum thickness $\theta$ to characterize the height of the boundary layer, since it can be measured more accurate than the boundary-layer thickness. 
+To describe the boundary-layer with the Reynolds number, different Reynolds numbers based on the introduced displacement measures are defined as
+
+\begin{gather}
+    \mathrm{Re}_x = \frac{U_0 x}{\nu}, \quad
+    \mathrm{Re}_{\delta_{99}} = \frac{U_0 \delta_{99}}{\nu}, \quad
+    \mathrm{Re}_{\delta^*} = \frac{U_0 \delta^*}{\nu}, \quad
+    \mathrm{Re}_\theta = \frac{U_0 \theta}{\nu}. \\
+    \nu : \text{viscosity} \nonumber
+\end{gather}
+
+From the RANS we can derive the boundary layer equations for a 2D boundary layer over a fixed flat wall. 
+
+\begin{equation}
+    \frac{1}{\rho} \frac{\mathrm{d}p_w}{\mathrm{d}x} = \frac{\mathrm{d}}{\mathrm{d}y} \left[ \nu \frac{\mathrm{d}U}{\mathrm{d}y} - \langle u'v' \rangle \right]
+\end{equation}
+
+With this equation we can define the wall shear stress $\tau_{w}$ as
+\begin{equation}
+    \tau_w := \mu \left. \frac{\mathrm{d}U}{\mathrm{d}y} \right|_w = -h \frac{\mathrm{d}P_w}{\mathrm{d}x}.
+\end{equation}
+
+
+To study the phenomenons in a boundary layer it is required to define so called viscous scales since the ranges of dimensions and velocity variations are much smaller than in the free-stream.
+Based in the wall shear stress the friction velocity $u_{\tau}$, the viscous length scale $\delta_{\nu}$ and the friction Reynolds number $Re_{\tau}$ are introduced as
+\begin{gather}
+    u_{\tau} = \sqrt{\frac{\tau_w}{\rho}} \hspace{1.0cm}
+    \delta_{\nu} = \frac{\nu}{u_{\tau}} \hspace{1.0cm}
+    Re_{\tau} = \frac{\delta_{99} u_\tau}{\nu}
+\end{gather}
+
+With these quantities the original length and velocity scales can be nondimensionalized in wall units as (fundamentals of tubr flows)
+\begin{equation}
+    y^+ = \frac{y}{\delta_v} = \frac{y u_\tau}{\nu}, \qquad
+    u^+ = \frac{U}{u_\tau}.
+\end{equation}
+
+The advantage of these non-dimensional scales is that they are universal for all wall buonded flows what enables the comparison between flows with different physical dimensions. XX unbedingt QUELLE XX
+
+something about plus units
+
+\subsection{zero pressure gradient tbl}
+
+clauser parameter
 
 
 
-
-
-\subsection{zero pressure gradient in curved boundary layers}
 
 why is it important?
 
