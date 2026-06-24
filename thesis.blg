@@ -9,48 +9,51 @@ The style file: abbrvnat.bst
 A level-1 auxiliary file: chapters/anhang1.aux
 Database file #1: bibliography_MA.bib
 Warning--I didn't find a database entry for "schlatter_orlu_2010"
+Warning--empty journal in johnston_experimental_nodate
+Warning--empty year in johnston_experimental_nodate
+Warning--empty year in johnston_experimental_nodate
 Warning--empty journal in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
-You've used 2 entries,
+You've used 3 entries,
             2773 wiz_defined-function locations,
-            610 strings with 5072 characters,
-and the built_in function-call counts, 796 in all, are:
-= -- 67
-> -- 42
+            613 strings with 5247 characters,
+and the built_in function-call counts, 1207 in all, are:
+= -- 98
+> -- 72
 < -- 2
-+ -- 14
-- -- 12
-* -- 58
-:= -- 132
-add.period$ -- 8
-call.type$ -- 2
-change.case$ -- 9
-chr.to.int$ -- 2
-cite$ -- 7
-duplicate$ -- 39
-empty$ -- 63
-format.name$ -- 18
-if$ -- 159
++ -- 24
+- -- 21
+* -- 96
+:= -- 196
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 15
+chr.to.int$ -- 3
+cite$ -- 12
+duplicate$ -- 59
+empty$ -- 94
+format.name$ -- 28
+if$ -- 240
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 3
-newline$ -- 20
-num.names$ -- 8
-pop$ -- 25
+missing$ -- 4
+newline$ -- 24
+num.names$ -- 12
+pop$ -- 44
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 13
 quote$ -- 0
-skip$ -- 29
+skip$ -- 40
 stack$ -- 0
-substring$ -- 4
+substring$ -- 6
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 17
-warning$ -- 3
-while$ -- 6
+type$ -- 28
+warning$ -- 6
+while$ -- 9
 width$ -- 0
-write$ -- 35
-(There were 4 warnings)
+write$ -- 44
+(There were 7 warnings)
