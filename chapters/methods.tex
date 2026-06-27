@@ -5,7 +5,43 @@ In the following chapter the methods used in this thesis are presented. In the b
 
 \section{Channel simulations/cooler name für 'Anfangssimulationen'}
 
-\section{plane TBL simulaitons}
+\section{plane TBL simulations}
+
+In the following part of the project we created a setup for a simulation of a \acrshort{tbl} acorss a plane wall.
+These simulations are used to verify the general settings of a \acrshort{tbl} simulations, and to verify the results through the comparison with similar simulations.
+The domain is defined as a box of the dimension $325 \times 24.5 \times 24.5$ which corresponds to $50\delta_{99} \times 4\delta_{99} \times 4\delta_{99}$ measured at a reference point at $Re_{\theta} = 1000$.
+The resolution in streamwise and spanwise diriction is constant with $x^+= 12$ and $z^+ = 6$.
+In wall-normal direction the resolution decreases with increasing distance from the lower wall starting at the wall with a resolution of $y^+ = 0.8$. 
+In the middle the resolution is constant on aquite coarse level.
+At the upper wall there is a small area where the resolution again increases since there the shear stress is measured (XXstimmt das??).
+The mesh is created with \name{gmsh}. 
+First a 2D mesh is constructed in the $x-y$/ streamwise- wall-normal-plane is created. 
+With the mesh transform tool in \name{neko} it is then extended in the spanwise direction. 
+
+\subsubsection{Boundary and initial conditions}
+
+To setup the \acrlong{tbl} boundary and initla conditions are necessary. 
+In the initial condition a boundary layer is imposed at the lower wall. 
+Since a laminar boundary layer has the quite easy blasuis profile as solution, a laminar boundary layer is given as initial velocity condition. 
+The velocity in the free-stream $U_0$ is set to be 1 initally.
+AS boundary conditions we impose a no-slip condition on the lower wall.
+The outflow has the boundary condition 'outlfow+dong', which means XXX.
+For the upper wall we tested two different setups.
+For one simulation we put a 'normal outflow' condtion at the top wall, which allows outflow in normal direction across the domain end.
+In the otehr simulation we imposed a Dirichlet conditon with (1,0,0) as velocity profile. 
+This is done to compare the effect of the different boundary conditions on the flow behaviour. 
+This becomes especially importnat for the simulation of the curved \acrshort{tbl}, since there the boundary condition needs to be imposed piecewise on the top wall.
+
+\subsubsection{Case settings}
+
+The additional settings for the simulation are definde in the CASE-file. 
+The polynomial order used for the simulations is 7 and the time order is 3.
+To enable shorter simulations times, the simulations first are started with lower polynomial order during the developing time of the \acrshort{tbl}.
+When the \acrshort{tbl} is stable the polynomial order is increased for higher result accuracy.
+All settings in the case file are listed in XXANHANG.
+
+
+
 
 \section{curved TBL simulations}
 
@@ -99,7 +135,7 @@ To use these fields in the higher \name{OpenFOAM} domain additional values for t
 For this part of the inflow the last interpolated value is copied and added in the remaining cells.
 
 
-\subsection{Optimization settings}
+\subsection{Optimization settings} \label{subsec:opt_settings}
 
 - how many design varibales
 - where are they located
@@ -110,10 +146,25 @@ how many iterations
 
 The results of this simulation are used as inflow conditino for the following RANS simulations in \name{OpenFOAM}. 
 More precisely the measure of U, k and omega at the positoin of $Re_theta = 1000 $ are extracted. Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta = 1000$ from the DNS is used as boundary condition at the inflow of the domain in the RANS simulation. XX hier noch das OPenfoma domain höher ist XX
- With this simulation setup the optimization process is started. The first step of the optimization loop is to ste new boundary points q. In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range. in the next step. The domiain is build with the new boundary points and the \name{OpenFOAM} simulation is started. When the simulation is finished, the postprocessing is performed to compute the current Clauser parameter $\beta$ and the residual R. As a last step the files and XX are updated. If the optimization was performed for a certain number of steps the new boundary points q are selected with the bayesian optmization. <the optimization runs until ???XX, sich that the ZPG is ensured. In the next step the velocity profile for the optimized domain is extracted. The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
+With this simulation setup the optimization process is started. The first step of the optimization loop is to ste new boundary points q. In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range. in the next step. The domiain is build with the new boundary points and the \name{OpenFOAM} simulation is started. When the simulation is finished, the postprocessing is performed to compute the current Clauser parameter $\beta$ and the residual R. As a last step the files and XX are updated. If the optimization was performed for a certain number of steps the new boundary points q are selected with the bayesian optmization. <the optimization runs until ???XX, sich that the ZPG is ensured. In the next step the velocity profile for the optimized domain is extracted. The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
 
-\subsection{data extraction}
+\subsection{data extraction} \label{subsec:data_extr}
 - how to extract data from openfoam and impose them on neko domain?
+Once the optimisation of the \name{OpenFOAM} simulation is finished, the next step is to transfer the relevant quantities into the \name{neko} simulation.
+As stated before, the domain use for the DNS is smaller in wall-normal direction. 
+Threfore the shape modification from the RANS simulation is not transferred.
+However, only the qunatities influenced by the shpae adaptation are transferred.
+Since the pressure itself is not direclty adapted the velocity components build the defining quantities.
+Therefore the velocity components are extracted at the height where the DNS domain has its upper wall, such that they can be imposed as boundary condition.
+The extraction of the data from the \name{OpenFOAM} simulation is done with \name{Python}.
+First the simulation with the best optimization result is detected and stored in a separate directory.
+The \name{Python} script reads the coordinates from the C/Cx/Cy files and the velocites from the corresponding fields. 
+At a user-defined height the velocity values then are interpolated from the surrounding cells. 
+The interpolated velocity are stored in a csv file. 
+This file is read in the f9o file, where the velocities in the curved section of the DNS domain are defined by these values. 
+XX entweder blending oder übertragung im inflow beschreibenXX 
+
+
 
 
 \section{simulations with ZPG}
