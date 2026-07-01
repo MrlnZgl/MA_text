@@ -120,16 +120,19 @@ XX HIER BILD VON MESH XX
 \paragraph{Initial conditions or boundary condition ??XX}
 The quantities that need predefined initial conditions depend on the chosen RANS model (XXQuelle). 
 Since in this project the $k-\omega-sst$-model is used, it is necessary to define initial conditions for turbulent kinetic energy $k$, dissipation $\omega$ and velocity $U$. 
-This is done due to the imposition of an initial field at the inflow of the domain which is extracted from the previous DNS simulation of the curved TBL (see XX).
-In the postprocessing of the DNS simulaiton the streamwise position in the plane part of the domain where $Re_{theta} = 1000$ is reached is identified. 
+This is done due to the imposition of an initial field at the inflow which is extracted from the previous DNS simulation of the curved TBL (see XX).
+Therefore, a slice of the fully developed \acrshort{tbl} from the DNS simulation is taken.
+We take this slice at the streamwise position in the plane part of the domain where $Re_{theta} = 1000$ is reached is identified.
 At this streamwise position the fields of $U$, $k$ and $\omega$ are extracted along the height of the domain.
-In order to do this the postprocessing of the DNS simulation data is repeated for the plane at $Re_{theta} = 1000$. 
+In order to do this we perform a postprocessing of the DNS simuation whith the \name{OpenFOAM}- mesh used as interpolation points.
 With the \name{Python} package \benennung{fluidfoam} it is possible to read an \name{OpenFOAM} mesh. 
-This is used to extract the points of the \name{OpenFOAM} mesh at inflow.
+This is used to extract the points of the \name{OpenFOAM} mesh at its inflow.
 These points are used as interpolation points to perform the postprocessing. 
 As described earlier the domain used in \name{OpenFOAM} is higher than the one for the DNS simulations.
 The usage of this higher domain would lead to interpolation conflicts since there are no data for the upper interpolation points. 
-To avoid these conflicts the interpolation is performed on an \name{OpenFOAM} domain which has the same height as the \name{neko} domain. 
+To avoid these conflicts the interpolation points lying beyond the height of the DNS domain are cutted.
+They will be filled manually at the end of the script.
+With these interpolation points the postprocessing script starts until one can extract the values.
 The values for $U$ can be extracted directly, whereas $k$ and $\omega$ need to be computed. 
 To use these fields in the higher \name{OpenFOAM} domain additional values for the upper part of the inflow are manually added. 
 For this part of the inflow the last interpolated value is copied and added in the remaining cells.
@@ -145,8 +148,56 @@ how many iterations
 
 
 The results of this simulation are used as inflow conditino for the following RANS simulations in \name{OpenFOAM}. 
-More precisely the measure of U, k and omega at the positoin of $Re_theta = 1000 $ are extracted. Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta = 1000$ from the DNS is used as boundary condition at the inflow of the domain in the RANS simulation. XX hier noch das OPenfoma domain höher ist XX
-With this simulation setup the optimization process is started. The first step of the optimization loop is to ste new boundary points q. In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range. in the next step. The domiain is build with the new boundary points and the \name{OpenFOAM} simulation is started. When the simulation is finished, the postprocessing is performed to compute the current Clauser parameter $\beta$ and the residual R. As a last step the files and XX are updated. If the optimization was performed for a certain number of steps the new boundary points q are selected with the bayesian optmization. <the optimization runs until ???XX, sich that the ZPG is ensured. In the next step the velocity profile for the optimized domain is extracted. The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
+More precisely the measure of U, k and omega at the positoin of $Re_theta = 1000 $ are extracted. 
+Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta = 1000$ from the DNS is used as initial condition at the inflow of the domain in the RANS simulation. 
+
+The general settings ofr the optimization are the same for all performed tests.
+However, the number and position of the \benennung{design parameters} varies depending on the case.
+For all cases the optimization is started with 5 \benennung{design vairbales} equially spaced along the curvature. 
+For the case with the smmel radius and 30° curvature this setup gave insufficient small residuals. 
+Therefore successively more \benennung{design points} where positioned in between the existing ones especially where the value of the clauser parameter was higher than the average.
+In the final configuration 8 \benennung{design parameters} we used in the curved area.
+The optimization of this setup then leads to the progression of beta along the lower wall pictured in figure X.
+As we can see there the value of beta XXXX.
+HOwever, there is a sharp negative peak when the curvature starts.
+This means that with this set up the inflow in the curved part odes not fulfill a \acrshort{zpg}.
+Since we wanted to enforce a \acrshort{zpg} already at the start of the curvature we needed to modify the optimization.
+TO dio this, firs the curent best setup is copied and its \benennung{design parameters} stored. 
+IN the new optimization setup we focus only on the part near the start of the curvature.
+To modify the pressure gradient in this region it is necessary to position additional \benennung{design parameters} in the straight part. 
+We deiced to add two more \benennung{desgin parameters}.
+one of them is positioned directly at the transition of the straight to the curved part.
+The second one is positioned at 2/3 the straight length behind the inflow.
+With these additional points the optimization range along the lower wall can be extended beyond the beginning of the curvature. 
+Since the length of this inflow region relative to the length of the whole optimization length along the curvature is quite small the addiiton of these points without changes in the optimisation settings would not have a big effect to the progression of beta.
+Thats because this region then only has low impact on the mean value of beta which is the one value optimized.
+In addition this would enlarge the optimization dimension by 2 more dimension whcih would slow down the optimization significantly.
+Therefore we choose a different method. 
+Since the optimization performed for the curved part only already showed quite good results, we took the optimized \benennung{design parameters} from there and adopt them in the new setup. There we fixed the six downstream parameters of these 8 parameters, since they were already positoned quite good.
+IN addtion we assuemd that the modifcation at the inflow would not impact the pressure field near the end of the curvature too much.
+Hence, we only have two free \benennung{design points} in the cruvature and two in the straight section in front of it which fastens the optimization.
+In addition we apply a weight to the trasnsition section of the optimization length to enlarge the impact of the new design points. 
+XXX shorten optimisation lengthXX??
+Thsi new setup then lead to the beta progression shown in figure XX.
+here we can see that the neegaitve spike at hte beginning of the curvature already recude significantly compered to the previous figure.
+However it did not ddisappear completely.
+XX blabl warum??
+
+XX Procedure für R550deh18 and R100deg90
+
+
+XX hier noch das OPenfoma domain höher ist XX
+With this simulation setup the optimization process is started. 
+The first step of the optimization loop is to ste new boundary points q. 
+In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range. in the next step. 
+The domiain is build with the new boundary points and the \name{OpenFOAM} simulation is started. 
+When the simulation is finished, the postprocessing is performed to compute the current Clauser parameter $\beta$ and the residual R.
+As a last step the files and XX are updated. 
+If the optimization was performed for a certain number of steps the new boundary points q are selected with the bayesian optmization. 
+<the optimization runs until ???XX, sich that the ZPG is ensured.
+In the next step the velocity profile for the optimized domain is extracted. 
+The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. 
+This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
 
 \subsection{data extraction} \label{subsec:data_extr}
 - how to extract data from openfoam and impose them on neko domain?
@@ -168,6 +219,12 @@ XX entweder blending oder übertragung im inflow beschreibenXX
 
 
 \section{simulations with ZPG}
+
+- application of velocity
+- domain and all setting similar to reference simulations
+- blending
+- interpolation to top wall points
+
 
 \section{General workflow}
 
