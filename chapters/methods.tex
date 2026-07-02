@@ -5,6 +5,13 @@ In the following chapter the methods used in this thesis are presented. In the b
 
 \section{Channel simulations/cooler name für 'Anfangssimulationen'}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{channel_IC.pdf}
+    \caption{Initial condition channel simulaiton}
+    \label{fig:channel_IC}
+\end{figure}
+
 \section{plane TBL simulations}
 
 In the following part of the project we created a setup for a simulation of a \acrshort{tbl} acorss a plane wall.
@@ -31,6 +38,13 @@ For one simulation we put a 'normal outflow' condtion at the top wall, which all
 In the otehr simulation we imposed a Dirichlet conditon with (1,0,0) as velocity profile. 
 This is done to compare the effect of the different boundary conditions on the flow behaviour. 
 This becomes especially importnat for the simulation of the curved \acrshort{tbl}, since there the boundary condition needs to be imposed piecewise on the top wall.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{plane_TBL_IC.pdf}
+    \caption{Initial condition for plane TBL with blasius profile XX Maße einfügen}
+    \label{fig:planeTBL_IC}
+\end{figure}
 
 \subsubsection{Case settings}
 
@@ -77,9 +91,21 @@ In the curved part the blasius profile is rotated such that it is formed in wall
 This setup was used to created different variations of curved \acrshort{tbl}.
 We tested two different radii such that we can study the impact of the amplitude of the curvature. 
 To do this we the radii of $R_1 = 100 * \delta_{99}$ and $R_2 = 500 * \delta_{99}$ with $\delta_{99}$ measured in the plane \acrshort{tbl} at $Re_{\theta} = 1000$. 
+Two setups where tested with radius $R_1$ namely with $30$° and $90$°. For the second only one setup was tested with $18$° curvature. 
+This value is chosen since it has the same arclength as the case with $R_1$ and $90$° curvature. 
+Therefore the cases have a comparable curved section length, which corresponds $157 * \delta_{99}$. 
+The case with $R_1$ and $30$° corresponds $52 * \delta_{99}$.
+
 For both radii we tested the angles of $30$° and $90$° of a circular arc.
 
 XX Tabelle mit Fällen XX
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{domain_paraview.pdf}
+    \caption{domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}
+    \label{fig:paraviewDomain}
+\end{figure}
 
 
 \section{ZPG Generation}
@@ -96,6 +122,13 @@ In the following paragraph the necessary steps are described in detail.
 
 \paragraph{General settings}
 RNAS model
+
+plus units
+turbulnece model
+other settings in OPENFOAM
+
+
+
 
 \paragraph{Mesh Generation}
 The transfer of the curved TBL simulation setup to \name{OpenFOAM} includes some adaptations which will be presented here. 
@@ -114,8 +147,12 @@ Hence, their position has to be transformed in $x-$ and $y-$ coordinates to defi
 Compared to the domain used for the DNS, the height of the domain is increased to $\delta_{99}*XX = XX$.
 This modification brings some simplifications when the results of the optimized \name{OpenFOAM} simulation are transferred to the DNS domain which will be described later (see XX).
 
-XX HIER BILD VON MESH XX
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{openfoam_mesh.pdf}
+    \caption{Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX)}
+    \label{fig:openfoamDomain}
+\end{figure}
 
 \paragraph{Initial conditions or boundary condition ??XX}
 The quantities that need predefined initial conditions depend on the chosen RANS model (XXQuelle). 
@@ -199,7 +236,7 @@ In the next step the velocity profile for the optimized domain is extracted.
 The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. 
 This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
 
-\subsection{data extraction} \label{subsec:data_extr}
+\subsection{Data extraction} \label{subsec:data_extr}
 - how to extract data from openfoam and impose them on neko domain?
 Once the optimisation of the \name{OpenFOAM} simulation is finished, the next step is to transfer the relevant quantities into the \name{neko} simulation.
 As stated before, the domain use for the DNS is smaller in wall-normal direction. 
@@ -224,6 +261,27 @@ XX entweder blending oder übertragung im inflow beschreibenXX
 - domain and all setting similar to reference simulations
 - blending
 - interpolation to top wall points
+
+\paragraph{Velocity integration}
+- read from field field
+- interpolate on top wall
+-- check code
+
+To run the \acrshort{dns} with \acrfull{zpg} the velocities extracted from \name{OpenFOAM} need to be applied as boundary condition on the \name{neko} domain. 
+This is implemented in the user f90 file. 
+There the boundary points are read from the mesh. 
+Then the streamwise position s for the current point is calculated.
+With this positon the mehtod interpolate velocity s is called.
+In this method the velocity is linearly interpolated form the surrounding velocity values read from the csv file.
+This is done for all streamwise positons that are included in the csv file. 
+Hence, also a part of the straight inflow in front of the curvature, and a part of the tail are included.
+In the parts of the domain that are not included, (1,0,0) is applied as before. 
+To avoid sharp changes of the boundary condition when changing from 1,0, to the optimized velocities, a blending is inclued.
+This blends the edge value of the optimized velocities into the 1,0,0 region in 10 length units in streamwise direciton. 
+
+The rest of the setup is similar to the one used in the reference simulations for curved \acrshort{tbl} simulations described in XX.
+
+
 
 
 \section{General workflow}
