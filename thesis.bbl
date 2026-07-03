@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,14 @@ J.~C. Gillis and J.~P. Johnston.
 \bibitem[Johnston et~al.()Johnston, Moffat, and Kays]{johnston_experimental_nodate}
 J.~P. Johnston, R.~J. Moffat, and W.~M. Kays.
 \newblock Experimental {Data} and {Model} for the {Turbulent} {Boundary} {Layer} on a {Convex}, {Curved} {Surface}.
+
+\bibitem[Menter(1994)]{menter_two-equation_1994}
+F.~R. Menter.
+\newblock Two-equation eddy-viscosity turbulence models for engineering applications.
+\newblock \emph{AIAA Journal}, 32\penalty0 (8):\penalty0 1598--1605, Aug. 1994.
+\newblock ISSN 0001-1452, 1533-385X.
+\newblock \doi{10.2514/3.12149}.
+\newblock URL \url{https://arc.aiaa.org/doi/10.2514/3.12149}.
 
 \bibitem[Meroney and Bradshaw(1975)]{meroney_turbulent_1975}
 R.~N. Meroney and P.~Bradshaw.
