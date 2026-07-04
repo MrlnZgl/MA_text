@@ -9,17 +9,64 @@
 
 \section{Wall-bounded turbulence}\label{sec:turbulenceTheory}
 
-- boundary layer develops const in flow direction
-- with increasing boundary layer thickness
-- wall shear stress not know a priori
-- behaviour in inner layer ess. same as in channel flow
-- equation for pressure gradient
-%--> U_0 = const pressure gradient = 0
-- definition of boundary layer thickness, displ. thickness, momentum thickness
-- corresponding Reynolds numbers
-- shape factor
+% - boundary layer develops const in flow direction
+% - with increasing boundary layer thickness
+% - wall shear stress not know a priori
+% - behaviour in inner layer ess. same as in channel flow
+% - equation for pressure gradient
+% %--> U_0 = const pressure gradient = 0
+% - definition of boundary layer thickness, displ. thickness, momentum thickness
+% - corresponding Reynolds numbers
+% - shape factor
+
+The description of a fluid is based on the continuum hypothesis. 
+It states that the motion of molecules in a fluid are continuous (XXQUELLE).
+In addition we take the viscous property of fludis into account.
+XX Hhier noch wie continuity equation erreicht wird
+With that hypothesis we can define the continuity equation which states that ....
+For viscous incompressible flows this equation is defined as
+
+\begin{equation}
+    \frac{\partial \rho}{\partial t} + \frac{\partial (\rho u_i)}{\partial x_i} = \frac{\partial u_i}{\partial x_i} = 0
+\end{equation}
 
 
+The second important equation describes the momentum conservation of a fluid.
+This so-called \name{Navier-Stokes-equation (NSE)} can be written as 
+
+\begin{equation}
+    \frac{\mathrm{D}u_i}{\mathrm{D}t} = \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} = -\frac{1}{\rho} \frac{\partial p}{\partial x_i} + \nu \frac{\partial^2 u_i}{\partial x_j \partial x_j} + g_i
+\end{equation}
+
+With these equations the motions of a fluid can be described (XXQUELLE).
+The Navier stokes equations hold universally for all kind of flows.
+However, one can split the behaviour of fluids into three groups with diffrent characteristic properties.
+These categories are defined as laminar, turbulent and transitional. 
+If a flow acts in the laminar regime its streamlines stay parallel and the flow is time-independent.
+IN the turbulnet regime the behaviour of the flow is chaotic and time-dependent.
+It shows irregular time and locations dependent random fluctuations \citep{pope_turbulent_2015}.
+Through this behaviour in turbulent flows much more mixing in the fluid can be observed.
+To describe the behaviour of a flow in temrs of laminar or turbulent behaviour the so-called \name{Reynolds number} was defined as 
+\begin{equation}
+    \mathrm{Re} = \frac{U L}{\nu}
+\end{equation}
+where U and L are reasonable velocity/ velocity scales and $\nu$ the viscosity of the fluid.
+FLwos with low Reynolds numbers show laminar flow behaviour.
+With increasing Reynolds number the fluid comes first in the transitional region between laminar and turbulent until it reaches a fully turbulent state.
+At high Reynolds numbers on can observe a separation of scales with different behaviours \citep{pope_turbulent_2015}.
+One can split the turbulent motions into large and small scale motions.
+The large scales are mostly controlled by the outer constraints of the flow such as its geometry and the boundary conditions.
+The behaviour of the small-scale motions however depends on the viscosity and the receiving energy from the large scales \citep{pope_turbulent_2015}, which makes their behaviour universal and independent of the specific flow case.
+This universal behaviour can be measured with statisitcs over long time averagings.
+
+The most turbulent flows are bounded by wall(s).
+One can split them into \benennung{external} and \benennung{internal} flows. 
+Internal flows are flows that are limited by outer walls like pipes or channels.
+External flows are flows which flow around a solid body like an airfoil or a wall.
+A characteristic of external flows is that the flow far away from the body being flowed around is not affected by it.
+The behaviour of the flow near the wall is in all these cases very similar\citep{pope_turbulent_2015}XX umformulieren.
+In the following section we will derive some definitions to describe this near-wall behaviour.
+Since this work focusses on boundary layers along a wall, the following chapter contains some definitions specified for this case.
 
 
 \subsection{Turbulent boundary layer theory} \label{subsec:TBLTheory}
@@ -88,7 +135,7 @@ With these quantities the original length and velocity scales can be nondimensio
 
 The advantage of these non-dimensional scales is that they are universal for all wall buonded flows what enables the comparison between flows with different physical dimensions. XX unbedingt QUELLE XX
 
-something about plus units
+XX REYNOLDSSTRESSES PRODUCTION TERMS
 
 \subsection{zero pressure gradient tbl}
 

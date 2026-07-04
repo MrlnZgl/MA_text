@@ -10,28 +10,28 @@
 \contentsline {chapter}{\numberline {2}Basics}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}DNS}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Wall-bounded turbulence}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Turbulent boundary layer theory}{5}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}Turbulent boundary layer theory}{6}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}zero pressure gradient tbl}{7}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}curved TBL}{7}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Optimization??}{8}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Tools}{8}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Methods}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Channel simulations}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}plane TBL simulations}{10}{section.3.2}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{10}{subsubsection*.13}%
-\contentsline {subsubsection}{\nonumberline Case settings}{10}{subsubsection*.16}%
-\contentsline {section}{\numberline {3.3}curved TBL simulations}{11}{section.3.3}%
-\contentsline {section}{\numberline {3.4}ZPG Generation}{12}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}OpenFOAM setup}{12}{subsection.3.4.1}%
-\contentsline {paragraph}{\nonumberline General settings}{12}{paragraph*.19}%
-\contentsline {paragraph}{\nonumberline Mesh Generation}{12}{paragraph*.21}%
-\contentsline {paragraph}{\nonumberline Initial conditions or boundary condition ??XX}{13}{paragraph*.24}%
-\contentsline {subsection}{\numberline {3.4.2}Optimization settings}{14}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Data extraction}{15}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}simulations with ZPG}{15}{section.3.5}%
-\contentsline {paragraph}{\nonumberline Velocity integration}{15}{paragraph*.26}%
-\contentsline {section}{\numberline {3.6}General workflow}{16}{section.3.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{19}{chapter*.28}%
-\contentsline {chapter}{\numberline {A}Einleitung}{20}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Important stuff}{20}{section.A.1}%
+\contentsline {chapter}{\numberline {3}Methods}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Channel simulations}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}plane TBL simulations}{11}{section.3.2}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{11}{subsubsection*.13}%
+\contentsline {subsubsection}{\nonumberline Case settings}{11}{subsubsection*.16}%
+\contentsline {section}{\numberline {3.3}curved TBL simulations}{12}{section.3.3}%
+\contentsline {section}{\numberline {3.4}ZPG Generation}{13}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}OpenFOAM setup}{13}{subsection.3.4.1}%
+\contentsline {paragraph}{\nonumberline General settings}{13}{paragraph*.19}%
+\contentsline {paragraph}{\nonumberline Mesh Generation}{13}{paragraph*.21}%
+\contentsline {paragraph}{\nonumberline Initial conditions or boundary condition ??XX}{14}{paragraph*.24}%
+\contentsline {subsection}{\numberline {3.4.2}Optimization settings}{15}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Data extraction}{16}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}simulations with ZPG}{16}{section.3.5}%
+\contentsline {paragraph}{\nonumberline Velocity integration}{16}{paragraph*.26}%
+\contentsline {section}{\numberline {3.6}General workflow}{17}{section.3.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{20}{chapter*.28}%
+\contentsline {chapter}{\numberline {A}Einleitung}{21}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Important stuff}{21}{section.A.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

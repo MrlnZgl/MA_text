@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -32,6 +32,12 @@ R.~N. Meroney and P.~Bradshaw.
 \newblock ISSN 0001-1452, 1533-385X.
 \newblock \doi{10.2514/3.7014}.
 \newblock URL \url{https://arc.aiaa.org/doi/10.2514/3.7014}.
+
+\bibitem[Pope(2015)]{pope_turbulent_2015}
+S.~B. Pope.
+\newblock \emph{Turbulent flows}.
+\newblock Cambridge Univ. Press, Cambridge, 1. publ., 12. print edition, 2015.
+\newblock ISBN 978-0-521-59125-6 978-0-521-59886-6.
 
 \bibitem[Schlichting and Gersten(2017)]{schlichting_boundary-layer_2017}
 H.~Schlichting and K.~Gersten.

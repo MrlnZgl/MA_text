@@ -1,24 +1,24 @@
 # Fdb version 4
-["bibtex thesis"] 1783078907.09996 "thesis.aux" "thesis.bbl" "thesis" 1783078911.40306 0
+["bibtex thesis"] 1783181894.68676 "thesis.aux" "thesis.bbl" "thesis" 1783183114.20612 0
   "./bibliography_MA.bib" 1783068652.99092 74199 5cfe7d77b63154f0604331232a238f78 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1233624470 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "chapters/anhang1.aux" 1783078910.82311 1868 8d3b86ffb88dcb97bbbdcd5296893d3c "pdflatex"
-  "chapters/introduction.aux" 1783078910.29184 2089 5f887ab43518e3c30575ab3866a6d119 "pdflatex"
-  "chapters/literaturverzeichnis.aux" 1783078910.80241 1825 4f99ed4d23ece26cce936fee5c8948ee "pdflatex"
-  "chapters/methods.aux" 1783078910.7918 5013 326f5bf64aaeca6396a483fb0635bc5d "pdflatex"
-  "chapters/theory.aux" 1783078910.33701 3023 982cd0491fafa272d839fae3a6c3077b "pdflatex"
-  "thesis.aux" 1783078910.82491 9169 5176eab68b057d2fec9ac497e1a28b2f "pdflatex"
+  "chapters/anhang1.aux" 1783183113.58238 1868 bc7db69e3ef9cb00ebe8c5944b650c0d "pdflatex"
+  "chapters/introduction.aux" 1783183113.00688 2089 5f887ab43518e3c30575ab3866a6d119 "pdflatex"
+  "chapters/literaturverzeichnis.aux" 1783183113.5612 1878 f2f8810add2cd7d0a66914f79e9e5d85 "pdflatex"
+  "chapters/methods.aux" 1783183113.54969 5018 044c19d273d73ecbe47321c8a6f7eb09 "pdflatex"
+  "chapters/theory.aux" 1783183113.05985 3149 46ad16e28bfa1f4e14c4799363265d5f "pdflatex"
+  "thesis.aux" 1783183113.58422 9170 d3b04098370d940b046d71d6afaf2de8 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["makeindex thesis.idx"] 1783062041.96966 "thesis.idx" "thesis.ind" "thesis" 1783078911.40289 0
-  "thesis.idx" 1783078909.49504 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex thesis.idx"] 1783062041.96966 "thesis.idx" "thesis.ind" "thesis" 1783183114.2059 0
+  "thesis.idx" 1783183111.98033 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "thesis.ilg"
   "thesis.ind"
   (rewritten before read)
-["pdflatex"] 1783078907.29036 "/Users/marleneziegler/Desktop/5. Semester/Masterarbeit/MA_text/thesis.tex" "thesis.pdf" "thesis" 1783078911.40352 0
+["pdflatex"] 1783183109.30364 "/Users/marleneziegler/Desktop/5. Semester/Masterarbeit/MA_text/thesis.tex" "thesis.pdf" "thesis" 1783183114.20655 0
   "/Users/marleneziegler/Desktop/5. Semester/Masterarbeit/MA_text/thesis.tex" 1781793050.12311 9578 8572b946fe2e23332eb6f78e736e243b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -367,16 +367,16 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756552029 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756551907 3345739 2cd41a0f49acc188c9151d65f4bab1c9 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "chapters/anhang1.aux" 1783078910.82311 1868 8d3b86ffb88dcb97bbbdcd5296893d3c "pdflatex"
+  "chapters/anhang1.aux" 1783183113.58238 1868 bc7db69e3ef9cb00ebe8c5944b650c0d "pdflatex"
   "chapters/anhang1.tex" 1774440103.6207 956 8ad8f03b84ac3eabcd8638918624d0ad ""
-  "chapters/introduction.aux" 1783078910.29184 2089 5f887ab43518e3c30575ab3866a6d119 "pdflatex"
+  "chapters/introduction.aux" 1783183113.00688 2089 5f887ab43518e3c30575ab3866a6d119 "pdflatex"
   "chapters/introduction.tex" 1781075950.71195 1227 10a04db118d194b3f7e275c84eedd480 ""
-  "chapters/literaturverzeichnis.aux" 1783078910.80241 1825 4f99ed4d23ece26cce936fee5c8948ee "pdflatex"
+  "chapters/literaturverzeichnis.aux" 1783183113.5612 1878 f2f8810add2cd7d0a66914f79e9e5d85 "pdflatex"
   "chapters/literaturverzeichnis.tex" 1781806958.79071 919 eeb5d2bbf8a66a8554462eaab5173179 ""
-  "chapters/methods.aux" 1783078910.7918 5013 326f5bf64aaeca6396a483fb0635bc5d "pdflatex"
+  "chapters/methods.aux" 1783183113.54969 5018 044c19d273d73ecbe47321c8a6f7eb09 "pdflatex"
   "chapters/methods.tex" 1783070059.25947 24644 3507f8653e9d3b0b5483bdc43434152d ""
-  "chapters/theory.aux" 1783078910.33701 3023 982cd0491fafa272d839fae3a6c3077b "pdflatex"
-  "chapters/theory.tex" 1783078902.41477 10342 8b5794bd42e12670d653b44972de6e59 ""
+  "chapters/theory.aux" 1783183113.05985 3149 46ad16e28bfa1f4e14c4799363265d5f "pdflatex"
+  "chapters/theory.tex" 1783183108.95882 13908 e6d718d6b566a06c2d7a9cd2e4e36c38 ""
   "digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf" 1739953829 215974 fe8bb1c94a1201079f4c72cf307b390c ""
   "images/LSTM_Logo.pdf" 1739953829 2738 f3444403b0f86cb1c37de412fa2d23ea ""
   "images/channel_IC.pdf" 1783002925.95949 5967691 74cb2cab1b6533f3f1aa48cd6a0678ab ""
@@ -386,14 +386,14 @@
   "images/plane_TBL_IC.pdf" 1783001648.20389 7682528 a35228cb2be2bdf8f6a45a095e50cd08 ""
   "preamble.tex" 1783067103.68817 9064 ec6ce963a1354f7798579ee312ae5130 ""
   "thesis.acr" 1781793892.56897 438 dd01f32f41a5b1a0e77a9ba1222408b8 ""
-  "thesis.aux" 1783078910.82491 9169 5176eab68b057d2fec9ac497e1a28b2f "pdflatex"
-  "thesis.bbl" 1783078907.28317 2730 264bc9c4b9e241c3d9b9b2c746bfc7d7 "bibtex thesis"
+  "thesis.aux" 1783183113.58422 9170 d3b04098370d940b046d71d6afaf2de8 "pdflatex"
+  "thesis.bbl" 1783181894.84767 2950 84d22c6e532f51ed5366a3a52d53f81a "bibtex thesis"
   "thesis.ind" 1783062042.11422 0 d41d8cd98f00b204e9800998ecf8427e "makeindex thesis.idx"
-  "thesis.lof" 1783078910.8347 1162 5df8d88b28c0d2c2680d4424aea57326 "pdflatex"
-  "thesis.lot" 1783078910.83473 334 fd8a0394a8575a1478ebb6ea621c5888 "pdflatex"
-  "thesis.out" 1783078909.9304 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "thesis.lof" 1783183113.59464 1163 eb518f3925183a9bde282984481391f8 "pdflatex"
+  "thesis.lot" 1783183113.59468 334 fd8a0394a8575a1478ebb6ea621c5888 "pdflatex"
+  "thesis.out" 1783183112.46926 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "thesis.tex" 1781793050.12311 9578 8572b946fe2e23332eb6f78e736e243b ""
-  "thesis.toc" 1783078910.83466 2672 5c4e3d98b09e213cbbf009046d604add "pdflatex"
+  "thesis.toc" 1783183113.59459 2674 47ce894893765dafdc004a716f46f5af "pdflatex"
   (generated)
   "chapters/anhang1.aux"
   "chapters/introduction.aux"
