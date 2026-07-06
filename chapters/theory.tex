@@ -35,7 +35,7 @@ The second important equation describes the momentum conservation of a fluid.
 This so-called \name{Navier-Stokes-equation (NSE)} can be written as 
 
 \begin{equation}
-    \frac{\mathrm{D}u_i}{\mathrm{D}t} = \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} = -\frac{1}{\rho} \frac{\partial p}{\partial x_i} + \nu \frac{\partial^2 u_i}{\partial x_j \partial x_j} + g_i
+    \frac{\mathrm{D}u_i}{\mathrm{D}t} = \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} = -\frac{1}{\rho} \frac{\partial p}{\partial x_i} + \nu \frac{\partial^2 u_i}{\partial x_j \partial x_j}
 \end{equation}
 
 With these equations the motions of a fluid can be described (XXQUELLE).
@@ -109,7 +109,7 @@ From the \acrfull{nse} we can derive the boundary layer equations for a 2D bound
 \begin{align}
     \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} &= 0 \\
     u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} &= -\frac{1}{\rho} \frac{\partial p}{\partial x} + \nu \frac{\partial^2 u}{\partial y^2} \\
-    0 &= - \frac{1}{\rho} \frac{\partial p}{\partial y}
+    0 &= - \frac{1}{\rho} \frac{\partial p}{\partial y} \label{eq:NSEy}
 \end{align}
 
 
@@ -135,13 +135,65 @@ With these quantities the original length and velocity scales can be nondimensio
 
 The advantage of these non-dimensional scales is that they are universal for all wall buonded flows what enables the comparison between flows with different physical dimensions. XX unbedingt QUELLE XX
 
+
+\subsubsection{Reynolds stresses}
+To measure velocities in a turbulent flow they are decomposed in a time averaged component $\langle \rangle$ and fluctuations $u_i'$. 
+
+\begin{equation}
+    u_i = \langle u_i \rangle + u_i' \equiv U_i + u_i' \text{ with } \langle u_i
+\rangle = 0\end{equation}
+
+represents the so-called \benennung{Reynolds decomposition}.
+Teh application of the reynolds decomposition on the \acrshort{nse} leads to the \acrfull{rans}. 
+
+From this one can extract one term as the \benennung{Reynolds stresses}.
+For turbulent flows the Reynolds stresses are important measures, since the transponrt of mean momentum is based on them \citep{moin_fundamentals_2024}. 
+The tensor is defined as 
+\begin{equation}
+    R_{ij} =  \langle u_i' u_j'\rangle.
+\end{equation}
+The inner part $u_i' u_j'$ of the tensor elements represents the product of the velocity fluctuations.
+To get the Reynolds stresses, the mean $\langle \rangle$ of this product is taken.
+Although the mean of one fluctuation is zero, the product of two fluctuation components is not necessarily zero. 
+The diagonal entries therefore, contain the normal stresses $\langle u' u'\rangle, \langle v' v'\rangle, \langle w' w'\rangle$.
+The remaining entries contain the shear stresses.
+Here the only non-zero entry is $\langle u' v'\rangle$.
+
+
+
 XX REYNOLDSSTRESSES PRODUCTION TERMS
 
 \subsection{zero pressure gradient tbl}
 
+In boundary layers the free-stream (XX stimmt das?) pressure gradient plays a crucial role since it impacts the flow behaviour significantly (XXQUELLE).
+From \autoref{eq:NSEy} we see that the pressure for a \acrshort{tbl} along a flat wall is constant in wall-normal direction.
+In streamwise direction however it not necessarily has to be constant.
+With Bernouli's equation the free-stream pressure is connected to the freestream velocity, such that the gradient in tstreamwise direction can be writte like
+\begin{equation}\label{eq:bernoulli}
+    -\frac{\mathrm{d}p_0}{\mathrm{d}x} = \rho\, U_0 \frac{\mathrm{d}U_0}{\mathrm{d}x}.
+\end{equation}
+This equation shows that an acceleration of the flow effects a negative pressure gradient, which is also called \benennung{\acrfull{fpg}}. 
+In contrast, an increase of the velocity leads to a positive or \benennung{\acrfull{apg}}. 
+\acrshort{tbl} with a constant freestream velocity therefore have no pressure gradient.
+This \benennung{\acrfull{zpg}} configuration is well studied, since in plane \acrshort{tbl} it is the natural configuration (XXQUELLE).
+However, it is possible to apply boundary conditions such that an adverse or favourable pressure gradient results.
+To measure the pressure gradient a common used quantity is the so-called \benennung{Clauser parameter $\beta(s)$} which is defined as
+\begin{equation}\label{eq:beta}
+    \beta(s) = \frac{\delta^*(s)}{\tau_w(s)} \frac{\mathrm{d}p_w}{\mathrm{d}s},
+\end{equation}
 
-generel pressure gradient in TBL
-clauser parameter
+This non-dimensionalized parameter defines the ratio between the streamwise pressure force on the boundary layer and the wall shear stress \citep{clauser_turbulent_1954}.
+In the literature this parameter is widely used to categorize the flow according to the introduced pressure regimes:
+
+\begin{equation}
+    \beta =
+    \begin{cases}
+        < 0, & \text{favourable pressure gradient (FPG)}, \\
+        = 0, & \text{zero pressure gradient (ZPG)}, \\
+        > 0, & \text{adverse pressure gradient (APG)}.
+    \end{cases}
+\end{equation}
+
 
 
 
@@ -154,7 +206,7 @@ Due to the curved shape a pressure gradient in streamwise direction builds up na
 As \citet{so_experiment_1973} observed in their experiments without pressure adjustment the pressure decreases slow near the beginning of the curvature and then decreases fast once the curvature starts. 
 Since these pressure variations have a high impact on the turbulent structures, an exclusive study of curvature effects requires a compensation of these pressure variations (XXQUELLE). 
 Therefore, it is possible to study curved \acrshort{tbl} under zero-pressure gradient conditions (see XXX), or to impose a defined pressure gradient (see XXX). 
-In experimental studies a defined pressure distribution is achieved by adjusting the position of the upper wall \citep{so_experimental_nodate},\citep{johnston_experimental_nodate} \citep{gillis_turbulent_1983}. 
+In experimental studies a defined pressure distribution is achieved by adjusting the position of the upper wall \citep{so_experimental_nodate, johnston_experimental_nodate, gillis_turbulent_1983}. 
 In simulations 
 XX some techniques used in simulations papers (ScHLATTER).
 
@@ -169,19 +221,19 @@ The pressure gradient forces the fluid particle in the opposite direction \citep
 
 
 
-The analysis of curved \acrshort{tbl} covers some difficulties 
+% The analysis of curved \acrshort{tbl} covers some difficulties 
 
-- presure gradient in curved tbl
-\cite{so_experimental_nodate}: liste page 93-94 --> beobachtungen an convex tbl
-\cite{so_experimental_nodate}: p 2: physical processes in TBl through curvature
-\cite{so_experimental_nodate}: p 8: pressure gradient in curved wall exists
-\cite{so_experimental_nodate}: p 29. without pressure adjustment: pressure decreases slow when near the start of curvature, steep decraese oin curvature
+% - presure gradient in curved tbl
+% \cite{so_experimental_nodate}: liste page 93-94 --> beobachtungen an convex tbl
+% \cite{so_experimental_nodate}: p 2: physical processes in TBl through curvature
+% \cite{so_experimental_nodate}: p 8: pressure gradient in curved wall exists
+% \cite{so_experimental_nodate}: p 29. without pressure adjustment: pressure decreases slow when near the start of curvature, steep decraese oin curvature
 
-why is it important?
+% why is it important?
 
-gillis and johnston: some general states
-History effects and near equilibrium in  adverse-pressure-gradient turbulent  boundary layers (Bobke)
-Y. Morita, S. Rezaeiravesh, N. Tabatabaei, R. Vinuesa, K. Fukagata, P. Schlatter, Applying Bayesian optimization with Gaussian process regression to computational fluid dynamics problems,
+% gillis and johnston: some general states
+% History effects and near equilibrium in  adverse-pressure-gradient turbulent  boundary layers (Bobke)
+% Y. Morita, S. Rezaeiravesh, N. Tabatabaei, R. Vinuesa, K. Fukagata, P. Schlatter, Applying Bayesian optimization with Gaussian process regression to computational fluid dynamics problems,
 
 \section{Optimization??}
 
