@@ -2,8 +2,7 @@
 \chapter{Basics}
 \label{chap:basics}
 
-\section{DNS} 
-\label{sec:DNSbasics}
+
 
 
 
@@ -18,29 +17,26 @@
 % - definition of boundary layer thickness, displ. thickness, momentum thickness
 % - corresponding Reynolds numbers
 % - shape factor
-
-The description of a fluid is based on the continuum hypothesis. 
-It states that the motion of molecules in a fluid are continuous (XXQUELLE).
-In addition we take the viscous property of fludis into account.
-XX Hhier noch wie continuity equation erreicht wird
-With that hypothesis we can define the continuity equation which states that ....
-For viscous incompressible flows this equation is defined as
+XX nette einleitung
+The description of fluids is based on three physical principles.
+The first  states that the motion of molecules in a fluid are continuous (XXQUELLE).
+In addition we take the viscous property of fluids into account which relates shear stresses to XX 
+And as a last assumption we want the mass conservation to hold.
+With these assumptions we can define the \benennung{continuity equation} for viscous incompressible flows as
 
 \begin{equation}
     \frac{\partial \rho}{\partial t} + \frac{\partial (\rho u_i)}{\partial x_i} = \frac{\partial u_i}{\partial x_i} = 0
 \end{equation}
 
-
 The second important equation describes the momentum conservation of a fluid.
-This so-called \name{Navier-Stokes-equation (NSE)} can be written as 
+This so-called \benennung{\acrfull{nse}} can be written as 
 
 \begin{equation}
     \frac{\mathrm{D}u_i}{\mathrm{D}t} = \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} = -\frac{1}{\rho} \frac{\partial p}{\partial x_i} + \nu \frac{\partial^2 u_i}{\partial x_j \partial x_j}
 \end{equation}
 
-With these equations the motions of a fluid can be described (XXQUELLE).
-The Navier stokes equations hold universally for all kind of flows.
-However, one can split the behaviour of fluids into three groups with diffrent characteristic properties.
+With these equations the motions of a fluid is fully described, since it holds for most kind of flows (XXQUELLE).
+However, one can split the behaviour of fluids into three groups with different characteristic properties.
 These categories are defined as laminar, turbulent and transitional. 
 If a flow acts in the laminar regime its streamlines stay parallel and the flow is time-independent.
 IN the turbulnet regime the behaviour of the flow is chaotic and time-dependent.
@@ -104,6 +100,8 @@ To describe the boundary-layer with the Reynolds number, different Reynolds numb
     \nu : \text{viscosity} \nonumber
 \end{gather}
 
+
+%XX das hier weglassen statdessen mehr über non-dim und C_p/ C_f? 
 From the \acrfull{nse} we can derive the boundary layer equations for a 2D boundary layer over a fixed flat wall for an incompressible fluid. 
 
 \begin{align}
@@ -134,17 +132,24 @@ With these quantities the original length and velocity scales can be nondimensio
 \end{equation}
 
 The advantage of these non-dimensional scales is that they are universal for all wall buonded flows what enables the comparison between flows with different physical dimensions. XX unbedingt QUELLE XX
+XX hier noch loglaw 
 
 
 \subsubsection{Reynolds stresses}
 To measure velocities in a turbulent flow they are decomposed in a time averaged component $\langle \rangle$ and fluctuations $u_i'$. 
 
 \begin{equation}
-    u_i = \langle u_i \rangle + u_i' \equiv U_i + u_i' \text{ with } \langle u_i
+    u_i = \langle u_i \rangle + u_i' = U_i + u_i' \text{ with } \langle u_i'
 \rangle = 0\end{equation}
 
 represents the so-called \benennung{Reynolds decomposition}.
 Teh application of the reynolds decomposition on the \acrshort{nse} leads to the \acrfull{rans}. 
+
+\comment{
+\begin{equation}
+    \frac{\partial \langle u_i \rangle}{\partial t} + \frac{\partial \langle u_i \rangle \langle u_j \rangle}{\partial x_j} = -\frac{1}{\rho} \frac{\partial \langle p \rangle}{\partial x_i} + \frac{1}{\rho} \frac{\partial}{\partial x_j} \left(  \mu \left( \frac{\partial \langle u_i \rangle}{\partial x_j} + \frac{\partial \langle u_j \rangle}{\partial x_i} \right) + \langle u_i' u_j'\rangle \right)
+\end{equation}
+}
 
 From this one can extract one term as the \benennung{Reynolds stresses}.
 For turbulent flows the Reynolds stresses are important measures, since the transponrt of mean momentum is based on them \citep{moin_fundamentals_2024}. 
@@ -157,13 +162,29 @@ To get the Reynolds stresses, the mean $\langle \rangle$ of this product is take
 Although the mean of one fluctuation is zero, the product of two fluctuation components is not necessarily zero. 
 The diagonal entries therefore, contain the normal stresses $\langle u' u'\rangle, \langle v' v'\rangle, \langle w' w'\rangle$.
 The remaining entries contain the shear stresses.
-Here the only non-zero entry is $\langle u' v'\rangle$.
+Here the only non-zero entry is $\langle u' v'\rangle$ \citep{schlichting_boundary-layer_2017}.
+The issue about this tensor is, that we cannot directly compute it.
+With the continuity equation and the \acrshort{nse} in three directions we have four equations to derive the pressure and the three velocity components.
+With the Reynolds stress tensor we have six additional terms we have to solve.
+This problem is called the \benennung{closure problem} \citep{wilcox_turbulence_2006}.
+To solve this, there are different approaches how to derive more equations such that all terms can be computed which is describe in detail in fundamental books like \citet{wilcox_turbulence_2006,pope_turbulent_2015} XXnoch eines.
+One can derive the trasnport equations for the REynolds stresses by XXX \citep{mansour_reynolds-stress_1988}
+For incompressible flows the non-dimensionalized transport equations can be stated as 
+\begin{gather}
+    \frac{\overline{\mathrm{D}}}{\overline{\mathrm{D}}t} \langle u_i' u_j' \rangle = P_{ij} + T_{ij} + D_{ij} + \Pi_{ij} - \epsilon_{ij}, \\[4pt]
+    \begin{aligned}
+        P_{ij} &\colon \text{production rate,} & \quad \epsilon_{ij} &\colon \text{dissipation rate,} \\
+        T_{ij} &\colon \text{turbulent transport rate,} & \quad D_{ij} &\colon \text{viscous diffusion rate,} \\
+        \Pi_{ij} &\colon \text{velocity pressure-gradient term.}
+    \end{aligned} \notag
+\end{gather}
+
+XX gelichung noch umschrieben dass convection noch einzeln ist
 
 
 
-XX REYNOLDSSTRESSES PRODUCTION TERMS
 
-\subsection{zero pressure gradient tbl}
+\subsection{Clauser parameter in turbulent boundary layers}
 
 In boundary layers the free-stream (XX stimmt das?) pressure gradient plays a crucial role since it impacts the flow behaviour significantly (XXQUELLE).
 From \autoref{eq:NSEy} we see that the pressure for a \acrshort{tbl} along a flat wall is constant in wall-normal direction.
@@ -219,21 +240,27 @@ The pressure gradient forces the fluid particle in the opposite direction \citep
  In addition, they found that the law of the wall coincides for the curved wall with the same parameters as for flat wall measurements. 
 
 
+\section{Simulation techniques} 
+\label{sec:SimBasics}
 
+For the simulation of turbulent flows differnet methods can be used. 
+The decision about the used approach depends on the characteristics of the flow and the requirements for the solution.
+One straight-forward approach is the \acrfull{dns}.
+THis method requires solving of the \acrshort{nse} to compute $U(x,t)$.
+\acrshort{dns} is the computational most expensive approach since all length and time scales are resolved \citep{pope_turbulent_2015} which one the other hand gives the most accurate results.
+Especially if the small turbulent scales are of interest, the usage of \acrshort{dns} is inevitable.
+Because of the high computational costs \acrshort{dns} are restricted to low to moderate Reynolds numbers and mostly used for research.
+The simulation method of \acrshort{dns} is mainly used within this project.
+Additional simulations were performed with \acrfull{rans} simulations.
+In this approach the \acrshort{rans} are solved instead of the full \acrshort{nse}.
+As a consequence only the mean velocity field is calculated.
+The effect of turbulence is summarized in the Reynolds stress tensor.
+To avoid the computation of this tensor multiple approaches were developed to model it.
+Since the models have different characteristics and accuracies the model choice can have significant impact on the simulation (XX QUELLE).
+These simulations are computational much easier to realize.
+If the exact behaivour of the turbulent scales is not important but only is interested in the effect of the turbulnece on the flow \acrshort{rans} simulations build a reasonable compromise (XXQUELLE).
+Therefore this simulation method finds application in multiple industrial environments.
 
-% The analysis of curved \acrshort{tbl} covers some difficulties 
-
-% - presure gradient in curved tbl
-% \cite{so_experimental_nodate}: liste page 93-94 --> beobachtungen an convex tbl
-% \cite{so_experimental_nodate}: p 2: physical processes in TBl through curvature
-% \cite{so_experimental_nodate}: p 8: pressure gradient in curved wall exists
-% \cite{so_experimental_nodate}: p 29. without pressure adjustment: pressure decreases slow when near the start of curvature, steep decraese oin curvature
-
-% why is it important?
-
-% gillis and johnston: some general states
-% History effects and near equilibrium in  adverse-pressure-gradient turbulent  boundary layers (Bobke)
-% Y. Morita, S. Rezaeiravesh, N. Tabatabaei, R. Vinuesa, K. Fukagata, P. Schlatter, Applying Bayesian optimization with Gaussian process regression to computational fluid dynamics problems,
 
 \section{Optimization??}
 

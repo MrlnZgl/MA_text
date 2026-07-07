@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -24,6 +24,14 @@ J.~C. Gillis and J.~P. Johnston.
 \bibitem[Johnston et~al.()Johnston, Moffat, and Kays]{johnston_experimental_nodate}
 J.~P. Johnston, R.~J. Moffat, and W.~M. Kays.
 \newblock Experimental {Data} and {Model} for the {Turbulent} {Boundary} {Layer} on a {Convex}, {Curved} {Surface}.
+
+\bibitem[Mansour et~al.(1988)Mansour, Kim, and Moin]{mansour_reynolds-stress_1988}
+N.~N. Mansour, J.~Kim, and P.~Moin.
+\newblock Reynolds-stress and dissipation-rate budgets in a turbulent channel flow.
+\newblock \emph{Journal of Fluid Mechanics}, 194:\penalty0 15--44, Sept. 1988.
+\newblock ISSN 0022-1120, 1469-7645.
+\newblock \doi{10.1017/S0022112088002885}.
+\newblock URL \url{https://www.cambridge.org/core/product/identifier/S0022112088002885/type/journal_article}.
 
 \bibitem[Menter(1994)]{menter_two-equation_1994}
 F.~R. Menter.
@@ -74,5 +82,11 @@ R.~M.~C. So and G.~L. Mellor.
 \newblock ISSN 0022-1120, 1469-7645.
 \newblock \doi{10.1017/S0022112073000030}.
 \newblock URL \url{https://www.cambridge.org/core/product/identifier/S0022112073000030/type/journal_article}.
+
+\bibitem[Wilcox(2006)]{wilcox_turbulence_2006}
+D.~C. Wilcox.
+\newblock \emph{Turbulence modeling for {CFD}}.
+\newblock DCW Industries, La Cãnada, Calif, 3rd ed edition, 2006.
+\newblock ISBN 978-1-928729-08-2.
 
 \end{thebibliography}

@@ -15,45 +15,45 @@ Warning--empty year in johnston_experimental_nodate
 Warning--empty journal in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
-You've used 10 entries,
+You've used 12 entries,
             2773 wiz_defined-function locations,
-            677 strings with 6828 characters,
-and the built_in function-call counts, 4301 in all, are:
-= -- 419
-> -- 186
-< -- 9
-+ -- 64
-- -- 54
-* -- 349
-:= -- 684
-add.period$ -- 50
-call.type$ -- 10
-change.case$ -- 47
-chr.to.int$ -- 10
-cite$ -- 26
-duplicate$ -- 199
-empty$ -- 358
-format.name$ -- 76
-if$ -- 891
+            693 strings with 7218 characters,
+and the built_in function-call counts, 5144 in all, are:
+= -- 500
+> -- 226
+< -- 10
++ -- 78
+- -- 66
+* -- 418
+:= -- 821
+add.period$ -- 60
+call.type$ -- 12
+change.case$ -- 57
+chr.to.int$ -- 12
+cite$ -- 30
+duplicate$ -- 240
+empty$ -- 428
+format.name$ -- 90
+if$ -- 1066
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 13
-newline$ -- 78
-num.names$ -- 40
-pop$ -- 85
+missing$ -- 16
+newline$ -- 92
+num.names$ -- 48
+pop$ -- 101
 preamble$ -- 1
-purify$ -- 38
+purify$ -- 46
 quote$ -- 0
-skip$ -- 135
+skip$ -- 161
 stack$ -- 0
-substring$ -- 148
-swap$ -- 14
+substring$ -- 171
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 95
+type$ -- 112
 warning$ -- 6
-while$ -- 40
+while$ -- 48
 width$ -- 0
-write$ -- 174
+write$ -- 209
 (There were 7 warnings)
