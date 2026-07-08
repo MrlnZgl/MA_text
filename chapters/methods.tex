@@ -169,21 +169,33 @@ First, the mesh has to be regenerated.
 It is not possible to use a mesh created in \name{gmsh} and transfer it to \name{OpenFOAM}, since the code has to adapt the domain and the mesh after every iteration of the optimization.
 Therefore, the domain has to be regenerated in every iteration with \verb|blockMesh|.
 As a consequence the domain has to be defined in \verb|blockMeshDict|.
-The plane part is meshed with rectangular blocks.
-The domain close to the lower wall has a progression factor included such that the resolution increases towards the wall. 
-In the curved part the lower wall is defined through a circle arc similar to the \name{gmsh} mesh used in \name{neko}. 
-The upper wall is determined by a spline. 
+To ensure that the results from the \name{OpenFOAM} simulation is transferrable into \name{neko}, we have to ensure a quite similar setup.
+Therefore the domain has the same curvature and also an inlet and outlet region similar to the \acrshort{dns} domain.
+However the inlet is shorter than the one for the \acrshort{dns}.
+The initial condition for the \name{OpenFOAM} simulaiton is extracted at a positon $s_{extr}$ in the inlet region of the \acrshort{dns} domain.
+Therefore the boundary layer in the \acrshort{rans} simulation only needs the remaining inlet region $s_{straight} - s_{extr}$ to develop similar to the \acrshort{dns} boundary layer.
+This is shown in \autoref{fig:openfoamDomain}.
+Compared to the domain used for the DNS, the height of the domain is increased to $\delta_{99}*XX = XX$.
+This modification brings some simplifications when the results of the optimized \name{OpenFOAM} simulation are transferred to the DNS domain which will be described later (see XX).
+To enable the adaption of the \benennung{design coordinates} cannot be defined as fix circular arc.
+Instead it is defined as spline.
 The points defining the spline are the coordinates $x_{\theta_i}$, $y_{\theta_i}$ of the \benennung{design parameters} $\theta_i$ whose position is modified to minimize the \benennung{objective function}.  
 The optimization code is constructed such that it modifies position of the \benennung{design parameters} in wall-normal direction. 
 Since the \benennung{design space} is curved, the wall-normal direction does not correspond to a fixed axis. 
 Hence, their position has to be transformed in $x-$ and $y-$ coordinates to define the spline correctly in space.
-Compared to the domain used for the DNS, the height of the domain is increased to $\delta_{99}*XX = XX$.
-This modification brings some simplifications when the results of the optimized \name{OpenFOAM} simulation are transferred to the DNS domain which will be described later (see XX).
+It has to be noticed that the straight inlet region is also part of the spline, due to the positioning of the \benennung{design parameters}.
+This will be discussed in detail in XX.
+To match the lower wall to this configuration we defined it also as spline but increased the number on control points to a very high level, such that it is quite similar to an analytical circular arc.
+The tail is not part of the splines, since their no optimization is needed.
+It is meshed in a block with straight vertices.
+The resolution of the mesh increases near the wall to ensure $y^+ = 1$ near the lower wall.
+ 
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{openfoam_mesh.pdf}
-    \caption{Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX)}
+    \caption{Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX): hier kein mesh, dafür maße anbringen}
     \label{fig:openfoamDomain}
 \end{figure}
 
@@ -209,20 +221,31 @@ For this part of the inflow the last interpolated value is copied and added in t
 
 
 \subsection{Optimization settings} \label{subsec:opt_settings}
-
-- how many design varibales
-- where are they located
-- why? 
-how many iterations
-- all settings done for the optimization
-
-
+\comment{
 The results of this simulation are used as inflow conditino for the following RANS simulations in \name{OpenFOAM}. 
 More precisely the measure of U, k and omega at the positoin of $Re_theta = 1000 $ are extracted. 
-Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta = 1000$ from the DNS is used as initial condition at the inflow of the domain in the RANS simulation. 
+Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta = 1000$ from the DNS is used as initial condition at the inflow of the domain in the RANS simulation.}
 
 The general settings ofr the optimization are the same for all performed tests.
 However, the number and position of the \benennung{design parameters} varies depending on the case.
+To reach an optimal configuration for a small $\beta$ two different distributions of the \benennung{design points} were tested.
+Since we wanted to enforce a \acrshort{zpg} already at the start of the curvature we positioned the first \benennung{design point} at $s=2/3 *s_{straight} = 43$. 
+In the first ocnfiguariont we distributed the points uniform along the spline from $s=43$ to the end of the curvature as depicted in fig XX.
+In addition we tested a sensible distribution of the points.
+To do this we first performed some previous tests to identify the most sensible areas along the spline, and then seek the \benennung{design points} there.
+In all cases we started these two configurations with 5 \benennung{design points}.
+Depending on the results we decided whether we needed more control points to further reduce the residual of the optimization.
+For the three different cases we tested we ended up with differnet numbers of control points.
+Because of the varying geometry of the cases, the capability of the optimization algorithm varied.
+XX blabla concret für cases
+IN figure XX we see the progression of the clauser parameter along the streamwise direction s. (XX in figure vergleich zw optimiertem und unoptimiertem verlauf?)
+We can see that at the start of the curvature beta has a significantly high negative spike in the reference case.
+With the optimization this spike is reduced.
+However with the sharp change from traight to curved wall, it will not be possible to compensate the spike completely.
+
+
+
+\comment{
 For all cases the optimization is started with 5 \benennung{design vairbales} equially spaced along the curvature. 
 For the case with the smmel radius and 30° curvature this setup gave insufficient small residuals. 
 Therefore successively more \benennung{design points} where positioned in between the existing ones especially where the value of the clauser parameter was higher than the average.
@@ -251,7 +274,7 @@ XXX shorten optimisation lengthXX??
 Thsi new setup then lead to the beta progression shown in figure XX.
 here we can see that the neegaitve spike at hte beginning of the curvature already recude significantly compered to the previous figure.
 However it did not ddisappear completely.
-XX blabl warum??
+XX blabl warum??}
 
 XX Procedure für R550deh18 and R100deg90
 
@@ -270,7 +293,7 @@ The values are extracted from the RANS simulation at the wand normal position wh
 This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
 
 \subsection{Data extraction} \label{subsec:data_extr}
-- how to extract data from openfoam and impose them on neko domain?
+
 Once the optimisation of the \name{OpenFOAM} simulation is finished, the next step is to transfer the relevant quantities into the \name{neko} simulation.
 As stated before, the domain use for the DNS is smaller in wall-normal direction. 
 Threfore the shape modification from the RANS simulation is not transferred.
@@ -282,23 +305,14 @@ First the simulation with the best optimization result is detected and stored in
 The \name{Python} script reads the coordinates from the C/Cx/Cy files and the velocites from the corresponding fields. 
 At a user-defined height the velocity values then are interpolated from the surrounding cells. 
 The interpolated velocity are stored in a csv file. 
-This file is read in the f9o file, where the velocities in the curved section of the DNS domain are defined by these values. 
-XX entweder blending oder übertragung im inflow beschreibenXX 
-
-
+The integration of these values in the \acrshort{dns} is described in the next section.
 
 
 \section{simulations with ZPG}
 
-- application of velocity
-- domain and all setting similar to reference simulations
-- blending
-- interpolation to top wall points
+THe setup of the simulations with the optimized boundary conditions at the upper wall have despite from this similar settings as the ones for the curved \acrshort{tbl} described in XX.
 
 \paragraph{Velocity integration}
-- read from field field
-- interpolate on top wall
--- check code
 
 To run the \acrshort{dns} with \acrfull{zpg} the velocities extracted from \name{OpenFOAM} need to be applied as boundary condition on the \name{neko} domain. 
 This is implemented in the user f90 file. 
@@ -311,10 +325,6 @@ Hence, also a part of the straight inflow in front of the curvature, and a part 
 In the parts of the domain that are not included, (1,0,0) is applied as before. 
 To avoid sharp changes of the boundary condition when changing from 1,0, to the optimized velocities, a blending is inclued.
 This blends the edge value of the optimized velocities into the 1,0,0 region in 10 length units in streamwise direciton. 
-
-The rest of the setup is similar to the one used in the reference simulations for curved \acrshort{tbl} simulations described in XX.
-
-
 
 
 \section{General workflow}

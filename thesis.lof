@@ -3,10 +3,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Initial condition channel simulaiton}}{9}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Initial condition for plane TBL with blasius profile XX Maße einfügen}}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}}{12}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX)}}{13}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Initial condition channel simulaiton}}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Initial condition for plane TBL with blasius profile XX Maße einfügen}}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}}{13}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX): hier kein mesh, dafür maße anbringen}}{14}{figure.caption.22}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Worklow}}{17}{figure.caption.27}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
