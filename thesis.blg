@@ -8,52 +8,52 @@ A level-1 auxiliary file: chapters/literaturverzeichnis.aux
 The style file: abbrvnat.bst
 A level-1 auxiliary file: chapters/anhang1.aux
 Database file #1: bibliography_MA.bib
-Warning--I didn't find a database entry for "schlatter_orlu_2010"
 Warning--empty journal in johnston_experimental_nodate
 Warning--empty year in johnston_experimental_nodate
 Warning--empty year in johnston_experimental_nodate
+Warning--empty year in schlatter_leveraging_nodate
 Warning--empty journal in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
-You've used 16 entries,
+You've used 27 entries,
             2773 wiz_defined-function locations,
-            730 strings with 8529 characters,
-and the built_in function-call counts, 7134 in all, are:
-= -- 688
-> -- 346
-< -- 11
-+ -- 118
-- -- 102
-* -- 606
-:= -- 1136
-add.period$ -- 82
-call.type$ -- 16
-change.case$ -- 81
-chr.to.int$ -- 16
-cite$ -- 38
-duplicate$ -- 318
-empty$ -- 577
-format.name$ -- 132
-if$ -- 1478
+            815 strings with 11378 characters,
+and the built_in function-call counts, 12392 in all, are:
+= -- 1180
+> -- 661
+< -- 17
++ -- 225
+- -- 198
+* -- 1060
+:= -- 1977
+add.period$ -- 136
+call.type$ -- 27
+change.case$ -- 145
+chr.to.int$ -- 27
+cite$ -- 61
+duplicate$ -- 533
+empty$ -- 975
+format.name$ -- 245
+if$ -- 2563
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 19
-newline$ -- 122
-num.names$ -- 64
-pop$ -- 137
+missing$ -- 30
+newline$ -- 198
+num.names$ -- 108
+pop$ -- 245
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 120
 quote$ -- 0
-skip$ -- 219
+skip$ -- 382
 stack$ -- 0
-substring$ -- 228
-swap$ -- 25
+substring$ -- 387
+swap$ -- 43
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 156
-warning$ -- 6
-while$ -- 64
+type$ -- 267
+warning$ -- 7
+while$ -- 109
 width$ -- 0
-write$ -- 280
+write$ -- 463
 (There were 7 warnings)

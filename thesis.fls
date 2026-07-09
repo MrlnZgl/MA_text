@@ -635,10 +635,10 @@ INPUT ./chapters/theory.tex
 INPUT chapters/theory.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/eccc1095.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecsl1095.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/eccc1095.tfm
 INPUT ./chapters/methods.tex
 INPUT ./chapters/methods.tex
 OUTPUT chapters/methods.aux
@@ -683,10 +683,6 @@ OUTPUT chapters/anhang1.aux
 INPUT ./chapters/anhang1.tex
 INPUT ./chapters/anhang1.tex
 INPUT chapters/anhang1.tex
-INPUT ./images/LSTM_Logo.pdf
-INPUT ./images/LSTM_Logo.pdf
-INPUT ./images/LSTM_Logo.pdf
-INPUT ./images/LSTM_Logo.pdf
 INPUT thesis.aux
 INPUT ./chapters/introduction.aux
 INPUT ./chapters/introduction.aux

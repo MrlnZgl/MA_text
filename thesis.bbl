@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -13,6 +13,14 @@ J.~Appelbaum, M.~Kloker, and C.~Wenzel.
 \newblock \doi{10.1007/s00162-024-00729-7}.
 \newblock URL \url{https://link.springer.com/10.1007/s00162-024-00729-7}.
 
+\bibitem[Bobke et~al.(2017)Bobke, Vinuesa, Örlü, and Schlatter]{bobke_history_2017}
+A.~Bobke, R.~Vinuesa, R.~Örlü, and P.~Schlatter.
+\newblock History effects and near equilibrium in adverse-pressure-gradient turbulent boundary layers.
+\newblock \emph{Journal of Fluid Mechanics}, 820:\penalty0 667--692, June 2017.
+\newblock ISSN 0022-1120, 1469-7645.
+\newblock \doi{10.1017/jfm.2017.236}.
+\newblock URL \url{https://www.cambridge.org/core/product/identifier/S0022112017002361/type/journal_article}.
+
 \bibitem[Clauser(1954)]{clauser_turbulent_1954}
 F.~H. Clauser.
 \newblock Turbulent {Boundary} {Layers} in {Adverse} {Pressure} {Gradients}.
@@ -21,6 +29,16 @@ F.~H. Clauser.
 \newblock \doi{10.2514/8.2938}.
 \newblock URL \url{https://arc.aiaa.org/doi/10.2514/8.2938}.
 
+\bibitem[Davidson(2015)]{davidson_turbulence_2015}
+P.~A. Davidson.
+\newblock \emph{Turbulence: an introduction for scientists and engineers}.
+\newblock Oxford University Press, Oxford, United Kingdom ; New York, NY, United States of America, second edition edition, 2015.
+\newblock ISBN 978-0-19-872258-8 978-0-19-872259-5.
+
+\bibitem[Ganagdhar(2025)]{ganagdhar_bayesian_2025}
+M.~Ganagdhar.
+\newblock Bayesian {Optimization} of free-stram conditions for a target pressure-gradient parameter beta in various boundary layers flows using {OpenFOAM}, 2025.
+
 \bibitem[Gillis and Johnston(1983)]{gillis_turbulent_1983}
 J.~C. Gillis and J.~P. Johnston.
 \newblock Turbulent boundary-layer flow and structure on a convex wall and its redevelopment on a flat wall.
@@ -28,6 +46,14 @@ J.~C. Gillis and J.~P. Johnston.
 \newblock ISSN 0022-1120, 1469-7645.
 \newblock \doi{10.1017/S0022112083002992}.
 \newblock URL \url{https://www.cambridge.org/core/product/identifier/S0022112083002992/type/journal_article}.
+
+\bibitem[Hosseini et~al.(2016)Hosseini, Vinuesa, Schlatter, Hanifi, and Henningson]{hosseini_direct_2016}
+S.~Hosseini, R.~Vinuesa, P.~Schlatter, A.~Hanifi, and D.~Henningson.
+\newblock Direct numerical simulation of the flow around a wing section at moderate {Reynolds} number.
+\newblock \emph{International Journal of Heat and Fluid Flow}, 61:\penalty0 117--128, Oct. 2016.
+\newblock ISSN 0142727X.
+\newblock \doi{10.1016/j.ijheatfluidflow.2016.02.001}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0142727X16300169}.
 
 \bibitem[Johnston et~al.()Johnston, Moffat, and Kays]{johnston_experimental_nodate}
 J.~P. Johnston, R.~J. Moffat, and W.~M. Kays.
@@ -65,6 +91,14 @@ P.~Moin and W.~H.~R. Chan.
 \newblock \doi{10.1017/9781009431385}.
 \newblock URL \url{https://www.cambridge.org/highereducation/product/9781009431385/book}.
 
+\bibitem[Morita et~al.(2022)Morita, Rezaeiravesh, Tabatabaei, Vinuesa, Fukagata, and Schlatter]{morita_applying_2022}
+Y.~Morita, S.~Rezaeiravesh, N.~Tabatabaei, R.~Vinuesa, K.~Fukagata, and P.~Schlatter.
+\newblock Applying {Bayesian} optimization with {Gaussian} process regression to computational fluid dynamics problems.
+\newblock \emph{Journal of Computational Physics}, 449:\penalty0 110788, Jan. 2022.
+\newblock ISSN 00219991.
+\newblock \doi{10.1016/j.jcp.2021.110788}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0021999121006835}.
+
 \bibitem[Pargal et~al.(2022)Pargal, Wu, Yuan, and Moreau]{pargal_adverse-pressure-gradient_2022}
 S.~Pargal, H.~Wu, J.~Yuan, and S.~Moreau.
 \newblock Adverse-pressure-gradient turbulent boundary layer on convex wall.
@@ -73,11 +107,23 @@ S.~Pargal, H.~Wu, J.~Yuan, and S.~Moreau.
 \newblock \doi{10.1063/5.0083919}.
 \newblock URL \url{https://pubs.aip.org/pof/article/34/3/035107/2845400/Adverse-pressure-gradient-turbulent-boundary-layer}.
 
+\bibitem[Patel and Sotiropoulos(1997)]{patel_longitudinal_1997}
+V.~Patel and F.~Sotiropoulos.
+\newblock Longitudinal curvature effects in turbulent boundary layers.
+\newblock \emph{Progress in Aerospace Sciences}, 33\penalty0 (1-2):\penalty0 1--70, Jan. 1997.
+\newblock ISSN 03760421.
+\newblock \doi{10.1016/S0376-0421(96)00001-2}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0376042196000012}.
+
 \bibitem[Pope(2015)]{pope_turbulent_2015}
 S.~B. Pope.
 \newblock \emph{Turbulent flows}.
 \newblock Cambridge Univ. Press, Cambridge, 1. publ., 12. print edition, 2015.
 \newblock ISBN 978-0-521-59125-6 978-0-521-59886-6.
+
+\bibitem[Schlatter()]{schlatter_leveraging_nodate}
+P.~Schlatter.
+\newblock Leveraging pre-exascale {GPU} computing to answer two outstanding questions in wall turbulence ({WALL2Q}).
 
 \bibitem[Schlichting and Gersten(2017)]{schlichting_boundary-layer_2017}
 H.~Schlichting and K.~Gersten.
@@ -113,10 +159,40 @@ P.~Spalart, K.~Jansen, and G.~Coleman.
 \newblock URL \url{http://arxiv.org/abs/2409.00555}.
 \newblock arXiv:2409.00555 [physics.flu-dyn].
 
+\bibitem[Tanarro et~al.(2020)Tanarro, Vinuesa, and Schlatter]{tanarro_effect_2020}
+A.~Tanarro, R.~Vinuesa, and P.~Schlatter.
+\newblock Effect of adverse pressure gradients on turbulent wing boundary layers.
+\newblock \emph{Journal of Fluid Mechanics}, 883:\penalty0 A8, Jan. 2020.
+\newblock ISSN 0022-1120, 1469-7645.
+\newblock \doi{10.1017/jfm.2019.838}.
+\newblock URL \url{https://www.cambridge.org/core/product/identifier/S0022112019008383/type/journal_article}.
+
+\bibitem[Tennekes and Lumley(1972)]{tennekes_first_1972}
+H.~Tennekes and J.~L. Lumley.
+\newblock \emph{A first course in turbulence}.
+\newblock MIT Press, Cambridge, Mass, 1972.
+\newblock ISBN 978-0-262-20019-6.
+
+\bibitem[Vinuesa et~al.(2017)Vinuesa, Hosseini, Hanifi, Henningson, and Schlatter]{vinuesa_pressure-gradient_2017}
+R.~Vinuesa, S.~M. Hosseini, A.~Hanifi, D.~S. Henningson, and P.~Schlatter.
+\newblock Pressure-{Gradient} {Turbulent} {Boundary} {Layers} {Developing} {Around} a {Wing} {Section}.
+\newblock \emph{Flow, Turbulence and Combustion}, 99\penalty0 (3-4):\penalty0 613--641, Dec. 2017.
+\newblock ISSN 1386-6184, 1573-1987.
+\newblock \doi{10.1007/s10494-017-9840-z}.
+\newblock URL \url{http://link.springer.com/10.1007/s10494-017-9840-z}.
+
 \bibitem[Wilcox(2006)]{wilcox_turbulence_2006}
 D.~C. Wilcox.
 \newblock \emph{Turbulence modeling for {CFD}}.
 \newblock DCW Industries, La Cãnada, Calif, 3rd ed edition, 2006.
 \newblock ISBN 978-1-928729-08-2.
+
+\bibitem[Yang and Tucker(2016)]{yang_assessment_2016}
+X.~Yang and P.~G. Tucker.
+\newblock Assessment of turbulence model performance: {Large} streamline curvature and integral length scales.
+\newblock \emph{Computers \& Fluids}, 126:\penalty0 91--101, Mar. 2016.
+\newblock ISSN 00457930.
+\newblock \doi{10.1016/j.compfluid.2015.11.010}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0045793015003813}.
 
 \end{thebibliography}
