@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  9 JUL 2026 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  10 JUL 2026 17:47
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1333,24 +1333,17 @@ l.258 \include{chapters/introduction}
 
  (./chapters/introduction.tex
 chapter 1.
-
+)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49     \item c
-                urved BTL überarbeiten [2
-
-
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}])
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
 l.258 \include{chapters/introduction}
-                                      [3]
+                                      [2
+
+
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 \openout2 = `chapters/theory.aux'.
 
  (./chapters/theory.tex
@@ -1358,44 +1351,64 @@ chapter 2.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 
-      [4
+l.58 
+      [3
 
 
 
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.92 \end{gather}
+                  [4]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.103 \end{gather}
-                   [5]
+l.168 \end{equation}
+                     [5]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.178 \begin{gather}
-                     [6]
+l.234 \end{gather}
+                   [6]
+
+LaTeX Warning: Reference `eq:NSEy' on page 7 undefined on input line 250.
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.219 
+l.300 
        [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.290 
+l.336 
        [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [9])
 
@@ -1404,7 +1417,7 @@ l.290
 
  (./chapters/methods.tex
 chapter 3.
-<images/channel_IC.pdf, id=426, 1508.1171pt x 753.4823pt>
+<images/channel_IC.pdf, id=446, 1508.1171pt x 753.4823pt>
 File: images/channel_IC.pdf Graphic file (type pdf)
 <use images/channel_IC.pdf>
 Package pdftex.def Info: images/channel_IC.pdf  used on input line 35.
@@ -1417,7 +1430,7 @@ Package pdftex.def Info: images/channel_IC.pdf  used on input line 35.
 
 
  <./images/channel_IC.pdf>]
-<images/plane_TBL_IC.pdf, id=441, 1904.01291pt x 436.58328pt>
+<images/plane_TBL_IC.pdf, id=461, 1904.01291pt x 436.58328pt>
 File: images/plane_TBL_IC.pdf Graphic file (type pdf)
 <use images/plane_TBL_IC.pdf>
 Package pdftex.def Info: images/plane_TBL_IC.pdf  used on input line 69.
@@ -1429,7 +1442,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--107
 
  []
 
-<images/domain_paraview.pdf, id=477, 1592.29094pt x 618.1311pt>
+<images/domain_paraview.pdf, id=495, 1592.29094pt x 618.1311pt>
 File: images/domain_paraview.pdf Graphic file (type pdf)
 <use images/domain_paraview.pdf>
 Package pdftex.def Info: images/domain_paraview.pdf  used on input line 130.
@@ -1442,7 +1455,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [13]
 
 [14 <./images/domain_paraview.pdf>]
-<images/openfoam_mesh.pdf, id=510, 2162.0775pt x 1161.33875pt>
+<images/openfoam_mesh.pdf, id=528, 2162.0775pt x 1161.33875pt>
 File: images/openfoam_mesh.pdf Graphic file (type pdf)
 <use images/openfoam_mesh.pdf>
 Package pdftex.def Info: images/openfoam_mesh.pdf  used on input line 197.
@@ -1452,7 +1465,7 @@ Package pdftex.def Info: images/openfoam_mesh.pdf  used on input line 197.
 [15 <./images/openfoam_mesh.pdf>]
 
 [16]
-<images/flowchart_workflow.pdf, id=533, 378.76636pt x 563.68129pt>
+<images/flowchart_workflow.pdf, id=549, 378.76636pt x 563.68129pt>
 File: images/flowchart_workflow.pdf Graphic file (type pdf)
 <use images/flowchart_workflow.pdf>
 Package pdftex.def Info: images/flowchart_workflow.pdf  used on input line 339.
@@ -1533,22 +1546,26 @@ chapter A.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 50269 strings out of 473190
- 1157945 string characters out of 5715800
- 2009318 words of memory out of 5000000
- 72484 multiletter control sequences out of 15000+600000
+ 50271 strings out of 473190
+ 1157997 string characters out of 5715800
+ 2008314 words of memory out of 5000000
+ 72485 multiletter control sequences out of 15000+600000
  580684 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,17n,109p,10986b,736s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (34 pages, 29291559 bytes).
+Output written on thesis.pdf (34 pages, 29295125 bytes).
 PDF statistics:
- 827 PDF objects out of 1000 (max. 8388607)
- 704 compressed objects within 8 object streams
- 130 named destinations out of 1000 (max. 500000)
+ 842 PDF objects out of 1000 (max. 8388607)
+ 719 compressed objects within 8 object streams
+ 131 named destinations out of 1000 (max. 500000)
  266 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,2 +1,15 @@
 OpenFOAM
 inviscid
+tbl
+nse
+rans
+Prandtl
+Clauser
+fpg
+zpg
+apg
+dns
+neko
+pysemtools
+FAU
+RRZE
