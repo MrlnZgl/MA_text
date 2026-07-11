@@ -5,9 +5,11 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Initial condition channel simulaiton}}{11}{figure.caption.11}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Initial condition for plane TBL with blasius profile XX Maße einfügen}}{12}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}}{14}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX): hier kein mesh, dafür maße anbringen}}{15}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Worklow}}{18}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX): hier kein mesh, dafür maße anbringen}}{15}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Positioning of the design points}}{17}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Worklow}}{19}{figure.caption.25}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

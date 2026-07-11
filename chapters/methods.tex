@@ -108,8 +108,8 @@ In the \acrlong{so} the mesh is coarsened since this part of the domain is not r
 The imposed boundary and initial conditions are the same used for the plane \acrshort{tbl}. 
 However, they need some modifications due to the curvature.
 The boundary conditions are summarized in the following table: XXXXXXXX
-As initial condition the blasius boundary layer was used similar as for the plane \acrshort{tbl}.
-In the curved part the blasius profile is rotated such that it is formed in wall-normal direction. 
+As initial condition the Blasius boundary layer was used similar as for the plane \acrshort{tbl}.
+In the curved part the Blasius profile is rotated such that it is formed in wall-normal direction. 
 
 
 
@@ -121,13 +121,25 @@ This value is chosen since it has the same arclength as the case with $R_1$ and 
 Therefore the cases have a comparable curved section length, which corresponds $157 * \delta_{99}$. 
 The case with $R_1$ and $30$° corresponds $52 * \delta_{99}$.
 
-For both radii we tested the angles of $30$° and $90$° of a circular arc.
 
-XX Tabelle mit Fällen XX
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.05}
+    \caption{Overview of the tested curved TBL cases}
+    \label{tab:curved_cases}
+    \begin{tabular}{L{0.15\textwidth}|C{0.15\textwidth}C{0.1\textwidth}}
+        \toprule
+        {\textbf{Name}} & \textbf{Radius} &  \textbf{Arc} \\ \midrule
+        R100deg30 & $100\,\delta_{99}$ & $30$° \\ \hline
+        R100deg90 & $100\,\delta_{99}$ & $90$° \\\hline
+        R500deg18 & $500\,\delta_{99}$ & $18$° \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{domain_paraview.pdf}
+    \includegraphics[width=0.85\textwidth]{curvedDomain_IC.pdf}
     \caption{domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}
     \label{fig:paraviewDomain}
 \end{figure}
@@ -172,7 +184,7 @@ As a consequence the domain has to be defined in \verb|blockMeshDict|.
 To ensure that the results from the \name{OpenFOAM} simulation is transferrable into \name{neko}, we have to ensure a quite similar setup.
 Therefore the domain has the same curvature and also an inlet and outlet region similar to the \acrshort{dns} domain.
 However the inlet is shorter than the one for the \acrshort{dns}.
-The initial condition for the \name{OpenFOAM} simulaiton is extracted at a positon $s_{extr}$ in the inlet region of the \acrshort{dns} domain.
+The initial condition for the \name{OpenFOAM} simulation is extracted at a position $s_{extr}$ in the inlet region of the \acrshort{dns} domain.
 Therefore the boundary layer in the \acrshort{rans} simulation only needs the remaining inlet region $s_{straight} - s_{extr}$ to develop similar to the \acrshort{dns} boundary layer.
 This is shown in \autoref{fig:openfoamDomain}.
 Compared to the domain used for the DNS, the height of the domain is increased to $\delta_{99}*XX = XX$.
@@ -185,16 +197,17 @@ Since the \benennung{design space} is curved, the wall-normal direction does not
 Hence, their position has to be transformed in $x-$ and $y-$ coordinates to define the spline correctly in space.
 It has to be noticed that the straight inlet region is also part of the spline, due to the positioning of the \benennung{design parameters}.
 This will be discussed in detail in XX.
-To match the lower wall to this configuration we defined it also as spline but increased the number on control points to a very high level, such that it is quite similar to an analytical circular arc.
+The lower wall is defined as a straight edge first and then transfers into a circular arc.
 The tail is not part of the splines, since their no optimization is needed.
 It is meshed in a block with straight vertices.
 The resolution of the mesh increases near the wall to ensure $y^+ = 1$ near the lower wall.
- 
+
+%To match the lower wall to this configuration we defined it also as spline but increased the number on control points to a very high level, such that it is quite similar to an analytical circular arc.
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{openfoam_mesh.pdf}
+    \includegraphics[width=0.85\textwidth]{oF_domain_IC.pdf}
     \caption{Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX): hier kein mesh, dafür maße anbringen}
     \label{fig:openfoamDomain}
 \end{figure}
@@ -228,62 +241,80 @@ Then the \name{OpenFOAM} simulation is set up such that the profile at $Re_theta
 
 The general settings ofr the optimization are the same for all performed tests.
 However, the number and position of the \benennung{design parameters} varies depending on the case.
+
+\comment{
 To reach an optimal configuration for a small $\beta$ two different distributions of the \benennung{design points} were tested.
 Since we wanted to enforce a \acrshort{zpg} already at the start of the curvature we positioned the first \benennung{design point} at $s=2/3 *s_{straight} = 43$. 
-In the first ocnfiguariont we distributed the points uniform along the spline from $s=43$ to the end of the curvature as depicted in fig XX.
-In addition we tested a sensible distribution of the points.
+}
+For all cases the optimization is started with 5 \benennung{design variables} uniform distributed along the curvature. 
+For the case with the small radius and 30° curvature this setup gave insufficient small residuals. 
+Therefore successively more \benennung{design points} where positioned in between the existing ones, positioned where the Clauser parameter shows high variations.
+In the final configuration we used eight \benennung{design parameters} in the curved area.
+The optimization of this setup showed that at the start of the curvature a sharp \acrshort{fpg} spike shows up which is not yet controlled by the optimization.
+Since we wanted to enforce a \acrshort{zpg} already at the start of the curvature we needed to modify the optimization.
+To do this, first the current best setup was copied and its \benennung{design parameters} stored. 
+In the new optimization setup we focus only on the part near the start of the curvature.
+To modify the pressure gradient in this region it is necessary to position additional \benennung{design parameters} in the straight part. 
+We decided to add two more \benennung{design parameters}.
+One of them is positioned directly at the transition of the straight to the curved part.
+The second one is positioned at 2/3 the straight length behind the inflow.
+With these additional points the optimization range along the lower wall can be extended beyond the beginning of the curvature. 
+Since the length of this inflow region relative to the length of the whole optimization length along the curvature is quite small the addition of these points without changes in the optimization settings would not have a big effect to the progression of beta.
+That is because this region then only has low impact on the mean value of beta which is the one value optimized.
+In addition, this would enlarge the optimization dimension by 2 more dimension which would slow down the optimization significantly.
+Therefore, we choose a different method. 
+Since the optimization performed for the curved part only already showed quite good results, we took the optimized \benennung{design parameters} from there and adopt them in the new setup. 
+There we fixed the six downstream parameters of these 8 parameters, since they were already positioned quite good.
+In addition, we assumed that the modification at the inflow would not impact the pressure field near the end of the curvature too much.
+Hence, we only have two free \benennung{design points} in the curvature and two in the straight section in front of it which fastens the optimization.
+In addition, we apply a weight to the transition section of the optimization length to enlarge the impact of the new design points.
+We tested multiple other setups and distributions of the \benennung{design points} to ensure a proper result.
+The results of the different configurations are discussed in XX.
+For the other two cases we decided to directly follow the best working principle to position the \benennung{design variables}.
+
+\comment{
+XXX shorten optimisation lengthXX??
+Thsi new setup then lead to the beta progression shown in figure XX.
+here we can see that the neegaitve spike at hte beginning of the curvature already recude significantly compered to the previous figure.
+However it did not ddisappear completely.
+XX blabl warum??
+
+
+In the first configuration we distributed the points uniform along the spline from $s=43$ to the end of the curvature as depicted in fig XX.
+In addition, we tested a sensible distribution of the points.
 To do this we first performed some previous tests to identify the most sensible areas along the spline, and then seek the \benennung{design points} there.
+The optimization of this setup then leads to the progression of beta along the lower wall pictured in figure X.
+As we can see there the value of beta XXXX.
+HOwever, there is a sharp negative peak when the curvature starts.
+This means that with this set up the inflow in the curved part odes not fulfill a \acrshort{zpg}.
+}
 In all cases we started these two configurations with 5 \benennung{design points}.
 Depending on the results we decided whether we needed more control points to further reduce the residual of the optimization.
 For the three different cases we tested we ended up with differnet numbers of control points.
 Because of the varying geometry of the cases, the capability of the optimization algorithm varied.
 XX blabla concret für cases
+
+\comment{
 IN figure XX we see the progression of the clauser parameter along the streamwise direction s. (XX in figure vergleich zw optimiertem und unoptimiertem verlauf?)
 We can see that at the start of the curvature beta has a significantly high negative spike in the reference case.
 With the optimization this spike is reduced.
 However with the sharp change from traight to curved wall, it will not be possible to compensate the spike completely.
+}
 
 
-
-\comment{
-For all cases the optimization is started with 5 \benennung{design vairbales} equially spaced along the curvature. 
-For the case with the smmel radius and 30° curvature this setup gave insufficient small residuals. 
-Therefore successively more \benennung{design points} where positioned in between the existing ones especially where the value of the clauser parameter was higher than the average.
-In the final configuration 8 \benennung{design parameters} we used in the curved area.
-The optimization of this setup then leads to the progression of beta along the lower wall pictured in figure X.
-As we can see there the value of beta XXXX.
-HOwever, there is a sharp negative peak when the curvature starts.
-This means that with this set up the inflow in the curved part odes not fulfill a \acrshort{zpg}.
-Since we wanted to enforce a \acrshort{zpg} already at the start of the curvature we needed to modify the optimization.
-TO dio this, firs the curent best setup is copied and its \benennung{design parameters} stored. 
-IN the new optimization setup we focus only on the part near the start of the curvature.
-To modify the pressure gradient in this region it is necessary to position additional \benennung{design parameters} in the straight part. 
-We deiced to add two more \benennung{desgin parameters}.
-one of them is positioned directly at the transition of the straight to the curved part.
-The second one is positioned at 2/3 the straight length behind the inflow.
-With these additional points the optimization range along the lower wall can be extended beyond the beginning of the curvature. 
-Since the length of this inflow region relative to the length of the whole optimization length along the curvature is quite small the addiiton of these points without changes in the optimisation settings would not have a big effect to the progression of beta.
-Thats because this region then only has low impact on the mean value of beta which is the one value optimized.
-In addition this would enlarge the optimization dimension by 2 more dimension whcih would slow down the optimization significantly.
-Therefore we choose a different method. 
-Since the optimization performed for the curved part only already showed quite good results, we took the optimized \benennung{design parameters} from there and adopt them in the new setup. There we fixed the six downstream parameters of these 8 parameters, since they were already positoned quite good.
-IN addtion we assuemd that the modifcation at the inflow would not impact the pressure field near the end of the curvature too much.
-Hence, we only have two free \benennung{design points} in the cruvature and two in the straight section in front of it which fastens the optimization.
-In addition we apply a weight to the trasnsition section of the optimization length to enlarge the impact of the new design points. 
-XXX shorten optimisation lengthXX??
-Thsi new setup then lead to the beta progression shown in figure XX.
-here we can see that the neegaitve spike at hte beginning of the curvature already recude significantly compered to the previous figure.
-However it did not ddisappear completely.
-XX blabl warum??}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{OF_designPoints.pdf}
+    \caption{Positioning of the design points}
+    \label{fig:OF_designPOints}
+\end{figure}
 
 XX Procedure für R550deh18 and R100deg90
 
-
-XX hier noch das OPenfoma domain höher ist XX
 With this simulation setup the optimization process is started. 
 The first step of the optimization loop is to ste new boundary points q. 
-In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range. in the next step. 
-The domiain is build with the new boundary points and the \name{OpenFOAM} simulation is started. 
+In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range.
+In the next step the domain is build with the new boundary points and the \name{OpenFOAM} simulation is started. 
 When the simulation is finished, the postprocessing is performed to compute the current Clauser parameter $\beta$ and the residual R.
 As a last step the files and XX are updated. 
 If the optimization was performed for a certain number of steps the new boundary points q are selected with the bayesian optmization. 

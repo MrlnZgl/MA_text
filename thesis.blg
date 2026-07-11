@@ -4,6 +4,7 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/theory.aux
 A level-1 auxiliary file: chapters/methods.aux
+A level-1 auxiliary file: chapters/results.aux
 A level-1 auxiliary file: chapters/literaturverzeichnis.aux
 The style file: abbrvnat.bst
 A level-1 auxiliary file: chapters/anhang1.aux
@@ -17,7 +18,7 @@ Warning--empty year in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
 You've used 27 entries,
             2773 wiz_defined-function locations,
-            815 strings with 11378 characters,
+            816 strings with 11398 characters,
 and the built_in function-call counts, 12392 in all, are:
 = -- 1180
 > -- 661
