@@ -1,8 +1,11 @@
 
 \chapter{Basics}
 \label{chap:basics}
-The following chapter introduces the foundational theory and simulation techniques that will be used throughout this work. As our study focuses on turbulent boundary layers \benennung{\acrfull{tbl}}, we provide a brief overview of the theoretical background to these flows. Next, we discuss the necessity of this work within the context of relevant literature focusing on curved boundary layers. The final section outlines the applied optimisation method and provides an overview of the tools used. \info{Absatz sprachlich verbessert}
 
+The following chapter introduces the foundational theory and simulations techniques that will be used throughout this work.
+Since we study \benennung{\acrfull{tbl}} we give a short overview about the theoretical background of these flows.
+Following, the necessity of this work is discussed within the context of relevant literature focussing on curved boundary layers.
+The last section outlines the applied optimization method and gives an overview about the used tools.
 
 \section{Wall-bounded turbulence}\label{sec:turbulenceTheory}
 
@@ -16,56 +19,51 @@ The following chapter introduces the foundational theory and simulation techniqu
 % - corresponding Reynolds numbers
 % - shape factor
 
-The description of fluids is based on three physical principles. \unsure{Kommen die drei Prinzipien jetzt sofort?, oder bezieht sich das auch auf den Text hinter Eq. 2.1?}
-The first one  states that a fluid can be treated as a continuum \citep{schlichting_boundary-layer_2017} \change{Hört sich an, wie ne alte Erkenntnis, dann gehört hier als erstes eine alte Originalquelle hin}.
-In addition, we take the viscous property of fluids into account, i.e.~a Newtonian fluid relates shear stresses to the rate of strain \citep{tennekes_first_1972}
-Finally, it is assumed that the law of mass conservation  holds.
-Using this, the \benennung{continuity equation} for viscous incompressible flows is given 
-as\improve{Müssen die Variablen nicht eingeführt werden?, mind in einem Nomenklaturverzeochnis: $\rho: xxx$, gilt für die nächste Gleichung ebenfalls }
+The description of fluids is based on three physical principles.
+The first  states that a fluid can be treated as a continuum \citep{schlichting_boundary-layer_2017}.
+In addition, we take the viscous property of fluids into account which for a Newtonian fluid relates shear stresses to the rate of strain \citep{tennekes_first_1972}
+And as a last assumption we want the mass conservation to hold.
+With these assumptions we can define the \benennung{continuity equation} for viscous incompressible flows as
 
 \begin{equation}
     \frac{\partial \rho}{\partial t} + \frac{\partial (\rho u_i)}{\partial x_i} = \frac{\partial u_i}{\partial x_i} = 0
 \end{equation}
 
-The second relevant equation describes the momentum conservation of a fluid.
+The second important equation describes the momentum conservation of a fluid.
 These so-called \benennung{\acrfull{nse}} can be written as 
 
 \begin{equation}
     \frac{\mathrm{D}u_i}{\mathrm{D}t} = \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} = -\frac{1}{\rho} \frac{\partial p}{\partial x_i} + \nu \frac{\partial^2 u_i}{\partial x_j \partial x_j}
 \end{equation}
 
-These equations fully describe the motion of a fluid, since they are pplicable for most kind of flows (XXQUELLE).
-Building on this,\unsure{However??}  the behaviour of fluids is often split into three groups with different characteristic properties:
-These categories are defined as \emph{laminar},  \emph{turbulent} and  \emph{transitional}. 
+With these equations the motions of a fluid is fully described, since it holds for most kind of flows (XXQUELLE).
+However, one can split the behaviour of fluids into three groups with different characteristic properties.
+These categories are defined as laminar, turbulent and transitional. 
 If a flow acts in the laminar regime its streamlines do not cross and the flow is time-independent \citep{davidson_turbulence_2015}.
 In the turbulent regime the behaviour of the flow is chaotic and time-dependent (XXQUELLLE).
 It shows irregular time- and location-dependent random fluctuations \citep{pope_turbulent_2015}.
-Consequently, in turbulent flows enhanced mixing in the fluid can be observed (XXQUELLE).
-\improve{ein Halbsatz zu transitional}
+Through this behaviour, in turbulent flows much more mixing in the fluid can be observed (XXQUELLE).
 To describe the behaviour of a flow in terms of laminar or turbulent behaviour the \benennung{Reynolds number} is introduced as 
 \begin{equation}
     \mathrm{Re} = \frac{U L}{\nu}
 \end{equation}
 where $U$ and $L$ are reasonable velocity and length scales, and $\nu$ the viscosity of the fluid.
 Flows with low Reynolds numbers show laminar flow behaviour.
-With an increasing Reynolds number the fluid arrives first in the transitional region between laminar and turbulent until it reaches a fully turbulent state.
+With increasing Reynolds number the fluid arrives first the transitional region between laminar and turbulent until it reaches a fully turbulent state.
 At high Reynolds numbers one can observe a separation of scales with different behaviours \citep{pope_turbulent_2015}.
 One can split the turbulent motions into large- and small-scale motions.
-The large scales are mostly controlled by the outer constraints of the flow, e.g., its geometry and the boundary conditions.
-The behaviour of the small-scale motions, however, depends on the viscosity and the receiving energy from the large scales \citep{pope_turbulent_2015}, which makes their behaviour universal and independent of the specific flow case.
-This universal behaviour can be measured with statistics over a long time averaging.
+The large scales are mostly controlled by the outer constraints of the flow e.g. its geometry and the boundary conditions.
+The behaviour of the small-scale motions however depends on the viscosity and the receiving energy from the large scales \citep{pope_turbulent_2015}, which makes their behaviour universal and independent of the specific flow case.
+This universal behaviour can be measured with statistics over long time averaging.
 
 The most turbulent flows are bounded by at least one solid wall (XXQUELLE).
-They are decomposed into \benennung{external} and \benennung{internal} flows. 
-Internal flows are limited by outer walls like pipes or channels.
-External flows refer to flows which occur around a solid body like an airfoil or a wall.
-A characteristic feature of external flows is that the flow sufficiently from the body remains unaffected by its presence (XXQUELLE).
-The flow behaviour in the immediate vicinity of the wall is in all these\unsure{Hier wurden mE keine Fälle aufgezählt: also besser "most cases"?} cases very similar due to the universal nature of small scales turbulences \citep{pope_turbulent_2015}XX umformulieren.
-In the following section we will introduce a set of definitions to describe this near-wall behaviour.
-is remarkably similar due to the universal nature of the near-wall small-scale turbulence \citep{pope_turbulent_2015}. 
-%Therefore, it is useful to introduce a set of quantities that characterize this near-wall behaviour.
-
-Since this work focuses on boundary layers developing along a wall, the definitions introduced in the following are presented specifically for this configuration.
+One can split them into \benennung{external} and \benennung{internal} flows. 
+Internal flows are flows that are limited by outer walls like pipes or channels.
+External flows are flows which flow around a solid body like an airfoil or a wall.
+A characteristic of external flows is that the flow far away from the body being flowed around is not affected by it (XXQUELLE).
+The behaviour of the flow near the wall is in all these cases very similar because of the universal small scales \citep{pope_turbulent_2015}XX umformulieren.
+In the following section we will derive some definitions to describe this near-wall behaviour.
+Since this work focusses on boundary layers along a wall, the following chapter contains some definitions specified for this case.
 
 \subsection{Turbulent boundary layer theory} \label{subsec:TBLTheory}
 

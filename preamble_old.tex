@@ -215,16 +215,3 @@
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{3}		          % Kapitelnummerierung nur bis zur Ebene "subsection" durchgeführt
 \let\endgraph\endgraf			          % falls nicht die neueste Version installiert ist, würde endgraf eine Fehlermeldung produzieren
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% folgende Pakete für Kommentare direkt in der Tex-Source
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{xargs}       
-\usepackage[pdftex,dvipsnames]{xcolor} 
-\usepackage[colorinlistoftodos,prependcaption,textsize=tiny,obeyDraft]{todonotes}
-\presetkeys{todonotes}{inline}{}
-\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=yellow!25,bordercolor=red,#1]{#2}}
-\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
-\newcommandx{\improve}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
