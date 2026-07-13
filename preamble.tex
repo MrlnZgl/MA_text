@@ -25,7 +25,7 @@
 %\DisableLigatures{}
 
 \usepackage{fixltx2e}
-\usepackage{graphicx}	
+\usepackage[final]{graphicx}
 \usepackage{epstopdf}		       		% Ermöglicht die Einbindung von Bildern
 \usepackage{makeidx}		          	% Erzeugt Verzeichnisse
 \usepackage{array}
@@ -224,7 +224,16 @@
 \usepackage[pdftex,dvipsnames]{xcolor} 
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny,obeyDraft]{todonotes}
 \presetkeys{todonotes}{inline}{}
+\newcommandx{\fxunsure}[2][1=]{\todo[linecolor=red,backgroundcolor=yellow!25,bordercolor=red,#1]{#2}}
 \newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=yellow!25,bordercolor=red,#1]{#2}}
+\newcommandx{\fxchange}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
 \newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\fxinfo}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
 \newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\fximprove}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
 \newcommandx{\improve}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\fxbmark}[2][1=]{\todo[linecolor=red,backgroundcolor=red!50,bordercolor=red,size=small, #1]{#2}}
+\makeatletter% 
+\@mparswitchfalse%
+\makeatother%
+\normalmarginpar

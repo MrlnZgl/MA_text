@@ -1,7 +1,7 @@
 
 \chapter{Basics}
 \label{chap:basics}
-The following chapter introduces the foundational theory and simulation techniques that will be used throughout this work. As our study focuses on turbulent boundary layers \benennung{\acrfull{tbl}}, we provide a brief overview of the theoretical background to these flows. Next, we discuss the necessity of this work within the context of relevant literature focusing on curved boundary layers. The final section outlines the applied optimisation method and provides an overview of the tools used. \info{Absatz sprachlich verbessert}
+The following chapter introduces the foundational theory and simulation techniques that will be used throughout this work. As our study focuses on \benennung{\acrfull{tbl}}, we provide a brief overview of the theoretical background to these flows. Next, we discuss the necessity of this work within the context of relevant literature focusing on curved boundary layers. The final section outlines the applied optimisation method and provides an overview of the tools used. 
 
 
 \section{Wall-bounded turbulence}\label{sec:turbulenceTheory}
@@ -16,32 +16,40 @@ The following chapter introduces the foundational theory and simulation techniqu
 % - corresponding Reynolds numbers
 % - shape factor
 
-The description of fluids is based on three physical principles. \unsure{Kommen die drei Prinzipien jetzt sofort?, oder bezieht sich das auch auf den Text hinter Eq. 2.1?}
-The first one  states that a fluid can be treated as a continuum \citep{schlichting_boundary-layer_2017} \change{Hört sich an, wie ne alte Erkenntnis, dann gehört hier als erstes eine alte Originalquelle hin}.
+The description of fluids is based on three physical principles:
+The first one  states that a fluid can be treated as a continuum \citep{batchelor_introduction_2000}.
 In addition, we take the viscous property of fluids into account, i.e.~a Newtonian fluid relates shear stresses to the rate of strain \citep{tennekes_first_1972}
 Finally, it is assumed that the law of mass conservation  holds.
-Using this, the \benennung{continuity equation} for viscous incompressible flows is given 
-as\improve{Müssen die Variablen nicht eingeführt werden?, mind in einem Nomenklaturverzeochnis: $\rho: xxx$, gilt für die nächste Gleichung ebenfalls }
+Using this, two important equations can be derived.
+The \benennung{continuity equation} for viscous incompressible flows is given 
+as
 
-\begin{equation}
-    \frac{\partial \rho}{\partial t} + \frac{\partial (\rho u_i)}{\partial x_i} = \frac{\partial u_i}{\partial x_i} = 0
-\end{equation}
+
+\begin{gather}
+    \frac{\partial \rho}{\partial t} + \frac{\partial (\rho u_i)}{\partial x_i} = \frac{\partial u_i}{\partial x_i} = 0  \\[4pt]
+    \begin{aligned}
+        \rho &\colon \text{density} & \quad u_i &\colon \text{velocity component}
+    \end{aligned} \notag
+\end{gather}
 
 The second relevant equation describes the momentum conservation of a fluid.
 These so-called \benennung{\acrfull{nse}} can be written as 
 
-\begin{equation}
-    \frac{\mathrm{D}u_i}{\mathrm{D}t} = \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} = -\frac{1}{\rho} \frac{\partial p}{\partial x_i} + \nu \frac{\partial^2 u_i}{\partial x_j \partial x_j}
-\end{equation}
+\begin{gather}
+    \frac{\mathrm{D}u_i}{\mathrm{D}t} = \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} = -\frac{1}{\rho} \frac{\partial p}{\partial x_i} + \nu \frac{\partial^2 u_i}{\partial x_j \partial x_j} \\[4pt]
+    \begin{aligned}
+        p &\colon \text{pressure}
+    \end{aligned} \notag
+\end{gather}
 
-These equations fully describe the motion of a fluid, since they are pplicable for most kind of flows (XXQUELLE).
-Building on this,\unsure{However??}  the behaviour of fluids is often split into three groups with different characteristic properties:
+These equations fully describe the motion of a fluid, since they are applicable for most kind of flows \citep{batchelor_introduction_2000}.
+Building on this, the behaviour of fluids is often split into three groups with different characteristic properties:
 These categories are defined as \emph{laminar},  \emph{turbulent} and  \emph{transitional}. 
 If a flow acts in the laminar regime its streamlines do not cross and the flow is time-independent \citep{davidson_turbulence_2015}.
-In the turbulent regime the behaviour of the flow is chaotic and time-dependent (XXQUELLLE).
+Disturbances begin to develop in the transitional regime, causing disruptions in the laminar behaviour.
+In the turbulent regime the behaviour of the flow is chaotic and time-dependent \citep{schlichting_boundary-layer_2017}.
 It shows irregular time- and location-dependent random fluctuations \citep{pope_turbulent_2015}.
-Consequently, in turbulent flows enhanced mixing in the fluid can be observed (XXQUELLE).
-\improve{ein Halbsatz zu transitional}
+Consequently, in turbulent flows enhanced mixing in the fluid can be observed \citep{pope_turbulent_2015}.
 To describe the behaviour of a flow in terms of laminar or turbulent behaviour the \benennung{Reynolds number} is introduced as 
 \begin{equation}
     \mathrm{Re} = \frac{U L}{\nu}
@@ -55,12 +63,12 @@ The large scales are mostly controlled by the outer constraints of the flow, e.g
 The behaviour of the small-scale motions, however, depends on the viscosity and the receiving energy from the large scales \citep{pope_turbulent_2015}, which makes their behaviour universal and independent of the specific flow case.
 This universal behaviour can be measured with statistics over a long time averaging.
 
-The most turbulent flows are bounded by at least one solid wall (XXQUELLE).
+The most turbulent flows are bounded by at least one solid wall \citep{moin_fundamentals_2024}.
 They are decomposed into \benennung{external} and \benennung{internal} flows. 
 Internal flows are limited by outer walls like pipes or channels.
 External flows refer to flows which occur around a solid body like an airfoil or a wall.
-A characteristic feature of external flows is that the flow sufficiently from the body remains unaffected by its presence (XXQUELLE).
-The flow behaviour in the immediate vicinity of the wall is in all these\unsure{Hier wurden mE keine Fälle aufgezählt: also besser "most cases"?} cases very similar due to the universal nature of small scales turbulences \citep{pope_turbulent_2015}XX umformulieren.
+A characteristic feature of external flows is that the flow sufficiently from the body remains unaffected by its \citep{moin_fundamentals_2024}.
+The flow behaviour in the immediate vicinity of the wall is in most cases very similar due to the universal nature of small scales turbulences \citep{pope_turbulent_2015}.
 In the following section we will introduce a set of definitions to describe this near-wall behaviour.
 is remarkably similar due to the universal nature of the near-wall small-scale turbulence \citep{pope_turbulent_2015}. 
 %Therefore, it is useful to introduce a set of quantities that characterize this near-wall behaviour.
@@ -69,33 +77,36 @@ Since this work focuses on boundary layers developing along a wall, the definiti
 
 \subsection{Turbulent boundary layer theory} \label{subsec:TBLTheory}
 
-Boundary layers occur when fluids with non-zero viscosity stream over a wall that is not moving. 
-In these setups the so called \benennung{no-slip} boundary condition impacts the flow behaviour significantly.
-It states that the velocity components of the fluid in wall-normal and streamwise direction need to be zero directly at the wall since there is no relative movement between the wall and the fluid \citep{schlichting_boundary-layer_2017}. 
-The velocity far away from the wall, the so called \benennung{free-stream velocity} $U_0$, is usually much higher than zero which implies the existence of a transition region where an acceleration of the fluid occurs (XXQUELLE).
+Boundary layers occur when fluids with non-zero viscosity stream over a stationary wall. 
+In these setups, the so called \benennung{no-slip} boundary condition affects the flow behaviour significantly.
+The \benennung{no-slip} boundary condition  asserts that the velocity components of the fluid in the wall-normal and streamwise directions must be zero directly at the wall since there is no relative movement between the wall and the fluid \citep{schlichting_boundary-layer_2017}. 
+The velocity sufficiently distant from the wall, known as the \benennung{free-stream velocity} $U_0$, is usually much higher than zero. This observation indicates the presence of a transition region where an acceleration of the fluid occurs \citep{prandtl_uber_1904}.
 This so-called \benennung{boundary layer} is placed close to the wall. 
-Depending on the Reynolds number the thickness of the boundary layer varies in a way that the boundary layer decreases with increasing Reynolds number \cite{schlichting_boundary-layer_2017}. 
-The flow in the boundary layer can behave laminar or turbulent, whereas in this thesis we will focus on \acrfull{tbl}.
-The boundary layer grows in streamwise direction and can be described via multiple characteristic quantities. 
+The thickness of the boundary layer is known to vary depending on the Reynolds number. In general, the boundary layer decreases with increasing Reynolds number \cite{schlichting_boundary-layer_2017}. 
+The flow in the boundary layer may behave laminar or turbulent. In this thesis we will focus on \acrfull{tbl}.
+
+The boundary layer grows in the streamwise direction. It can be described via multiple characteristic quantities. 
 The introduction of these quantities requires a consistent coordinate system: 
-We define $x$ as the streamwise direction with its corresponding velocity $u$, $y$ represents the wall-normal direction with velocity component $v$ and $z$ describes the spanwise direction with velocity component $w$.
-In the free stream far away from the wall we assume $U_0$ being the dominant velocity component. 
-For simplicity this free-stream velocity is often set to be 1. XX diesen satz vlt eher bei non-dim? XX
-The streamwise velocity component inside the boundary layer is referred to as $u(x,y)$.
-To describe the thickness of a boundary layer mainly three different parameters are used: 
-the boundary-layer thickness $\delta_{99}(x)$, which describes the distance from the wall at which the velocity $u(x,y)$ derives $99\%$ of the free-stream velocity;
-the displacement thickness $\delta^*$, which defines the displacement of an inviscid fluid to preserve the same mass flow;
-and the momentum thickness $\theta$  which defines the displacement of an inviscid fluid to fulfil the conservation of momentum.
-These quantities can be derived with the following equations
+The streamwise direction  is denoted by  $x$  with the corresponding velocity $u$. The wall-normal direction is denoted by $y$ and the associated velocity  $v$.  $z$ denotes the spanwise direction and is associated with the  velocity component $w$.
+In the free stream, distant from the wall, we assume $U_0$ being the dominant velocity component. 
+The streamwise velocity component inside the boundary layer is denoted  $u(x,y)$.
+Often, the thickness of the boundary layer is modelled using three different parameters \citep{schlichting_boundary-layer_2017}: 
+the \emph{boundary-layer thickness} $\delta_{99}(x)$ describing the distance from the wall at which the velocity $u(x,y)$ derives $99\%$ of the free-stream velocity;
+the \emph{displacement thickness} $\delta^*$, which defines the displacement of an inviscid fluid to preserve the same mass flow;
+and the \emph{momentum thickness} denoted by  $\theta$  is employed to define the displacement of an inviscid fluid in order to fulfil the conservation of momentum.
+The following equations can be used to derive these quantities:
 \begin{gather}\label{eq: tblThickness}
-    u (x, \delta_{99}(x)) = 0.99 U_0 \\
+    u (x, \delta_{99}(x)) = 0.99 \cdot U_0 \\[1ex]
     \delta^*(x) = \int_0^\infty \left( 1 - \frac{u(x,y)}{U_0} \right) \mathrm{d}y \hspace{0.8cm}
      \theta(x) = \int_0^\infty \frac{u(x,y)}{U_0} \left( 1 - \frac{u(x,y)}{U_0} \right) \mathrm{d}y
 \end{gather}
 
 
-In this thesis we use the momentum thickness $\theta$ to characterize the height of the boundary layer, since it can be measured more accurate than the boundary-layer thickness (XXQUELLE). 
-To describe the boundary-layer with the Reynolds number, different Reynolds numbers based on the introduced displacement measures are defined as
+In this thesis we use the momentum thickness $\theta$ to characterise the height of the boundary layer.
+This approach is adopted from \citet{schlatter_assessment_2010} since it facilitates a  more precise measurement in comparison to the boundary-layer thickness. 
+%To describe the boundary-layer with the Reynolds number, 
+The boundary-layer is related to the Reynolds number, 
+with different Reynolds numbers being defined based on the introduced displacement measures:
 
 \begin{gather}
     \mathrm{Re}_x = \frac{U_0 x}{\nu}, \quad
@@ -105,29 +116,31 @@ To describe the boundary-layer with the Reynolds number, different Reynolds numb
     \nu : \text{viscosity} \nonumber
 \end{gather}
 
-To measure velocities in a turbulent flow they are decomposed in a time averaged component $\langle \rangle$ and fluctuations $u_i'$. 
+In order to measure velocities in a turbulent flow the velocities are decomposed in a time averaged component denoted by $\langle \rangle$ and fluctuations denoted by  $u_i'$. 
 
 \begin{equation}
+	\label{eq:ReynoldDecomposition}
     u_i = \langle u_i \rangle + u_i' = U_i + u_i' \text{ with } \langle u_i'
 \rangle = 0\end{equation}
 
-represents the so-called \benennung{Reynolds decomposition}.
-The application of the Reynolds decomposition on the \acrshort{nse} leads to the \acrfull{rans}. 
-For the boundary layer the \acrshort{rans} equations reduces to 
+Equation \ref{eq:ReynoldDecomposition} represents the so-called \benennung{Reynolds decomposition}.
+Applying it on the \acrshort{nse} leads to the \benennung{\acrfull{rans}}\citep{reynolds_iv_1895}. 
+For the boundary layer the \acrshort{rans} equations is reduced to 
 
 \begin{gather}
     0 = \nu\,\frac{\mathrm{d}^2 U}{\mathrm{d}y^2} - \frac{\mathrm{d}}{\mathrm{d}y}\langle u'v'\rangle - \frac{1}{\rho}\frac{\partial \langle p\rangle}{\partial x} \\
     0 = -\frac{\mathrm{d}}{\mathrm{d}y}\langle v'v'\rangle - \frac{1}{\rho}\frac{\partial \langle p\rangle}{\partial y} 
 \end{gather}
 
-Through some rearrangements and boundary conditions one can derive the total shear stress $\tau$ and its derivative as
+By means of rearrangement and the imposition of boundary conditions, it is possible to derive the total shear stress, denoted by $\tau$, and its derivative as follows:
 
 \begin{gather}
     \tau = \rho\nu\,\frac{\mathrm{d} U}{\mathrm{d}y} - \rho\langle u'v'\rangle \quad
     \frac{\mathrm{d}\tau}{\mathrm{d}y} = \frac{\mathrm{d}p_{\mathrm{w}}}{\mathrm{d}x}.
 \end{gather}
 
-To derive the shear stress at the wall one can apply the no-slip boundary condition which then results in
+
+By applying  the no-slip boundary condition the shear stress at the wall is derived, which then results in
 \begin{equation}
     \tau_w = \mu \left. \frac{\mathrm{d}U}{\mathrm{d}y} \right|_w 
 \end{equation}
@@ -155,32 +168,34 @@ With this equation we can define the wall shear stress $\tau_{w}$ as
 
 
 \paragraph{Non-dimensionalisation}
-To study the phenomenons in a boundary layer it is required to define so-called viscous scales since the ranges of dimensions and velocity variations are much smaller than in the free-stream \citep{pope_turbulent_2015}.
-Based in the wall shear stress $\tau_w$, $\rho$ and $\delta_{99}$, the friction velocity $u_{\tau}$, the viscous length scale $\delta_{\nu}$ and the friction Reynolds number $\mathrm{Re}_{\tau}$ are introduced as
+For simplicity,  free-stream velocity $U_0$  is often set to be 1. 
+In order to undertake a study of the phenomena present in a boundary layer, it is first necessary to define the so-called viscous scales, since the ranges of dimensions and velocity variations are much smaller than in the free stream \citep{pope_turbulent_2015}.
+%
+Based in the wall shear stress $\tau_w$, $\rho$ and $\delta_{99}$, the friction velocity $u_{\tau}$, the viscous length scale $\delta_{\nu}$ and the friction Reynolds number $\mathrm{Re}_{\tau}$ are introduced as follows:
 \begin{gather}
     u_{\tau} = \sqrt{\frac{\tau_w}{\rho}} \hspace{1.0cm}
     \delta_{\nu} = \frac{\nu}{u_{\tau}} \hspace{1.0cm}
     \mathrm{Re}_{\tau} = \frac{\delta_{99} u_\tau}{\nu}
 \end{gather}
 
-With these quantities the original length and velocity scales can be non-dimensionalised in wall units as \citep{moin_fundamentals_2024}
+With these quantities, the original length and velocity scales can be non-dimensionalised in wall units, also called plus units, as shown in \citep{moin_fundamentals_2024}:
 \begin{equation}
     y^+ = \frac{y}{\delta_v} = \frac{y u_\tau}{\nu}, \qquad
     u^+ = \frac{U}{u_\tau}.
 \end{equation}
 
-The advantage of these non-dimensional scales is that they are universal for all wall-bounded flows what enables the comparison between flows with different physical dimensions. XX unbedingt QUELLE XX
-The non-dimensionalisation enables a detailed investigation of the velocity profile inside the \acrshort{tbl}.
-Prandtl (XXQUELLE) registered that the \acrshort{tbl} contains an inner part where the mean velocity profiles is independent of the free-stream quantities $U_0$ and $\delta_{99}$ such that the mean velocity profile can be fully described by the plus units.
+The merits of these non-dimensional scales are twofold.  Firstly, they are universal for all wall-bounded flows enabling the comparison between flows of different physical dimensions \citep{von_karman_mechanische_1930}.
+Moreover, the non-dimensionalisation facilitates a detailed investigation of the velocity profile inside the \acrshort{tbl}.
+\citet{prandtl_uber_1904} observed that the \acrshort{tbl} contains an inner part where the mean velocity profiles are independent of the free-stream quantities $U_0$ and $\delta_{99}$ such that the mean velocity profile can be fully described by the plus units.
 In the region closest to the wall – the \benennung{viscous sublayer} – $U^+$ is a linear function of $y^+$. 
-With increasing wall-distance the velocity profile transitions such that it follows a logarithmic function.
+With increasing wall distance, the velocity profile transitions such that it follows a logarithmic function.
 This so-called \benennung{log law} is defined as 
 \begin{gather}
     U^+ = \frac{1}{\kappa}\ln y^+ + B \\
     \text{with } \kappa = 0.41 \quad B = 5.2
 \end{gather}
 
-The values for the constants $\kappa$ and $B$ vary throughout the literature.
+The values estimated for the constants $\kappa$ and $B$ vary throughout the literature.
 In the context of this work the values introduced by \citet{pope_turbulent_2015} are used as reference.
 Typical velocity profiles from different turbulent flows are depicted in XX.
 It can be seen that all profiles follow the described functions.
@@ -206,26 +221,29 @@ The application of the Reynolds decomposition on the \acrshort{nse} leads to the
 }
 }
 
-As already introduced the application of the Reynolds decomposition on the \acrshort{nse} result in the \acrshort{rans}.
-From this one can extract one term as the \benennung{Reynolds stresses}.
-For turbulent flows the Reynolds stresses are important measures, since the transport of mean momentum is based on them \citep{moin_fundamentals_2024}. 
+As  introduced,  the application of the Reynolds decomposition on the \acrshort{nse} result in the \acrshort{rans}.
+From this equation, a single term known as the \benennung{Reynolds stresses} can be extracted.
+For turbulent flows, the Reynolds stresses are significant characteristics, since the transport of mean momentum is based on them \citep{moin_fundamentals_2024}. 
 The tensor is defined as 
 \begin{equation}
     R_{ij} =  \langle u_i' u_j'\rangle.
 \end{equation}
-The inner part $u_i' u_j'$ of the tensor elements represents the product of the velocity fluctuations.
-To get the Reynolds stresses, the mean $\langle \rangle$ of this product is taken.
-Although the mean of one fluctuation is zero, the product of two fluctuation components is not necessarily zero. 
-The diagonal entries therefore, contain the normal stresses $\langle u' u'\rangle, \langle v' v'\rangle, \langle w' w'\rangle$.
+The inner part $u_i' u_j'$ of the tensor elements $R_{ij}$ represents the product of the velocity fluctuations.
+To determine the Reynolds stresses, the mean $\langle . \rangle$  is taken.
+Although the mean of a single fluctuation equals zero, the product of two fluctuation components is not necessarily zero. 
+The diagonal entries contain the normal stresses $\langle u' u'\rangle, \langle v' v'\rangle, \langle w' w'\rangle$.
 The remaining entries contain the shear stresses.
-Here the only non-zero entry is $\langle u' v'\rangle$ \citep{schlichting_boundary-layer_2017}.
-The issue about this tensor is, that we cannot directly compute it.
-With the continuity equation and the \acrshort{nse} in three directions we have four equations to derive the pressure and the three velocity components.
-With the Reynolds stress tensor we have six additional terms we have to solve.
-This problem is called the \benennung{closure problem} \citep{wilcox_turbulence_2006}.
-To solve this, there are different approaches how to derive more equations such that all terms can be computed which is described in detail in fundamental books like \citet{wilcox_turbulence_2006,pope_turbulent_2015} XXnoch eines.
-One can derive the transport equations for the Reynolds stresses by XXX \citep{mansour_reynolds-stress_1988}
-For incompressible flows the non-dimensionalized transport equations can be stated as 
+According to \citep{schlichting_boundary-layer_2017}, the only non-zero entry is $\langle u' v'\rangle$.
+The issue with this tensor is that direct computation is not possible.
+%
+Computing the pressure and the three velocity components is based on  four equations, namely the continuity equation and the Navier-Stokes equation in three dimensions.
+
+The Reynolds stress tensor is accompanied by six additional terms that have to be resolved.
+This issue is referred to as the \benennung{closure problem} \citep{wilcox_turbulence_2006}.
+%
+In order to resolve this issue, a number of different approaches can be adopted  to derive additional equations such ensuring that all terms can be computed. These approaches are described in detail in fundamental books like \citet{wilcox_turbulence_2006,pope_turbulent_2015,moin_fundamentals_2024}.
+The transport equations for the Reynolds stresses can be determined by taking the appropriate moments of the \acrshort{nse} \citep{mansour_reynolds-stress_1988}.
+For incompressible flows the non-dimensionalised transport equations can be stated as 
 \begin{gather}
     0 = -\frac{\overline{\mathrm{D}}}{\overline{\mathrm{D}}t} \langle u_i u_j \rangle - T_{ij} + D_{ij} + \mathcal{P}_{ij} + \Pi_{ij} - \varepsilon_{ij}, \\[4pt]
     \begin{aligned}
@@ -246,27 +264,28 @@ For incompressible flows the non-dimensionalized transport equations can be stat
 \end{equation}}
 
 
+
 \subsection{Clauser parameter in turbulent boundary layers}
 
-In boundary layers the free-stream (XX stimmt das?) pressure gradient plays a crucial role since it impacts the flow behaviour significantly (XXQUELLE).
-From \autoref{eq:NSEy} we see that the pressure for a \acrshort{tbl} along a flat wall is constant in wall-normal direction.
-In streamwise direction however it not necessarily has to be constant.
-With Bernoulli's equation the free-stream pressure is connected to the free-stream velocity, such that the gradient in streamwise direction can be written like
+In boundary layers the free-stream (XX stimmt das?) pressure gradient plays a crucial role since it has a significant impact on the flow behaviour significantly (XXQUELLE).
+As demonstrated in \autoref{eq:NSEy}, the pressure for a \acrshort{tbl} is constant along a flat wall  in the wall-normal direction.
+In the streamwise direction, however, it does not necessarily have to be constant.
+Bernoulli's equation establishes a correlation between the free-stream pressure and the free-stream velocity. Consequently, the gradient in the streamwise direction can be expressed as follows:
 \begin{equation}\label{eq:bernoulli}
     -\frac{\mathrm{d}p_0}{\mathrm{d}x} = \rho\, U_0 \frac{\mathrm{d}U_0}{\mathrm{d}x}.
 \end{equation}
-This equation shows that an acceleration of the flow effects a negative pressure gradient, which is also called \benennung{\acrfull{fpg}}. 
-In contrast, an increase of the velocity leads to a positive or \benennung{\acrfull{apg}}. 
-\acrshort{tbl} with a constant free-stream velocity therefore have no pressure gradient.
-This \benennung{\acrfull{zpg}} configuration is well studied, since in plane \acrshort{tbl} it is the natural configuration (XXQUELLE).
+This equation shows that an acceleration of the flow results in a negative pressure gradient, which is also referred to as \benennung{\acrfull{fpg}}. 
+In the other hand, an increase of the velocity yields a positive or \benennung{\acrfull{apg}}. 
+It can thus be concluded that a \acrshort{tbl} with a constant free-stream velocity will have no pressure gradient.
+This configuration, designated as \benennung{\acrfull{zpg}}, has been the subject of extensive research due to its status as the natural configuration in a plane \acrshort{tbl} \citep{spalart_direct_2024,schlatter_assessment_2010}.
 However, it is possible to apply boundary conditions such that an adverse or favourable pressure gradient results.
-To measure the pressure gradient a common used quantity is the so-called \benennung{Clauser parameter $\beta(s)$} which is defined as
+To measure the pressure gradient, a commonly used quantity is introduced,  the so-called \benennung{Clauser parameter $\beta(s)$}, which is defined as follows:
 \begin{equation}\label{eq:beta}
     \beta(s) = \frac{\delta^*(s)}{\tau_w(s)} \frac{\mathrm{d}p_w}{\mathrm{d}s},
 \end{equation}
 
-This non-dimensionalized parameter defines the ratio between the streamwise pressure force on the boundary layer and the wall shear stress \citep{clauser_turbulent_1954}.
-In the literature this parameter is widely used to categorize the flow according to the introduced pressure regimes:
+This non-dimensionalised parameter defines the ratio between the streamwise pressure force on the boundary layer and the wall shear stress \citep{clauser_turbulent_1954}.
+In the literature, this parameter is widely used to categorise the flow according to the introduced pressure regimes:
 
 \begin{equation}
     \beta =
@@ -282,59 +301,62 @@ In the literature this parameter is widely used to categorize the flow according
 
 \section{curved TBL}
 
-Most research about \acrshort{tbl} focusses on \acrshort{tbl} across straight walls. (XXQUELLE) 
-However, there are many real-world applications where the wall is not fully straight but shows curved sections as well (XXQUELLE). 
-The effects in \acrshort{tbl} along curved walls are still poorly studied (XXQUELLE) since it covers some difficulties. 
-Due to the curved shape a pressure gradient in streamwise direction builds up naturally which makes it hard to separate the source of observed physical effects \citep{so_experimental_nodate}. 
-As \citet{so_experiment_1973} observed in their experiments without pressure adjustment the pressure decreases slow near the beginning of the curvature and then decreases fast once the curvature starts. 
-Since these pressure variations have a high impact on the turbulent structures, an exclusive study of curvature effects requires a compensation of these pressure variations (XXQUELLE). 
-Therefore, it is possible to study curved \acrshort{tbl} under zero-pressure gradient conditions (see XXX), or to impose a defined pressure gradient (see XXX). 
-In experimental studies a defined pressure distribution is achieved by adjusting the position of the upper wall \citep{so_experimental_nodate, johnston_experimental_nodate, gillis_turbulent_1983,schwarz_convex_1996}. 
-In simulations 
-From these studies some general statements about the effects of curvature on the \acrshort{tbl} can be summarized.
-First a boundary layer along a convex wall with \acrshort{zpg} shows smaller growth rate compared to a straight developing \acrfull{tbl} \citep{so_experimental_nodate}, \citep{meroney_turbulent_1975}. 
-This phenomenon is caused by a pressure gradient in centripetal direction. 
-It balances the centrifugal force of the fluid elements. Through the centrifugal force fluid particles with high velocities will be pushed to a new outer position. 
+The majority of research conducted on \acrshort{tbl} has focused on the utilisation of \acrshort{tbl}  in contexts of straight walls \citep{pargal_adverse-pressure-gradient_2022}. 
+However, in many real-world scenarios, the wall may not be completely straight, but rather exhibit curved segments \citep{spalart_direct_2024}. 
+The effects in \acrshort{tbl} along curved walls are still poorly studied, since the problem involves a range of inherent complications \citep{appelbaum_systematic_2025}. 
+Due to the curved shape, a pressure gradient in streamwise direction builds up naturally which makes it hard to separate the source of observed physical effects \citep{so_experimental_nodate}. 
+As \citet{so_experiment_1973} observed in their experiments without pressure adjustment, the pressure decreases slowly towards the bginning of the curvature and then decreases fast once the curvature is reached. 
+Since these pressure variations have a significant impact on the turbulent structures, an indepth study of curvature effects necessitates the  compensation of these pressure variations \citep{appelbaum_systematic_2025}. 
+Therefore, it is necessary to study curved \acrshort{tbl} under zero-pressure gradient conditions \citep{so_experimental_nodate,gillis_turbulent_1983}, or to impose a defined pressure gradient \citep{schwarz_convex_1996,pargal_adverse-pressure-gradient_2022,spalart_direct_2024}. 
+In experimental studies, the achievement of a defined pressure distribution is facilitated by adjusting the position of the upper wall \citep{so_experimental_nodate, johnston_experimental_nodate, gillis_turbulent_1983,schwarz_convex_1996}. 
+
+From the  studies mentioned before, some general statements regarding the effects of curvature on the \acrshort{tbl} may be  deduced.
+First, a boundary layer along a convex wall with  \acrshort{zpg} shows a smaller growth rate compared to a straight developing \acrfull{tbl} \citep{so_experimental_nodate}, \citep{meroney_turbulent_1975}. 
+This phenomenon can be attributed to a pressure gradient in the centripetal direction. 
+It balances the centrifugal force of the fluid elements. 
+The application of  centrifugal force  will result in a displacement of fluid particles with high velocities to a new outer position. 
 The pressure gradient forces the fluid particle in the opposite direction \citep{so_experimental_nodate}, \citep{meroney_turbulent_1975}.
 \citet{gillis_turbulent_1983} observed a decrease in the turbulent scales as consequence of a convex curvature. 
-In addition, they found that the law of the wall coincides for the curved wall with the same parameters as for flat wall measurements. 
-Besides experimental investigations, some numerical studies about the characteristics of curved \acrshort{tbl} are presented.
+They also found that the wall law for the curved wall corresponds to that observed in measurements taken on a flat wall, using the same parameters. 
 
-Similar as in the experimental investigations a modification of the setup is necessary to compensate the streamwise pressure gradient \citet{appelbaum_systematic_2025}, XX. 
-One possible approach to do so is the setup of a curved and a flat \acrshort{tbl} simulation and match their pressure distributions.
+Besides experimental investigations, some numerical studies about the characteristics of curved \acrshort{tbl} have been presented.
+In a similar manner to the experimental investigations, a modification of the setup is necessary to compensate for the streamwise pressure gradient \citet{appelbaum_systematic_2025}. 
+One possible approach for achieving this  is to setup  both a curved and a flat \acrshort{tbl} simulation model and match their pressure distributions.
 The naturally occurring pressure gradient in the curved domain is then imposed as boundary condition on the flat \acrshort{tbl} simulation.
-With the flat plate as reference case one can thus isolate the effects of curvature.
-This approach is used by \citet{spalart_direct_2024,pargal_adverse-pressure-gradient_2022}.
-XXX hier bobke and schlatter einfügen
-A similar approach \citet{bobke_history_2017} followed in their study about the effect of history on \acrshort{apg} \acrshort{tbl}.
-To do this the $\beta(x)$ distribution from a wing \acrshort{dns} was copied on a flat \acrshort{tbl} through the imposition of corresponding velocity profiles along the top wall.
-They studied various distributions and showed that even with matching $\beta(x)$ and $Re_{\tau}$ the geometry of the flow impacts the flow \citep{bobke_history_2017}.
-Another possibility of course is the study of curved setups without manipulation of the pressure as done by \citet{vinuesa_pressure-gradient_2017,tanarro_effect_2020}, and XX.
+With the flat plate as reference case it is, therefore, possible to isolate the effects of curvature.
+This approach is utilised  by \citet{spalart_direct_2024,pargal_adverse-pressure-gradient_2022}.
+A similar approach was adopted by \citet{bobke_history_2017} in their study on the effect of history on \acrshort{apg} \acrshort{tbl}.
+They applied the distribution of the Clauser parameter $\beta(x)$ from a wing \acrshort{dns} on a flat \acrshort{tbl} through the imposition of corresponding velocity profiles along the top wall.
+They studied various distributions and showed that even with matching $\beta(x)$ and $Re_{\tau}$ the geometry of the wall alters the flow \citep{bobke_history_2017}.
+Another possibility, of course, is the study of curved setups without manipulation of the pressure as done by \citet{vinuesa_pressure-gradient_2017,tanarro_effect_2020}.
 \citet{vinuesa_pressure-gradient_2017} analysed data from flows along a wing which were derived by \citet{hosseini_direct_2016}.
-They studied the occurring pressure field and found that even small variations of $\beta$ impacted the development of the boundary layer compared to \acrshort{zpg} \acrshort{tbl} \citet{vinuesa_pressure-gradient_2017}.
+They investigated the occurring pressure field and observed that even minor variations of $\beta$ altered
+ the development of the boundary layer when compared to baseline configuration \acrshort{zpg} \acrshort{tbl} \citet{vinuesa_pressure-gradient_2017}.
 \citet{tanarro_effect_2020} extended these studies and analysed the different effects of local and integrated pressure gradient distributions.
-However, these studies mainly focus on the effect of pressure on the flow characteristics refereeing to the argument that the pressure driven effects superpose the curvature effects \citep{patel_longitudinal_1997}.
-\citet{yang_assessment_2016} studied a quite similar setup compared to the one used in the project to investigate curvature effects in \acrshort{tbl}. 
+However, these studies mainly focus on the effect of pressure on the flow characteristics referreing to the argument that the pressure-driven effects superpose the curvature effects \citep{patel_longitudinal_1997}.
+\citet{yang_assessment_2016} studied a  setup that was quite similar  to the one used in the project, with a view  to investigating curvature effects in \acrshort{tbl}. 
 Their domain has a straight inlet, then a 60° circular bend section followed by a straight tail.
-The \acrshort{rans} simulations they performed showed in comparison with \acrshort{dns} results, that accuracy of the tested turbulence models in insufficient in cases with large curvature \citep{yang_assessment_2016}.
+The experimental results of the \acrshort{rans} demonstrated thtat, in comparison with \acrshort{dns} results, the accuracy of the  turbulence models tested was inadequate in cases involving large curvature \citep{yang_assessment_2016}.
 In the study of \citep{appelbaum_systematic_2025} a concave \acrshort{tbl} was investigated. 
-To achieve a \acrshort{zpg} distribution the pressure profile from the top wall of a plane \acrshort{tbl} was imposed on the top wall of the curved domain.
-Since the pressure is the result of the flow behaviour it cannot be set directly an implicit approach was necessary to reach the desired pressure distribution \citep{appelbaum_systematic_2025}.
-This overview of current research about curved \acrshort{tbl} shows that there is an interest in investigation of curvature effects on \acrshort{tbl}.
-However, the separation of pressure and curvature effects is still an issue (XXQUELLE).
+In oder to achieve a \acrshort{zpg} distribution the pressure profile from the top wall of a plane \acrshort{tbl} was imposed on the top wall of the curved domain.
+Since the pressure is the result of the flow behaviour, it cannot be set directly. Thus, an implicit approach was necessary to achieve the desired pressure distribution \citep{appelbaum_systematic_2025}.
+
+This overview of current research about curved \acrshort{tbl} shows that there is an interest in investigating curvature effects on \acrshort{tbl}.
+However, the separation of pressure and curvature effects is still an issue \citep{appelbaum_systematic_2025}.
 Many investigations focus on rebuilding the pressure distribution of a curved domain on a flat domain to get some understanding.
-These studies already create some knowledge about curved \acrshort{tbl}.
-However, the effects of curvature and pressure gradient still interfere with each other.
-The study of the isolated curvature in simulations is rare since the realization of the \acrshort{zpg} is not straight-forward.
-The purpose of this project is to implement and test a new workflow for setting up a curved \acrshort{zpg} \acrshort{tbl}.
-The project is based on the previous work from \citet{morita_applying_2022} who introduced an algorithm to realize desired $\beta$-distributions.
+These studies already created some knowledge about curved \acrshort{tbl}.
+But  the effects of curvature and pressure gradient still interfere with each other.
+The study of the isolated curvature in simulations is rare since the realisation of the \acrshort{zpg} is not straight-forward.
+The objective of this project is to implement and evaluate a noval workflow for the configuration of a curved \acrshort{zpg} \acrshort{tbl}.
+The project is founded on the preceding research from \citet{morita_applying_2022} who introduced an algorithm to achieve specific $\beta$-distributions.
 The capability of the algorithm on curved domains was tested by \citet{ganagdhar_bayesian_2025}.
-However, the results are only partly transferrable to the investigations from this study since the curvature studied by \citet{ganagdhar_bayesian_2025} had a much lower $\delta/R$ ratio. 
-A detailed discussion about the transferability of other results is done in chapter XX.
-The algorithm performs a shape optimization of the upper wall in an \name{OpenFOAM} simulation trying to fit a prescribed $\beta$ distribution at the lower wall.
-Since we wanted to perform \acrshort{dns} simulations the result of the optimization need to be transferred.
-With the optimized \acrshort{dns} domain we performed simulations with different curvature configurations.
-The used approach is based on \citet{schlatter_leveraging_nodate} and will be presented in detail in \autoref{chap:methods}.
+Nonetheless, the results are only partly transferable to the investigations from this study, since the curvature studied by \citet{ganagdhar_bayesian_2025} has a considerably  lower $\delta/R$ ratio. 
+A detailed discussion about the transferability of other results is conducted in chapter XX.
+The algorithm performs a shape optimisation of the upper wall in an \name{OpenFOAM} simulation with the objective of fitting a prescribed $\beta$ distribution at the lower wall.
+In order to perform \acrshort{dns} simulations, it is necessary to transfer the result of the optimisation.
+The present study investigates simulations based on the optimised \acrshort{dns}  domains utilising   diverse curvature configurations.   
+The proposed approach is based on \citet{schlatter_leveraging_nodate}'s work and will be presented in detail in \autoref{chap:methods}.
+
 
 \comment{
 To design a \acrshort{dns} domain with \acrshort{zpg} distribution the velocities along the upper wall will be manipulated.
@@ -344,6 +366,7 @@ The optimization algorithm itself was introduced by \citet{morita_applying_2022}
 XX hier noch absatz 5.1 aus BO paper integrieren als motivation
 }
 
+\fxbmark{13.07. - 14:10}
 
 \section{Simulation techniques} 
 \label{sec:SimBasics}

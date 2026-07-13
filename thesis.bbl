@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,6 +12,14 @@ J.~Appelbaum, M.~Kloker, and C.~Wenzel.
 \newblock ISSN 0935-4964, 1432-2250.
 \newblock \doi{10.1007/s00162-024-00729-7}.
 \newblock URL \url{https://link.springer.com/10.1007/s00162-024-00729-7}.
+
+\bibitem[Batchelor(2000)]{batchelor_introduction_2000}
+G.~K. Batchelor.
+\newblock \emph{An {Introduction} to {Fluid} {Dynamics}}.
+\newblock Cambridge University Press, 1 edition, Feb. 2000.
+\newblock ISBN 978-0-521-66396-0 978-0-511-80095-5.
+\newblock \doi{10.1017/CBO9780511800955}.
+\newblock URL \url{https://www.cambridge.org/core/product/identifier/9780511800955/type/book}.
 
 \bibitem[Bobke et~al.(2017)Bobke, Vinuesa, Örlü, and Schlatter]{bobke_history_2017}
 A.~Bobke, R.~Vinuesa, R.~Örlü, and P.~Schlatter.
@@ -121,9 +129,30 @@ S.~B. Pope.
 \newblock Cambridge Univ. Press, Cambridge, 1. publ., 12. print edition, 2015.
 \newblock ISBN 978-0-521-59125-6 978-0-521-59886-6.
 
+\bibitem[Prandtl(1904)]{prandtl_uber_1904}
+L.~Prandtl.
+\newblock Über {Flüssigkeitsbewegung} bei sehr kleiner {Reibung}.
+\newblock Hannover, 1904.
+
+\bibitem[Reynolds(1895)]{reynolds_iv_1895}
+O.~Reynolds.
+\newblock {IV}. {On} the dynamical theory of incompressible viscous fluids and the determination of the criterion.
+\newblock \emph{Philosophical Transactions of the Royal Society of London. (A.)}, \penalty0 (186):\penalty0 123--164, Dec. 1895.
+\newblock ISSN 0264-3820, 2053-9231.
+\newblock \doi{10.1098/rsta.1895.0004}.
+\newblock URL \url{https://royalsocietypublishing.org/rsta/article/doi/10.1098/rsta.1895.0004/108119/IV-On-the-dynamical-theory-of-incompressible}.
+
 \bibitem[Schlatter()]{schlatter_leveraging_nodate}
 P.~Schlatter.
 \newblock Leveraging pre-exascale {GPU} computing to answer two outstanding questions in wall turbulence ({WALL2Q}).
+
+\bibitem[Schlatter and Örlü(2010)]{schlatter_assessment_2010}
+P.~Schlatter and R.~Örlü.
+\newblock Assessment of direct numerical simulation data of turbulent boundary layers.
+\newblock \emph{Journal of Fluid Mechanics}, 659:\penalty0 116--126, Sept. 2010.
+\newblock ISSN 0022-1120, 1469-7645.
+\newblock \doi{10.1017/S0022112010003113}.
+\newblock URL \url{https://www.cambridge.org/core/product/identifier/S0022112010003113/type/journal_article}.
 
 \bibitem[Schlichting and Gersten(2017)]{schlichting_boundary-layer_2017}
 H.~Schlichting and K.~Gersten.
@@ -180,6 +209,10 @@ R.~Vinuesa, S.~M. Hosseini, A.~Hanifi, D.~S. Henningson, and P.~Schlatter.
 \newblock ISSN 1386-6184, 1573-1987.
 \newblock \doi{10.1007/s10494-017-9840-z}.
 \newblock URL \url{http://link.springer.com/10.1007/s10494-017-9840-z}.
+
+\bibitem[von Karman(1930)]{von_karman_mechanische_1930}
+T.~von Karman.
+\newblock Mechanische Ähnlichkeit und {Turbulenz}, 1930.
 
 \bibitem[Wilcox(2006)]{wilcox_turbulence_2006}
 D.~C. Wilcox.
