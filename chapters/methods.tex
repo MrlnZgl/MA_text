@@ -9,8 +9,8 @@ To get familiar with the \acrshort{dns} code and the effect of different setting
 In addition, the created postprocessing script was verified with these results and reference results.
 In the \name{neko} installation some examples are included which also contains one for a tubulent chnannel simulation.
 We used this example as starting point and made some modifications.
-The simulation is setup for a tubulent channel flow at $Re_\tau = 180$.
-With the bulk velocity $U_b = 1$ and the channle ahlf height $\delta = 1$, the bulk Reynolds number is set to be $Re_b = 2800$.
+The simulation is setup for a turbulent channel flow at $Re_\tau = 180$.
+With the bulk velocity $U_b = 1$ and the channel half height $\delta = 1$, the bulk Reynolds number is set to be $Re_b = 2800$.
 The simulation runs with polynomial order 7 and time order 3.
 At the top and the bottom wall we set \benennung{no-slip} as boundary condition.
 The streamwise and spanwise wall are set to be periodic, meaning that everything that goes out at one side enters the domain at the opposite.
@@ -20,8 +20,8 @@ In wall-normal direction we set the point closest to the wall to be at $y^+ = 1$
 The physical domain size is $(4\pi \delta, 2 \delta, \frac{4}{3}\pi \delta)$.
 Then we applied some new initial conditions to create the turbulence.
 We added more pertubations in different scales such that the transition into a fully turbulent flow is much faster.
-In addition, the new pertubations made the old random pertubaitions in wall-normal direction become unnecessary (XX warum ist das gut??).
-The new setup of inital conditons is depicted in \autoref{fig:channel_IC}.
+In addition, the new pertubations made the old random pertubations in wall-normal direction become unnecessary (XX warum ist das gut??).
+The new setup of initial conditions is depicted in \autoref{fig:channel_IC}.
 With this setup simulations were performed.
 The collected statistics are discussed in chapter XX.
 
