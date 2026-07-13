@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  13 JUL 2026 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  13 JUL 2026 19:08
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -850,7 +850,12 @@ Package pgfplots: loading complementary utilities for your pgf version...
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2025/texmf-dist/tex/latex/cancel/cancel.sty
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/underscore/underscore.sty
+Package: underscore 2006/09/13
+LaTeX Info: Redefining \_ on input line 42.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/firstaid/underscore-ltx.sty
+Package: underscore-ltx 2023/09/20 LaTeX firstaid to make underscore protected 
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 \figureheight=\skip87
@@ -960,7 +965,7 @@ Package tocbasic Info: setting babel extension for `nls' on input line 188.
 \@nomenclaturefile=\write4
 \openout4 = `thesis.nlo'.
 
-Package nomencl Info: Writing nomenclature file thesis.nlo on input line 145.
+Package nomencl Info: Writing nomenclature file thesis.nlo on input line 147.
 \@indexfile=\write5
 \openout5 = `thesis.idx'.
 
@@ -1072,11 +1077,11 @@ Package: glossary-tree 2025/03/03 v4.56 (NLCT)
 \glo@main@file=\write7
 \openout7 = `thesis.glo'.
 
-Package glossaries Info: Writing glossary file thesis.glo on input line 179.
+Package glossaries Info: Writing glossary file thesis.glo on input line 181.
 \glo@acronym@file=\write8
 \openout8 = `thesis.acn'.
 
-Package glossaries Info: Writing glossary file thesis.acn on input line 179.
+Package glossaries Info: Writing glossary file thesis.acn on input line 181.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/xargs/xargs.sty
 Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
 \xargs@max=\count393
@@ -1297,7 +1302,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ] (./thesis.lof
-Overfull \hbox (11.23256pt too wide) in paragraph at lines 9--9
+Overfull \hbox (11.23256pt too wide) in paragraph at lines 10--10
  [][] []\T1/cmr/m/n/10.95 Optimised do-main for RANS sim-u-la-tions in Open-FOAM (vlt lieber ohne mesh??XX): |
  []
 
@@ -1345,56 +1350,130 @@ chapter 2.
 
 [4]
 
-[5]
+[5] (./images/Uplus_referenceOnly_txt.pgf
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 115.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 115.
+
+LaTeX Font Info:    Calculating math sizes for size <9.163> on input line 2685.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.41406> not available
+(Font)              size <6> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.5815> not available
+(Font)              size <5> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.41406> not available
+(Font)              size <6> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.5815> not available
+(Font)              size <5> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.41406> not available
+(Font)              size <6> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.5815> not available
+(Font)              size <5> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <6.41406> not available
+(Font)              size <6> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <4.5815> not available
+(Font)              size <5> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <6.41406> not available
+(Font)              size <6> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <4.5815> not available
+(Font)              size <5> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <6.41406> not available
+(Font)              size <6> substituted on input line 2685.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <4.5815> not available
+(Font)              size <5> substituted on input line 2685.
+
+)
 
 [6]
-
-LaTeX Warning: Reference `eq:NSEy' on page 7 undefined on input line 271.
-
-
 
 [7]
 
 [8]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 369.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[9])
+[9]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 376.
+)
 
 [10]
+
+[11]
 \openout2 = `chapters/methods.aux'.
 
  (./chapters/methods.tex
 chapter 3.
-<images/channel_IC.pdf, id=99, 1508.1171pt x 753.4823pt>
+<images/channel_IC.pdf, id=108, 1508.1171pt x 753.4823pt>
 File: images/channel_IC.pdf Graphic file (type pdf)
 <use images/channel_IC.pdf>
 Package pdftex.def Info: images/channel_IC.pdf  used on input line 35.
 (pdftex.def)             Requested size: 295.90587pt x 147.83098pt.
 
 
-[11
+[12
 
 
 
 
  <./images/channel_IC.pdf>]
-<images/plane_TBL_IC.pdf, id=108, 1904.01291pt x 436.58328pt>
+<images/plane_TBL_IC.pdf, id=116, 1904.01291pt x 436.58328pt>
 File: images/plane_TBL_IC.pdf Graphic file (type pdf)
 <use images/plane_TBL_IC.pdf>
 Package pdftex.def Info: images/plane_TBL_IC.pdf  used on input line 69.
 (pdftex.def)             Requested size: 386.96024pt x 88.72739pt.
 
 
-[12 <./images/plane_TBL_IC.pdf>]
+[13 <./images/plane_TBL_IC.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 92--107
 
  []
 
-<images/curvedDomain_IC.pdf, id=116, 2204.235pt x 1162.3425pt>
+<images/curvedDomain_IC.pdf, id=124, 2204.235pt x 1162.3425pt>
 File: images/curvedDomain_IC.pdf Graphic file (type pdf)
 <use images/curvedDomain_IC.pdf>
 Package pdftex.def Info: images/curvedDomain_IC.pdf  used on input line 142.
@@ -1404,28 +1483,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[13]
+[14]
 
-[14 <./images/curvedDomain_IC.pdf>]
-<images/oF_domain_IC.pdf, id=135, 2083.56862pt x 946.99414pt>
+[15 <./images/curvedDomain_IC.pdf>]
+<images/oF_domain_IC.pdf, id=144, 2083.56862pt x 946.99414pt>
 File: images/oF_domain_IC.pdf Graphic file (type pdf)
 <use images/oF_domain_IC.pdf>
 Package pdftex.def Info: images/oF_domain_IC.pdf  used on input line 210.
 (pdftex.def)             Requested size: 386.96024pt x 175.87032pt.
 
 
-[15 <./images/oF_domain_IC.pdf>]
+[16 <./images/oF_domain_IC.pdf>]
 
-[16]
-<images/OF_designPoints.pdf, id=148, 822.74123pt x 358.73512pt>
+[17]
+<images/OF_designPoints.pdf, id=155, 822.74123pt x 358.73512pt>
 File: images/OF_designPoints.pdf Graphic file (type pdf)
 <use images/OF_designPoints.pdf>
 Package pdftex.def Info: images/OF_designPoints.pdf  used on input line 307.
 (pdftex.def)             Requested size: 386.96024pt x 168.72595pt.
 
 
-[17 <./images/OF_designPoints.pdf>]
-<images/flowchart_workflow.pdf, id=170, 378.76636pt x 563.68129pt>
+[18 <./images/OF_designPoints.pdf>]
+<images/flowchart_workflow.pdf, id=177, 378.76636pt x 563.68129pt>
 File: images/flowchart_workflow.pdf Graphic file (type pdf)
 <use images/flowchart_workflow.pdf>
 Package pdftex.def Info: images/flowchart_workflow.pdf  used on input line 370.
@@ -1435,21 +1514,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[18]
+[19]
 Underfull \vbox (badness 7613) has occurred while \output is active []
 
 
 
-[19 <./images/flowchart_workflow.pdf>])
+[20 <./images/flowchart_workflow.pdf>])
 
-[20]
+[21]
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 chapter 4.
 )
 
-[21
+[22
 
 
 
@@ -1461,41 +1540,41 @@ chapter 4.
 chapter without number
 
 
-[22
+[23
 
 
 
 
 ]
-Underfull \hbox (badness 1527) in paragraph at lines 138--144
+Underfull \hbox (badness 1527) in paragraph at lines 146--152
 \T1/cmr/m/it/10.95 don. (A.)\T1/cmr/m/n/10.95 , (186):123--164, Dec. 1895.  ISSN 0264-3820, 2053-9231.  doi: $10 . 1098 /
  []
 
 
 
-[23]
-Underfull \hbox (badness 4181) in paragraph at lines 166--172
+[24]
+Underfull \hbox (badness 4181) in paragraph at lines 174--180
 []\T1/cmr/m/n/10.95 A. C. Schwarz and M. W. Ples-niak.  Con-vex Tur-bu-lent Bound-ary Lay-ers With
  []
 
 
-Underfull \hbox (badness 4120) in paragraph at lines 166--172
+Underfull \hbox (badness 4120) in paragraph at lines 174--180
 \T1/cmr/m/n/10.95 Zero and Fa-vor-able Pres-sure Gra-di-ents.  \T1/cmr/m/it/10.95 Jour-nal of Flu-ids En-gi-neer-ing\T1/cmr/m/n/10.95 , 118(4):
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 166--172
+Underfull \hbox (badness 1248) in paragraph at lines 174--180
 \T1/cmr/m/n/10.95 787--794, Dec. 1996.  ISSN 0098-2202, 1528-901X.  doi: $10 . 1115 / 1 . 2835510$.  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--172
+Underfull \hbox (badness 10000) in paragraph at lines 174--180
 \T1/cmtt/m/n/10.95 https : / / asmedigitalcollection . asme . org / fluidsengineering / article / 118 / 4 / 787 /
  []
 
 ))
 
-[24]
+[25]
 
 Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrreprt)              You should note, that `\appendix' is a mostly globally
@@ -1516,7 +1595,7 @@ Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 chapter A.
 )
 
-[25
+[26
 
 
 
@@ -1528,22 +1607,23 @@ L3 programming layer <2025-01-18>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 50774 strings out of 473190
- 1170456 string characters out of 5715800
- 2024746 words of memory out of 5000000
- 73078 multiletter control sequences out of 15000+600000
- 579136 words of font info for 81 fonts, out of 8000000 for 9000
+ 50977 strings out of 473190
+ 1174285 string characters out of 5715800
+ 2034515 words of memory out of 5000000
+ 73249 multiletter control sequences out of 15000+600000
+ 593262 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,16n,109p,10986b,835s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,16n,109p,10986b,833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{appendix.A} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{chapter*.25} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{chapter*.26} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{section.4.4} has been referenced but does not exist, replaced by a fixed one
@@ -1629,11 +1709,11 @@ pdfTeX warning (dest): name{chapter*.5} has been referenced but does not exist, 
 
 pdfTeX warning (dest): name{section*.3} has been referenced but does not exist, replaced by a fixed one
 
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (35 pages, 21859207 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on thesis.pdf (36 pages, 21908415 bytes).
 PDF statistics:
- 442 PDF objects out of 1000 (max. 8388607)
- 315 compressed objects within 4 object streams
+ 465 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
  30 named destinations out of 1000 (max. 500000)
  303 words of extra memory for PDF output out of 10000 (max. 10000000)
 

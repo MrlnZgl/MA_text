@@ -168,10 +168,10 @@ With this equation we can define the wall shear stress $\tau_{w}$ as
 
 
 \paragraph{Non-dimensionalisation}
-For simplicity,  free-stream velocity $U_0$  is often set to be 1. 
+
 In order to undertake a study of the phenomena present in a boundary layer, it is first necessary to define the so-called viscous scales, since the ranges of dimensions and velocity variations are much smaller than in the free stream \citep{pope_turbulent_2015}.
 %
-Based in the wall shear stress $\tau_w$, $\rho$ and $\delta_{99}$, the friction velocity $u_{\tau}$, the viscous length scale $\delta_{\nu}$ and the friction Reynolds number $\mathrm{Re}_{\tau}$ are introduced as follows:
+Based on the wall shear stress $\tau_w$, $\rho$ and $\delta_{99}$, the friction velocity $u_{\tau}$, the viscous length scale $\delta_{\nu}$ and the friction Reynolds number $\mathrm{Re}_{\tau}$ are introduced as follows:
 \begin{gather}
     u_{\tau} = \sqrt{\frac{\tau_w}{\rho}} \hspace{1.0cm}
     \delta_{\nu} = \frac{\nu}{u_{\tau}} \hspace{1.0cm}
@@ -184,7 +184,8 @@ With these quantities, the original length and velocity scales can be non-dimens
     u^+ = \frac{U}{u_\tau}.
 \end{equation}
 
-The merits of these non-dimensional scales are twofold.  Firstly, they are universal for all wall-bounded flows enabling the comparison between flows of different physical dimensions \citep{von_karman_mechanische_1930}.
+The merits of these non-dimensional scales are twofold.  
+Firstly, they are universal for all wall-bounded flows enabling the comparison between flows of different physical dimensions \citep{von_karman_mechanische_1930}.
 Moreover, the non-dimensionalisation facilitates a detailed investigation of the velocity profile inside the \acrshort{tbl}.
 \citet{prandtl_uber_1904} observed that the \acrshort{tbl} contains an inner part where the mean velocity profiles are independent of the free-stream quantities $U_0$ and $\delta_{99}$ such that the mean velocity profile can be fully described by the plus units.
 In the region closest to the wall – the \benennung{viscous sublayer} – $U^+$ is a linear function of $y^+$. 
@@ -202,6 +203,12 @@ It can be seen that all profiles follow the described functions.
 
 XX hier noch bild mit $U^+/y^+$
 
+\begin{figure}[H]
+    \centering
+    \input{images/Uplus_referenceOnly_txt.pgf}
+    \caption{Comparison of velocity profiles in viscous scales for different $Re_\theta$, data taken from \citet{balasubramanian_direct_2023}}
+    \label{fig:Uplus_yplus}
+\end{figure}
 
 \subsubsection{Reynolds stresses}
 \comment{
@@ -267,8 +274,8 @@ For incompressible flows the non-dimensionalised transport equations can be stat
 
 \subsection{Clauser parameter in turbulent boundary layers}
 
-In boundary layers the free-stream (XX stimmt das?) pressure gradient plays a crucial role since it has a significant impact on the flow behaviour significantly (XXQUELLE).
-As demonstrated in \autoref{eq:NSEy}, the pressure for a \acrshort{tbl} is constant along a flat wall  in the wall-normal direction.
+In boundary layers the free-stream pressure gradient plays a crucial role since it has a significant impact on the flow behaviour \citep{clauser_turbulent_1954}.
+From the \acrshort{nse} one can derive that the pressure for a \acrshort{tbl} is constant along a flat wall in the wall-normal direction.
 In the streamwise direction, however, it does not necessarily have to be constant.
 Bernoulli's equation establishes a correlation between the free-stream pressure and the free-stream velocity. Consequently, the gradient in the streamwise direction can be expressed as follows:
 \begin{equation}\label{eq:bernoulli}

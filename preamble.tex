@@ -55,6 +55,8 @@
 %\usepackage{microtype,textcomp}			% bei siunitx
 \usepackage{bm}
 \usepackage{pgfplots}					%Matlab Diagramme in Latex
+\def\mathdefault#1{#1}					% required by matplotlib's pgf backend
+\makeatletter\@ifpackageloaded{underscore}{}{\usepackage[strings]{underscore}}\makeatother
 \def\rb#1{\rotatebox{90}{$\xleftarrow{#1}$}}
 \newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \coordinate (#1);}
 

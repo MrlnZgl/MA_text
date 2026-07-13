@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,6 +12,14 @@ J.~Appelbaum, M.~Kloker, and C.~Wenzel.
 \newblock ISSN 0935-4964, 1432-2250.
 \newblock \doi{10.1007/s00162-024-00729-7}.
 \newblock URL \url{https://link.springer.com/10.1007/s00162-024-00729-7}.
+
+\bibitem[Balasubramanian et~al.(2023)Balasubramanian, Guastoni, Schlatter, and Vinuesa]{balasubramanian_direct_2023}
+A.~G. Balasubramanian, L.~Guastoni, P.~Schlatter, and R.~Vinuesa.
+\newblock Direct numerical simulation of a zero-pressure-gradient turbulent boundary layer with passive scalars up to {Prandtl} number \textit{{Pr}} = 6.
+\newblock \emph{Journal of Fluid Mechanics}, 974:\penalty0 A49, Nov. 2023.
+\newblock ISSN 0022-1120, 1469-7645.
+\newblock \doi{10.1017/jfm.2023.803}.
+\newblock URL \url{https://www.cambridge.org/core/product/identifier/S0022112023008030/type/journal_article}.
 
 \bibitem[Batchelor(2000)]{batchelor_introduction_2000}
 G.~K. Batchelor.
