@@ -4,6 +4,7 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/theory.aux
 A level-1 auxiliary file: chapters/methods.aux
+A level-1 auxiliary file: chapters/verification.aux
 A level-1 auxiliary file: chapters/results.aux
 A level-1 auxiliary file: chapters/literaturverzeichnis.aux
 The style file: abbrvnat.bst
@@ -15,48 +16,51 @@ Warning--empty year in johnston_experimental_nodate
 Warning--empty booktitle in prandtl_uber_1904
 Warning--there's a number but no volume in reynolds_iv_1895
 Warning--empty year in schlatter_leveraging_nodate
+Warning--empty journal in slotnick_cfd_nodate
+Warning--empty year in slotnick_cfd_nodate
+Warning--empty year in slotnick_cfd_nodate
 Warning--empty journal in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
-You've used 33 entries,
+You've used 35 entries,
             2773 wiz_defined-function locations,
-            858 strings with 12824 characters,
-and the built_in function-call counts, 14816 in all, are:
-= -- 1414
-> -- 761
-< -- 22
-+ -- 261
-- -- 228
-* -- 1244
-:= -- 2362
-add.period$ -- 165
-call.type$ -- 33
-change.case$ -- 173
-chr.to.int$ -- 33
-cite$ -- 75
-duplicate$ -- 651
-empty$ -- 1190
-format.name$ -- 283
-if$ -- 3072
+            872 strings with 13443 characters,
+and the built_in function-call counts, 15839 in all, are:
+= -- 1499
+> -- 837
+< -- 23
++ -- 287
+- -- 252
+* -- 1340
+:= -- 2528
+add.period$ -- 173
+call.type$ -- 35
+change.case$ -- 187
+chr.to.int$ -- 35
+cite$ -- 82
+duplicate$ -- 691
+empty$ -- 1260
+format.name$ -- 309
+if$ -- 3276
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 36
-newline$ -- 239
-num.names$ -- 132
-pop$ -- 299
+missing$ -- 38
+newline$ -- 251
+num.names$ -- 140
+pop$ -- 330
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 154
 quote$ -- 0
-skip$ -- 458
+skip$ -- 485
 stack$ -- 0
-substring$ -- 458
-swap$ -- 52
+substring$ -- 480
+swap$ -- 54
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 328
-warning$ -- 9
-while$ -- 132
+type$ -- 350
+warning$ -- 12
+while$ -- 139
 width$ -- 0
-write$ -- 561
-(There were 9 warnings)
+write$ -- 589
+(There were 12 warnings)

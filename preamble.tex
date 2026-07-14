@@ -9,8 +9,9 @@
 %\usepackage[ansinew]{inputenc}			% Umlaute
 %\usepackage[utf8]{inputenc}
 \usepackage[small,bf]{caption}
-\usepackage{subfig}
-%\usepackage{subcaption}
+%\usepackage{subfig}
+\usepackage{subcaption}
+\captionsetup[subfigure]{justification=raggedright,singlelinecheck=false}
 \usepackage{placeins}
 \usepackage{preview}
 \newcommand{\kreis}[1]{\unitlength1ex\begin{picture}(2.5,2.5)\put(0.75,0.75){\circle{2.5}}\put(0.75,0.75){\makebox(0,0){#1}}\end{picture}}
@@ -210,12 +211,12 @@
 \newcommand{\comment}[1]{}		          % Um einen ganzen Textblock auszukommentieren 
 \newcommand{\Rey}{\mathrm{Re}}   		  % Reynoldszahl
 \renewcommand{\baselinestretch}{1.15}	  % Zeilenabstand 115%
-\renewcommand{\belowcaptionskip}{5pt}	  % Abstand von Bildunterschriften zum Bild?
-\renewcommand{\abovecaptionskip}{8pt}
+\setlength{\belowcaptionskip}{5pt}	  % Abstand von Bildunterschriften zum Bild?
+\setlength{\abovecaptionskip}{8pt}
 \pagestyle{headings}		              % Die Kapitelüberschrift wird in der Kopfzeile angezeigt
 %\frenchspacing                  	      % Kein Mehrabstand nach Satzende
 \setcounter{tocdepth}{2}
-\setcounter{secnumdepth}{3}		          % Kapitelnummerierung nur bis zur Ebene "subsection" durchgeführt
+\setcounter{secnumdepth}{2}		          % Kapitelnummerierung nur bis zur Ebene "subsection" durchgeführt
 \let\endgraph\endgraf			          % falls nicht die neueste Version installiert ist, würde endgraf eine Fehlermeldung produzieren
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

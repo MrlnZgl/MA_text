@@ -1,9 +1,17 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alfonsi(2009)]{alfonsi_reynolds-averaged_2009}
+G.~Alfonsi.
+\newblock Reynolds-{Averaged} {Navier}–{Stokes} {Equations} for {Turbulence} {Modeling}.
+\newblock \emph{Applied Mechanics Reviews}, 62\penalty0 (4):\penalty0 040802, July 2009.
+\newblock ISSN 0003-6900, 2379-0407.
+\newblock \doi{10.1115/1.3124648}.
+\newblock URL \url{https://asmedigitalcollection.asme.org/appliedmechanicsreviews/article/doi/10.1115/1.3124648/443737/ReynoldsAveraged-NavierStokes-Equations-for}.
 
 \bibitem[Appelbaum et~al.(2025)Appelbaum, Kloker, and Wenzel]{appelbaum_systematic_2025}
 J.~Appelbaum, M.~Kloker, and C.~Wenzel.
@@ -177,6 +185,10 @@ A.~C. Schwarz and M.~W. Plesniak.
 \newblock ISSN 0098-2202, 1528-901X.
 \newblock \doi{10.1115/1.2835510}.
 \newblock URL \url{https://asmedigitalcollection.asme.org/fluidsengineering/article/118/4/787/427529/Convex-Turbulent-Boundary-Layers-With-Zero-and}.
+
+\bibitem[Slotnick et~al.()Slotnick, Khodadoust, Alonso, Darmofal, Gropp, Lurie, and Mavriplis]{slotnick_cfd_nodate}
+J.~Slotnick, A.~Khodadoust, J.~Alonso, D.~Darmofal, W.~Gropp, E.~Lurie, and D.~Mavriplis.
+\newblock {CFD} {Vision} 2030 {Study}: {A} {Path} to {Revolutionary} {Computational} {Aerosciences}.
 
 \bibitem[So and Mellor()]{so_experimental_nodate}
 C.~So and L.~Mellor.

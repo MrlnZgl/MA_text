@@ -1,141 +1,104 @@
 
 \chapter{Methods} \label{chap:methods}
 
-In the following chapter the methods used in this thesis are presented. In the beginning the used tools are introduced. Then the workflow of the handled project is described and in the end the used optimization method is discussed briefly.
+In the following chapter the methods used in this thesis are presented. 
+First the setup of curved \acrshort{tbl} simulations in \name{neko} is presented.
+Then the generation of the \acrshort{zpg} conditions is described.
+Finally, it is presented how the \acrshort{zpg} is imposed onto the \acrshort{dns} domain.
 
-\section{Channel simulations}
-In the beginning of the project channel simulations were performed. 
-To get familiar with the \acrshort{dns} code and the effect of different settings these reproducable simulations were performed.
-In addition, the created postprocessing script was verified with these results and reference results.
-In the \name{neko} installation some examples are included which also contains one for a tubulent chnannel simulation.
-We used this example as starting point and made some modifications.
-The simulation is setup for a turbulent channel flow at $Re_\tau = 180$.
-With the bulk velocity $U_b = 1$ and the channel half height $\delta = 1$, the bulk Reynolds number is set to be $Re_b = 2800$.
-The simulation runs with polynomial order 7 and time order 3.
-At the top and the bottom wall we set \benennung{no-slip} as boundary condition.
-The streamwise and spanwise wall are set to be periodic, meaning that everything that goes out at one side enters the domain at the opposite.
-As a first step we refined the mesh which was necessary to create proper statistics.
-For an adequate resolution we defined the grid spacing in plus units to be $\Delta x^+= 12$, $\Delta z^+= 6$. 
-In wall-normal direction we set the point closest to the wall to be at $y^+ = 1$ and then coarsening the resolution.
-The physical domain size is $(4\pi \delta, 2 \delta, \frac{4}{3}\pi \delta)$.
-Then we applied some new initial conditions to create the turbulence.
-We added more pertubations in different scales such that the transition into a fully turbulent flow is much faster.
-In addition, the new pertubations made the old random pertubations in wall-normal direction become unnecessary (XX warum ist das gut??).
-The new setup of initial conditions is depicted in \autoref{fig:channel_IC}.
-With this setup simulations were performed.
-The collected statistics are discussed in chapter XX.
-
-% genmeshbox log:
-% xmin, xmax, Nel, periodic:    0.000000    12.566371   28 T
-% ymin, ymax, Nel, periodic:   -1.000000     1.000000   21 F
-% zmin, zmax, Nel, periodic:    0.000000     4.188790   18 T
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.65\textwidth]{channel_IC.pdf}
-    \caption{Initial condition channel simulaiton}
-    \label{fig:channel_IC}
-\end{figure}
-
-\section{plane TBL simulations}
-
-In the following part of the project we created a setup for a simulation of a \acrshort{tbl} acorss a plane wall.
-These simulations are used to verify the general settings of a \acrshort{tbl} simulations, and to verify the results through the comparison with similar simulations.
-The domain is defined as a box of the dimension $325 \times 24.5 \times 24.5$ which corresponds to $50\delta_{99} \times 4\delta_{99} \times 4\delta_{99}$ measured at a reference point at $Re_{\theta} = 1000$.
-The resolution in streamwise and spanwise diriction is constant with $x^+= 12$ and $z^+ = 6$.
-In wall-normal direction the resolution decreases with increasing distance from the lower wall starting at the wall with a resolution of $y^+ = 0.8$. 
-In the middle the resolution is constant on aquite coarse level.
-At the upper wall there is a small area where the resolution again increases since there the shear stress is measured (XXstimmt das??).
-The mesh is created with \name{gmsh}. 
-First a 2D mesh is constructed in the $x-y$/ streamwise- wall-normal-plane is created. 
-With the mesh transform tool in \name{neko} it is then extended in the spanwise direction. 
-
-\subsubsection{Boundary and initial conditions}
-
-To setup the \acrlong{tbl} boundary and initla conditions are necessary. 
-In the initial condition a boundary layer is imposed at the lower wall. 
-Since a laminar boundary layer has the quite easy blasuis profile as solution, a laminar boundary layer is given as initial velocity condition. 
-The velocity in the free-stream $U_0$ is set to be 1 initially.
-AS boundary conditions we impose a no-slip condition on the lower wall.
-The outflow has the boundary condition 'outlfow+dong', which means XXX.
-For the upper wall we tested two different setups.
-For one simulation we put a 'normal outflow' condition at the top wall, which allows outflow in normal direction across the domain end.
-In the otehr simulation we imposed a Dirichlet condition with (1,0,0) as velocity profile. 
-This is done to compare the effect of the different boundary conditions on the flow behaviour. 
-This becomes especially importnat for the simulation of the curved \acrshort{tbl}, since there the boundary condition needs to be imposed piecewise on the top wall.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{plane_TBL_IC.pdf}
-    \caption{Initial condition for plane TBL with blasius profile XX Maße einfügen}
-    \label{fig:planeTBL_IC}
-\end{figure}
-
-\subsubsection{Case settings}
-
-The additional settings for the simulation are definde in the CASE-file. 
-The polynomial order used for the simulations is 7 and the time order is 3.
-To enable shorter simulations times, the simulations first are started with lower polynomial order during the developing time of the \acrshort{tbl}.
-When the \acrshort{tbl} is stable the polynomial order is increased for higher result accuracy.
-All settings in the case file are listed in XXANHANG.
-
-
-
-
-\section{curved TBL simulations}
-
-- meshing
-- imposing bc
-- case settings
-
+\section{Curved TBL simulations}
 
 In the next step to derive the curved \acrshort{zpg} \acrshort{tbl} we first need to create a general setup for the curved \acrshort{tbl}. 
 As a basis we use the setup of the plane \acrshort{tbl} and add a curved part at the end of the domain of the plane \acrshort{tbl}. 
+The setup of the plane \acrshort{tbl} is described in \autoref{sec:planeTBL.}
 The plane part is necessary such that the \acrshort{tbl} can develop properly since we want $Re_{\theta} \approx 1000$ when the curvature starts. 
 The curved part has a constant radius and develops in negative wall-normal direction. 
 Therefore, the \acrshort{tbl} experiences a convex curvature. 
 At the end of the curvature another straight domain part is added which is called \benennung{\acrlong{so}}.
 There is a smooth transition between the curved part and the \acrlong{so} because it follows the tangential direction of the end of the curved part. 
-The complete set up is shown in fig XX.
+The complete set-up is shown in \autoref{fig:paraviewDomain}.
 The \acrlong{so} is applied to reduce the impact of the \acrlong{bc} at the outflow. 
 The pressure \acrshort{bc} as the outflow forces the pressure to be zero.
-Since the pressure does XX in the curvature, this outflow condition would impact its behaviour and therefore the development of the \acrshort{tbl}.
-To reduce this impact the \acrlong{so} is added.
-XX general dimension of domain XX
-The mesh is generated similar to the one used for the plane \acrshort{tbl} and adapted to the shape of the domain.
+Therefore, the pressure trend in front of the outflow is impacted by that boundary condition.
+To avoid this \acrshort{bc} impacts the pressure progression in the curvature, the \acrlong{so} is added.
+The mesh is generated similar to the one used for the plane \acrshort{tbl} with the addition of the curved part and the \acrlong{so}.
+The curved part is created with a circular arc with the corresponding values for the radius and angle.
 In the \acrlong{so} the mesh is coarsened since this part of the domain is not relevant for the study of the curved \acrshort{tbl}. \\
 
-The imposed boundary and initial conditions are the same used for the plane \acrshort{tbl}. 
-However, they need some modifications due to the curvature.
-The boundary conditions are summarized in the following table: XXXXXXXX
+\subsubsection{Boundary and initial conditions}
+The imposed boundary and initial conditions are similar to the ones of the plane \acrshort{tbl} simulations.
+The initial condition is as in the plane \acrshort{tbl} a Blasius profile.
+The outflow condition and the boundary condition at the lower wall are transferred as well.
+As boundary condition for the top wall a Dirichlet condition is applied.
+Since the domain is curved the coordinate system needs to be adapted.
+We introduce a moving coordinate system that is based on the streamwise direction $s$, wall-normal direction $n$ and the spanwise-direction $z$.
+The corresponding velocities are named as $u$, $v$ and $w$.
+Hence, the Dirichlet condition with the velocity components $(1,0,0)$ is applied in the new coordinate system.
+In \autoref{sec:planeTBL} normal outflow and Dirichlet as boundary condition on the top wall are compared regarding their effect on the \acrshort{tbl} development.
+These verifications show that the differences at last on a flat \acrshort{tbl} are negligible small, meaning that the Dirichlet boundary condition does not prevent the growth of the \acrshort{tbl}.
+Therefore, we transferred this finding to the curved \acrshort{tbl}, which also brings some simplifications in the case set-up.
+The application of the Dirichlet condition is possible in the f90 file, where the normal and tangential velocity components can be calculated and imposed as user velocity. 
+The normal outflow condition is in neko implemented and until now only works for normal directions axis-aligned to a fix x-y-z coordinate system. 
 As initial condition the Blasius boundary layer was used similar as for the plane \acrshort{tbl}.
-In the curved part the Blasius profile is rotated such that it is formed in wall-normal direction. 
+In the curved part the Blasius profile is rotated such that it builds up in wall-normal direction. \\
 
 
+This setup was used to create three different variations of curved \acrshort{tbl}.
+We tested two different radii to study the impact of different curvatures. 
+We used the radii of $R_1 = 100 \cdot \delta_{99}$ and $R_2 = 500 \cdot \delta_{99}$ with $\delta_{99}$ measured in the plane \acrshort{tbl} at $Re_{\theta} = 1000$. 
+Two setups where tested with radius $R_1$ namely with $30$° and $90$°. 
+For the second only one setup was tested with $18$° curvature. 
+This value is chosen since it has the same arc length as the case with $R_1$ and $90$° curvature. 
+Therefore, the cases have a comparable curved section length.
+The domain dimensions for the tested cases are summarised in \autoref{tab:curved_cases}.
 
-This setup was used to created different variations of curved \acrshort{tbl}.
-We tested two different radii such that we can study the impact of the amplitude of the curvature. 
-To do this we the radii of $R_1 = 100 * \delta_{99}$ and $R_2 = 500 * \delta_{99}$ with $\delta_{99}$ measured in the plane \acrshort{tbl} at $Re_{\theta} = 1000$. 
-Two setups where tested with radius $R_1$ namely with $30$° and $90$°. For the second only one setup was tested with $18$° curvature. 
-This value is chosen since it has the same arclength as the case with $R_1$ and $90$° curvature. 
-Therefore the cases have a comparable curved section length, which corresponds $157 * \delta_{99}$. 
-The case with $R_1$ and $30$° corresponds $52 * \delta_{99}$.
-
-
-\begin{table}[H]
+\comment{
+\begin{table}[!ht]
     \centering
-    \renewcommand{\arraystretch}{1.05}
     \caption{Overview of the tested curved TBL cases}
     \label{tab:curved_cases}
-    \begin{tabular}{L{0.15\textwidth}|C{0.15\textwidth}C{0.1\textwidth}}
-        \toprule
-        {\textbf{Name}} & \textbf{Radius} &  \textbf{Arc} \\ \midrule
-        R100deg30 & $100\,\delta_{99}$ & $30$° \\ \hline
-        R100deg90 & $100\,\delta_{99}$ & $90$° \\\hline
-        R500deg18 & $500\,\delta_{99}$ & $18$° \\
-        \bottomrule
+    \begin{tabular}{ c c c c c c c c c c}
+    \hline
+    \textbf{Name} & \textbf{Angle}  & \multicolumn{2}{c}{\textbf{Radius}} & \multicolumn{2}{c}{\textbf{Straight length}} & \multicolumn{2}{c}{\textbf{Arc length}} & \multicolumn{2}{c}{\textbf{Tail length}}\\
+    && $\times \delta_{99}$ & physical  & $\times \delta_{99}$ & physical & $\times \delta_{99}$ & physical&  $\times \delta_{99}$ & physical \\
+    \hline
+    R100deg30 & $30$° & $100$ & 610  & $53$ & 325 & $53$ & 319& $27$ & 162\\ 
+    R100deg90  &$90$° & $100$ & 610 & $53$ & 325 & $157$ & 958&$27$ & 162\\ 
+    R500deg18 &$18$° & $500$ & 3050  & $53$ & 325 & $157$ & 958&$53$ & 325\\ 
+    \hline
     \end{tabular}
 \end{table}
+}
+\begin{table}[!ht]
+    \centering
+    \caption{Overview of the tested curved TBL cases}
+    \label{tab:curved_cases}
+    \begin{tabular}{l l c c c}
+    \hline
+    Name & & \textbf{R100deg30} & \textbf{R100deg90} & \textbf{R500deg18} \\
+    \hline
+    \multicolumn{2}{l}{\textbf{Angle}} & $30$° & $90$° & $18$° \\
+    \hline
+    \multirow{2}{*}{\textbf{Radius}} & $\times \delta_{99}$ & $100$ & $100$ & $500$ \\
+     & physical & 610 & 610 & 3050 \\
+    \hline
+    \multirow{2}{*}{\textbf{Straight length}} & $\times \delta_{99}$ & $53$ & $53$ & $53$ \\
+     & physical & 325 & 325 & 325 \\
+    \hline
+    \multirow{2}{*}{\textbf{Arc length}} & $\times \delta_{99}$ & $53$ & $157$ & $157$ \\
+     & physical & 319 & 958 & 958 \\
+    \hline
+    \multirow{2}{*}{\textbf{Tail length}} & $\times \delta_{99}$ & $27$ & $27$ & $53$ \\
+     & physical & 162 & 162 & 325 \\
+    \hline
+    \multirow{2}{*}{\textbf{Wall-normal dimension}} & $\times \delta_{99}$ & $4$ & $4$ & $8$ \\
+     & physical & 162 & 162 & 325 \\
+    \hline
+    \multirow{2}{*}{\textbf{Spanwise dimension}} & $\times \delta_{99}$ & $4$ & $4$ & $6$ \\
+     & physical & 162 & 162 & 325 \\
+    \end{tabular}
+\end{table}
+
 
 \begin{figure}[H]
     \centering
@@ -145,60 +108,58 @@ The case with $R_1$ and $30$° corresponds $52 * \delta_{99}$.
 \end{figure}
 
 
-\section{ZPG Generation}
+\section{Zero-pressure gradient generation}
 
-In the next step the procedure to generate a ZPG in the curved TBL domain is introduced. 
-This procedure is done on \name{OpeFOAM} using the Bayesion optmizer code (ref: Eman etc XX, ref: basics XX). 
-As described in XX the code is able to optimize the shape of the domain to achieve a given pressure gradient function, which in this case is ZPG. 
-To do this the simulaiton setup has to be transferred to \name{OpenFOAM}. 
+In this section the procedure to generate a \acrshort{zpg} in the curved \acrshort{tbl} domain is introduced. 
+This procedure is done on \name{OpenFOAM} using the Bayesian optimiser code developed by \citet{morita_applying_2022}. 
+As described in \autoref{sec:OptimsationBasics} the code is able to optimize the shape of the domain to achieve a given Clauser parameter, which in this case is a ZPG. 
+To do this the simulation setup has to be transferred to \name{OpenFOAM}. 
 In the following paragraph the necessary steps are described in detail. 
-
 
 \subsection{OpenFOAM setup}\label{subsec: methodsOFsetup}
 
-
 \paragraph{General settings}
-With \name{OpenFOAM} the \acrshort{rans} simulations for the optimization are performed.
-As described in chapter XX, \acrshort{rans} simulations use turbulence models compared to \acrshort{dns}, where the turbulenc is simulated completely.
-There are different common used models to describe the turbulence which have various properties and accuracies.
-In this simulaiton we use the so-called $k-\omega-sst$-model.
-This model 
-XX something about this model is a combinatio of the $k-\omega$- and $k-\epsilon$ model with an added term for the shear-stress transport (SST) \citep{menter_two-equation_1994}.
+With \name{OpenFOAM} the \acrshort{rans} simulations for the optimisation are performed.
+As described in \autoref{sec:SimBasics} \acrshort{rans} simulations use turbulence models compared to \acrshort{dns} where the turbulence is simulated completely.
+There are different commonly used models to describe the turbulence which have various properties and accuracies.
+In this simulation we use the so-called $k-\omega-sst$-model.
+This model is a combination of the $k-\omega$- and $k-\varepsilon$ model with an added term for the shear-stress transport (SST) \citep{menter_two-equation_1994}.
 in the sublayer of the boundary layer the $k-\omega$ model is used because of its accuracy in this region. 
-This is blende with the $k-\epsilon$ model which gives better results for $k$ and $\epsilon$.
-These qunatities determine the eddy viscosity which is the main information for the solver of the mean flow. 
-THerefore, a reasonable prediction of mean flow depends on accurate values for $k$ and $\epsilon$ \citep{menter_two-equation_1994}. 
+This is blended with the $k-\varepsilon$ model which gives better results for $k$ and $\varepsilon$.
+These quantities determine the eddy viscosity which is the main information for the solver of the mean flow. 
+Therefore, a reasonable prediction of mean flow depends on accurate values for $k$ and $\varepsilon$ \citep{menter_two-equation_1994}. 
 
-other settings in OPENFOAM
-
-
+\fxinfo{other settings in OPENFOAM}
 
 
-\paragraph{Mesh Generation}
-XX pLus units
+
+
+\subsubsection{Mesh Generation}
 The transfer of the curved TBL simulation setup to \name{OpenFOAM} includes some adaptations which will be presented here. 
 First, the mesh has to be regenerated. 
 It is not possible to use a mesh created in \name{gmsh} and transfer it to \name{OpenFOAM}, since the code has to adapt the domain and the mesh after every iteration of the optimization.
 Therefore, the domain has to be regenerated in every iteration with \verb|blockMesh|.
-As a consequence the domain has to be defined in \verb|blockMeshDict|.
-To ensure that the results from the \name{OpenFOAM} simulation is transferrable into \name{neko}, we have to ensure a quite similar setup.
-Therefore the domain has the same curvature and also an inlet and outlet region similar to the \acrshort{dns} domain.
-However the inlet is shorter than the one for the \acrshort{dns}.
-The initial condition for the \name{OpenFOAM} simulation is extracted at a position $s_{extr}$ in the inlet region of the \acrshort{dns} domain.
-Therefore the boundary layer in the \acrshort{rans} simulation only needs the remaining inlet region $s_{straight} - s_{extr}$ to develop similar to the \acrshort{dns} boundary layer.
+As a consequence the domain has to be defined in the \verb|blockMeshDict|.
+To ensure that the results from the \name{OpenFOAM} simulation are transferrable into \name{neko}, we have to ensure a quite similar setup.
+Therefore the domain has the same curvature and also an inlet and outlet region similar to the constitution of the \acrshort{dns} domain.
+However the inlet is shorter than the one in the \acrshort{dns} domain.
+The initial condition for the \name{OpenFOAM} simulation is extracted at a position $s_{extr}$ in the straight section of the \acrshort{dns} domain.
+Therefore the boundary layer in the \acrshort{rans} simulation only needs the remaining straight part $s_{straight} - s_{extr}$ to develop similar to the \acrshort{dns} boundary layer.
 This is shown in \autoref{fig:openfoamDomain}.
-Compared to the domain used for the DNS, the height of the domain is increased to $\delta_{99}*XX = XX$.
-This modification brings some simplifications when the results of the optimized \name{OpenFOAM} simulation are transferred to the DNS domain which will be described later (see XX).
-To enable the adaption of the \benennung{design coordinates} cannot be defined as fix circular arc.
-Instead it is defined as spline.
-The points defining the spline are the coordinates $x_{\theta_i}$, $y_{\theta_i}$ of the \benennung{design parameters} $\theta_i$ whose position is modified to minimize the \benennung{objective function}.  
-The optimization code is constructed such that it modifies position of the \benennung{design parameters} in wall-normal direction. 
+Compared to the domain used for the DNS, the height of the domain is increased to $10 \cdot \delta_{99}$ for R100deg30 and R100deg90, and up to $20 \cdot \delta_{99}$ in R500deg18.
+This modification brings some simplifications for transferring the results of the optimised \name{OpenFOAM} simulation to the DNS domain which will be described in \autoref{subsec:data_extr}.
+To enable the adaption of the \benennung{design points}, the upper wall cannot be defined as fix circular arc in the curved section.
+Instead it is defined as spline defined by the \benennung{design points}.
+$x_{\theta_i}$, $y_{\theta_i}$ are the coordinates that describe the position of the \benennung{design points} $\theta_i$ whose position is modified to minimise the \benennung{objective function}.  
+The optimisation code is constructed in a way that it modifies the position of the \benennung{design points} in wall-normal direction. 
+
+\fxinfo{hier omrge weitermachen}
 Since the \benennung{design space} is curved, the wall-normal direction does not correspond to a fixed axis. 
-Hence, their position has to be transformed in $x-$ and $y-$ coordinates to define the spline correctly in space.
-It has to be noticed that the straight inlet region is also part of the spline, due to the positioning of the \benennung{design parameters}.
-This will be discussed in detail in XX.
+Hence, their position has to be transformed in $x-$ and $y-$ coordinates to correctly define the spline.
+It has to be noticed that the straight inlet region is also part of the spline, due to the positioning of the \benennung{design points}.
+This will be discussed in detail in \autoref{subsec:opt_settings}.
 The lower wall is defined as a straight edge first and then transfers into a circular arc.
-The tail is not part of the splines, since their no optimization is needed.
+The tail is not part of the spline, since there no optimisation is needed.
 It is meshed in a block with straight vertices.
 The resolution of the mesh increases near the wall to ensure $y^+ = 1$ near the lower wall.
 
@@ -212,7 +173,7 @@ The resolution of the mesh increases near the wall to ensure $y^+ = 1$ near the 
     \label{fig:openfoamDomain}
 \end{figure}
 
-\paragraph{Initial conditions or boundary condition ??XX}
+\paragraph{Initial and boundary conditions}
 The quantities that need predefined initial conditions depend on the chosen RANS model (XXQuelle). 
 Since in this project the $k-\omega-sst$-model is used, it is necessary to define initial conditions for turbulent kinetic energy $k$, dissipation $\omega$ and velocity $U$. 
 This is done due to the imposition of an initial field at the inflow which is extracted from the previous DNS simulation of the curved TBL (see XX).
