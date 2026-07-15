@@ -4,14 +4,15 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of velocity profiles in viscous scales for different $Re_\theta $, data taken from \acrshort {tbl} simulations from \citet {balasubramanian_direct_2023}}}{6}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}}{14}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Optimised domain for RANS simulations in OpenFOAM (vlt lieber ohne mesh??XX): hier kein mesh, dafür maße anbringen}}{15}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Positioning of the design points}}{17}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Worklow}}{19}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}}{14}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \relax }}{15}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \relax }}{17}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Positioning of the design points}}{19}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Worklow}}{21}{figure.caption.40}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Initial condition channel simulaiton}}{21}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Initial condition for plane TBL with blasius profile XX Maße einfügen}}{22}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \relax }}{23}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Initial condition channel simulaiton}}{23}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Initial condition for plane TBL with blasius profile XX Maße einfügen}}{24}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \relax }}{25}{figure.caption.47}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
