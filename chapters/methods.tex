@@ -2,55 +2,59 @@
 \chapter{Methods} \label{chap:methods}
 
 \fxbmark{Start here: 15.07. 8:45}
-In the following chapter the methods used in this thesis are presented. 
-First the setup of curved \acrshort{tbl} simulations in \name{neko} is presented.
-Then the generation of the \acrshort{zpg} conditions is described.
-Finally, it is presented how the \acrshort{zpg} is imposed onto the \acrshort{dns} domain.
 
-\section{Curved TBL simulations}
+In this chapter, the methods employed in this thesis are provided. 
+First, we outline the setup of curved \acrshort{tbl} simulations in \name{neko}.
+Next the generation of the \acrshort{zpg} conditions is described.
+Finally, the methodology employed to impose the \acrshort{zpg}  onto the \acrshort{dns} domain is presented.
 
-In the next step to derive the curved \acrshort{zpg} \acrshort{tbl} we first need to create a general setup for the curved \acrshort{tbl}. 
-As a basis we use the setup of the plane \acrshort{tbl} and add a curved part at the end of the domain of the plane \acrshort{tbl}. 
+\section{Curved TBL simulations}\label{sec:MethodCurvedTBL}
+
+In order to derive the curved \acrshort{zpg} \acrshort{tbl}, we first need to create a general setup for the curved \acrshort{tbl}. 
+The initial configuration of the plane  \acrshort{tbl} is utilised as the basis, and we add a curved part at the end of the domain of the plane \acrshort{tbl}. 
 The setup of the plane \acrshort{tbl} is described in \autoref{sec:planeTBL.}
-The plane part is necessary such that the \acrshort{tbl} can develop properly since we want $Re_{\theta} \approx 1000$ when the curvature starts. 
+It is imperative to consider the plane part, as this is necessary for the optimal development of the \acrshort{tbl}. The objective is to achieve
+a value of $Re_{\theta} \approx 1000$ when the curvature starts. 
 The curved part has a constant radius and develops in negative wall-normal direction. 
 Therefore, the \acrshort{tbl} experiences a convex curvature. 
-At the end of the curvature another straight domain part is added which is called \benennung{\acrlong{so}}.
-There is a smooth transition between the curved part and the \acrlong{so} because it follows the tangential direction of the end of the curved part. 
-The complete set-up is shown in \autoref{fig:paraviewDomain}.
-The \acrlong{so} is applied to reduce the impact of the \acrlong{bc} at the outflow. 
-The pressure \acrshort{bc} as the outflow forces the pressure to be zero.
-Therefore, the pressure trend in front of the outflow is impacted by that boundary condition.
-To avoid this \acrshort{bc} impacts the pressure progression in the curvature, the \acrlong{so} is added.
-The mesh is generated similar to the one used for the plane \acrshort{tbl} with the addition of the curved part and the \acrlong{so}.
-The curved part is created with a circular arc with the corresponding values for the radius and angle.
+At the end of the curvature, an additional straight domain segment is appended, which is called \benennung{\acrlong{so}}.
+A smooth\fxinfo{seamless?} transition is observed between the curved segment and the straight one \acrlong{so}, as the former aligns with the tangential direction of the curved segment. 
+
+The complete setup is shown in \autoref{fig:paraviewDomain}.
+The \acrlong{so} is introduced to reduce the impact of the \acrlong{bc} at the outflow. 
+The pressure \acrshort{bc} as the outflow forces the pressure to be zero.\fxchange{Satz unvollständig, oder ich versteh's nicht}
+Consequently, the pressure trend in front of the outflow is affected by the specified boundary condition.
+In order to circumvent  that the \acrshort{bc} impacts the pressure progression in the curvature, the \acrlong{so} is added.
+The mesh is generated in a manner analogous to that employed for the plane  \acrshort{tbl} with the addition of the curved part and the \acrlong{so}.
+The curved psegment is created with a circular arc with the corresponding values for the radius and angle.
 In the \acrlong{so} the mesh is coarsened since this part of the domain is not relevant for the study of the curved \acrshort{tbl}. \\
 
-\subsubsection{Boundary and initial conditions}
-The imposed boundary and initial conditions are similar to the ones of the plane \acrshort{tbl} simulations.
-The initial condition is as in the plane \acrshort{tbl} a Blasius profile.
-The outflow condition and the boundary condition at the lower wall are transferred as well.
-As boundary condition for the top wall a Dirichlet condition is applied.
+\subsection{Boundary and initial conditions}
+The imposed boundary and initial conditions are similar to those of the plane \acrshort{tbl} simulations.
+The initial condition is  a Blasius\fximprove{Begriff neu, braucht das keine Literaturreferenz} profile, as in the plane \acrshort{tbl} simulations.
+The outflow condition and the lower wall boundary condition  are also transferred.
+A Dirichlet condition is applied as boundary condition for the top wall.
 Since the domain is curved the coordinate system needs to be adapted.
-We introduce a moving coordinate system that is based on the streamwise direction $s$, wall-normal direction $n$ and the spanwise-direction $z$.
+We introduce a moving coordinate system that is based on the streamwise direction $s$, the wall-normal direction $n$ and the spanwise direction $z$.
 The corresponding velocities are named as $u$, $v$ and $w$.
 Hence, the Dirichlet condition with the velocity components $(1,0,0)$ is applied in the new coordinate system.
-In \autoref{sec:planeTBL} normal outflow and Dirichlet as boundary condition on the top wall are compared regarding their effect on the \acrshort{tbl} development.
-These verifications show that the differences at last on a flat \acrshort{tbl} are negligible small, meaning that the Dirichlet boundary condition does not prevent the growth of the \acrshort{tbl}.
-Therefore, we transferred this finding to the curved \acrshort{tbl}, which also brings some simplifications in the case set-up.
-The application of the Dirichlet condition is possible in the f90 file, where the normal and tangential velocity components can be calculated and imposed as user velocity. 
-The normal outflow condition is in neko implemented and until now only works for normal directions axis-aligned to a fix x-y-z coordinate system. 
-As initial condition the Blasius boundary layer was used similar as for the plane \acrshort{tbl}.
-In the curved part the Blasius profile is rotated such that it builds up in wall-normal direction. \\
+In \autoref{sec:planeTBL}, normal outflow and the Dirichlet  boundary condition on the top wall are compared  in terms of their effect on the \acrshort{tbl} development.
+These verifications show that, ultimately, the differences  on a flat \acrshort{tbl} are negligible small\fxinfo{small kann weg}, meaning that the Dirichlet boundary condition does not prevent the growth of the \acrshort{tbl}.
+Therefore, we transferred this finding to the curved \acrshort{tbl}, which also simplifies the scenario setup.
+The Dirichlet condition can be applied in the f90 file, where the normal and tangential velocity components can be calculated and set as the user velocity. 
+The normal outflow condition has been  implemented in neko, but currently  only works for normal directions axis-aligned to a fixed x-y-z coordinate system. 
+ The Blasius boundary layer was used as the initial condition similar to the plane \acrshort{tbl}.
+In the curved part the Blasius profile is rotated so that it builds up in the wall-normal direction. \\
 
 
-This setup was used to create three different variations of curved \acrshort{tbl}.
-We tested two different radii to study the impact of different curvatures. 
-We used the radii of $R_1 = 100 \cdot \delta_{99}$ and $R_2 = 500 \cdot \delta_{99}$ with $\delta_{99}$ measured in the plane \acrshort{tbl} at $Re_{\theta} = 1000$. 
-Two setups where tested with radius $R_1$ namely with $30$° and $90$°. 
-For the second only one setup was tested with $18$° curvature. 
-This value is chosen since it has the same arc length as the case with $R_1$ and $90$° curvature. 
-Therefore, the cases have a comparable curved section length.
+
+This setup was used to create three different variations of the curved \acrshort{tbl}.
+We tested two different radii to study the impact of varying curvatures. 
+The radii used were  $R_1 = 100 \cdot \delta_{99}$ and $R_2 = 500 \cdot \delta_{99}$ with $\delta_{99}$ measured in the plane \acrshort{tbl} at $Re_{\theta} = 1000$. 
+Two setups were tested with radius $R_1$ namely at $30$° and $90$°. 
+For the second, only one setup was tested, with $18$° curvature. 
+This value was chosen because it has the same arc length as the case with radius $R_1$ and $90$° curvature. 
+Therefore, the cases have a comparable curved section lengths.
 The domain dimensions for the tested cases are summarised in \autoref{tab:curved_cases}.
 
 
@@ -113,65 +117,74 @@ The domain dimensions for the tested cases are summarised in \autoref{tab:curved
 
 \section{Zero-pressure gradient generation}
 
-In this section the procedure to generate a \acrshort{zpg} in the curved \acrshort{tbl} domain is introduced. 
-This procedure is done on \name{OpenFOAM} using the Bayesian optimiser code developed by \citet{morita_applying_2022}. 
-As described in \autoref{sec:OptimsationBasics} the code is able to optimize the shape of the domain to achieve a given Clauser parameter, which in this case is a ZPG. 
-To do this the simulation setup has to be transferred to \name{OpenFOAM}. 
+This section introduces the procedure for generating a \acrshort{zpg} in the curved \acrshort{tbl} domain. 
+This procedure is performed using \name{OpenFOAM}\fxinfo{wurde das schon mal als Quelle genannt?} and the Bayesian optimiser code developed by \citet{morita_applying_2022}. 
+As described in \autoref{sec:OptimsationBasics}, the code is able to optimise the shape of the domain to achieve a given Clauser parameter,  in this case the parameter is a ZPG. 
+To achieve this, the simulation setup has to be transferred to \name{OpenFOAM}. 
 In the following paragraph the necessary steps are described in detail. 
 
 \subsection{OpenFOAM setup}\label{subsec: methodsOFsetup}
 
-With \name{OpenFOAM} the \acrshort{rans} simulations for the optimisation are performed.
-As described in \autoref{sec:SimBasics} \acrshort{rans} simulations use turbulence models compared to \acrshort{dns} where the turbulence is simulated completely.
-There are different commonly used models to describe the turbulence which have various properties and accuracies.
+The OpenFOAM package is used to perform the RANS simulations for optimisation.
+As described in \autoref{sec:SimBasics} \acrshort{rans} simulations use turbulence models, whereas \acrshort{dns} simulate the turbulence completely.
+There are various commonly used models for describing the turbulence, which have different  properties and accuracies.
 In this simulation we use the so-called $k-\omega-sst$-model.
-This model is a combination of the $k-\omega$- and $k-\varepsilon$ model with an added term for the shear-stress transport (SST) \citep{menter_two-equation_1994}.
-in the sublayer of the boundary layer the $k-\omega$ model is used because of its accuracy in this region. 
-This is blended with the $k-\varepsilon$ model which gives better results for $k$ and $\varepsilon$.
-These quantities determine the eddy viscosity which is the main information for the solver of the mean flow. 
-Therefore, a reasonable prediction of mean flow depends on accurate values for $k$ and $\varepsilon$ \citep{menter_two-equation_1994}. 
+This model combines the $k-\omega$- and $k-\varepsilon$ models, incorporating an additional  term for the shear-stress transport (SST) \citep{menter_two-equation_1994}.
+In the sublayer of the boundary layer, the $k-\omega$ model is used because of its accuracy in this region. 
+This is blended with the $k-\varepsilon$ model, which provide more accurate results for $k$ and $\varepsilon$.
+These quantities determine the eddy viscosity which is the main information required by the mean flow solver. 
+Therefore, an accurate prediction of mean flow depends on accurate values for $k$ and $\varepsilon$ \citep{menter_two-equation_1994}. 
 
 \fxinfo{other settings in OPENFOAM}
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{domain_overview.pdf}
-    \caption{}
+    \input{images/domain_overview.pgf}
+    \caption[XX]{Schematic of the TBL channel domain (R\,=\,610, $30^\circ$ arc).
+    The \lswatch{wallcol} fixed bottom wall and the
+    \lswatch{wallcol} straight inlet/outlet of the top wall are rigid;
+    over the curved section the top wall is a movable spline, shown in its
+    \lswatch{splinecol} current (deflected) shape relative to its
+    \lswatch[dashed]{neutralcol} neutral, undeformed position.
+    \lswatch[dashed]{onsetcol} mark the onset of curvature and the tail start.
+    The \dswatch{cpdot} spline control points move within their
+    \lswatch{rangecol} admissible range (drawn exaggerated for clarity).}
     \label{fig:openfoamDomain}
 \end{figure}
 
 \subsubsection{Mesh Generation}
-The transfer of the curved TBL simulation setup to \name{OpenFOAM} includes some adaptations which will be presented here. 
+Transferring the curved TBL simulation setup to \name{OpenFOAM} requires some adaptations which will be presented here. 
 First, the mesh has to be regenerated. 
-It is not possible to use a mesh created in \name{gmsh} and transfer it to \name{OpenFOAM}, since the code has to adapt the domain and the mesh after every iteration of the optimisation.
-Therefore, the domain has to be regenerated in every iteration with \verb|blockMesh|.
-As a consequence the domain has to be defined in the \verb|blockMeshDict|.
-To ensure that the results from the \name{OpenFOAM} simulation are transferrable into \name{neko}, we have to ensure a quite similar setup.
-Therefore the domain has the same curvature and also an inlet and outlet region similar to the constitution of the \acrshort{dns} domain.
-However the inlet is shorter than the one in the \acrshort{dns} domain.
-The initial condition for the \name{OpenFOAM} simulation is extracted at the position $s_{extr} = 275$ in the straight section of the \acrshort{dns} domain.
-Therefore the boundary layer in the \acrshort{rans} simulation only needs a much shorter straight inlet region to develop similar to the \acrshort{dns} boundary layer.
-We defined the remaining length of the straight inlet as the remaining part of $s_{p} - s_{extr}$ and then added a balance zone of $s_{bal = 20}$ for the \acrshort{tbl} profile to balance in the \acrshort{rans} simulation.
-This balance region is recommendable since quantities of the extracted \acrshort{dns} inflow profile have to rebalance in \acrshort{rans} model (XXQUELLE).
+It is not possible to use a mesh created in \name{gmsh} and transfer it to \name{OpenFOAM}, since the code must adapt the domain and the mesh after each iteration of the optimisation.
+Therefore, the domain has to be regenerated with \verb|blockMesh| in every iteration.
+As a consequence, the domain has to be defined in the \verb|blockMeshDict|.
+To ensure that the results from the \name{OpenFOAM} simulation can be transferred into \name{neko}, the setup must be quite similar.
+Therefore the domain has the same curvature as well as  inlet and outlet regions similar to the constitution of the \acrshort{dns} domain.
+However, the inlet is shorter than the one in the \acrshort{dns} domain.
+The initial condition for the \name{OpenFOAM} simulation is extracted at a position $s_{extr} = 275$ in the straight section of the \acrshort{dns} domain.
+Therefore, in the \acrshort{rans} simulation, the boundary layer  only needs the remaining straight segment $s_{straight} - s_{extr}$ to develop in a similar way to the \acrshort{dns} boundary layer.
+Therefore, the boundary layer in the \acrshort{rans} simulation only needs a much shorter straight inlet region to develop similar to the \acrshort{dns} boundary layer.
+We defined the remaining length of the straight inlet as the remaining part of $s_{p} - s_{extr}$ and then added a balance zone of $s_{bal = 20}$\fxchange{?? $s_{bal} = 20$??} for the \acrshort{tbl} profile to balance in the \acrshort{rans} simulation.
+This balance region is recommended since quantities of the extracted \acrshort{dns} inflow profile have to be rebalanced in the \acrshort{rans} model (XXQUELLE).
 \fxunsure{unsicher ob dieser satz verständlich ist}
-This is shown in \autoref{fig:openfoamDomain}.
+In \autoref{fig:openfoamDomain} the general configuration of the \acrshort{rans} domain is depicted exemplary for the R100deg30 case.
 Compared to the domain used for the DNS, the height of the domain is increased to $10 \cdot \delta_{99}$ for R100deg30 and R100deg90, and up to $20 \cdot \delta_{99}$ in R500deg18.
-This modification brings some simplifications for transferring the results of the optimised \name{OpenFOAM} simulation to the DNS domain which will be described in \autoref{subsec:data_extr}.
-To enable the adaption of the \benennung{design points}, the upper wall cannot be defined as fix circular arc in the curved section.
-Instead it is defined as spline defined by the \benennung{design points}.
-$x_{\theta_i}$, $y_{\theta_i}$ are the coordinates that describe the position of the \benennung{design points} $\theta_i$ whose position is modified to minimise the \benennung{objective function}.  
-The optimisation code is constructed in a way that it modifies the position of the \benennung{design points} in wall-normal direction. 
+This modification simplifies the transfer of the results of the optimised \name{OpenFOAM} simulation to the DNS domain, as  described in \autoref{subsec:data_extr}.
+To enable the adaption of the \benennung{design points}, the upper wall cannot be defined as a fixed circular arc in the curved section.
+Instead, it is defined as a spline defined by the \benennung{design points}.
+The coordinates $x_{\theta_i}$ and $y_{\theta_i}$  describe the position of the \benennung{design points} $\theta_i$ whose position is modified to minimise the \benennung{objective function}.  
+The optimisation code is constructed in a way that it modifies the position of the \benennung{design points} in the wall-normal direction. 
 
 
 Since the \benennung{design space} is curved, the wall-normal direction does not correspond to a fixed axis. 
-Hence, their position has to be transformed in $x-$ and $y-$ coordinates to correctly define the spline.
+Therefore,  it must be transformed into  $x-$ and $y-$ coordinates to  define the spline correctly.
 It has to be noticed that the straight inlet region is also part of the spline, due to the positioning of the \benennung{design points}.
 This will be discussed in detail in \autoref{subsec:opt_settings}.
-The lower wall is defined as a straight edge first and then transfers into a circular arc.
-The tail is not part of the spline, since there no optimisation is needed.
-It is meshed in a block with straight vertices.
-The resolution of the mesh increases near the wall to ensure $y^+ = 1$ near the lower wall.
+The lower wall is defined first as a straight edge  and then transitions into a circular arc.
+The tail is not part of the spline, since there no optimisation is required.
+It is meshed as a block with straight vertices.
+The mesh resolution increases near the wall to ensure $y^+ = 1$ near the lower wall.
 
 
 %To match the lower wall to this configuration we defined it also as spline but increased the number on control points to a very high level, such that it is quite similar to an analytical circular arc.
@@ -180,11 +193,11 @@ The resolution of the mesh increases near the wall to ensure $y^+ = 1$ near the 
 
 
 \paragraph{Initial and boundary conditions}
-The quantities that need predefined initial conditions depend on the chosen RANS model (XXQuelle). 
-Since in this project the $k-\omega-sst$-model is used, it is necessary to define initial conditions for turbulent kinetic energy $k$, dissipation $\omega$ and velocity $U$. 
-This is done through the application of an initial field at the inflow which is extracted from the previous \acrshort{dns} simulation of the curved \acrshort{tbl}.
-Therefore, a slice of the fully developed \acrshort{tbl} from the DNS simulation is taken.
-We take this slice at the streamwise position in the straight part where $Re_{theta} = 1000$ is reached.
+The quantities that require predefined initial conditions depend on the selected RANS model (XXQuelle). 
+Since  the $k-\omega-sst$-model is used in this project, it is necessary to define the initial conditions for turbulent kinetic energy $k$, dissipation $\omega$ and velocity $U$. 
+This is achieved by applying an initial field at the inflow which is extracted from the previous \acrshort{dns} simulation of the curved \acrshort{tbl}.
+Therefore, a slice of the fully developed \acrshort{tbl} from the DNS simulation is used.
+We take this slice at the streamwise position in the straight inlet where $Re_{theta} = 1000$ is reached.
 At this streamwise position the fields of $U$, $k$ and $\omega$ are extracted across the entire height of the domain. 
 In the spanwise direction the fields are already averaged which corresponds to the two-dimensionality of the \name{OpenFOAM} simulation.
 In order to do this we perform a post-processing of the \acrshort{dns} simulation using the \name{OpenFOAM} mesh as interpolation points.
@@ -203,6 +216,15 @@ For this part of the inflow the last interpolated value is copied and added in t
 \subsection{Optimisation settings} \label{subsec:opt_settings}
 In the following subsection the general workflow of the optimisation algorithm is outlined.
 Then, the positioning of the \benennung{control points} is explained and addiitonal settings for the optimisation are presented.
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{BOGP_flowchart_horizontal.pdf}
+    \caption{}
+    \label{fig:openfoamDomain}
+\end{figure}
 
 \subsubsection{Optimisation algorithm}
 
@@ -224,54 +246,61 @@ With this, the residual, which is defined by the normalised $L^2$-norm of $\beta
 
 with $\beta_{eval}$ representing the calculated value in the current iteration.
 $\beta_{target}$ is the objective value. 
-The $L^2$-norm is normalised by the number of cells that are included in the target window.
+The $L^2$-norm is normalised by the number of cells that are included in the target window $N_eval$.
 That is necessary for comparisons between residuals of different cases and respectively different target window sizes.
 In the next step the setup of the \texttt{OFcase} is stored if the residual is below a user-defined threshold.
 That is good to later compare differnt configuartions with comparable good residuals.
 In the last step the \benennung{design points} are added to the \texttt{gpList.dat} and the convergence check is performed.
 THese steps are repeated until the residual is converged or the maximum number of iterations is reached.
 
-\begin{figure}[h]
+\subsubsection{Positioning of the design points}
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{BOGP_flowchart_horizontal.pdf}
-    \caption{}
-    \label{fig:openfoamDomain}
+    \input{images/domain_cps.pgf}
+    \caption[TBL channel domain.]{TBL channel domain.
+    \lswatch{splinecol} spline defined by the control points;
+    \lswatch{targetcol} target window on the lower wall;
+    \lswatch[dashed]{onsetcol} onset and tail-start.
+    Control points by positioning round:
+    \dswatch{cpone}~initial 5,
+    \dswatch{cptwo}~+3 curvature,
+    \dswatch{cpthree}~+2 inlet.}
+    \label{fig:OF_designPOints}
 \end{figure}
 
 
-\subsubsection{Positioning of the design points}
-The general settings for the optimisation are the same for all performed tests.
+The general settings for the optimisation are the same for all tests performed.
 However, the number and position of the \benennung{design parameters} varies depending on the case.
+In \autoref{fig:OF_designPOints} the positioning procedure of the \benennung{control points} is visualised.
+In all cases, optimisation was started with five \benennung{design points} uniformly distributed along the curvature.  
+Their position is marked in \autoref{fig:OF_designPOints} as 'Positioning 1'.
+For the R100deg30 case this setup produced insufficient small residuals. 
+Therefore  more \benennung{design points} were successively positioned  between the existing ones,  where the Clauser parameter showed high variations.
+They are visualised in 'Positioning 2' in \autoref{fig:OF_designPOints}.
+In the final configuration, we used eight \benennung{design parameters} in the curved area for this case.
+Optimisation of this setup revealed a sharp \acrshort{fpg} spike at the start of the curvature, not yet being controlled by the optimisation.
+Since we wanted to enforce a \acrshort{zpg} already at the start of the curvature, we needed to modify the optimisation process.
+First, the current best setup was copied and its \benennung{design parameters} stored. 
+In the new optimisation setup, the focus is on the part near the start of the curvature only.
+In order to manipulate the pressure gradient in this region, it was necessary to position additional \benennung{design parameters} in the straight part. 
+We decided to add two more \benennung{design parameters}.\fxinfo{Gibt es nen Grund dafür?}
+One of these is positioned directly at the transition from the straight to the curved segment.
+The second one is positioned at $\frac{2}{3}s_p$ behind the inflow.
+These additional points extend the optimisation range along the lower wall beyond the beginning of the curvature which is depicted in green in \autoref{fig:OF_designPOints}. 
+Since the length of this inflow region is quite small relative to the total  length of the optimisation  along the curvature, adding these points without changing the optimisation settings would not significantly affect the progression of $\beta$\fxinfo{beta?}.
 
-\comment{
-To reach an optimal configuration for a small $\beta$ two different distributions of the \benennung{design points} were tested.
-Since we wanted to enforce a \acrshort{zpg} already at the start of the curvature we positioned the first \benennung{design point} at $s=2/3 *s_{straight} = 43$. 
-}
-For all cases the optimisation is started with five \benennung{design points} uniform distributed along the curvature. 
-For the R100deg30 case this setup gave insufficient small residuals. 
-Therefore successively more \benennung{design points} where positioned in between the existing ones, positioned where the Clauser parameter shows high variations.
-In the final configuration we used eight \benennung{design parameters} in the curved area for this case.
-The optimisation of this setup showed that at the start of the curvature a sharp \acrshort{fpg} spike shows up which is not yet controlled by the optimisation.
-Since we wanted to enforce a \acrshort{zpg} already at the start of the curvature we needed to modify the optimisation.
-To do this, first the current best setup was copied and its \benennung{design parameters} stored. 
-In the new optimisation setup we focus only on the part near the start of the curvature.
-To manipulate the pressure gradient in this region it is necessary to position additional \benennung{design parameters} in the straight part. 
-We decided to add two more \benennung{design parameters}.
-One of them is positioned directly at the transition of the straight to the curved part.
-The second one is positioned at 2/3 the straight length behind the inflow.
-With these additional points the optimisation range along the lower wall can be extended beyond the beginning of the curvature. 
-Since the length of this inflow region relative to the length of the whole optimisation length along the curvature is quite small the addition of these points without changes in the optimisation settings would not have a big effect to the progression of beta.
-That is because this region then only has low impact on the mean value of beta which is the one value optimized.
-In addition, this would enlarge the optimisation dimension by 2 more dimension which would slow down the optimisation significantly.
-Therefore, we choose a different method. 
-Since the optimisation performed for the curved part only already showed quite good results, we took the optimized \benennung{design parameters} from there and adopt them in the new setup. 
-There we fixed the six downstream parameters of these 8 parameters, since they were already positioned quite good.
-In addition, we assumed that the modification at the inflow would not impact the pressure field near the end of the curvature too much.
-Hence, we only have two free \benennung{design points} in the curvature and two in the straight section in front of it which fastens the optimisation.
-In addition, we apply a weight to the transition section of the optimisation length to enlarge the impact of the new design points.
-We tested multiple other setups and distributions of the \benennung{design points} to ensure a proper result.
+This is because this region only has a low impact on the mean value of $\beta$\fxinfo{beta?}, which is the only value optimised.
+Additionally, this would\fxunsure{verstehe ich nicht: Gerade wurde doch gesagt, dass diese 2 Punkte jetzt dazugenommen werden, jetzt doch nicht - fehlt hier ein Satz was man sonst so machen würde??} increase the optimisation dimension by two, which would significantly slow down the optimisation process.
+Therefore, we chose a different method. 
+Since the optimisation performed for the curved segment only already produced quite good results, we adopted the optimised design parameters from there in the new setup. 
+We fixed the six downstream parameters of these eight parameters since they were already it a good position.
+Moreover, we assumed that the inflow modification  would not significantly impact the pressure field near the end of the curvature.
+Thus, we only have two free \benennung{design points} in the curvature and two in the straight section in front of it which fastens the optimisation.
+In addition, we applied a weight to the transition section of the optimisation length to increase the impact of the new design points.
+We tested multiple other setups and distributions of the \benennung{design points} to ensure an accurate result.
 The results of the different configurations are discussed in XX.
-For the other two cases we decided to directly follow the best working principle to position the \benennung{design variables}.
+For the other two cases we decided to directly follow the best working principle to position the \benennung{design variables} directly.
 
 \comment{
 XXX shorten optimisation lengthXX??
@@ -289,18 +318,18 @@ As we can see there the value of beta XXXX.
 HOwever, there is a sharp negative peak when the curvature starts.
 This means that with this set up the inflow in the curved part odes not fulfill a \acrshort{zpg}.
 }
-As stated before in all cases we started with five \benennung{design points}.
-For the R500deg18 this already lead to small residuals.
+As mentioned previously, we started with five \benennung{design points} in all cases.
+For the R500deg18, this resulted in small residuals.
 This can be explained by the lower curvature in this case which reduces the natural pressure gradient caused by the curvature.
 Therefore, the necessary compensation is much smaller. 
-In addition, the longer arc length provides more space for pressure changes, resulting in smaller gradients along the domain (XXQUELLE).
-However, in the curve of the Clauser parameter the R500deg18 case also shows a \acrshort{fpg} spike.
-Therefore, we added similar as for R100deg30 two \benennung{design points} in the straight inlet. 
-We fixed the last four out of five points in the curved section reducing the optimisation problem to three dimensions where only the upstream points are free.
-With this configuration a quite good optimisation of the $\beta$ distribution was possible.
+Additionally, the longer arc length provides more space for pressure changes, resulting in smaller gradients along the domain (XXQUELLE).
+However,  the R500deg18 case lso shows an \acrshort{fpg} spike in the curve of the Clauser parameter.
+Therefore, as with R100deg30, we added  two \benennung{design points} in the straight inlet. 
+We fixed the last four out of five points in the curved section reducing the optimisation problem to three dimensions with only the upstream points  free.
+With this configuration, it was possible to achieve a fairly good optimisation of the $\beta$ distribution.
 
-\fxbmark{End here: 15.07. 19:00}
-For R100deg90 XXXX
+
+For R100deg90 XXXX\fxchange{kann das weg?}
 
 \comment{
 In all cases we started these two configurations with 5 \benennung{design points}.
@@ -310,38 +339,38 @@ Because of the varying geometry of the cases, the capability of the optimisation
 XX blabla concret für cases
 
 
-IN figure XX we see the progression of the clauser parameter along the streamwise direction s. (XX in figure vergleich zw optimiertem und unoptimiertem verlauf?)
+In Figure XX we see the progression of the clauser parameter along the streamwise direction s. (XX in figure vergleich zw optimiertem und unoptimiertem verlauf?)
 We can see that at the start of the curvature beta has a significantly high negative spike in the reference case.
 With the optimisation this spike is reduced.
 However with the sharp change from traight to curved wall, it will not be possible to compensate the spike completely.
 }
 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{domain_cps.pdf}
-    \caption{Positioning of the design points}
-    \label{fig:OF_designPOints}
-\end{figure}
+\fxmarlenebmark{Bis hier Mamas Änderungen eingebaut 16.07. 16:50}
 
 \subsubsection{Optimisation parameters}
 
 Besides the positioning of the \benennung{design points} other parameters have to be determined for the optimisation algorithm.
-For example, the design space has to be limited for all \benennung{control points}.
-We do this 
+For simplicity, all user-defined parameters are defined in a single \texttt{params.py} file.
+There e.g. specific dimensions for the geometry of the domain can be defined, such as the radius, the length of the straight inlet and outlet and the angle.
+The \texttt{blockMeshDict} such that the general configuration of the domain with straight inlet, curved section and straight outlet is predefined.
+In addition, the position of the \benennung{control points} in streamwise direction can be defined.
+Regarding the \benennung{design points}, the design space also has to be limited for all \benennung{control points}.
+We adapt their \benennung{design space} iteratively starting with the same wide range for all \benennung{control points}.
+During the optimisation process we observe the motion of each control points in its range.
+If \benennung{control points} tend over multiple iterations to a limit of their \benennung{design space}, we interrupt the optimisaiton and adapt their range correspondingly.
+To avoid a steady extension of the \benennung{design space}, the opposite limit is also changed to keep the \benennung{design space} size constant.
+The optimisation then can be restarted, and the old optimisation results are still taken into account from the \acrshort{bo}.
+However, these adjustments require caution as hasty modifications can distort the exploration of the \acrshort{bo}.
+Therefore, these adjustments should only be made if there is a long-term trend.
+Concerning the optimisation algorithm, the target window at the lower wall has to be defined.
+As visualised in \autoref{fig:OF_designPOints} the target window does not cover the complete bottom wall of the domain.
+Instead the target window is confined to a section on which the modification of the \benennung{design points} has the capacity to exert an effect on $\beta(s)$ at the lower wall.
+The most important parameter is the definition of the \benennung{objective function} for $\beta(s)$.
 
-case sprecific optimisation settings:
-\begin{itemize}
-    \item geometry
-    \item bounds of the control points
-    \item definition of target beta distribution
-    \item adapt inlet and outlet exclusion, such that target window is only in between the control points
-    \item normalize the residual: makes it comparable across different domain sizes
-    \item adjust safety clamp, such that separated runs are not taken into account
-\end{itemize}
 
 
-
+\comment{
 With this simulation setup the optimisation process is started. 
 The first step of the optimisation loop is to ste new boundary points q. 
 In the beginning (if there are less then XX in GPinit) the points are taken randomly in the given parameter range.
@@ -353,42 +382,46 @@ If the optimisation was performed for a certain number of steps the new boundary
 In the next step the velocity profile for the optimized domain is extracted. 
 The values are extracted from the RANS simulation at the wand normal position which corresponds to the topwall of the DNS domain. 
 This velocity profile is imposed to the DNS setup and then the DNS simulation is performed. 
+}
+
 
 \subsection{Data extraction} \label{subsec:data_extr}
 
-Once the optimisation of the \name{OpenFOAM} simulation is finished, the next step is to transfer the relevant quantities into the \name{neko} simulation.
-As stated before, the domain use for the DNS is smaller in wall-normal direction. 
-Threfore the shape modification from the RANS simulation is not transferred.
-However, only the qunatities influenced by the shpae adaptation are transferred.
-Since the pressure itself is not direclty adapted the velocity components build the defining quantities.
-Therefore the velocity components are extracted at the height where the DNS domain has its upper wall, such that they can be imposed as boundary condition.
+Once the optimisation of the Clauser parameter in \name{OpenFOAM} finished, the next step is to transfer the relevant quantities into the \name{neko} simulation.
+As stated before, the domain use for the \acrshort{dns} is less high in wall-normal direction. 
+Therefore the shape modification from the \acrshort{rans} simulation is not transferred.
+However, only the quantities influenced by the shape adaptation are transferred.
+Since the pressure itself is not directly adapted the velocity components build the defining quantities.
+The velocity components are extracted at the height where the \acrshort{dns} domain has its upper wall, such that they can be imposed as boundary condition.
 The extraction of the data from the \name{OpenFOAM} simulation is done with \name{Python}.
 First the simulation with the best optimisation result is detected and stored in a separate directory.
-The \name{Python} script reads the coordinates from the C/Cx/Cy files and the velocites from the corresponding fields. 
+The \name{Python} script reads the coordinates from the \texttt{C/Cx/Cy} files and the velocities from the corresponding fields. 
 At a user-defined height the velocity values then are interpolated from the surrounding cells. 
-The interpolated velocity are stored in a csv file. 
+The interpolated velocity are stored in a \texttt{csv} file. 
 The integration of these values in the \acrshort{dns} is described in the next section.
 
 
-\section{simulations with ZPG}
+\section{Simulations with zero pressure gradient}
 
-THe setup of the simulations with the optimized boundary conditions at the upper wall have despite from this similar settings as the ones for the curved \acrshort{tbl} described in XX.
+The setup of the simulations with the optimized boundary conditions at the upper wall have despite from this similar settings as the ones for the curved \acrshort{tbl} described in \autoref{sec:MethodCurvedTBL}.
 
 \paragraph{Velocity integration}
 
 To run the \acrshort{dns} with \acrfull{zpg} the velocities extracted from \name{OpenFOAM} need to be applied as boundary condition on the \name{neko} domain. 
-This is implemented in the user f90 file. 
+This is implemented in the \texttt{user.f90} file. 
 There the boundary points are read from the mesh. 
-Then the streamwise position s for the current point is calculated.
-With this positon the mehtod interpolate velocity s is called.
-In this method the velocity is linearly interpolated form the surrounding velocity values read from the csv file.
-This is done for all streamwise positons that are included in the csv file. 
+Then the streamwise position $s$ for the current point is calculated.
+With this position the method \texttt{interpolate_velocity(s)} is called.
+In this method the velocity is linearly interpolated form the surrounding velocity values read from the \texttt{csv} file.
+This is done for all streamwise positions that are included in the \texttt{csv} file. 
 Hence, also a part of the straight inflow in front of the curvature, and a part of the tail are included.
-In the parts of the domain that are not included, (1,0,0) is applied as before. 
-To avoid sharp changes of the boundary condition when changing from 1,0, to the optimized velocities, a blending is inclued.
-This blends the edge value of the optimized velocities into the 1,0,0 region in 10 length units in streamwise direciton. 
+In the parts of the domain that are not included, $(1,0,0)$ is applied as before. 
+To avoid sharp changes of the boundary condition when changing from $(1,0,0)$ to the optimised velocities, a blending is included.
+This blends the edge value of the optimised velocities into the $(1,0,0)$ region in 10 length units in streamwise direction. 
 
+\fxmarlenebmark{Marlene Stand bis hier 16.07. 16:50}
 
+\comment{
 \section{General workflow}
 
 In this section the general workflow followed during this project is presented.
@@ -428,5 +461,5 @@ IN the final part of the project the curved TBL is analysed. Therefore it is nec
 - perform neko simulation
 
 - do this for different domains: why these domains?
-
+}
 

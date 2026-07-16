@@ -141,6 +141,35 @@
 }
 
 
+%%%%%%%%%%%%%%%%%%added colors for lengend entries in caption %%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{xcolor}
+
+\definecolor{splinecol}{HTML}{7A0177}   % spline
+\definecolor{targetcol}{HTML}{2CA02C}   % target window
+\definecolor{cpone}{HTML}{FCC5C0}       % positioning 1
+\definecolor{cptwo}{HTML}{F78BA6}       % positioning 2
+\definecolor{cpthree}{HTML}{DD3490}     % positioning 3
+\definecolor{onsetcol}{HTML}{0B3D91}    % onset / tail-start
+
+% little inline samples
+\newcommand{\lswatch}[2][solid]{%
+  \tikz[baseline=-0.5ex]{\draw[line width=1.4pt,#1,#2] (0,0)--(1.4em,0);}}
+\newcommand{\dswatch}[1]{%
+  \tikz[baseline=-0.5ex]{\node[circle,fill=#1,inner sep=1.7pt]{};}}
+
+\definecolor{wallcol}{HTML}{000000}    % fixed walls (black)
+\definecolor{splinecol}{HTML}{7A0177}  % movable spline, current shape
+\definecolor{neutralcol}{HTML}{8C8C8C} % neutral (undeformed) spline (grey 0.55)
+\definecolor{onsetcol}{HTML}{0B3D91}   % onset / tail-start
+\definecolor{cpdot}{HTML}{FF3FB9}      % control points
+\definecolor{rangecol}{HTML}{FEADEF}   % exaggerated motion range
+
+
+%%%%%%%%%%%%%%%%%%added colors for lengend entries in caption %%%%%%%%%%%%%%%%%%%%%%
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  % Nomenklatur erstellen
 \usepackage[german,norefeq]{nomencl}
@@ -190,9 +219,9 @@
 \newacronym{fpg}{FPG}{favourable pressure gradient}
 \newacronym{apg}{APG}{adverse pressure gradient}
 \newacronym{gpr}{GPR}{Gaussian process regression}
+\newacronym{bo}{BO}{Bayesian optimiser}
 
 
-% \newacronym{md}{MD}{molecular dynamics}
 % \newacronym{pbc}{PBC}{periodic boundary conditions}
 % \newacronym{mpv}{MPV}{material parameter values}
 % \newacronym{fem}{FEM}{finite element method}
@@ -236,6 +265,7 @@
 \newcommandx{\fximprove}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
 \newcommandx{\improve}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
 \newcommandx{\fxbmark}[2][1=]{\todo[linecolor=red,backgroundcolor=red!50,bordercolor=red,size=small, #1]{#2}}
+\newcommandx{\fxmarlenebmark}[2][1=]{\todo[linecolor=violet,backgroundcolor=violet!50,bordercolor=violet,size=small, #1]{#2}}
 \makeatletter% 
 \@mparswitchfalse%
 \makeatother%
