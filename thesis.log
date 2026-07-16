@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  16 JUL 2026 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  16 JUL 2026 18:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1105,11 +1105,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 60.
 
 Package hyperref Warning: Option `pagecolor' is not available anymore.
 
-(./thesis.aux (./chapters/introduction.aux) (./chapters/theory.aux) (./chapters/methods.aux
-
-LaTeX Warning: Label `fig:openfoamDomain' multiply defined.
-
-) (./chapters/verification.aux) (./chapters/results.aux) (./chapters/literaturverzeichnis.aux) (./chapters/anhang1.aux))
+(./thesis.aux (./chapters/introduction.aux) (./chapters/theory.aux) (./chapters/methods.aux) (./chapters/verification.aux) (./chapters/results.aux) (./chapters/literaturverzeichnis.aux) (./chapters/anhang1.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
@@ -1482,10 +1478,12 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
  (./chapters/methods.tex
 chapter 3.
 
-LaTeX Warning: Reference `sec:planeTBL.' on page 12 undefined on input line 15.
+Underfull \hbox (badness 10000) in paragraph at lines 23--31
+
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--31
+Underfull \hbox (badness 10000) in paragraph at lines 34--48
 
  []
 
@@ -1497,42 +1495,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--31
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 42--48
-
- []
-
-<images/curvedDomain_IC.pdf, id=579, 2204.235pt x 1162.3425pt>
+<images/curvedDomain_IC.pdf, id=582, 2204.235pt x 1162.3425pt>
 File: images/curvedDomain_IC.pdf Graphic file (type pdf)
 <use images/curvedDomain_IC.pdf>
-Package pdftex.def Info: images/curvedDomain_IC.pdf  used on input line 112.
+Package pdftex.def Info: images/curvedDomain_IC.pdf  used on input line 114.
 (pdftex.def)             Requested size: 386.96024pt x 204.05147pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[13] (./images/domain_overview.pgf
-
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 2515.
-
-
-LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 2671.
-
-)
-Underfull \vbox (badness 3536) has occurred while \output is active []
+[13] (./images/domain_overview.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [14 <./images/curvedDomain_IC.pdf>]
 
 [15]
-<images/BOGP_flowchart_horizontal.pdf, id=651, 432.20018pt x 268.35226pt>
+<images/BOGP_flowchart_horizontal.pdf, id=643, 432.20018pt x 268.35226pt>
 File: images/BOGP_flowchart_horizontal.pdf Graphic file (type pdf)
 <use images/BOGP_flowchart_horizontal.pdf>
-Package pdftex.def Info: images/BOGP_flowchart_horizontal.pdf  used on input line 224.
+Package pdftex.def Info: images/BOGP_flowchart_horizontal.pdf  used on input line 229.
 (pdftex.def)             Requested size: 455.24408pt x 282.66673pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 [16]
@@ -1673,23 +1661,17 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51325 strings out of 473190
- 1180947 string characters out of 5715800
- 2169916 words of memory out of 5000000
- 73410 multiletter control sequences out of 15000+600000
- 594375 words of font info for 135 fonts, out of 8000000 for 9000
+ 51297 strings out of 473190
+ 1180459 string characters out of 5715800
+ 2166026 words of memory out of 5000000
+ 73391 multiletter control sequences out of 15000+600000
+ 594724 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,16n,109p,10986b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,16n,109p,10986b,1107s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:bo} has been referenced but does not exist, replaced by a fixed one
 
@@ -1723,11 +1705,11 @@ pdfTeX warning (dest): name{glo:nse} has been referenced but does not exist, rep
 
 pdfTeX warning (dest): name{glo:tbl} has been referenced but does not exist, replaced by a fixed one
 
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (42 pages, 14430458 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on thesis.pdf (42 pages, 14423344 bytes).
 PDF statistics:
- 1153 PDF objects out of 1200 (max. 8388607)
- 1002 compressed objects within 11 object streams
- 190 named destinations out of 1000 (max. 500000)
+ 1145 PDF objects out of 1200 (max. 8388607)
+ 996 compressed objects within 10 object streams
+ 181 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
