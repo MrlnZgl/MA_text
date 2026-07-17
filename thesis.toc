@@ -6,43 +6,45 @@
 \contentsline {chapter}{\nonumberline List of Tables}{1}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {subsection}{\numberline {1.0.1}ToDos}{2}{subsection.1.0.1}%
-\contentsline {chapter}{\numberline {2}Basics}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Governing equations}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Wall-bounded turbulence}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Turbulent boundary layer theory}{4}{subsection.2.1.1}%
-\contentsline {paragraph}{\nonumberline Non-dimensionalisation}{6}{paragraph*.8}%
+\contentsline {subsubsection}{\nonumberline Non-dimensionalisation}{6}{subsubsection*.8}%
 \contentsline {subsubsection}{\nonumberline Reynolds stresses}{7}{subsubsection*.11}%
 \contentsline {subsection}{\numberline {2.1.2}Clauser parameter in turbulent boundary layers}{7}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Curved TBL}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Curved turbulent boundary layers}{8}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Simulation techniques}{10}{section.2.3}%
 \contentsline {section}{\numberline {2.4}optimisation??}{11}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Tools}{11}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Methods}{12}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Curved TBL simulations}{12}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Boundary and initial conditions}{12}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Zero-pressure gradient generation}{14}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}OpenFOAM setup}{14}{subsection.3.2.1}%
-\contentsline {subsubsection}{\nonumberline Mesh Generation}{15}{subsubsection*.22}%
-\contentsline {subsubsection}{\nonumberline Initial and boundary conditions}{16}{subsubsection*.24}%
-\contentsline {subsection}{\numberline {3.2.2}Optimisation settings}{16}{subsection.3.2.2}%
-\contentsline {subsubsection}{\nonumberline Optimisation algorithm}{17}{subsubsection*.27}%
-\contentsline {subsubsection}{\nonumberline Positioning of the design points}{18}{subsubsection*.30}%
-\contentsline {subsubsection}{\nonumberline Optimisation parameters}{19}{subsubsection*.37}%
-\contentsline {subsection}{\numberline {3.2.3}Data extraction}{20}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Simulations with zero pressure gradient}{20}{section.3.3}%
-\contentsline {paragraph}{\nonumberline Velocity integration}{20}{paragraph*.39}%
-\contentsline {chapter}{\numberline {4}Verification}{22}{chapter.4}%
+\contentsline {chapter}{\numberline {3}Methods and Setup}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Spectral element method}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Curved turbulent boundary layer simulation setup}{12}{section.3.2}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{12}{subsubsection*.17}%
+\contentsline {section}{\numberline {3.3}Optimisation method}{14}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Allg über OPenFOAM funktionsweise}{14}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}OpenFOAM simulation setup}{14}{subsection.3.3.2}%
+\contentsline {subsubsection}{\nonumberline Mesh generation}{15}{subsubsection*.23}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{16}{subsubsection*.25}%
+\contentsline {subsection}{\numberline {3.3.3}Optimisation settings}{16}{subsection.3.3.3}%
+\contentsline {subsubsection}{\nonumberline Optimisation algorithm}{17}{subsubsection*.28}%
+\contentsline {subsubsection}{\nonumberline Positioning of the design points}{18}{subsubsection*.31}%
+\contentsline {subsubsection}{\nonumberline Optimisation parameters}{19}{subsubsection*.38}%
+\contentsline {subsection}{\numberline {3.3.4}Data extraction}{20}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Simulation setup with zero pressure gradient}{20}{section.3.4}%
+\contentsline {paragraph}{\nonumberline Velocity integration}{20}{paragraph*.40}%
+\contentsline {chapter}{\numberline {4}Validation}{22}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Channel simulations}{22}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Results and Discussion}{23}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}plane TBL simulations}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.1.1}Results and discussion}{23}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Plane turbulent boundary layer simulations}{23}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Simulation setup}{23}{subsection.4.2.1}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{23}{subsubsection*.43}%
-\contentsline {subsubsection}{\nonumberline Case settings}{23}{subsubsection*.46}%
-\contentsline {subsection}{\numberline {4.2.2}Results and Discussion}{24}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{23}{subsubsection*.44}%
+\contentsline {subsubsection}{\nonumberline Case settings}{23}{subsubsection*.47}%
+\contentsline {subsection}{\numberline {4.2.2}Results and discussion}{24}{subsection.4.2.2}%
 \contentsline {chapter}{\numberline {5}Results}{26}{chapter.5}%
 \contentsline {section}{\numberline {5.1}plane TBL verification}{26}{section.5.1}%
 \contentsline {section}{\numberline {5.2}optmization tests}{26}{section.5.2}%
 \contentsline {section}{\numberline {5.3}cruved resutls}{26}{section.5.3}%
 \contentsline {section}{\numberline {5.4}pressure fluctuation tests}{26}{section.5.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.48}%
+\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.49}%
 \contentsline {chapter}{\numberline {A}Einleitung}{31}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

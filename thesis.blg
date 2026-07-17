@@ -22,45 +22,45 @@ Warning--empty year in slotnick_cfd_nodate
 Warning--empty journal in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
-You've used 35 entries,
+You've used 36 entries,
             2773 wiz_defined-function locations,
-            872 strings with 13443 characters,
-and the built_in function-call counts, 15839 in all, are:
-= -- 1499
-> -- 837
-< -- 23
-+ -- 287
-- -- 252
-* -- 1340
-:= -- 2528
-add.period$ -- 173
-call.type$ -- 35
-change.case$ -- 187
-chr.to.int$ -- 35
-cite$ -- 82
-duplicate$ -- 691
-empty$ -- 1260
-format.name$ -- 309
-if$ -- 3276
+            879 strings with 13588 characters,
+and the built_in function-call counts, 16146 in all, are:
+= -- 1526
+> -- 847
+< -- 24
++ -- 291
+- -- 255
+* -- 1359
+:= -- 2578
+add.period$ -- 176
+call.type$ -- 36
+change.case$ -- 191
+chr.to.int$ -- 36
+cite$ -- 84
+duplicate$ -- 710
+empty$ -- 1291
+format.name$ -- 313
+if$ -- 3340
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 38
-newline$ -- 251
-num.names$ -- 140
-pop$ -- 330
+missing$ -- 39
+newline$ -- 256
+num.names$ -- 144
+pop$ -- 337
 preamble$ -- 1
-purify$ -- 154
+purify$ -- 157
 quote$ -- 0
-skip$ -- 485
+skip$ -- 499
 stack$ -- 0
-substring$ -- 480
-swap$ -- 54
+substring$ -- 482
+swap$ -- 55
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 350
+type$ -- 361
 warning$ -- 12
-while$ -- 139
+while$ -- 142
 width$ -- 0
-write$ -- 589
+write$ -- 602
 (There were 12 warnings)

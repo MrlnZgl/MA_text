@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  16 JUL 2026 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  17 JUL 2026 15:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1453,8 +1453,8 @@ l.214
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.286 \end{equation}
-                     [7]
+l.284 \begin{equation}
+                      \label{eq:bernoulli} [7]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
@@ -1462,6 +1462,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has b
                    \relax 
 l.331 
        [8]
+
+LaTeX Warning: Reference `chap:methods' on page 9 undefined on input line 368.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1478,12 +1482,12 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
  (./chapters/methods.tex
 chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--31
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--48
+Underfull \hbox (badness 10000) in paragraph at lines 39--54
 
  []
 
@@ -1495,28 +1499,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--48
 
 
 ]
-<images/curvedDomain_IC.pdf, id=582, 2204.235pt x 1162.3425pt>
+
+[13]
+<images/curvedDomain_IC.pdf, id=597, 2204.235pt x 1162.3425pt>
 File: images/curvedDomain_IC.pdf Graphic file (type pdf)
 <use images/curvedDomain_IC.pdf>
-Package pdftex.def Info: images/curvedDomain_IC.pdf  used on input line 114.
+Package pdftex.def Info: images/curvedDomain_IC.pdf  used on input line 120.
 (pdftex.def)             Requested size: 386.96024pt x 204.05147pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[13] (./images/domain_overview.pgf)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ (./images/domain_overview.pgf)
 
 [14 <./images/curvedDomain_IC.pdf>]
 
 [15]
-<images/BOGP_flowchart_horizontal.pdf, id=643, 432.20018pt x 268.35226pt>
+<images/BOGP_flowchart_horizontal.pdf, id=654, 432.20018pt x 268.35226pt>
 File: images/BOGP_flowchart_horizontal.pdf Graphic file (type pdf)
 <use images/BOGP_flowchart_horizontal.pdf>
-Package pdftex.def Info: images/BOGP_flowchart_horizontal.pdf  used on input line 229.
+Package pdftex.def Info: images/BOGP_flowchart_horizontal.pdf  used on input line 240.
 (pdftex.def)             Requested size: 455.24408pt x 282.66673pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1538,7 +1536,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  (./chapters/verification.tex
 chapter 4.
-<images/channel_IC.pdf, id=749, 1508.1171pt x 753.4823pt>
+<images/channel_IC.pdf, id=760, 1508.1171pt x 753.4823pt>
 File: images/channel_IC.pdf Graphic file (type pdf)
 <use images/channel_IC.pdf>
 Package pdftex.def Info: images/channel_IC.pdf  used on input line 32.
@@ -1554,7 +1552,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
  <./images/channel_IC.pdf>]
-<images/plane_TBL_IC.pdf, id=762, 1904.01291pt x 436.58328pt>
+<images/plane_TBL_IC.pdf, id=773, 1904.01291pt x 436.58328pt>
 File: images/plane_TBL_IC.pdf Graphic file (type pdf)
 <use images/plane_TBL_IC.pdf>
 Package pdftex.def Info: images/plane_TBL_IC.pdf  used on input line 71.
@@ -1595,29 +1593,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--15
 
 
 ]
-Underfull \hbox (badness 1527) in paragraph at lines 154--160
+Underfull \hbox (badness 1527) in paragraph at lines 159--165
 \T1/cmr/m/it/10.95 don. (A.)\T1/cmr/m/n/10.95 , (186):123--164, Dec. 1895.  ISSN 0264-3820, 2053-9231.  doi: $10 . 1098 /
  []
 
 
 
 [28]
-Underfull \hbox (badness 4181) in paragraph at lines 182--188
+Underfull \hbox (badness 4181) in paragraph at lines 187--193
 []\T1/cmr/m/n/10.95 A. C. Schwarz and M. W. Ples-niak.  Con-vex Tur-bu-lent Bound-ary Lay-ers With
  []
 
 
-Underfull \hbox (badness 4120) in paragraph at lines 182--188
+Underfull \hbox (badness 4120) in paragraph at lines 187--193
 \T1/cmr/m/n/10.95 Zero and Fa-vor-able Pres-sure Gra-di-ents.  \T1/cmr/m/it/10.95 Jour-nal of Flu-ids En-gi-neer-ing\T1/cmr/m/n/10.95 , 118(4):
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 182--188
+Underfull \hbox (badness 1248) in paragraph at lines 187--193
 \T1/cmr/m/n/10.95 787--794, Dec. 1996.  ISSN 0098-2202, 1528-901X.  doi: $10 . 1115 / 1 . 2835510$.  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--188
+Underfull \hbox (badness 10000) in paragraph at lines 187--193
 [][]$\T1/cmtt/m/n/10.95 https : / / asmedigitalcollection . asme . org / fluidsengineering / article / 118 / 4 / 787 /
  []
 
@@ -1661,14 +1659,17 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51297 strings out of 473190
- 1180459 string characters out of 5715800
- 2166026 words of memory out of 5000000
- 73391 multiletter control sequences out of 15000+600000
+ 51331 strings out of 473190
+ 1181017 string characters out of 5715800
+ 2165677 words of memory out of 5000000
+ 73421 multiletter control sequences out of 15000+600000
  594724 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,109p,10986b,1107s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1683,6 +1684,9 @@ pdfTeX warning (dest): name{glo:bc} has been referenced but does not exist, repl
 
 
 pdfTeX warning (dest): name{glo:so} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:sem} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{glo:dns} has been referenced but does not exist, replaced by a fixed one
@@ -1706,10 +1710,10 @@ pdfTeX warning (dest): name{glo:nse} has been referenced but does not exist, rep
 pdfTeX warning (dest): name{glo:tbl} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (42 pages, 14423344 bytes).
+Output written on thesis.pdf (42 pages, 14427015 bytes).
 PDF statistics:
- 1145 PDF objects out of 1200 (max. 8388607)
- 996 compressed objects within 10 object streams
- 181 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1160 PDF objects out of 1200 (max. 8388607)
+ 1010 compressed objects within 11 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

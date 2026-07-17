@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -36,6 +36,11 @@ G.~K. Batchelor.
 \newblock ISBN 978-0-521-66396-0 978-0-511-80095-5.
 \newblock \doi{10.1017/CBO9780511800955}.
 \newblock URL \url{https://www.cambridge.org/core/product/identifier/9780511800955/type/book}.
+
+\bibitem[Blasius(1908)]{blasius_grenzschichtern_1908}
+H.~Blasius.
+\newblock Grenzschichtern in {Flüssigkeiten} mit kleienr {Reibung}.
+\newblock \emph{Zeitschrift für Mathematik und Physik}, 56\penalty0 (Heft 1), 1908.
 
 \bibitem[Bobke et~al.(2017)Bobke, Vinuesa, Örlü, and Schlatter]{bobke_history_2017}
 A.~Bobke, R.~Vinuesa, R.~Örlü, and P.~Schlatter.
