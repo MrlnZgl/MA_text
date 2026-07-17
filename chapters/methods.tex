@@ -8,9 +8,47 @@ First, we present \acrfull{sem} and simulation method and outline the setup of c
 Next the optimisation method to derive the \acrshort{zpg} conditions is described.
 Finally, the methodology employed to impose the \acrshort{zpg} onto the \acrshort{dns} domain is presented.
 
-\section{Spectral element method}
+\section{Simulation methods}
 
-\section{Curved turbulent boundary layer simulation setup}\label{sec:MethodCurvedTBL}
+\subsection{Direct numerical simulation in Neko}
+
+\subsection{RANS simulations in OpenFOAM}
+\paragraph{Simulation techniques} 
+\label{sec:SimBasics}
+
+For the simulation of turbulent flows a range of methodologies can be employed.
+The decision regarding the utilisation of a specific approach  depends on the characteristics of the flow and the requirements for the solution.
+One straight-forward approach is the \acrshort{dns}.
+\acrshort{dns} necessitates the solution of the \acrshort{nse} in order to compute  $U(x,t)$.
+Thus, \acrshort{dns} is the computationally most expensive approach, given that it resolves all length and time scales \citep{pope_turbulent_2015}.  Conversely, this approach yields  the most accurate results.
+In the context of small turbulent scales, the utilisation  of \acrshort{dns} is inevitable.
+Due to the high computational demands, \acrshort{dns} is typically employed in the study of low to moderate Reynolds numbers. Its application is primarily restricted to research context \citep{slotnick_cfd_nodate}.
+The simulation method of \acrshort{dns} is the principal approach employed in this project.
+Moreover, we employed \acrshort{rans} simulations to ensure that the computational effort remained within acceptable limits.
+%In this approach\fximprove{Meinst Du deinen eigenen Ansatz?} the \acrshort{rans} are solved instead of the full \acrshort{nse}.
+As a consequence, only the mean velocity field is calculated.
+The effect of turbulence can be summarised in the Reynolds stress tensor.
+In order to circumvent the computation of this tensor, a number of methodologies have been formulated for its modelling \citep{wilcox_turbulence_2006}. 
+Since the models have different characteristics and accuracies, the selection of the model will have a substantial impact on the simulation \citep{yang_assessment_2016}.
+It is evident that these simulations show a considerably better computational performance.
+In case the precise behaviour of the turbulent scales is irrelevant, and the main interest is the effect of the turbulence on the flow, \acrshort{rans} simulations provide a reasonable compromise \citep{alfonsi_reynolds-averaged_2009}.
+Therefore, this simulation method finds application in multiple industrial environments.
+\paragraph{Tools}
+
+Developing this project involved the utilisation of a range of tools. The majority of fluid-flow simulations were performed with DNS (see XX \autoref{sec:SimBasics}). To execute these simulations the spectral element code \name{neko} was used. \fxchange{Blabla über neko}
+
+When running simulations with \name{neko}, it is possible to track statistics regarding the  simulated flow.  The recording of the statistics can be configured in various manners and is defined in the so-called case file of the simulation.
+ For instance, it is possible to define one or two axes along which the statistics should be averaged. 
+ These statistics are used to extract and calculate certain metrics of the flow. In order to accomplish this, it is necessary to undertake a process of post-processing of the recorded statistics. For this purpose,  the \name{python} package \texttt{pysemtools} is employed. 
+ \name{pysemtools} facilitates the extraction and interpolation of data, like those resulting from  \name{neko} simulations,  from an SEM mesh into any arbitrary points \fxchange{ Quelle:GitHub repository}. Subsequently, a multitude of statistical metrics, including budget terms, can be calculated. 
+ 
+In addition to the DNS,  a number of \acrshort{rans} simulations were conducted as well. In order to execute these simulations, the open-source software \name{OpenFOAM} is utilised. This software is able to perform \acrshort{rans} simulations of fluid flows with a variety of turbulence models. To extract velocity fields and related data from the simulation \name{Python} is used. 
+All simulations are performed on the cluster of the RRZE of the Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU).  \fxchange{Blabla über cluster}
+
+
+\section{Simulation Setups}\label{sec:MethodCurvedTBL}
+
+\subsection{Neko simulation setup}
 
 In order to derive the curved \acrshort{zpg} \acrshort{tbl}, we first need to create a general setup for the curved \acrshort{tbl}. 
 The initial configuration of the plane  \acrshort{tbl} is utilised as the basis, and we add a curved part at the end of the domain of the plane \acrshort{tbl}. 
@@ -122,17 +160,6 @@ Additionally, these simulations were used to extract the inflow conditions for t
     \label{fig:paraviewDomain}
 \end{figure}
 
-
-\section{Optimisation method}
-
-This section introduces the procedure for generating a \acrshort{zpg} in the curved \acrshort{tbl} domain. 
-This procedure is performed using \name{OpenFOAM} and the Bayesian optimiser code developed by \citet{morita_applying_2022}. 
-As described in \autoref{sec:OptimsationBasics}, the code is able to optimise the shape of the domain to achieve a given Clauser parameter,  in this case the parameter is a ZPG. 
-To achieve this, the simulation setup has to be transferred to \name{OpenFOAM}. 
-In the following paragraph the necessary steps are described in detail. 
-
-\subsection{Allg über OPenFOAM funktionsweise}
-
 \subsection{OpenFOAM simulation setup}\label{subsec: methodsOFsetup}
 
 The OpenFOAM software is used to perform the RANS simulations for optimisation.
@@ -228,10 +255,20 @@ The values for $U$ can be extracted directly, whereas $k$ and $\omega$ need to b
 To use these fields in the higher \name{OpenFOAM} domain additional values for the upper part of the inflow are manually added. 
 For this part of the inflow the last interpolated value is copied and added in the remaining cells.
 
+\section{Optimisation method}
 
-\subsection{Optimisation settings} \label{subsec:opt_settings}
+This section introduces the procedure for generating a \acrshort{zpg} in the curved \acrshort{tbl} domain. 
+This procedure is performed using \name{OpenFOAM} and the Bayesian optimiser code developed by \citet{morita_applying_2022}. 
+As described in \autoref{sec:OptimsationBasics}, the code is able to optimise the shape of the domain to achieve a given Clauser parameter,  in this case the parameter is a ZPG. 
+To achieve this, the simulation setup has to be transferred to \name{OpenFOAM}. 
+In the following paragraph the necessary steps are described in detail. 
+
 In the following subsection the general workflow of the optimisation algorithm is outlined.
 Then, the positioning of the \benennung{control points} is explained and additonal settings for the optimisation are presented.
+
+
+\subsection{Optimisation algorithm} \label{subsec:opt_settings}
+
 
 
 
@@ -242,7 +279,6 @@ Then, the positioning of the \benennung{control points} is explained and additon
     \label{fig:optiFlowchart}
 \end{figure}
 
-\subsubsection{Optimisation algorithm}
 
 The optimisation algorithm is based on a Bayesian optimisation with \acrfull{gpr}.
 \fxinfo{hier noch merh zur optimierer theorie}
@@ -269,6 +305,8 @@ In the next step the setup of the \texttt{OFcase} is stored if the residual is b
 That is good to later compare different configurations with comparable good residuals.
 In the last step the \benennung{design points} are added to the \texttt{gpList.dat} and the convergence check is performed.
 These steps are repeated until the residual is converged or the maximum number of iterations is reached.
+
+\subsection{Optimisation setup}
 
 \subsubsection{Positioning of the design points}
 
@@ -402,7 +440,7 @@ This velocity profile is imposed to the DNS setup and then the DNS simulation is
 }
 
 
-\subsection{Data extraction} \label{subsec:data_extr}
+\subsubsection{Data extraction} \label{subsec:data_extr}
 
 Once the optimisation of the Clauser parameter in \name{OpenFOAM} finished, the next step is to transfer the relevant quantities into the \name{neko} simulation.
 As stated before, the domain use for the \acrshort{dns} is less high in wall-normal direction. 
@@ -418,7 +456,7 @@ The interpolated velocity are stored in a \texttt{csv} file.
 The integration of these values in the \acrshort{dns} is described in the next section.
 
 
-\section{Simulation setup with zero pressure gradient}
+\section{Optimised Neko simulation setup}
 
 The setup of the simulations with the optimized boundary conditions at the upper wall have despite from this similar settings as the ones for the curved \acrshort{tbl} described in \autoref{sec:MethodCurvedTBL}.
 

@@ -46,6 +46,7 @@
 \usepackage{pdfpages}					% PDF einbinden
 %\usepackage{eurosans}
 \usepackage[bookmarks,pagebackref=false,pdftex,bookmarksopen=true,bookmarksnumbered]{hyperref}	% PDF-Bookmarks, Angabe im Literaturverzeichnis auf welcher Seite Einordnungsformel steht momentan auf false gesetzt
+\newcommand{\doi}[1]{doi: \href{https://doi.org/#1}{#1}}	% macht DOIs im Literaturverzeichnis klickbar (überschreibt die \providecommand-Definition aus der .bbl)
 \usepackage{multirow}
 %\usepackage[square]{natbib}         	% nützliches Paket, falls man die Gestaltung des Literaturverzeichnisse und der Referenzen selbst übernehmen möchte
 \usepackage{wrapfig}
