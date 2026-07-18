@@ -8,42 +8,89 @@ First, we present \acrfull{sem} and simulation method and outline the setup of c
 Next the optimisation method to derive the \acrshort{zpg} conditions is described.
 Finally, the methodology employed to impose the \acrshort{zpg} onto the \acrshort{dns} domain is presented.
 
-\section{Simulation methods}
+\section{Simulation methods}\label{sec:SimMethods}
 
-\subsection{Direct numerical simulation in Neko}
-
-\subsection{RANS simulations in OpenFOAM}
-\paragraph{Simulation techniques} 
-\label{sec:SimBasics}
+\subsection{Direct numerical simulation in Neko}\label{subsec:DNSmethod}
 
 For the simulation of turbulent flows a range of methodologies can be employed.
 The decision regarding the utilisation of a specific approach  depends on the characteristics of the flow and the requirements for the solution.
 One straight-forward approach is the \acrshort{dns}.
 \acrshort{dns} necessitates the solution of the \acrshort{nse} in order to compute  $U(x,t)$.
 Thus, \acrshort{dns} is the computationally most expensive approach, given that it resolves all length and time scales \citep{pope_turbulent_2015}.  Conversely, this approach yields  the most accurate results.
-In the context of small turbulent scales, the utilisation  of \acrshort{dns} is inevitable.
+In the context of small turbulent scales, the utilisation of \acrshort{dns} is inevitable.
 Due to the high computational demands, \acrshort{dns} is typically employed in the study of low to moderate Reynolds numbers. Its application is primarily restricted to research context \citep{slotnick_cfd_nodate}.
 The simulation method of \acrshort{dns} is the principal approach employed in this project.
+Developing this project involved the utilisation of a range of tools. The majority of fluid-flow simulations were performed with DNS (see XX \autoref{sec:SimBasics}). To execute these simulations the spectral element code \name{neko} was used. \fxchange{Blabla über neko}
+
+When running simulations with \name{neko}, it is possible to track statistics regarding the  simulated flow.  The recording of the statistics can be configured in various manners and is defined in the so-called case file of the simulation.
+For instance, it is possible to define one or two axes along which the statistics should be averaged. 
+These statistics are used to extract and calculate certain metrics of the flow. In order to accomplish this, it is necessary to undertake a process of post-processing of the recorded statistics. 
+For this purpose,  the \name{python} package \texttt{pysemtools} is employed. 
+\name{pysemtools} facilitates the extraction and interpolation of data, like those resulting from  \name{neko} simulations, from an SEM mesh into any arbitrary points \fxchange{ Quelle:GitHub repository}. 
+Subsequently, a multitude of statistical metrics, including budget terms, can be calculated. 
+
+\fxmarlenebmark{ab hier Sachen hinzugefügt 18.07. 11:30}
+\subsection{RANS simulations in OpenFOAM}\label{sec:RANSmethod}
+%In addition to the DNS, a number of \acrshort{rans} simulations were conducted as well. 
+
 Moreover, we employed \acrshort{rans} simulations to ensure that the computational effort remained within acceptable limits.
-%In this approach\fximprove{Meinst Du deinen eigenen Ansatz?} the \acrshort{rans} are solved instead of the full \acrshort{nse}.
 As a consequence, only the mean velocity field is calculated.
 The effect of turbulence can be summarised in the Reynolds stress tensor.
 In order to circumvent the computation of this tensor, a number of methodologies have been formulated for its modelling \citep{wilcox_turbulence_2006}. 
 Since the models have different characteristics and accuracies, the selection of the model will have a substantial impact on the simulation \citep{yang_assessment_2016}.
-It is evident that these simulations show a considerably better computational performance.
+In this simulation we use the so-called $k\text{-}\omega$ SST model.
+This model combines the $k\text{-}\omega$ and $k\text{-}\varepsilon$ models, incorporating an additional term for the shear-stress transport (SST) \citep{menter_two-equation_1994}.
+In the sublayer of the boundary layer, the $k\text{-}\omega$ model is used because of its accuracy in this region. 
+This is blended with the $k\text{-}\varepsilon$ model, which provides more accurate results for $k$ and $\varepsilon$.
+These quantities determine the eddy viscosity which is the main information required by the mean flow solver. 
+Therefore, an accurate prediction of mean flow depends on accurate values for $k$ and $\varepsilon$ \citep{menter_two-equation_1994}.
+It is evident that these simulations show a considerably better computational performance compared to \acrshort{dns}.
 In case the precise behaviour of the turbulent scales is irrelevant, and the main interest is the effect of the turbulence on the flow, \acrshort{rans} simulations provide a reasonable compromise \citep{alfonsi_reynolds-averaged_2009}.
 Therefore, this simulation method finds application in multiple industrial environments.
-\paragraph{Tools}
 
-Developing this project involved the utilisation of a range of tools. The majority of fluid-flow simulations were performed with DNS (see XX \autoref{sec:SimBasics}). To execute these simulations the spectral element code \name{neko} was used. \fxchange{Blabla über neko}
 
-When running simulations with \name{neko}, it is possible to track statistics regarding the  simulated flow.  The recording of the statistics can be configured in various manners and is defined in the so-called case file of the simulation.
- For instance, it is possible to define one or two axes along which the statistics should be averaged. 
- These statistics are used to extract and calculate certain metrics of the flow. In order to accomplish this, it is necessary to undertake a process of post-processing of the recorded statistics. For this purpose,  the \name{python} package \texttt{pysemtools} is employed. 
- \name{pysemtools} facilitates the extraction and interpolation of data, like those resulting from  \name{neko} simulations,  from an SEM mesh into any arbitrary points \fxchange{ Quelle:GitHub repository}. Subsequently, a multitude of statistical metrics, including budget terms, can be calculated. 
+In order to execute these simulations, the open-source software \name{OpenFOAM} is utilised. 
+This software is able to perform \acrshort{rans} simulations of fluid flows with a variety of turbulence models. 
+\name{OpenFOAM} is based on the \acrfull{fvm} to handle the \acrshort{nse} \citep{weller_tensorial_1998}.
+The \acrshort{fvm} is an approach that has not been designed for the purpose for solving the \acrshort{nse} analytically. 
+Instead, the domain is subdivided into finite control volumes.
+For each of these cells, the equations are then integrated over the volume, which converts them into a sum of fluxes through the cell edges.
+This property makes the method inherently conservative, since everything that leaves a cell across an edge enters the neighbouring cell \citep{moukalled_finite_2016}. 
+Therefore, mass and momentum are exactly conserved in the discretisation \citep{weller_tensorial_1998}.
+The most codes are based on a so-called collocated variable arrangement, meaning that all variables are stored at the same point in the control volume, e.g.~the cell centre.
+However, some interpolation is necessary to derive their values at the cell edges to determine the fluxes across the cell edges \citep{schlatter_lecture_2025}.
+To perform this interpolation multiple schemes exist.
+Often different interpolation schemes are used for different quantities depending on its properties.
+In \name{OpenFOAM} the interpolation schemes for the different variables can be defined in the \texttt{fvSchemes} file.
+With this approach the most variables of the flow can be determined.
+However, for incompressible flows it is not possible to derive the pressure with this method directly.
+Since the pressure appears only in a derivative, no explicit term to calculate the pressure is given.
+Nevertheless, the prediction of the pressure has to be done in a way that it requires the following condition:
+If the predicted solution for the pressure is included in the momentum equation the velocity values need to resolve in such a way that they fulfil the continuity equation.
+To do this, different methods exist to derive a pressure field that satisfies this condition with a \benennung{predictor-corrector iteration} \citep{schlatter_lecture_2025, weller_tensorial_1998}.
+One commonly used approach is the \acrfull{simple} approach which is also implemented in \name{OpenFOAM}.
+It consists of four basic steps \citep{schlatter_lecture_2025}:
+\begin{enumerate}
+    \item Prediction: Estimate pressure field and solve momentum equations
+    \item Poisson equation: Solve additional pressure equation for pressure correction variable $p'$
+    \item Correction: Correct pressure and velocity fields with pressure correction variable to improve mass conservation
+    \item Repetition: update initial values for pressure and velocities and repeat until a converged solution is obtained
+\end{enumerate}
+\fxmarlenebmark{bis hier Sachen hinzugefügt 18.07. 11:30}
+%In addition to the method for the pressure prediction, the turbulence model has to b
+
+
+
+%The OpenFOAM software is used to perform the RANS simulations for optimisation.
+%As described in \autoref{sec:SimBasics} \acrshort{rans} simulations use turbulence models, whereas \acrshort{dns} simulate the turbulence completely.
+
+%There are various commonly used models for describing the turbulence, which have different properties and accuracies.
+
+
+
  
-In addition to the DNS,  a number of \acrshort{rans} simulations were conducted as well. In order to execute these simulations, the open-source software \name{OpenFOAM} is utilised. This software is able to perform \acrshort{rans} simulations of fluid flows with a variety of turbulence models. To extract velocity fields and related data from the simulation \name{Python} is used. 
-All simulations are performed on the cluster of the RRZE of the Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU).  \fxchange{Blabla über cluster}
+
+%All simulations are performed on the cluster of the RRZE of the Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU).  \fxchange{Blabla über cluster}
 
 
 \section{Simulation Setups}\label{sec:MethodCurvedTBL}
@@ -162,16 +209,7 @@ Additionally, these simulations were used to extract the inflow conditions for t
 
 \subsection{OpenFOAM simulation setup}\label{subsec: methodsOFsetup}
 
-The OpenFOAM software is used to perform the RANS simulations for optimisation.
-As described in \autoref{sec:SimBasics} \acrshort{rans} simulations use turbulence models, whereas \acrshort{dns} simulate the turbulence completely.
-There are various commonly used models for describing the turbulence, which have different properties and accuracies.
-In this simulation we use the so-called $k\text{-}\omega$ SST model.
-This model combines the $k\text{-}\omega$- and $k\text{-}\varepsilon$ models, incorporating an additional term for the shear-stress transport (SST) \citep{menter_two-equation_1994}.
-In the sublayer of the boundary layer, the $k\text{-}\omega$ model is used because of its accuracy in this region. 
-This is blended with the $k\text{-}\varepsilon$ model, which provides more accurate results for $k$ and $\varepsilon$.
-These quantities determine the eddy viscosity which is the main information required by the mean flow solver. 
-Therefore, an accurate prediction of mean flow depends on accurate values for $k$ and $\varepsilon$ \citep{menter_two-equation_1994}. \\
-A 
+
 
 
 

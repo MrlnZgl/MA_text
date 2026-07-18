@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -102,6 +102,14 @@ Y.~Morita et~al.
 \newblock \emph{Journal of Computational Physics}, 449:\penalty0 110788, 2022.
 \newblock \doi{10.1016/j.jcp.2021.110788}.
 
+\bibitem[Moukalled et~al.(2016)Moukalled, Mangani, and Darwish]{moukalled_finite_2016}
+F.~Moukalled, L.~Mangani, and M.~Darwish.
+\newblock \emph{The {Finite} {Volume} {Method} in {Computational} {Fluid} {Dynamics}: {An} {Advanced} {Introduction} with {OpenFOAM}® and {Matlab}}, volume 113 of \emph{Fluid {Mechanics} and {Its} {Applications}}.
+\newblock Springer International Publishing, Cham, 2016.
+\newblock ISBN 978-3-319-16873-9 978-3-319-16874-6.
+\newblock \doi{10.1007/978-3-319-16874-6}.
+\newblock URL \url{https://link.springer.com/10.1007/978-3-319-16874-6}.
+
 \bibitem[Pargal et~al.(2022)Pargal, Wu, Yuan, and Moreau]{pargal_adverse-pressure-gradient_2022}
 S.~Pargal et~al.
 \newblock Adverse-pressure-gradient turbulent boundary layer on convex wall.
@@ -134,6 +142,11 @@ O.~Reynolds.
 \bibitem[Schlatter()]{schlatter_leveraging_nodate}
 P.~Schlatter.
 \newblock Leveraging pre-exascale {GPU} computing to answer two outstanding questions in wall turbulence ({WALL2Q}).
+
+\bibitem[Schlatter(2025)]{schlatter_lecture_2025}
+P.~Schlatter.
+\newblock Lecture notes on {Computational} {Fluid} {Dynamics} {I}.
+\newblock 2025.
 
 \bibitem[Schlatter and Örlü(2010)]{schlatter_assessment_2010}
 P.~Schlatter and R.~Örlü.
@@ -193,6 +206,14 @@ R.~Vinuesa et~al.
 \bibitem[von Karman(1930)]{von_karman_mechanische_1930}
 T.~von Karman.
 \newblock Mechanische ähnlichkeit und turbulenz, 1930.
+
+\bibitem[Weller et~al.(1998)Weller, Tabor, Jasak, and Fureby]{weller_tensorial_1998}
+H.~G. Weller et~al.
+\newblock A tensorial approach to computational continuum mechanics using object-oriented techniques.
+\newblock \emph{Computers in Physics}, 12\penalty0 (6):\penalty0 620--631, Nov. 1998.
+\newblock ISSN 0894-1866.
+\newblock \doi{10.1063/1.168744}.
+\newblock URL \url{https://pubs.aip.org/cip/article/12/6/620/510187/A-tensorial-approach-to-computational-continuum}.
 
 \bibitem[Wilcox(2006)]{wilcox_turbulence_2006}
 D.~C. Wilcox.

@@ -19,35 +19,33 @@
 \contentsline {section}{\numberline {3.1}Simulation methods}{11}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Direct numerical simulation in Neko}{11}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}RANS simulations in OpenFOAM}{11}{subsection.3.1.2}%
-\contentsline {paragraph}{\nonumberline Simulation techniques}{11}{paragraph*.16}%
-\contentsline {paragraph}{\nonumberline Tools}{11}{paragraph*.18}%
-\contentsline {section}{\numberline {3.2}Simulation Setups}{12}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Neko simulation setup}{12}{subsection.3.2.1}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{13}{subsubsection*.23}%
-\contentsline {subsection}{\numberline {3.2.2}OpenFOAM simulation setup}{14}{subsection.3.2.2}%
-\contentsline {subsubsection}{\nonumberline Mesh generation}{15}{subsubsection*.29}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{16}{subsubsection*.31}%
-\contentsline {section}{\numberline {3.3}Optimisation method}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.2}Simulation Setups}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Neko simulation setup}{13}{subsection.3.2.1}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{13}{subsubsection*.20}%
+\contentsline {subsection}{\numberline {3.2.2}OpenFOAM simulation setup}{15}{subsection.3.2.2}%
+\contentsline {subsubsection}{\nonumberline Mesh generation}{15}{subsubsection*.26}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{16}{subsubsection*.28}%
+\contentsline {section}{\numberline {3.3}Optimisation method}{17}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Optimisation algorithm}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Optimisation setup}{18}{subsection.3.3.2}%
-\contentsline {subsubsection}{\nonumberline Positioning of the design points}{18}{subsubsection*.35}%
-\contentsline {subsubsection}{\nonumberline Optimisation parameters}{19}{subsubsection*.42}%
-\contentsline {subsubsection}{\nonumberline Data extraction}{20}{subsubsection*.44}%
-\contentsline {section}{\numberline {3.4}Optimised Neko simulation setup}{20}{section.3.4}%
-\contentsline {paragraph}{\nonumberline Velocity integration}{20}{paragraph*.46}%
+\contentsline {subsection}{\numberline {3.3.2}Optimisation setup}{19}{subsection.3.3.2}%
+\contentsline {subsubsection}{\nonumberline Positioning of the design points}{19}{subsubsection*.32}%
+\contentsline {subsubsection}{\nonumberline Optimisation parameters}{20}{subsubsection*.39}%
+\contentsline {subsubsection}{\nonumberline Data extraction}{21}{subsubsection*.41}%
+\contentsline {section}{\numberline {3.4}Optimised Neko simulation setup}{21}{section.3.4}%
+\contentsline {paragraph}{\nonumberline Velocity integration}{21}{paragraph*.43}%
 \contentsline {chapter}{\numberline {4}Validation}{22}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Channel simulations}{22}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Results and discussion}{23}{subsection.4.1.1}%
 \contentsline {section}{\numberline {4.2}Plane turbulent boundary layer simulations}{23}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Simulation setup}{23}{subsection.4.2.1}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{23}{subsubsection*.50}%
-\contentsline {subsubsection}{\nonumberline Case settings}{23}{subsubsection*.53}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{23}{subsubsection*.47}%
+\contentsline {subsubsection}{\nonumberline Case settings}{23}{subsubsection*.50}%
 \contentsline {subsection}{\numberline {4.2.2}Results and discussion}{24}{subsection.4.2.2}%
 \contentsline {chapter}{\numberline {5}Results}{26}{chapter.5}%
 \contentsline {section}{\numberline {5.1}plane TBL verification}{26}{section.5.1}%
 \contentsline {section}{\numberline {5.2}optmization tests}{26}{section.5.2}%
 \contentsline {section}{\numberline {5.3}cruved resutls}{26}{section.5.3}%
 \contentsline {section}{\numberline {5.4}pressure fluctuation tests}{26}{section.5.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.55}%
+\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.52}%
 \contentsline {chapter}{\numberline {A}Einleitung}{30}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

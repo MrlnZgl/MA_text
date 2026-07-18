@@ -776,6 +776,7 @@ INPUT chapters/literaturverzeichnis.tex
 INPUT ./thesis.bbl
 INPUT ./thesis.bbl
 INPUT thesis.bbl
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcti1095.tfm
 INPUT ./chapters/anhang1.tex
 INPUT ./chapters/anhang1.tex
 OUTPUT chapters/anhang1.aux
