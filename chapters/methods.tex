@@ -4,11 +4,14 @@
 
 
 In this chapter, the methods employed in this thesis are provided. 
-First, we present \acrfull{sem} and simulation method and outline the setup of curved \acrshort{tbl} simulations in \name{neko}.
-Next the optimisation method to derive the \acrshort{zpg} conditions is described.
-Finally, the methodology employed to impose the \acrshort{zpg} onto the \acrshort{dns} domain is presented.
+First, we present the employed simulation methods.
+Afterwards the simulations setups are introduced and finally the methodology to derive and employ \acrshort{zpg} conditions is explained. 
 
 \section{Simulation methods}\label{sec:SimMethods}
+
+In the following section the numerical methods utilised in this work are presented.
+In th beginning we focus on \acrfull{dns} which we mainly use throughout this work.
+Afterwards \acrfull{rans} is presented, since some additional simulations are performed with this method.
 
 \subsection{Direct numerical simulation in Neko}\label{subsec:DNSmethod}
 
@@ -20,7 +23,25 @@ Thus, \acrshort{dns} is the computationally most expensive approach, given that 
 In the context of small turbulent scales, the utilisation of \acrshort{dns} is inevitable.
 Due to the high computational demands, \acrshort{dns} is typically employed in the study of low to moderate Reynolds numbers. Its application is primarily restricted to research context \citep{slotnick_cfd_nodate}.
 The simulation method of \acrshort{dns} is the principal approach employed in this project.
-Developing this project involved the utilisation of a range of tools. The majority of fluid-flow simulations were performed with DNS (see XX \autoref{sec:SimBasics}). To execute these simulations the spectral element code \name{neko} was used. \fxchange{Blabla über neko}
+Developing this project involved the utilisation of a range of tools. The majority of fluid-flow simulations were performed with DNS (see XX \autoref{sec:SimBasics}). To execute these simulations the spectral element code \name{neko} was used. 
+\name{neko} is an open-source code developed for \acrshort{dns} and \acrshort{les} simulations of incompressible turbulent flows.
+It is the direct decendant of \name{nek5000} which is a well-established \acrfull{cfd} code.
+\name{neko} is written in modern, object-oriented Fortran code.
+It solves the \acrshort{nse} based on the high-order \acrfull{sem}.
+In \acrshort{sem} the methods of \acrshort{fem} and spectral methods are combined.
+Therefore, the domain is divided into small elements adding up to a mesh structure that represents the domain similar as in \acrshort{fem}.
+This enables the representation of complex geometries through various element shapes and arrangements.
+Additionally, the resolution of the solution can be adjusted by varying the size of the elements.
+In \acrshort{fem} usually the quantities inside the cells are calculated with low-order approximations.
+Therefore, a refinement of the mesh would cause an algebraic error reduction. 
+In order to create well-resolved results, this would lead to meshes with extremely high element numbers leading to high computational costs.
+Hence, the spectral method is introduced.
+The idea of the spectral method is to use a single high-order polynomial to represent the behaviour of the complete domain.
+With this approach the error decreases exponentially with increasing polynomial order.
+However, it is only feasible for quite easy geometries since a single polynomial cannot match complex geometries.
+Therefore, the approaches are combined in the following way:
+The domain is discretised in elements according to \acrshort{fem} and the solution within one element is approximated with a high-order polynomial as in the spectral method.
+
 
 When running simulations with \name{neko}, it is possible to track statistics regarding the  simulated flow.  The recording of the statistics can be configured in various manners and is defined in the so-called case file of the simulation.
 For instance, it is possible to define one or two axes along which the statistics should be averaged. 
@@ -48,6 +69,20 @@ It is evident that these simulations show a considerably better computational pe
 In case the precise behaviour of the turbulent scales is irrelevant, and the main interest is the effect of the turbulence on the flow, \acrshort{rans} simulations provide a reasonable compromise \citep{alfonsi_reynolds-averaged_2009}.
 Therefore, this simulation method finds application in multiple industrial environments.
 
+
+\begin{figure}[H]
+    \centering
+    \input{images/fvm_stencil.pgf}
+    \caption[Finite-volume stencil]{%
+    Finite-volume discretisation stencil: a $3\times3$ patch of the mesh
+    around the control volume $P$ with its neighbours $N$, $S$, $E$, $W$ and
+    the face centres $n$, $s$, $e$, $w$.
+    \centermark~cell centres store the flow variables (collocated arrangement);
+    \facemark~face centres are where interpolated/flux values are evaluated.
+    Double-headed arrows across the faces of $P$ indicate the conservative flux
+    exchange with the neighbouring cells.}
+    \label{fig:FVMMethod}
+\end{figure}
 
 In order to execute these simulations, the open-source software \name{OpenFOAM} is utilised. 
 This software is able to perform \acrshort{rans} simulations of fluid flows with a variety of turbulence models. 
@@ -94,6 +129,10 @@ It consists of four basic steps \citep{schlatter_lecture_2025}:
 
 
 \section{Simulation Setups}\label{sec:MethodCurvedTBL}
+
+In the following section the simulation setups are presented.
+First we introduce the setup we use for the \acrshort{dns} simulations.
+Then the simulation setup for the \acrshort{rans} simulations is presented.
 
 \subsection{Neko simulation setup}
 

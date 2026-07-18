@@ -166,6 +166,12 @@
 \definecolor{cpdot}{HTML}{FF3FB9}      % control points
 \definecolor{rangecol}{HTML}{FEADEF}   % exaggerated motion range
 
+\definecolor{fvmcenter}{HTML}{01665E}   % teal  — cell-centre dots
+\definecolor{fvmface}{HTML}{BF812D}     % ochre — face-centre circles
+
+% little inline markers matching the figure
+\newcommand{\centermark}{\tikz\draw[fvmcenter,fill=fvmcenter] (0,0) circle (2.2pt);}
+\newcommand{\facemark}{\tikz\draw[fvmface,fill=white,line width=0.9pt] (0,0) circle (2.0pt);}
 
 %%%%%%%%%%%%%%%%%%added colors for lengend entries in caption %%%%%%%%%%%%%%%%%%%%%%
 
@@ -224,13 +230,13 @@
 \newacronym{sem}{SEM}{Spectral element method}
 \newacronym{fvm}{FVM}{Finite volume method}
 \newacronym{simple}{SIMPLE}{semi-implict method for pressure-linked equations}
+\newacronym{les}{LES}{large-eddy simulations}
+\newacronym{cfd}{fd}{computational fluid dynamics}
 
-% \newacronym{omp}{OMP}{optimised material parameters}
-% \newacronym{odb}{ODB}{output database}
 % \newacronym{mdb}{MDB}{model database}
 % \newacronym{cae}{CAE}{computer aided engineering}
 % \newacronym{api}{API}{application programming interface}
-% \newacronym{fe}{FE}{finite element}
+\newacronym{fem}{FEM}{finite element method}
 % \newacronym{fau}{FAU}{Friedrich-Alexander Universität Erlangen-Nürnberg}
 
 
