@@ -8,10 +8,10 @@ First, we present the employed simulation methods.
 Afterwards the simulations setups are introduced and finally the methodology to derive and employ \acrshort{zpg} conditions is explained. 
 
 \section{Simulation methods}\label{sec:SimMethods}
-
-In the following section the numerical methods utilised in this work are presented.
-In th beginning we focus on \acrfull{dns} which we mainly use throughout this work.
-Afterwards \acrfull{rans} is presented, since some additional simulations are performed with this method.
+\fxbmark{Korekturbeginn}
+In this section, the numerical methods utilised in this work are introduced.
+Firstly, we focus on \acrfull{dns} which we primarily use throughout this work.
+Thereafter, \acrfull{rans} are presented, as additional simulations are performed with this method.
 \fxmarlenebmark{ab hier Sachen hinzugefügt 19.07. 11:40}
 \subsection{Direct numerical simulation in Neko}\label{subsec:DNSmethod}
 
@@ -23,35 +23,36 @@ Thus, \acrshort{dns} is the computationally most expensive approach, given that 
 Conversely, this approach yields  the most accurate results.
 In the context of small turbulent scales, the utilisation of \acrshort{dns} is inevitable.
 Due to the high computational demands, \acrshort{dns} is typically employed in the study of low to moderate Reynolds numbers. 
-Its application is primarily restricted to research context \citep{slotnick_cfd_nodate}.
+Its application is primarily restricted to  research contexts \citep{slotnick_cfd_nodate}.
 The simulation method of \acrshort{dns} is the principal approach employed in this project.
-Developing this project involved the utilisation of a range of tools. 
-The majority of fluid simulations were performed with DNS. 
+
+%Developing this project involved the utilisation of a range of tools. 
+%In this project, the majority of fluid simulations were performed with \acrshort{dns}. 
 To execute these simulations the spectral element code \name{neko} was used. 
 \name{neko} is an open-source code developed for \acrshort{dns} and \acrshort{les} simulations of incompressible turbulent flows.
-It is the direct decendant of \name{nek5000} which is a well-established \acrfull{cfd} code.
+It is the direct decendant of \name{nek5000} which is a well-established \acrfull{cfd} implementation.
 \name{neko} is written in modern, object-oriented Fortran code \citep{jansson_neko_2024}.
 It solves the \acrshort{nse} based on the high-order \acrfull{sem} which was first introduced by \citet{patera_spectral_1984}.
 In \acrshort{sem} the methods of \acrshort{fem} and spectral methods are combined \citep{patera_spectral_1984}.
 Therefore, the domain is divided into small elements adding up to a mesh structure that represents the domain similar as in \acrshort{fem}.
 This enables the representation of complex geometries through various element shapes and arrangements.
 Additionally, the resolution of the solution can be adjusted by varying the size of the elements.
-In \acrshort{fem} usually the quantities inside the cells are calculated with low-order approximations.
+In \acrshort{fem}, the quantities inside the cells are  usually calculated with low-order approximations.
 Therefore, a refinement of the mesh would cause an algebraic error reduction \citep{deville_high-order_2002}. 
-In order to create well-resolved results, this would lead to meshes with extremely high element numbers leading to high computational costs.
-Hence, the spectral method is introduced.
+In order to achieve well-resolved results, it is necessary to employ meshes with extremely high element numbers. This, in turn, increases the  computational costs significantly.
+Hence, the spectral method was introduced by \citep{patera_spectral_1984}.
 The idea of the spectral method is to use a single high-order polynomial to represent the behaviour of the complete domain.
-With this approach the error decreases exponentially with increasing polynomial order \citep{deville_high-order_2002}.
-However, it is only feasible for quite easy geometries since a single polynomial cannot match complex geometries.
+With this approach, the error decreases exponentially with increasing polynomial order \citep{deville_high-order_2002}.
+However, the spectral method is only applicable to quite simple geometries since a single polynomial cannot match complex geometries.
 Therefore, the approaches are combined in the following way:
 The domain is discretised in elements according to \acrshort{fem} and the solution within one element is approximated with a high-order polynomial as in the spectral method.
 The high-order polynomial can be expressed as a tensor-product of 1D Lagrange interpolating polynomials \citep{deville_high-order_2002}.
-Inside one element the polynomial is defined through a set of nodal points.
+Inside a single element, the polynomial is defined through a set of points.
 These \benennung{\acrfull{gll}} points have a specific non-uniform distribution across the element which is visualised in \autoref{fig:gllPoints}.
-Their spacing is denser near the element boundaries which suppresses oscillation problems of the high-order polynomial \citep{deville_high-order_2002}.
-In \autoref{fig:gllPoints} it is also visualised how the positions of the \acrshort{gll} points if the shape of the element changes.
-This could happen through complex domain shapes, where the element shape needs to adapt to the shape of the domain boundaries as in the curved domain studied in this project.
-Since at the boundaries of the element also a \acrshort{gll} point is positioned, the number of \acrshort{gll} points is $N+1$ for representing a polynomial of order $N$.
+Their spacing is more compact near an element boundaries,  thereby mitigating oscillation issues associated with high-order polynomials \citep{deville_high-order_2002}.
+In \autoref{fig:gllPoints}, it is also visualised how the positions of the \acrshort{gll} points are adopted if the shape of the element is modified.
+This could happen through complex domain shapes, where the element shape needs to be adapted to the shape of the domain boundaries as in the curved domain studied in this project.
+Since a \acrshort{gll} point is positioned at the boundaries of the element also, the number of \acrshort{gll} points is $N+1$ for representing a polynomial of order $N$.
 The \acrshort{gll} points at the element boundaries ensure the continuity of the solution across element boundaries \citep{deville_high-order_2002}.
 Usually, different polynomial orders are used to represent velocity and pressure field to avoid spurious pressure oscillations \citep{maday_spectral_1989}.
 
@@ -63,7 +64,9 @@ Usually, different polynomial orders are used to represent velocity and pressure
     spectral element of polynomial order $N=6$ in two-dimensional space (a) Reference element with quadratic shape; (b) shape modified element to match a curved domain shape.}
     \label{fig:gllPoints}
 \end{figure}
+\fxchange{Das klingt nach einer guten Erklärung! vllt noch 2 Sätze, die ausdrücken, dass das ein aussichtsreicher Kompromiss zwischen reduziertem computationel effort and the required accuracy bei der Bestimmung von xx sein könnte (weil das bei iEinem anderen Anwendungsgebiet auch schon mal probiert wurde, oder weil yyy oder ohne weil - ist halt Forschung)}
 \fxmarlenebmark{bis hier Sachen hinzugefügt 19.07. 11:40}
+\fxbmark{fertig}
 \comment{
 When running simulations with \name{neko}, it is possible to track statistics regarding the simulated flow. 
 The recording of the statistics can be configured in various manners and is defined in the so-called case file of the simulation.
@@ -78,31 +81,32 @@ Subsequently, a multitude of statistical metrics, including budget terms, can be
 \subsection{RANS simulations in OpenFOAM}\label{sec:RANSmethod}
 %In addition to the DNS, a number of \acrshort{rans} simulations were conducted as well. 
 
-Moreover, we employed \acrshort{rans} simulations to ensure that the computational effort remained within acceptable limits.
-As a consequence, only the mean velocity field is calculated.
-The effect of turbulence can be summarised in the Reynolds stress tensor.
-In order to circumvent the computation of this tensor, a number of methodologies have been formulated for its modelling \citep{wilcox_turbulence_2006}. 
-Since the models have different characteristics and accuracies, the selection of the model will have a substantial impact on the simulation \citep{yang_assessment_2016}.
-In this simulation we use the so-called $k\text{-}\omega$ SST model.
-This model combines the $k\text{-}\omega$ and $k\text{-}\varepsilon$ models, incorporating an additional term for the shear-stress transport (SST) \citep{menter_two-equation_1994}.
-In the sublayer of the boundary layer, the $k\text{-}\omega$ model is used because of its accuracy in this region. 
-This is blended with the $k\text{-}\varepsilon$ model, which provides more accurate results for $k$ and $\varepsilon$.
-These quantities determine the eddy viscosity which is the main information required by the mean flow solver. 
+In the course of this work, we also employed \acrshort{rans} simulations.
+They are based on the already introduced Reynolds decomposition of the \acrshort{nse} (see \autoref{subsec:TBLTheory}).
+The resulting equations for \acrshort{tbl} are written in \autoref{eq:rans} which enables the computation of the mean pressure and velocity fields.
+The fluctuations are represented in the Reynolds stress tensor. 
+In order to circumvent the full computation of this tensor, a number of methodologies have been formulated for its approximative modelling \citep{wilcox_turbulence_2006}. 
+Since the models differ with respect to characteristics and accuracies, the selection of the most appropriate model is of paramount importance, as it will have a substantial impact on the simulation \citep{yang_assessment_2016}.
+Within the simulation, we employ the so-called $k\text{-}\omega$ SST model.
+This model combines the $k\text{-}\omega$ and $k\text{-}\varepsilon$ models, incorporating an additional term for the shear-stress transport (SST) \citep{menter_two-equation_1994}:
+In the sublayer of the boundary layer, the $k\text{-}\omega$ model is used due to its proven accuracy in this region. 
+The $k\text{-}\omega$ model is then blended with the $k\text{-}\varepsilon$ model, which has been shown to provide more accurate results for $k$ and $\varepsilon$.
+These quantities determine the eddy viscosity which is the primary information required by the mean flow solver. 
 Therefore, an accurate prediction of mean flow depends on accurate values for $k$ and $\varepsilon$ \citep{menter_two-equation_1994}.
-It is evident that these simulations show a considerably better computational performance compared to \acrshort{dns}.
-In case the precise behaviour of the turbulent scales is irrelevant, and the main interest is the effect of the turbulence on the flow, \acrshort{rans} simulations provide a reasonable compromise \citep{alfonsi_reynolds-averaged_2009}.
-Therefore, this simulation method finds application in multiple industrial environments.
+It is evident that these simulations exhibits superior computational  performance in comparison to \acrshort{dns}.
+In case the detailed behaviour of the turbulent scales is irrelevant, and the focus is on the effect of the turbulence on the flow, \acrshort{rans} simulations provide a reasonable compromise \citep{alfonsi_reynolds-averaged_2009}.
+Consequently, this simulation method finds application in multiple industrial environments.
 
 
 \begin{figure}[H]
     \centering
     \input{images/fvm_stencil.pgf}
     \caption[Finite-volume stencil]{%
-    Finite-volume discretisation stencil: a $3\times3$ patch of the mesh
+    Finite-volume discretisation: a $3\times3$  mesh
     around the control volume $P$ with its neighbours $N$, $S$, $E$, $W$ and
     the face centres $n$, $s$, $e$, $w$.
     \centermark~cell centres store the flow variables (collocated arrangement);
-    \facemark~face centres are where interpolated/flux values are evaluated.
+    \facemark~face centres are where interpolated values are evaluated.
     Double-headed arrows across the faces of $P$ indicate the conservative flux
     exchange with the neighbouring cells.}
     \label{fig:FVMMethod}
@@ -110,30 +114,35 @@ Therefore, this simulation method finds application in multiple industrial envir
 
 In order to execute these simulations, the open-source software \name{OpenFOAM} is utilised. 
 This software is able to perform \acrshort{rans} simulations of fluid flows with a variety of turbulence models. 
-\name{OpenFOAM} is based on the \acrfull{fvm} to handle the \acrshort{nse} \citep{weller_tensorial_1998}.
-The \acrshort{fvm} is an approach that has not been designed for the purpose for solving the \acrshort{nse} analytically. 
-Instead, the domain is subdivided into finite control volumes.
-For each of these cells, the equations are then integrated over the volume, which converts them into a sum of fluxes through the cell edges.
-This property makes the method inherently conservative, since everything that leaves a cell across an edge enters the neighbouring cell \citep{moukalled_finite_2016}. 
+\name{OpenFOAM} implements the \acrfull{fvm} to approximate the \acrshort{nse} \citep{weller_tensorial_1998}.
+The numerical approximation of the \acrshort{nse} is achieved by the subdivision of the domain into finite control volumes. 
+This approach stands in contrast to the \acrshort{dns}, wherein the equations are solved analytically.
+For each of these cells, the equations are then integrated over the volume, thereby converting them into a sum of fluxes through the cell edges.
+This property makes the method inherently conservative, since all field quantities, e.g.~pressure and velocity components, that leave a cell across an edge enter the neighbouring cell \citep{moukalled_finite_2016}. 
 Therefore, mass and momentum are exactly conserved in the discretisation \citep{weller_tensorial_1998}.
-The most codes are based on a so-called collocated variable arrangement, meaning that all variables are stored at the same point in the control volume, e.g.~the cell centre.
-However, some interpolation is necessary to derive their values at the cell edges to determine the fluxes across the cell edges \citep{schlatter_lecture_2025}.
-To perform this interpolation multiple schemes exist.
-Often different interpolation schemes are used for different quantities depending on its properties.
-In \name{OpenFOAM} the interpolation schemes for the different variables can be defined in the \texttt{fvSchemes} file.
-With this approach the most variables of the flow can be determined.
-However, for incompressible flows it is not possible to derive the pressure with this method directly.
-Since the pressure appears only in a derivative, no explicit term to calculate the pressure is given.
-Nevertheless, the prediction of the pressure has to be done in a way that it requires the following condition:
-If the predicted solution for the pressure is included in the momentum equation the velocity values need to resolve in such a way that they fulfil the continuity equation.
-To do this, different methods exist to derive a pressure field that satisfies this condition with a \benennung{predictor-corrector iteration} \citep{schlatter_lecture_2025, weller_tensorial_1998}.
-One commonly used approach is the \acrfull{simple} approach which is also implemented in \name{OpenFOAM}.
+Most codes are based on a so-called collocated variable arrangement, meaning that all quantities are stored at the same point in the control volume, e.g., the cell centre.
+However, it is necessary to derive the field quantities at the cell edges to determine the fluxes across the cell edges \citep{schlatter_lecture_2025}.
+This is usually done by interpolation of the field quantities which is visualised in \autoref{fig:FVMMethod}
+A range of schemes exist for the purpose of performing this interpolation. 
+Specific interpolation schemes can be utilised for individual  quantities depending on their properties.
+In \name{OpenFOAM} the interpolation schemes for the different variables are defined in the \texttt{fvSchemes} file.
+
+
+Using the previously described approach, most variables can be successfully quantified.
+However, for incompressible flows it is not possible to derive the pressure  directly through with this method.
+The pressure manifests exclusively in a derivative, thus there is no explicit term to calculate the pressure.
+Nevertheless, the prediction of the pressure  must be conducted in a manner that satisfies  the following condition:
+
+If the predicted solution for the pressure is included in the momentum equation, the velocity values are resolved in such a way that they fulfil the continuity equation.
+In order to achieve this objective, a  number of  methodologies can be employed
+ to derive a pressure field that satisfies this condition with a \benennung{predictor-corrector iteration} \citep{schlatter_lecture_2025, weller_tensorial_1998}.
+One  commonly used  approach is the \acrfull{simple} approach, which is also implemented in \name{OpenFOAM}.
 It consists of four basic steps \citep{schlatter_lecture_2025}:
 \begin{enumerate}
-    \item Prediction: Estimate pressure field and solve momentum equations
-    \item Poisson equation: Solve additional pressure equation for pressure correction variable $p'$
-    \item Correction: Correct pressure and velocity fields with pressure correction variable to improve mass conservation
-    \item Repetition: update initial values for pressure and velocities and repeat until a converged solution is obtained
+    \item Prediction: Estimate the pressure field and solve the momentum equations.
+    \item Poisson equation: Solve the additional pressure equation for the  pressure correction variable $p'$.
+    \item Correction: Correct the pressure and the velocity fields with the pressure correction variable to improve the mass conservation.
+    \item Repetition: update the initial values for  pressure and velocities and repeat until a converged solution is obtained.
 \end{enumerate}
 
 %In addition to the method for the pressure prediction, the turbulence model has to b
@@ -266,7 +275,7 @@ Additionally, these simulations were used to extract the inflow conditions for t
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{curvedDomain_IC.pdf}
-    \caption{domain for curved TBL simulations Bild ändern, sodass winkel und längen eingetragen werdne können}
+    \caption{This picture will be recreated}
     \label{fig:paraviewDomain}
 \end{figure}
 
@@ -306,7 +315,7 @@ However, the inlet is shorter than the one in the \acrshort{dns} domain.
 The initial condition for the \name{OpenFOAM} simulation is extracted at a position $s_{extr} = 275$ in the straight section of the \acrshort{dns} domain.
 Therefore, the boundary layer in the \acrshort{rans} simulation only needs a much shorter straight inlet region to develop similar to the \acrshort{dns} boundary layer.
 We defined the remaining length of the straight inlet as the remaining part of $s_{i} - s_{extr}$ and then added a balance zone of $s_{bal} = 20$ which ends up in a straight inlet of $s_{iOF} = 70$.
-This balance region is recommended since quantities of the extracted \acrshort{dns} inflow profile have to be rebalanced in the \acrshort{rans} model (XXQUELLE).
+This balance region is recommended since quantities of the extracted \acrshort{dns} inflow profile have to be rebalanced in the \acrshort{rans} model \fxinfo{(XXQUELLE)}.
 In \autoref{fig:openfoamDomain} the general configuration of the \acrshort{rans} domain is depicted exemplary for the R100deg30 case.
 Compared to the domain used for the DNS, the height of the domain is increased to $10 \cdot \delta_{99}$ for R100deg30 and R100deg90, and up to $20 \cdot \delta_{99}$ in R500deg18.
 This modification simplifies the transfer of the results of the optimised \name{OpenFOAM} simulation to the DNS domain, as  described in \autoref{subsec:data_extr}.
@@ -331,7 +340,7 @@ The mesh resolution increases near the wall to ensure $y^+ = 1$ near the lower w
 
 
 \subsubsection{Boundary and initial conditions}
-The quantities that require predefined initial conditions depend on the selected RANS model (XXQuelle). 
+The quantities that require predefined initial conditions depend on the selected RANS model \fxinfo{(XXQuelle)}. 
 Since  the $k-\omega-sst$-model is used in this project, it is necessary to define the initial conditions for turbulent kinetic energy $k$, dissipation $\omega$ and velocity $U$. 
 This is achieved by applying an initial field at the inflow which is extracted from the previous \acrshort{dns} simulation of the curved \acrshort{tbl}.
 Therefore, a slice of the fully developed \acrshort{tbl} from the DNS simulation is used.
@@ -449,7 +458,7 @@ Moreover, we assumed that the inflow modification  would not significantly impac
 Thus, we only have two free \benennung{design points} in the curvature and two in the straight section in front of it which fastens the optimisation.
 In addition, we applied a weight to the transition section of the optimisation length to increase the impact of the new design points.
 We tested multiple other setups and distributions of the \benennung{design points} to ensure an accurate result.
-The results of the different configurations are discussed in XX.
+The results of the different configurations are discussed in chapter 5.
 For the other two cases we decided to directly follow the best working principle to position the \benennung{design variables} directly.
 
 \comment{
@@ -472,7 +481,7 @@ As mentioned previously, we started with five \benennung{design points} in all c
 For the R500deg18, this resulted in small residuals.
 This can be explained by the lower curvature in this case which reduces the natural pressure gradient caused by the curvature.
 Therefore, the necessary compensation is much smaller. 
-Additionally, the longer arc length provides more space for pressure changes, resulting in smaller gradients along the domain (XXQUELLE).
+Additionally, the longer arc length provides more space for pressure changes, resulting in smaller gradients along the domain \fxinfo{(XXQUELLE)}.
 However, the R500deg18 case also shows a \acrshort{fpg} spike in the curve of the Clauser parameter.
 Therefore, as with R100deg30, we added  two \benennung{design points} in the straight inlet. 
 We fixed the last four out of five points in the curved section reducing the optimisation problem to three dimensions with only the upstream points  free.

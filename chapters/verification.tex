@@ -38,6 +38,41 @@ The collected statistics are discussed in chapter XX.
 
 \subsection{Results and discussion}
 
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/channel_valid/UplusNearWall_txt_Re178_bycase.pgf}
+    \label{fig:channelUplus}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/channel_valid/fluctuations_txt_Re178_bycase.pgf}
+    \label{fig:channelFluct}
+\end{subfigure}
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/channel_valid/budget_txt_Re178_k_linestyle.pgf}
+    \label{fig:channelBudgets}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:channelValid}
+\end{figure}
+
+The performed simulations of a turbulent channel lead to the results depicted in \autoref{fig:channelValid}.
+
 \section{Plane turbulent boundary layer simulations}\label{sec:planeTBL}
 
 \subsection{Simulation setup}
@@ -92,23 +127,38 @@ As reference data the data from \citet{schlatter_assessment_2010} at $\mathrm{Re
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
     \centering
-    \input{images/planeTBL_verif/UplusNearWall_txt_Re700.pgf}
+    \input{images/planeTBL_verif/UplusNearWall_txt_Re700_bycase.pgf}
     \label{fig:planeTBLverifU}
 \end{subfigure}
 \hfill
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/planeTBL_verif/fluctuations_txt_Re700.pgf}
+    \input{images/planeTBL_verif/fluctuations_txt_Re700_bycase.pgf}
     \label{fig:planeTBLverifFluct}
 \end{subfigure}
-\begin{subfigure}[t]{\textwidth}
+\begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/planeTBL_verif/budget_txt_Re700_k.pgf}
+    \input{images/planeTBL_verif/beta_streamwise_txt.pgf}
+    \label{fig:planeTBLverifBeta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/planeTBL_verif/budget_txt_Re700_k_linestyle.pgf}
     \label{fig:planeTBLverifBudget}
 \end{subfigure}
-\caption{}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
 \label{fig:planeTBLVerif}
 \end{figure}
 
