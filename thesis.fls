@@ -722,6 +722,9 @@ OUTPUT chapters/methods.aux
 INPUT ./chapters/methods.tex
 INPUT ./chapters/methods.tex
 INPUT chapters/methods.tex
+INPUT ./images/gll_points.pgf
+INPUT ./images/gll_points.pgf
+INPUT images/gll_points.pgf
 INPUT ./images/fvm_stencil.pgf
 INPUT ./images/fvm_stencil.pgf
 INPUT images/fvm_stencil.pgf

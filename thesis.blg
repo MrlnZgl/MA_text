@@ -13,6 +13,7 @@ Database file #1: bibliography_MA.bib
 Warning--empty journal in johnston_experimental_nodate
 Warning--empty year in johnston_experimental_nodate
 Warning--empty year in johnston_experimental_nodate
+Warning--empty booktitle in maday_spectral_1989
 Warning--empty booktitle in prandtl_uber_1904
 Warning--there's a number but no volume in reynolds_iv_1895
 Warning--empty year in schlatter_leveraging_nodate
@@ -23,45 +24,45 @@ Warning--empty year in slotnick_cfd_nodate
 Warning--empty journal in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
-You've used 39 entries,
+You've used 43 entries,
             2789 wiz_defined-function locations,
-            867 strings with 12216 characters,
-and the built_in function-call counts, 16336 in all, are:
-= -- 1500
-> -- 840
-< -- 26
-+ -- 279
-- -- 240
-* -- 1303
-:= -- 2522
-add.period$ -- 144
-call.type$ -- 39
-change.case$ -- 207
-chr.to.int$ -- 39
-cite$ -- 91
-duplicate$ -- 766
-empty$ -- 1385
-format.name$ -- 309
-if$ -- 3418
+            899 strings with 13289 characters,
+and the built_in function-call counts, 18352 in all, are:
+= -- 1697
+> -- 938
+< -- 30
++ -- 311
+- -- 268
+* -- 1472
+:= -- 2825
+add.period$ -- 166
+call.type$ -- 43
+change.case$ -- 229
+chr.to.int$ -- 43
+cite$ -- 100
+duplicate$ -- 859
+empty$ -- 1551
+format.name$ -- 344
+if$ -- 3853
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 42
-newline$ -- 230
-num.names$ -- 156
-pop$ -- 408
+missing$ -- 46
+newline$ -- 259
+num.names$ -- 173
+pop$ -- 446
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 190
 quote$ -- 0
-skip$ -- 562
+skip$ -- 628
 stack$ -- 0
-substring$ -- 513
-swap$ -- 37
-text.length$ -- 1
+substring$ -- 591
+swap$ -- 52
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 389
-warning$ -- 13
-while$ -- 145
+type$ -- 428
+warning$ -- 14
+while$ -- 162
 width$ -- 0
-write$ -- 558
-(There were 13 warnings)
+write$ -- 628
+(There were 14 warnings)

@@ -12,45 +12,69 @@ Afterwards the simulations setups are introduced and finally the methodology to 
 In the following section the numerical methods utilised in this work are presented.
 In th beginning we focus on \acrfull{dns} which we mainly use throughout this work.
 Afterwards \acrfull{rans} is presented, since some additional simulations are performed with this method.
-
+\fxmarlenebmark{ab hier Sachen hinzugefügt 19.07. 11:40}
 \subsection{Direct numerical simulation in Neko}\label{subsec:DNSmethod}
 
 For the simulation of turbulent flows a range of methodologies can be employed.
 The decision regarding the utilisation of a specific approach  depends on the characteristics of the flow and the requirements for the solution.
 One straight-forward approach is the \acrshort{dns}.
 \acrshort{dns} necessitates the solution of the \acrshort{nse} in order to compute  $U(x,t)$.
-Thus, \acrshort{dns} is the computationally most expensive approach, given that it resolves all length and time scales \citep{pope_turbulent_2015}.  Conversely, this approach yields  the most accurate results.
+Thus, \acrshort{dns} is the computationally most expensive approach, given that it resolves all length and time scales \citep{pope_turbulent_2015}. 
+Conversely, this approach yields  the most accurate results.
 In the context of small turbulent scales, the utilisation of \acrshort{dns} is inevitable.
-Due to the high computational demands, \acrshort{dns} is typically employed in the study of low to moderate Reynolds numbers. Its application is primarily restricted to research context \citep{slotnick_cfd_nodate}.
+Due to the high computational demands, \acrshort{dns} is typically employed in the study of low to moderate Reynolds numbers. 
+Its application is primarily restricted to research context \citep{slotnick_cfd_nodate}.
 The simulation method of \acrshort{dns} is the principal approach employed in this project.
-Developing this project involved the utilisation of a range of tools. The majority of fluid-flow simulations were performed with DNS (see XX \autoref{sec:SimBasics}). To execute these simulations the spectral element code \name{neko} was used. 
+Developing this project involved the utilisation of a range of tools. 
+The majority of fluid simulations were performed with DNS. 
+To execute these simulations the spectral element code \name{neko} was used. 
 \name{neko} is an open-source code developed for \acrshort{dns} and \acrshort{les} simulations of incompressible turbulent flows.
 It is the direct decendant of \name{nek5000} which is a well-established \acrfull{cfd} code.
-\name{neko} is written in modern, object-oriented Fortran code.
-It solves the \acrshort{nse} based on the high-order \acrfull{sem}.
-In \acrshort{sem} the methods of \acrshort{fem} and spectral methods are combined.
+\name{neko} is written in modern, object-oriented Fortran code \citep{jansson_neko_2024}.
+It solves the \acrshort{nse} based on the high-order \acrfull{sem} which was first introduced by \citet{patera_spectral_1984}.
+In \acrshort{sem} the methods of \acrshort{fem} and spectral methods are combined \citep{patera_spectral_1984}.
 Therefore, the domain is divided into small elements adding up to a mesh structure that represents the domain similar as in \acrshort{fem}.
 This enables the representation of complex geometries through various element shapes and arrangements.
 Additionally, the resolution of the solution can be adjusted by varying the size of the elements.
 In \acrshort{fem} usually the quantities inside the cells are calculated with low-order approximations.
-Therefore, a refinement of the mesh would cause an algebraic error reduction. 
+Therefore, a refinement of the mesh would cause an algebraic error reduction \citep{deville_high-order_2002}. 
 In order to create well-resolved results, this would lead to meshes with extremely high element numbers leading to high computational costs.
 Hence, the spectral method is introduced.
 The idea of the spectral method is to use a single high-order polynomial to represent the behaviour of the complete domain.
-With this approach the error decreases exponentially with increasing polynomial order.
+With this approach the error decreases exponentially with increasing polynomial order \citep{deville_high-order_2002}.
 However, it is only feasible for quite easy geometries since a single polynomial cannot match complex geometries.
 Therefore, the approaches are combined in the following way:
 The domain is discretised in elements according to \acrshort{fem} and the solution within one element is approximated with a high-order polynomial as in the spectral method.
+The high-order polynomial can be expressed as a tensor-product of 1D Lagrange interpolating polynomials \citep{deville_high-order_2002}.
+Inside one element the polynomial is defined through a set of nodal points.
+These \benennung{\acrfull{gll}} points have a specific non-uniform distribution across the element which is visualised in \autoref{fig:gllPoints}.
+Their spacing is denser near the element boundaries which suppresses oscillation problems of the high-order polynomial \citep{deville_high-order_2002}.
+In \autoref{fig:gllPoints} it is also visualised how the positions of the \acrshort{gll} points if the shape of the element changes.
+This could happen through complex domain shapes, where the element shape needs to adapt to the shape of the domain boundaries as in the curved domain studied in this project.
+Since at the boundaries of the element also a \acrshort{gll} point is positioned, the number of \acrshort{gll} points is $N+1$ for representing a polynomial of order $N$.
+The \acrshort{gll} points at the element boundaries ensure the continuity of the solution across element boundaries \citep{deville_high-order_2002}.
+Usually, different polynomial orders are used to represent velocity and pressure field to avoid spurious pressure oscillations \citep{maday_spectral_1989}.
 
-
-When running simulations with \name{neko}, it is possible to track statistics regarding the  simulated flow.  The recording of the statistics can be configured in various manners and is defined in the so-called case file of the simulation.
+\begin{figure}[H]
+    \centering
+    \input{images/gll_points.pgf}
+    \caption[GLL points on a curved spectral element]{%
+    Distribution of the \gllmark~\acrshort{gll} points within a single
+    spectral element of polynomial order $N=6$ in two-dimensional space (a) Reference element with quadratic shape; (b) shape modified element to match a curved domain shape.}
+    \label{fig:gllPoints}
+\end{figure}
+\fxmarlenebmark{bis hier Sachen hinzugefügt 19.07. 11:40}
+\comment{
+When running simulations with \name{neko}, it is possible to track statistics regarding the simulated flow. 
+The recording of the statistics can be configured in various manners and is defined in the so-called case file of the simulation.
 For instance, it is possible to define one or two axes along which the statistics should be averaged. 
 These statistics are used to extract and calculate certain metrics of the flow. In order to accomplish this, it is necessary to undertake a process of post-processing of the recorded statistics. 
 For this purpose,  the \name{python} package \texttt{pysemtools} is employed. 
-\name{pysemtools} facilitates the extraction and interpolation of data, like those resulting from  \name{neko} simulations, from an SEM mesh into any arbitrary points \fxchange{ Quelle:GitHub repository}. 
+\name{pysemtools} facilitates the extraction and interpolation of data, like those resulting from \name{neko} simulations, from an SEM mesh into any arbitrary points \fxchange{ Quelle:GitHub repository}. 
 Subsequently, a multitude of statistical metrics, including budget terms, can be calculated. 
+}
 
-\fxmarlenebmark{ab hier Sachen hinzugefügt 18.07. 11:30}
+
 \subsection{RANS simulations in OpenFOAM}\label{sec:RANSmethod}
 %In addition to the DNS, a number of \acrshort{rans} simulations were conducted as well. 
 
@@ -111,7 +135,7 @@ It consists of four basic steps \citep{schlatter_lecture_2025}:
     \item Correction: Correct pressure and velocity fields with pressure correction variable to improve mass conservation
     \item Repetition: update initial values for pressure and velocities and repeat until a converged solution is obtained
 \end{enumerate}
-\fxmarlenebmark{bis hier Sachen hinzugefügt 18.07. 11:30}
+
 %In addition to the method for the pressure prediction, the turbulence model has to b
 
 
@@ -247,12 +271,6 @@ Additionally, these simulations were used to extract the inflow conditions for t
 \end{figure}
 
 \subsection{OpenFOAM simulation setup}\label{subsec: methodsOFsetup}
-
-
-
-
-
-\fxinfo{other settings in OPENFOAM}
 
 
 \begin{figure}[H]
@@ -461,7 +479,7 @@ We fixed the last four out of five points in the curved section reducing the opt
 With this configuration, it was possible to achieve a fairly good optimisation of the $\beta$ distribution.
 
 
-For R100deg90 XXXX\fxchange{kann das weg?}
+\fxchange{For R100deg90 XXXX}
 
 \comment{
 In all cases we started these two configurations with 5 \benennung{design points}.
@@ -478,7 +496,7 @@ However with the sharp change from traight to curved wall, it will not be possib
 }
 
 
-\fxmarlenebmark{Bis hier Mamas Änderungen eingebaut 16.07. 16:50}
+
 
 \subsubsection{Optimisation parameters}
 
@@ -551,7 +569,6 @@ In the parts of the domain that are not included, $(1,0,0)$ is applied as before
 To avoid sharp changes of the boundary condition when changing from $(1,0,0)$ to the optimised velocities, a blending is included.
 This blends the edge value of the optimised velocities into the $(1,0,0)$ region in 10 length units in streamwise direction. 
 
-\fxmarlenebmark{Marlene Stand bis hier 16.07. 16:50}
 
 \comment{
 \section{General workflow}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -52,6 +52,12 @@ P.~A. Davidson.
 \newblock Oxford University Press, Oxford, United Kingdom ; New York, NY, United States of America, second edition edition, 2015.
 \newblock ISBN 978-0-19-872258-8 978-0-19-872259-5.
 
+\bibitem[Deville et~al.(2002)Deville, Fischer, and Mund]{deville_high-order_2002}
+M.~Deville, P.~F. Fischer, and E.~H. Mund, editors.
+\newblock \emph{High-order methods for incompressible fluid flow}.
+\newblock Number~9 in Cambridge monographs on applied and computational mathematics. Cambridge University Press, Cambridge, UK New York, 2002.
+\newblock ISBN 978-0-521-45309-7 978-0-511-03946-1 978-0-511-05284-2 978-0-511-09197-1 978-0-511-54679-2.
+
 \bibitem[Ganagdhar(2025)]{ganagdhar_bayesian_2025}
 M.~Ganagdhar.
 \newblock Bayesian optimization of free-stram conditions for a target pressure-gradient parameter beta in various boundary layers flows using openfoam, 2025.
@@ -68,9 +74,24 @@ S.~Hosseini et~al.
 \newblock \emph{International Journal of Heat and Fluid Flow}, 61:\penalty0 117--128, 2016.
 \newblock \doi{10.1016/j.ijheatfluidflow.2016.02.001}.
 
+\bibitem[Jansson et~al.(2024)Jansson, Karp, Podobas, Markidis, and Schlatter]{jansson_neko_2024}
+N.~Jansson et~al.
+\newblock Neko: {A} modern, portable, and scalable framework for high-fidelity computational fluid dynamics.
+\newblock \emph{Computers \& Fluids}, 275:\penalty0 106243, May 2024.
+\newblock ISSN 00457930.
+\newblock \doi{10.1016/j.compfluid.2024.106243}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0045793024000756}.
+
 \bibitem[Johnston et~al.()Johnston, Moffat, and Kays]{johnston_experimental_nodate}
 J.~P. Johnston, R.~J. Moffat, and W.~M. Kays.
 \newblock Experimental data and model for the turbulent boundary layer on a convex, curved surface.
+
+\bibitem[Maday and Patera(1989)]{maday_spectral_1989}
+Y.~Maday and A.~T. Patera.
+\newblock Spectral element methods for the incompressible {Navier}-{Stokes} equations.
+\newblock pages 71--143, Jan. 1989.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/1989sasc.proc...71M}.
+\newblock ADS Bibcode: 1989sasc.proc...71M.
 
 \bibitem[Mansour et~al.(1988)Mansour, Kim, and Moin]{mansour_reynolds-stress_1988}
 N.~N. Mansour, J.~Kim, and P.~Moin.
@@ -121,6 +142,14 @@ V.~Patel and F.~Sotiropoulos.
 \newblock Longitudinal curvature effects in turbulent boundary layers.
 \newblock \emph{Progress in Aerospace Sciences}, 33\penalty0 (1-2):\penalty0 1--70, 1997.
 \newblock \doi{10.1016/S0376-0421(96)00001-2}.
+
+\bibitem[Patera(1984)]{patera_spectral_1984}
+A.~T. Patera.
+\newblock A spectral element method for fluid dynamics: {Laminar} flow in a channel expansion.
+\newblock \emph{Journal of Computational Physics}, 54\penalty0 (3):\penalty0 468--488, June 1984.
+\newblock ISSN 00219991.
+\newblock \doi{10.1016/0021-9991(84)90128-1}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/0021999184901281}.
 
 \bibitem[Pope(2015)]{pope_turbulent_2015}
 S.~B. Pope.
