@@ -1,9 +1,214 @@
 \chapter{Results}
 
-\section{plane TBL verification}
+\section{plane section verification}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R100deg30/comparison_plots/Re700/UplusNearWall_txt_Re700_bycase.pgf}
+    \label{fig:inflowSecVerifU}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/Re700/fluctuations_txt_Re700_bycase.pgf}
+    \label{fig:nflowSecVerifFluct}
+\end{subfigure}
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/Re700/beta_streamwise_txt.pgf}
+    \label{fig:nflowSecVerifBeta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/Re700/budget_txt_Re700_k_linestyle.pgf}
+    \label{fig:nflowSecVerifBudget}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:inflowSecVerifVerif}
+\end{figure}
 
 \section{optmization tests}
 
-\section{cruved resutls}
+\section{Curved Results}
+
+\subsection{R100deg 30}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R100deg30/comparison_plots/Re1200/UplusNearWall_txt_Re1200_bycase.pgf}
+    \label{fig:R100deg30Re1200U}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/Re1200/fluctuations_txt_Re1200_bycase.pgf}
+    \label{fig:R100deg30Re1200Fluct}
+\end{subfigure}
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/Retau_Retheta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R100deg30Re1200Beta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/delta99_theta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R100deg30Re1200Budget}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:R100deg30Re1200}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R100deg30/comparison_plots/delta_wall_pressure_bendmean_vs_s_over_delta0_txt.pgf}
+    \label{fig:R100deg30Re1200U}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/Ue_vs_s_over_delta0_txt.pgf}
+    \label{fig:R100deg30Re1200Fluct}
+\end{subfigure}
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/beta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R100deg30Re1200Beta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg30/comparison_plots/Re1200/budget_txt_Re1200_k_linestyle.pgf}
+    \label{fig:R100deg30Re1200Budget}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:R100deg30Re1200}
+\end{figure}
+
+\subsection{R500deg18}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R500deg18/comparison_plots/Re1200/UplusNearWall_txt_Re1200_bycase.pgf}
+    \label{fig:R100deg30Re1200U}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/Re1200/fluctuations_txt_Re1200_bycase.pgf}
+    \label{fig:R100deg30Re1200Fluct}
+\end{subfigure}
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/Retau_Retheta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R100deg30Re1200Beta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/delta99_theta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R100deg30Re1200Budget}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:R100deg30Re1200}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R500deg18/comparison_plots/delta_wall_pressure_bendmean_vs_s_over_delta0_txt.pgf}
+    \label{fig:R100deg30Re1200U}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/Ue_vs_s_over_delta0_txt.pgf}
+    \label{fig:R100deg30Re1200Fluct}
+\end{subfigure}
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/beta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R100deg30Re1200Beta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/Re1200/budget_txt_Re1200_k_linestyle.pgf}
+    \label{fig:R100deg30Re1200Budget}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:R100deg30Re1200}
+\end{figure}
+
 
 \section{pressure fluctuation tests}
