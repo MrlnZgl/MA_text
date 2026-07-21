@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -85,6 +85,14 @@ N.~Jansson et~al.
 \bibitem[Johnston et~al.()Johnston, Moffat, and Kays]{johnston_experimental_nodate}
 J.~P. Johnston, R.~J. Moffat, and W.~M. Kays.
 \newblock Experimental data and model for the turbulent boundary layer on a convex, curved surface.
+
+\bibitem[Lee and Moser(2015)]{lee_direct_2015}
+M.~D. Lee and R.~Moser.
+\newblock Direct numerical simulation of turbulent channel flow up to {$Re_\tau$}=5200.
+\newblock \emph{Journal of Fluid Mechnics}, 11\penalty0 (4):\penalty0 943--945, 2015.
+\newblock ISSN 1070-6631, 1089-7666.
+\newblock \doi{10.1063/1.869966}.
+\newblock URL \url{https://pubs.aip.org/pof/article/11/4/943/253866/Direct-numerical-simulation-of-turbulent-channel}.
 
 \bibitem[Maday and Patera(1989)]{maday_spectral_1989}
 Y.~Maday and A.~T. Patera.
