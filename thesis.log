@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  21 JUL 2026 17:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  21 JUL 2026 22:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1310,33 +1310,53 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, id=7, 597.55246pt x 845.07718pt>
+<digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, id=7, 597.4822pt x 845.1575pt>
 File: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf Graphic file (type pdf)
 <use digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf>
 Package pdftex.def Info: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf  used on input line 88.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, id=9, page=1, 597.55246pt x 845.07718pt>
+(pdftex.def)             Requested size: 597.48073pt x 845.15544pt.
+<digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, id=9, page=1, 597.4822pt x 845.1575pt>
+File: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf Graphic file (type pdf)
+<use digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, page 1>
+Package pdftex.def Info: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf , page1 used on input line 88.
+(pdftex.def)             Requested size: 597.48073pt x 845.15544pt.
+File: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf Graphic file (type pdf)
+<use digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, page 1>
+Package pdftex.def Info: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf , page1 used on input line 88.
+(pdftex.def)             Requested size: 597.50807pt x 845.19412pt.
+File: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf Graphic file (type pdf)
+<use digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, page 1>
+Package pdftex.def Info: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf , page1 used on input line 88.
+(pdftex.def)             Requested size: 597.50807pt x 845.19412pt.
+File: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf Graphic file (type pdf)
+<use digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, page 1>
+Package pdftex.def Info: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf , page1 used on input line 88.
+(pdftex.def)             Requested size: 597.50807pt x 845.19412pt.
 
 
-[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+File: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf Graphic file (type pdf)
+<use digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf, page 1>
+Package pdftex.def Info: digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf , page1 used on input line 88.
+(pdftex.def)             Requested size: 597.50807pt x 845.19412pt.
+[1
 
 \openout6 = `thesis.ist'.
 
 
-]
+ <./digitale_Vorlage_Abschlussarbeit_TechFak_ENG.pdf>]
 
 [2
 
 
 ]
-<images/LSTM_Logo.pdf, id=20, 285.23898pt x 102.82458pt>
+<images/LSTM_Logo.pdf, id=59, 285.23898pt x 102.82458pt>
 File: images/LSTM_Logo.pdf Graphic file (type pdf)
 <use images/LSTM_Logo.pdf>
 Package pdftex.def Info: images/LSTM_Logo.pdf  used on input line 98.
 (pdftex.def)             Requested size: 213.39566pt x 76.9268pt.
 
 
-[3 <./images/LSTM_Logo.pdf>]
+[3{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./images/LSTM_Logo.pdf>]
 
 [4
 
@@ -1402,7 +1422,7 @@ Underfull \vbox (badness 1466) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.260 \include{chapters/introduction}
+l.259 \include{chapters/introduction}
                                       [1
 
 
@@ -1417,7 +1437,7 @@ chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.260 \include{chapters/introduction}
+l.259 \include{chapters/introduction}
                                       [2
 
 
@@ -1646,7 +1666,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--211
 
 
 [15]
-<images/curvedDomain_IC.pdf, id=740, 2204.235pt x 1162.3425pt>
+<images/curvedDomain_IC.pdf, id=781, 2204.235pt x 1162.3425pt>
 File: images/curvedDomain_IC.pdf Graphic file (type pdf)
 <use images/curvedDomain_IC.pdf>
 Package pdftex.def Info: images/curvedDomain_IC.pdf  used on input line 277.
@@ -1661,7 +1681,7 @@ Underfull \vbox (badness 2529) has occurred while \output is active []
 [17]
 
 [18]
-<images/BOGP_flowchart_horizontal.pdf, id=797, 432.20018pt x 268.35226pt>
+<images/BOGP_flowchart_horizontal.pdf, id=837, 432.20018pt x 268.35226pt>
 File: images/BOGP_flowchart_horizontal.pdf Graphic file (type pdf)
 <use images/BOGP_flowchart_horizontal.pdf>
 Package pdftex.def Info: images/BOGP_flowchart_horizontal.pdf  used on input line 381.
@@ -1689,7 +1709,7 @@ chapter 4.
 
 
 ]
-<images/channel_IC.pdf, id=908, 1508.1171pt x 753.4823pt>
+<images/channel_IC.pdf, id=948, 1508.1171pt x 753.4823pt>
 File: images/channel_IC.pdf Graphic file (type pdf)
 <use images/channel_IC.pdf>
 Package pdftex.def Info: images/channel_IC.pdf  used on input line 59.
@@ -1706,7 +1726,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [27]
 
 [28]
-<images/plane_TBL_IC.pdf, id=973, 1904.01291pt x 436.58328pt>
+<images/plane_TBL_IC.pdf, id=1014, 1904.01291pt x 436.58328pt>
 File: images/plane_TBL_IC.pdf Graphic file (type pdf)
 <use images/plane_TBL_IC.pdf>
 Package pdftex.def Info: images/plane_TBL_IC.pdf  used on input line 202.
@@ -1781,7 +1801,7 @@ Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrreprt)              inconsistent.
 (scrreprt)              Because of this, you should remove `\end{appendix}'
 (scrreprt)              and replace `\begin{appendix}' by command
-(scrreprt)              `\appendix' on input line 277.
+(scrreprt)              `\appendix' on input line 276.
 
 \openout2 = `chapters/anhang1.aux'.
 
@@ -1813,11 +1833,11 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  51908 strings out of 473190
  1197903 string characters out of 5715800
- 2342458 words of memory out of 5000000
+ 2343465 words of memory out of 5000000
  73869 multiletter control sequences out of 15000+600000
  598564 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,16n,109p,10986b,1107s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,109p,10986b,1107s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:tke} has been referenced but does not exist, replaced by a fixed one
 
@@ -1843,10 +1863,10 @@ pdfTeX warning (dest): name{glo:cfd} has been referenced but does not exist, rep
 pdfTeX warning (dest): name{glo:les} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (52 pages, 14676389 bytes).
+Output written on thesis.pdf (52 pages, 14864671 bytes).
 PDF statistics:
- 1406 PDF objects out of 1440 (max. 8388607)
- 1236 compressed objects within 13 object streams
+ 1446 PDF objects out of 1728 (max. 8388607)
+ 1267 compressed objects within 13 object streams
  236 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
