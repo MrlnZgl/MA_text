@@ -1,0 +1,274 @@
+\chapter{Validation} \label{chap:validation}
+
+\fxmarlenebmark{Hier Sachen hinzugefügt 21.07. 18:00}
+The following chapter presents the simulations performed for validation.
+First, the performed channel simulations are described.
+Then, simulations of a plane \acrshort{tbl} were performed to validate the setup and ensure a proper selection of the boundary conditions.
+
+\section{Channel simulations}\label{sec:channel}
+At the start of this project, channel simulations were performed. 
+These reproducible simulations were executed to to familiarise ourselves  with the \acrshort{dns} code and the effect of different settings. 
+In addition, the created post-processing script was verified using these  and reference results.
+The \name{neko} installation includes some examples, one of which is for a turbulent channel simulation.
+We used this example as a starting point and made some modifications\fxinfo{klingt vage: besser: and modified it according to our needs (geht das genauer?) }.
+
+\subsection{Simulation setup}
+
+The simulation is set up for a turbulent channel flow  with a Reynolds number of  $Re_\tau = 180$.
+With a bulk velocity $U_b = 1$ and a channel half height $\delta = 1$, the bulk Reynolds number is set to be $Re_b = 2800$.
+The simulation runs with a polynomial of order 7 and a time order of 3.
+The physical domain size is $ L_x \times L_y \times L_z = 4\pi \delta \times 2 \delta \times \frac{4}{3}\pi \delta$.
+We set \benennung{no-slip}
+at the top and the bottom walls, as \acrshort{bc} which forces $u$ and $v$ to be 0 at the walls.
+Physically, this  corresponds to a flow whose viscosity causes the streamwise velocity component to be equal to its limiting wall value, which is $=0$ in this case. \fxchange{Ist es möglich 1.2 Sätze hinzuzufügen, warum das sinnvoll ist?}
+The wall-normal component is restricted by the impermeable characteristics of the walls.
+The streamwise and spanwise walls are set to have periodic \acrlong{bc}, meaning that  anything leaving one side enters the domain at the opposite side.
+Consequently, turbulence motions evolving along the channel length are recycled to accelerate  the process of turbulence evolution.
+In order to set up the channel simulation, we apply some \fxinfo{the following} modifications to the example case from the \name{neko} documentation.
+First, we refine\fxinfo{alles PRäsenz oder alles Past} the mesh.
+
+
+This is necessary to ensure a proper resolution of all turbulent scales.
+The mean flow and  statistics only vary  in the wall-normal direction, since the periodic \acrshort{bc} in the streamwise and spanwise directions render the flow statistically homogeneous.
+In contrast, the instantaneous velocity field is three-dimensional, with the steepest gradients in the wall-normal direction close to the wall.
+Therefore, a fine resolution in the wall-normal direction is required close to the wall.
+As a well-established reference,   the first grid point is positioned at $y^+<1$ from the wall, with a fine wall-normal resolution at the wall being used
+ \citep{schlatter_assessment_2010}.
+
+The mesh is coarsened towards the channel centre since the turbulent scales grow with increasing wall distance.
+In the streamwise and spanwise directions, a uniform spacing is used. 
+%
+As the flow is statistically homogeneous in both directions, the smallest scales are independent of the wall-parallel position.
+As the turbulent structures elongate in the streamwise direction, a higher resolution is required in the spanwise direction  to properly resolve the short dimension of the structures.
+We define the grid spacing as $\Delta z^+= 6$, an established size according to \citep{pope_turbulent_2015}.
+
+In the streamwise direction, it is a common practice  a spanwise resolution of twice the value used in the other directions, i.e. a value of $\Delta x^+= 12$ (XXQUELLE). 
+Next, we apply the new \acrshort{ic} to the velocity field.
+A laminar velocity field following the laminar profile $u = 1.5(1-y^2)$ is applied as a basis.
+Then, a set of analytically prescribed perturbations is designed to trigger rapid transition to turbulence.
+These perturbations consist of combinations of polynomial and sinusoidal functions.
+Five perturbation modes are applied overall, with different wave numbers corresponding to different scales in the flow.
+All perturbations are constructed in a manner that they satisfy the \benennung{divergence-free criterion} by construction.
+The new setup of \acrshort{ic} is depicted in \autoref{fig:channel_IC}.
+To constantly drive the flow, a \benennung{flow rate force} is applied. 
+\fxinfo{XX info über flow rate force}
+Simulations are performed with this setup.
+
+
+% numnebr of elements in channel: 10584
+% genmeshbox log:
+% xmin, xmax, Nel, periodic:    0.000000    12.566371   28 T
+% ymin, ymax, Nel, periodic:   -1.000000     1.000000   21 F
+% zmin, zmax, Nel, periodic:    0.000000     4.188790   18 T
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{channel_IC.pdf}
+    \caption{Initial condition channel simulaiton}
+    \label{fig:channel_IC}
+\end{figure}
+
+
+\subsection{Results and discussion}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/channel_valid/UplusNearWall_txt_Re178_bycase.pgf}
+    \label{fig:channelUplus}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/channel_valid/fluctuations_txt_Re178_bycase.pgf}
+    \label{fig:channelFluct}
+\end{subfigure}
+\\[-20pt]
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/channel_valid/budget_txt_Re178_k_linestyle.pgf}
+    \label{fig:channelBudgets}
+\end{subfigure}
+\\[-20pt]
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:channelValid}
+\end{figure}
+
+The  simulations of a turbulent channel that were performed lead to the results depicted in \autoref{fig:channelValid}.
+\autoref{fig:channelUplus} visualises the velocity near the lower wall in viscous scales (see \autoref{subsec:TBLTheory}).
+As can be seen, the profile matches that  of the reference data almost perfectly.
+Additionally, both profiles follow the trend of the linear law in the viscous sublayer. 
+After transitioning into the log-law region, the profiles run parallel to the analytical solution of the log-law.
+However, their absolute value is slightly higher than that of the analytical solution.
+A similar trend was observed  in \citep{lee_direct_2015} when they compared velocity profiles with different $\mathrm{Re}_{\tau}$.
+The simulation with $\mathrm{Re}_{\tau} = 180$ had the smallest $\mathrm{Re}_{\tau}$ and showed slightly higher values of $U^+$ in the log-law region.
+XXWARUM?
+
+The components of the Reynolds stress tensor $\langle u_i'u_j'\rangle ^+$ are depicted in \autoref{fig:channelFluct}.
+Similarly, as for the velocity profile, it can be observed that the reference data and the recorded simulation data coincide for all terms.
+The component of $\langle u'u'\rangle ^+$ shows  significantly higher peak values compared to the other components.
+This is in line with expectations,  since $u$ is defined as the streamwise direction.
+Consequently,  the mean value and as well the fluctuations are highest in this direction.
+The components of the $\langle v'v'\rangle ^+$ and $\langle w'w'\rangle ^+$ tensors have their peaks at much smaller values.
+%
+This can be explained using the same argument in the opposite direction.
+Since the velocity components in non-streamwise directions are much smaller, their fluctuations also must be much smaller compared to the streamwise fluctuations.
+The only component showing negative values is $\langle u'v'\rangle ^+$  .
+This behaviour is based on the momentum of the particles causing these fluctuations.
+Particles with $v' > 0$ move away from the wall, which at the same time comes along with a smaller streamwise velocity. This means that the streamwise fluctuation $u'$ is also  smaller than the fluctuations of the surrounding particles in the new occasion \fxchange{?? situation?}.
+This leads to a negative sign in the Reynolds stress.
+With a particle moving the opposite direction $v$, the explanation can be reversed.
+This particle has a negative $v'$, moving towards the wall and causing  fluctuation overshoot in the streamwise direction, as it is arriving from a faster region. \fxinfo{XXQUELLE}
+Therefore, this configuration also results in a negative shear stress component.
+\autoref{fig:channelBudgets} depicts the energy budgets of the \acrshort{tke}.
+Again, it can be seen that for all components the profiles of the performed simulation match the reference data for all components.
+In the viscous sublayer, the viscous diffusion and the dissipation are the dominant quantities.
+As distance from the wall increases, both terms decrease.
+Instead, the production increases rapidly in the buffer region and shows its peak at around $y ^+ = 11$.
+The production is balanced in this region by the viscous diffusion, dissipation and the turbulent transport.
+Therefore, the residual of all terms is zero in the entire boundary layer.
+The behaviour of the budgets corresponds to that expected  for a general fully developed turbulent channel flow \fxinfo{quelleXX}
+The results  of the simulation show that the selected setup leads to reasonable results.
+Also, the post-processing script can be approved to compute the non-dimensionalised quantities correctly.
+
+
+
+\section{Plane turbulent boundary layer}\label{sec:planeTBL}
+
+The following section presents the simulations performed on a plane  \acrshort{tbl}.
+First, the simulation setup is described, followed by a discussion of the results.
+
+
+\subsection{Simulation setup}
+
+In the next part of the project we create a setup for simulating a \acrshort{tbl} over a plane wall.
+These simulations are used to verify the general settings for \acrshort{tbl} simulations, and to validate the results through by comparing them with those of similar simulations.
+In comparison with the channel simulations, the flow characteristics are different in a \acrshort{tbl} which requires a  different simulation setup.
+Unlike a channel simulation, the flow of a \acrshort{tbl} is statistically inhomogeneous in the streamwise direction since the \acrshort{tbl} grows in this direction.
+As a consequence, separate conditions for the inflow and the outflow must be defined, which will be discussed in detail in the next paragraph.
+These properties impact the selection of an appropriate domain size.
+The streamwise length is chosen based on two requirements.
+First, the domain  must be long enough for  the development of the \acrshort{tbl} to become independent of the prescribed inflow condition \fxinfo{XXQUELLE}.
+Secondly,  it must be long enough to enable the development of the \acrshort{tbl} up to the desired $\mathrm{Re}_{\theta}$.
+The wall-normal dimension is chosen so that the \acrshort{tbl} is unaffected by the upper wall and the free stream remains undisturbed. 
+In the spanwise direction the dimension is selected so that the largest turbulent structures remain unaffected by the applied periodic \acrlong{bc}.
+To define the dimensions properly, we used $Re_{\theta} = 1000$ as a reference value which the \acrshort{tbl} should reach within the plane domain.
+The streamwise position at which this value is reached is marked as $x_0$ with a corresponding \acrshort{tbl} thickness of $\delta_0$.
+Based on this, we set the dimensions to $L_x \times L_y \times L_z = 53\delta_{0} \times 4\delta_{0} \times 4\delta_{0}$, corresponding to $325 \times 24.5 \times 24.5$ in physical units.
+The next step is to create a mesh for this domain.
+It should be noted that the growth of the \acrshort{tbl} causes variations of the viscous scales.
+This is  due to the reduction of $u_{tau}$ downstream, which leads to an increase of $\delta_{\nu} = \nu u_{\tau}$.
+With a constant physical $\Delta x$, this implies that $\Delta x^+ = \Delta x/\delta_{\nu}$ decreases downstream.
+So the resolution requirement is most restrictive at the upstream end of the domain.
+Therefore, $u_{\tau}$ at the reference position $s_0$ is used to derive the viscous dimensions since this coincides with the upstream end of the domain. \fxinfo{nicht so wirklich aber nacja, liegt bei 85prozent der domain länge}
+The resolutions are adopted from the channel setup (see \autoref{sec:channel}).
+This is valid since, as stated in \autoref{sec:turbulenceTheory}, the turbulent structures in the near-wall region are independent of the Reynolds number and the flow geometry.
+The streamwise and spanwise resolutions  are adopted directly from the channel simulation ($x^+= 12$ and $z^+ = 6$). 
+In the wall-normal direction, a slightly higher resolution is used, with the first grid point staged  at $y^+ = 0.8$.
+The mesh is coarsened in the wall-normal direction up to a height of $2\delta_0$.
+The coarse resolution is then fixed up to $L_y - \delta_0/2$.
+The small bend between this slice and the upper wall has an increased resolution, since  the shear stress is measured there and requires a higher resolution.
+The mesh is created using  \name{gmsh}. 
+First, a 2D mesh is constructed in the $x-y$/ streamwise-wall-normal-plane \fxinfo{oder: streamwise, wall-normal} is created. 
+Using the mesh transform tool in \name{neko}, it is then extended in the spanwise direction. 
+\fxmarlenebmark{Bis hier 21.07. 18:00}
+\fxbmark{fertig}
+\fxinfo{XX checken ob das hier dauzpasst}
+The additional settings for the simulation are definde in the CASE-file. 
+The polynomial order used for the simulations is 7 and the time order is 3.
+To enable shorter simulations times, the simulations first are started with lower polynomial order during the developing time of the \acrshort{tbl}.
+When the \acrshort{tbl} is stable the polynomial order is increased for higher result accuracy.
+All settings in the case file are listed in XXANHANG.
+
+\subsubsection{Boundary and initial conditions}
+
+To setup the \acrlong{tbl} boundary and initla conditions are necessary. 
+In the initial condition a boundary layer is imposed at the lower wall. 
+Since a laminar boundary layer has the quite easy blasuis profile as solution, a laminar boundary layer is given as initial velocity condition. 
+The velocity in the free-stream $U_0$ is set to be 1 initially.
+AS boundary conditions we impose a no-slip condition on the lower wall.
+The outflow has the boundary condition 'outlfow+dong', which means XXX.
+For the upper wall we tested two different setups.
+For one simulation we put a 'normal outflow' condition at the top wall, which allows outflow in normal direction across the domain end.
+In the otehr simulation we imposed a Dirichlet condition with (1,0,0) as velocity profile. 
+This is done to compare the effect of the different boundary conditions on the flow behaviour. 
+This becomes especially importnat for the simulation of the curved \acrshort{tbl}, since there the boundary condition needs to be imposed piecewise on the top wall.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{plane_TBL_IC.pdf}
+    \caption{Initial condition for plane TBL with blasius profile XX Maße einfügen}
+    \label{fig:planeTBL_IC}
+\end{figure}
+
+\subsection{Results and discussion}
+In the following the results form the simulations of a plane \acrshort{tbl} are presented.
+The plots are extracted from data at $\mathrm{Re}_{\theta} = 700$.
+As reference data the data from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 677$ are taken.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/planeTBL_verif/UplusNearWall_txt_Re700_bycase.pgf}
+    \label{fig:planeTBLverifU}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/planeTBL_verif/fluctuations_txt_Re700_bycase.pgf}
+    \label{fig:planeTBLverifFluct}
+\end{subfigure}
+\\[-20pt]
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/planeTBL_verif/beta_streamwise_txt.pgf}
+    \label{fig:planeTBLverifBeta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/planeTBL_verif/budget_txt_Re700_k_linestyle.pgf}
+    \label{fig:planeTBLverifBudget}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:planeTBLVerif}
+\end{figure}
+
+\autoref{fig:planeTBLverifU} depicts the velocity in inner scales.
+It can be seen that all three profiles follow the analytical definitions of the linear law and the log law.
+The reference profile differs from the two performed simulations in the region of the outer flow, which can be explained through the lower $Re_{\theta}$ of the reference data.
+Besides from that, no differences between the profiles can be observed.
+For the fluctuations similar observation holds.
+In the viscous sublayer the profiles coincide for all fluctuation components.
+In the wake region it can be seen that the reference values are slightly below the two performed simulation data, which again be explained with the lower $\mathrm{Re}_{\theta}$. \\
+The presented results show a proper agreement of both simulations with the reference data.
+Based on that two conclusions can be drawn.
+First, the simulations seem to generally create reasonable results compared to other \acrshort{tbl} simulations.
+And second, the difference between the two simulation with different boundary conditions at the top wall are negligible small.
+
+
