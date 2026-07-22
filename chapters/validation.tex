@@ -56,14 +56,16 @@ With this setup simulations were performed.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{channel_IC.pdf}
-    \caption{Initial condition channel simulaiton}
+    \includegraphics[width=0.65\textwidth]{simulation_setups/channel_IC.pdf}
+    \caption{Setup of the domain for channel simulation with applied \acrshort{ic} for the velocity profile showing variations of perturbations}
     \label{fig:channel_IC}
 \end{figure}
 
 
 \subsection{Results and discussion}\label{subsec:channelResults}
 
+In the following the results of the performed channel simulation are discussed.
+\\[-30pt]
 \begin{figure}[H]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
@@ -86,16 +88,16 @@ With this setup simulations were performed.
     \input{images/channel_valid/budget_txt_Re178_k_linestyle.pgf}
     \label{fig:channelBudgets}
 \end{subfigure}
-\\[-20pt]
-\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+\\[-15pt]
+\caption[First and second order statistics of channel simulations at $\mathrm{Re}_{\tau} = 180$]{First and second order statistics of channel simulations at $\mathrm{Re}_{\tau} = 180$: (a) streamwise velocity profile in viscous scales; (b) Reynolds stresses $\langle u_i' u_j' \rangle$; budget of \acrshort{tke} = $\frac{1}{2} \langle u_i' u_i' \rangle$ at $Re_\theta \approx 700$;
 Linestyle denotes budget term:
-Production \lswatch[solid]{black},
-Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
-Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
-Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
-Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
-Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
-Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+ \lswatch[solid]{black} production,
+\lswatch[dash pattern=on 5pt off 1pt]{black} convection,
+\lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black} dissipation,
+\lswatch[dash pattern=on 1pt off 1pt]{black} velocity-pressure-gradient correlation,
+\lswatch[dash pattern=on 5pt off 5pt]{black} turbulent transport,
+\lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black} viscous diffusion,
+\lswatch[dash pattern=on 1pt off 5pt]{black} residual.}
 \label{fig:channelValid}
 \end{figure}
 
@@ -187,7 +189,7 @@ All settings in the case file are listed in XXANHANG.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{mesh.pdf}
-    \caption{Initial condition for plane TBL with blasius profile XX Maße einfügen}
+    \caption{Extraction of mesh structure for \acrshort{tbl} simulations}
     \label{fig:planeTBL_mesh}
 \end{figure}
 
@@ -225,11 +227,12 @@ For the boundary condition at the inflow, we apply a user defined \benennung{Dir
 This imposes the free-stream velocity uniformly across the inflow plane independent of the wall-normal position.
 Last, the \acrshort{ic} is prescribed.
 There, we impose a laminar boundary layer profile since this can be defined analytically which is visualised in XX.
-\\[-15pt]
+\\[-20pt]
 \begin{figure}[H]
     \centering
-    \input{images/blasius_profile_poly.pgf}
-    \caption{Initial condition for plane TBL with blasius profile XX Maße einfügen}
+    \input{images/simulation_setups/blasius_profile_poly.pgf}
+    \\[0pt]
+    \caption{Velocity profile for the \benennung{Blasius solution} of a laminar boundary layer}
     \label{fig:BlasiusIC}
 \end{figure}
 
@@ -238,11 +241,12 @@ With the \benennung{Blasius profile} the solution for a laminar boundary layer i
 Since the exact \benennung{Blasius profile} can only be derived by solving an \acrfull{ode}, we approximate its solution analytical.
 Above the boundary layer, the free-stream profile of $(1, 0, 0)$ is applied over the complete.
 The resulting initial velocity filed is depicted in \autoref{fig:planeTBL_IC}.
-
+\\[-30pt]
 \begin{figure}[H]
     \centering
-    \input{images/setup_plane.pgf}
-    \caption{Initial condition for plane TBL with blasius profile XX Maße einfügen}
+    \input{images/simulation_setups/setup_plane.pgf}
+    \\[-15pt]
+    \caption{Dimension of the domain setup for plane \acrshort{tbl} simulations with the applied \benennung{Blasius profile} as \acrshort{ic}.}
     \label{fig:planeTBL_IC}
 \end{figure}
 
@@ -250,7 +254,7 @@ The resulting initial velocity filed is depicted in \autoref{fig:planeTBL_IC}.
 In the following the results form the simulations of a plane \acrshort{tbl} are presented.
 The plots are extracted from data at $\mathrm{Re}_{\theta} = 700$.
 As reference data the data from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 677$ are taken.
-
+\\[-20pt]
 \begin{figure}[H]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
@@ -281,15 +285,16 @@ As reference data the data from \citet{schlatter_assessment_2010} at $\mathrm{Re
     \label{fig:planeTBLverifDelta}
 \end{subfigure}
 \\[-15pt]
-\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+\caption[First and second order statistics of plane \acrshort{tbl} simulations]{First and second order statistics of plane \acrshort{tbl} simulations: (a) streamwise velocity profile in viscous scales; (b) Reynolds stresses $\langle u_i' u_j' \rangle$; budget of \acrshort{tke} = $\frac{1}{2} \langle u_i' u_i' \rangle$ at $Re_\theta \approx 700$;
 Linestyle denotes budget term:
-Production \lswatch[solid]{black},
-Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
-Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
-Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
-Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
-Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
-Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+ \lswatch[solid]{black} production,
+\lswatch[dash pattern=on 5pt off 1pt]{black} convection,
+\lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black} dissipation,
+\lswatch[dash pattern=on 1pt off 1pt]{black} velocity-pressure-gradient correlation,
+\lswatch[dash pattern=on 5pt off 5pt]{black} turbulent transport,
+\lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black} viscous diffusion,
+\lswatch[dash pattern=on 1pt off 5pt]{black} residual; 
+(d) development of boundary layer thickness and momentum thickness along the streamwise direction}
 \label{fig:planeTBLVerif}
 \end{figure}
 
@@ -331,7 +336,7 @@ Here we can directly see that the small-scale turbulent structures are independe
     \input{images/planeTBL_valid/wall_pressure_normalised_vs_s_txt.pgf}
     \label{fig:planeTBLpress}
 \end{subfigure}
-\caption{}
+\caption[Pressure related parameters of plane \acrshort{tbl} simulations]{Pressure related parameters of plane \acrshort{tbl} simulations: (a) Clauser parameter along non-dimensionalised streamwise coordinate; (b) pressure coefficient $C_p$ along non-dimensionalised streamwise coordinate.}
 \end{figure}
 
 Since in this work the focus lies on manipulation of the pressure and its gradient, we also discuss briefly two relevant parameters, namely the Clauser parameter $\beta$ and the pressure coefficient $2 \cdot C_P$.

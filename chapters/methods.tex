@@ -8,11 +8,11 @@ First, we present the employed simulation methods.
 Afterwards the simulations setups are introduced and finally the methodology to derive and employ \acrshort{zpg} conditions is explained. 
 
 \section{Simulation methods}\label{sec:SimMethods}
-\fxbmark{Korekturbeginn}
+
 In this section, the numerical methods utilised in this work are introduced.
 Firstly, we focus on \acrfull{dns} which we primarily use throughout this work.
 Thereafter, \acrfull{rans} are presented, as additional simulations are performed with this method.
-\fxmarlenebmark{ab hier Sachen hinzugefügt 19.07. 11:40}
+
 \subsection{Direct numerical simulation in Neko}\label{subsec:DNSmethod}
 
 For the simulation of turbulent flows a range of methodologies can be employed.
@@ -55,18 +55,18 @@ This could happen through complex domain shapes, where the element shape needs t
 Since a \acrshort{gll} point is positioned at the boundaries of the element also, the number of \acrshort{gll} points is $N+1$ for representing a polynomial of order $N$.
 The \acrshort{gll} points at the element boundaries ensure the continuity of the solution across element boundaries \citep{deville_high-order_2002}.
 Usually, different polynomial orders are used to represent velocity and pressure field to avoid spurious pressure oscillations \citep{maday_spectral_1989}.
-
+\\[-15pt]
 \begin{figure}[H]
     \centering
-    \input{images/gll_points.pgf}
-    \caption[GLL points on a curved spectral element]{%
+    \input{images/methods/gll_points.pgf}
+    \\[-15pt]
+    \caption[Distribution of GLL points on a curved spectral element]{%
     Distribution of the \gllmark~\acrshort{gll} points within a single
-    spectral element of polynomial order $N=6$ in two-dimensional space (a) Reference element with quadratic shape; (b) shape modified element to match a curved domain shape.}
+    spectral element of polynomial order $N=6$ in two-dimensional space: (a) reference element with quadratic shape; (b) shape modified element to match a curved domain shape.}
     \label{fig:gllPoints}
 \end{figure}
 \fxchange{Das klingt nach einer guten Erklärung! vllt noch 2 Sätze, die ausdrücken, dass das ein aussichtsreicher Kompromiss zwischen reduziertem computationel effort and the required accuracy bei der Bestimmung von xx sein könnte (weil das bei iEinem anderen Anwendungsgebiet auch schon mal probiert wurde, oder weil yyy oder ohne weil - ist halt Forschung)}
-\fxmarlenebmark{bis hier Sachen hinzugefügt 19.07. 11:40}
-\fxbmark{fertig}
+
 \comment{
 When running simulations with \name{neko}, it is possible to track statistics regarding the simulated flow. 
 The recording of the statistics can be configured in various manners and is defined in the so-called case file of the simulation.
@@ -100,13 +100,13 @@ Consequently, this simulation method finds application in multiple industrial en
 
 \begin{figure}[H]
     \centering
-    \input{images/fvm_stencil.pgf}
-    \caption[Finite-volume stencil]{%
-    Finite-volume discretisation: a $3\times3$  mesh
+    \input{images/methods/fvm_stencil.pgf}
+    \caption[Finite-volume method visualised for a $3\times3$ mesh with collocated arrangement]{%
+    Finite-volume method: $3\times3$ mesh
     around the control volume $P$ with its neighbours $N$, $S$, $E$, $W$ and
-    the face centres $n$, $s$, $e$, $w$.
-    \centermark~cell centres store the flow variables (collocated arrangement);
-    \facemark~face centres are where interpolated values are evaluated.
+    the face centres $n$, $s$, $e$, $w$;
+    \centermark~cell centres store the flow variables in a collocated arrangement;
+    \facemark~face centres are evaluation points of the interpolated values.
     Double-headed arrows across the faces of $P$ indicate the conservative flux
     exchange with the neighbouring cells.}
     \label{fig:FVMMethod}
@@ -211,7 +211,7 @@ In the curved part the Blasius profile is rotated so that it builds up in the wa
 
 \begin{table}[!ht]
     \centering
-    \caption{Overview of the tested curved TBL cases}
+    \caption{Overview of the geometric parameters of the performed simulations of curved turbulent boundary layers with assigned naming}
     \label{tab:curved_cases}
     \begin{tabular}{l l c c c}
     \hline
@@ -252,6 +252,7 @@ We used these simulations as references to evaluate the effect of pressure corre
 Therefore, all configurations were simulated once with a $(1,0,0)$ and an optimised velocity profile on the top wall.
 Additionally, these simulations were used to extract the inflow conditions for the \acrshort{rans} simulations.
 
+
 \comment{
 \begin{table}[!ht]
     \centering
@@ -271,11 +272,12 @@ Additionally, these simulations were used to extract the inflow conditions for t
 }
 
 
-
+%\\[-20pt]
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{curvedDomain_IC.pdf}
-    \caption{This picture will be recreated}
+    \input{images/simulation_setups/setup_curved.pgf}
+    \\[-15pt]
+    \caption{Domain setup for simulation of curved \acrshort{tbl} case R100deg30 with applied \benennung{Blasius profile} as \acrshort{ic}.}
     \label{fig:paraviewDomain}
 \end{figure}
 
@@ -284,10 +286,10 @@ Additionally, these simulations were used to extract the inflow conditions for t
 
 \begin{figure}[H]
     \centering
-    \input{images/domain_overview.pgf}
-    \caption[XX]{Constitution of the OpenFOAM domain for the case R100deg30 with examplary positioning of the \benennung{design points (DP)}:
-    \lswatch{wallcol}~ fixed bottom wall, inlet top wall, outlet top wall;
-    \dswatch{cpdot}~movable \benennung{design points} with \lswatch{rangecol} their design space;
+    \input{images/optimisation/domain_overview.pgf}
+    \caption[Constitution of the OpenFOAM domain for the case R100deg30 with examplary positioning of the \benennung{design points (DP)}]{Constitution of the OpenFOAM domain for the case R100deg30 with examplary positioning of the \benennung{design points (DP)}:
+    \lswatch{wallcol}~ fixed bottom, inlet, top and outlet walls;
+    \dswatch{cpdot}~movable \benennung{design points} with their \lswatch{rangecol} design space;
     \lswatch{splinecol}~upper wall shape defined by the position of the DP;
     \lswatch[dashed]{neutralcol} neutral undeformed position of the upper wall;
     \lswatch[dashed]{onsetcol} limits of the curved section.
@@ -378,7 +380,7 @@ Then, the positioning of the \benennung{control points} is explained and additon
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{BOGP_flowchart_horizontal.pdf}
+    \includegraphics[width=\textwidth]{optimisation/BOGP_flowchart_horizontal.pdf}
     \caption{Schematic visualisation of the workflow of the optimisation algorithm developed by \citet{morita_applying_2022}}
     \label{fig:optiFlowchart}
 \end{figure}
@@ -416,11 +418,11 @@ These steps are repeated until the residual is converged or the maximum number o
 
 \begin{figure}[H]
     \centering
-    \input{images/domain_cps.pgf}
+    \input{images/optimisation/domain_cps.pgf}
     \caption[Positioning procedure of \benennung{design points} for the Bayesian optimisation]{Positioning procedure of \benennung{design points (DP)} for the Bayesian optimisation;
-    First positioning: \dswatch{cpone}~5 DP in the curvature,
-    Second positioning: \dswatch{cptwo}~3 DP in the curvature,
-    Third positioning: \dswatch{cpthree}~2 DP in the straight inlet;
+    first positioning: \dswatch{cpone}~5 DP uniformly distributed in the curvature,
+    second positioning: \dswatch{cptwo}~3 DP in the curvature,
+    third positioning: \dswatch{cpthree}~2 DP in the straight inlet;
     \lswatch{splinecol} spline defined by the design points;
     \lswatch{targetcol} evaluation window on the lower wall;
     \lswatch[dashed]{onsetcol} limit of the curved segment.
