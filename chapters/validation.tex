@@ -54,7 +54,7 @@ With this setup simulations were performed.
 % ymin, ymax, Nel, periodic:   -1.000000     1.000000   21 F
 % zmin, zmax, Nel, periodic:    0.000000     4.188790   18 T
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.65\textwidth]{simulation_setups/channel_IC.pdf}
     \caption{Setup of the domain for channel simulation with applied \acrshort{ic} for the velocity profile showing variations of perturbations}
@@ -64,9 +64,9 @@ With this setup simulations were performed.
 
 \subsection{Results and discussion}\label{subsec:channelResults}
 
-In the following the results of the performed channel simulation are discussed.
-\\[-30pt]
-\begin{figure}[H]
+%In the following the results of the performed channel simulation are discussed.
+%\\[-30pt]
+\begin{figure}[h!]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
@@ -124,7 +124,7 @@ This behaviour is based on the momentum of the particles causing these fluctuati
 Particles with $v' > 0$ move away from the wall, which in the same time comes along with a smaller streamwise velocity meaning that the streamwise fluctuation $u'$ as well is smaller than the fluctuations of the surrounding particles at the new occasion.
 This leads in the Reynolds stress to a negative sign.
 With a particle moving the opposite direction $v$ the explanation can be reversed.
-This particle has a negative $v'$ moving towards the wall which goes along with fluctuation overshoot in streamwise direction since it is arriving from a faster region. \fxinfo{XXQUELLE}
+This particle has a negative $v'$ moving towards the wall which goes along with fluctuation overshoot in streamwise direction since it is arriving from a faster region \citep{tennekes_first_1972}.
 Therefore, this constellation also causes a negative shear stress component.
 In \autoref{fig:channelBudgets} the energy budgets of the \acrshort{tke} are depicted.
 Again it can be seen that for all components the profiles of the performed simulation matches the reference data.
@@ -133,7 +133,7 @@ With increasing distance from the wall both terms are getting smaller.
 Instead, the production increases rapidly in the buffer region and shows its peak at around $y ^+ = 11$.
 The production is balanced in this region by the viscous diffusion, dissipation and the turbulent transport.
 Therefore, the residual of all terms is zero in the complete boundary layer.
-The behaviour of the budgets corresponds to the expected behaviour for a general fully developed turbulent channel flow \fxinfo{quelleXX}
+The behaviour of the budgets corresponds to the expected behaviour for a general fully developed turbulent channel flow \citep{mansour_reynolds-stress_1988}.
 The governed results show that the performed simulation setup leads to reasonable results.
 Also, the post-processing script can be approved to compute the non-dimesionalised quantities correct.
 
@@ -154,7 +154,7 @@ In contrast to a channel simulation, the flow of a \acrshort{tbl} is statistical
 As a consequence, separate conditions for the inflow and the outflow have to be defined which will be discussed in detail in the next paragraph.
 These properties impact the selection of a proper domain size.
 The streamwise length is chosen based on two requirements.
-First, the domain should be sufficiently long, such that the development of the \acrshort{tbl} becomes independent of the prescribed inflow condition \fxinfo{XXQUELLE}.
+First, the domain should be sufficiently long, such that the development of the \acrshort{tbl} becomes independent of the prescribed inflow condition \citep{schlatter_turbulent_2012}.
 And second, the length has to enable the development of the \acrshort{tbl} up to the desired $\mathrm{Re}_{\theta}$.
 The wall-normal dimension is chosen so that the \acrshort{tbl} is unaffected by the upper wall and the free stream also remains undisturbed. 
 In spanwise direction the dimension selected such that the largest turbulent structures are unaffected by the applied periodic \acrshort{bc}.
@@ -186,10 +186,10 @@ When the \acrshort{tbl} is stable the polynomial order is increased for higher r
 All settings in the case file are listed in XXANHANG.
 
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.6\textwidth]{mesh.pdf}
-    \caption{Extraction of mesh structure for \acrshort{tbl} simulations}
+    \includegraphics[width=0.6\textwidth]{methods/mesh.pdf}
+    \caption{Extract of mesh structure for \acrshort{tbl} simulations}
     \label{fig:planeTBL_mesh}
 \end{figure}
 
@@ -201,12 +201,12 @@ As \acrshort{bc} we impose a \benennung{no-slip} condition on the lower wall.
 As described in detail in \autoref{subsec:channelSetup} this simulates a fix impermeable wall.
 For the outflow we used the in \name{neko} predefined \acrshort{bc} \benennung{outflow+Dong}.
 It is a combination of the \benennung{outflow} condition which is based on a \benennung{Dirichlet} condition for the pressure.
-With a \benennung{Dirichlet} condition the value of the restricted quantity is directly prescribed, which in this case is $p = 0$ at the outflow \fxinfo{quelle neko manual}.
+With a \benennung{Dirichlet} condition the value of the restricted quantity is directly prescribed, which in this case is $p = 0$ at the outflow \citep{jansson_neko_2024}.
 This condition forces the pressure to zero at the outlet. 
 The velocities are not restricted, such that they can adjust freely according to the pressure field.
 The addition of the \benennung{Dong} stabilisation modifies this pressure condition based on the local velocity directions. 
 It checks the velocity at the outflow for backflow, i.e. flow entering the domain against the outward normal direction, and where this occurs it raises the prescribed outflow pressure by an amount equal to the local kinetic energy. 
-This correction does not prevent backflow itself, but keeps the simulation numerically stable in its presence, avoiding the energy injection that would otherwise destabilise a plain outflow condition \fxinfo{DONG Quelle}.
+This correction does not prevent backflow itself, but keeps the simulation numerically stable in its presence, avoiding the energy injection that would otherwise destabilise a plain outflow condition \citep{dong_robust_2014}.
 Due to the turbulent character of the boundary layer, local backward facing velocity components can occur.
 At the upper wall we tested two different \acrshort{bc}.
 In the first configuration we put a \benennung{normal outflow} condition at the top wall.
@@ -228,11 +228,11 @@ This imposes the free-stream velocity uniformly across the inflow plane independ
 Last, the \acrshort{ic} is prescribed.
 There, we impose a laminar boundary layer profile since this can be defined analytically which is visualised in XX.
 \\[-20pt]
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \input{images/simulation_setups/blasius_profile_poly.pgf}
     \\[0pt]
-    \caption{Velocity profile for the \benennung{Blasius solution} of a laminar boundary layer}
+    \caption{Velocity profile for the \benennung{Blasius profile} of a laminar boundary layer}
     \label{fig:BlasiusIC}
 \end{figure}
 
@@ -242,7 +242,7 @@ Since the exact \benennung{Blasius profile} can only be derived by solving an \a
 Above the boundary layer, the free-stream profile of $(1, 0, 0)$ is applied over the complete.
 The resulting initial velocity filed is depicted in \autoref{fig:planeTBL_IC}.
 \\[-30pt]
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \input{images/simulation_setups/setup_plane.pgf}
     \\[-15pt]
@@ -255,7 +255,7 @@ In the following the results form the simulations of a plane \acrshort{tbl} are 
 The plots are extracted from data at $\mathrm{Re}_{\theta} = 700$.
 As reference data the data from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 677$ are taken.
 \\[-20pt]
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
@@ -322,7 +322,7 @@ The consistency with the reference data also implies a sufficiently long evoluti
 Comparing the discussed plots from the plane \acrshort{tbl} simulations with the one performed in a channel, we can approve their qualitative agreement already introduced in \autoref{sec:turbulenceTheory}.
 Here we can directly see that the small-scale turbulent structures are independent of the outer geometry of the flow.
 \\[-20pt]
-\begin{figure}[H]
+\begin{figure}[h!]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}

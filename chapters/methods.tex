@@ -56,7 +56,7 @@ Since a \acrshort{gll} point is positioned at the boundaries of the element also
 The \acrshort{gll} points at the element boundaries ensure the continuity of the solution across element boundaries \citep{deville_high-order_2002}.
 Usually, different polynomial orders are used to represent velocity and pressure field to avoid spurious pressure oscillations \citep{maday_spectral_1989}.
 \\[-15pt]
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \input{images/methods/gll_points.pgf}
     \\[-15pt]
@@ -98,7 +98,7 @@ In case the detailed behaviour of the turbulent scales is irrelevant, and the fo
 Consequently, this simulation method finds application in multiple industrial environments.
 
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \input{images/methods/fvm_stencil.pgf}
     \caption[Finite-volume method visualised for a $3\times3$ mesh with collocated arrangement]{%
@@ -188,7 +188,7 @@ The mesh is generated in a manner analogous to that employed for the plane  \acr
 The curved segment is created with a circular arc with the corresponding values for the radius and angle.
 In the \acrlong{so} the mesh is coarsened since this part of the domain is not relevant for the study of the curved \acrshort{tbl}. \\
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \input{images/simulation_setups/setup_curved.pgf}
     \\[-15pt]
@@ -269,7 +269,7 @@ Additionally, these simulations were used to extract the inflow conditions for t
 \subsection{OpenFOAM simulation setup}\label{subsec: methodsOFsetup}
 
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \input{images/optimisation/domain_overview.pgf}
     \caption[Constitution of the OpenFOAM domain for the case R100deg30 with examplary positioning of the \benennung{design points (DP)}]{Constitution of the OpenFOAM domain for the case R100deg30 with examplary positioning of the \benennung{design points (DP)}:
@@ -302,7 +302,7 @@ However, the inlet is shorter than the one in the \acrshort{dns} domain.
 The initial condition for the \name{OpenFOAM} simulation is extracted at a position $s_{extr} = 275$ in the straight section of the \acrshort{dns} domain.
 Therefore, the boundary layer in the \acrshort{rans} simulation only needs a much shorter straight inlet region to develop similar to the \acrshort{dns} boundary layer.
 We defined the remaining length of the straight inlet as the remaining part of $s_{i} - s_{extr}$ and then added a balance zone of $s_{bal} = 20$ which ends up in a straight inlet of $s_{iOF} = 70$.
-This balance region is recommended since quantities of the extracted \acrshort{dns} inflow profile have to be rebalanced in the \acrshort{rans} model \fxinfo{(XXQUELLE)}.
+This balance region is recommended since quantities of the extracted \acrshort{dns} inflow profile have to be rebalanced in the \acrshort{rans} model \citep{morita_applying_2022}.
 In \autoref{fig:openfoamDomain} the general configuration of the \acrshort{rans} domain is depicted exemplary for the R100deg30 case.
 Compared to the domain used for the DNS, the height of the domain is increased to $10 \cdot \delta_{99}$ for R100deg30 and R100deg90, and up to $20 \cdot \delta_{99}$ in R500deg18.
 This modification simplifies the transfer of the results of the optimised \name{OpenFOAM} simulation to the DNS domain, as  described in \autoref{subsec:data_extr}.
@@ -327,7 +327,7 @@ The mesh resolution increases near the wall to ensure $y^+ = 1$ near the lower w
 
 
 \subsubsection{Boundary and initial conditions}
-The quantities that require predefined initial conditions depend on the selected RANS model \fxinfo{(XXQuelle)}. 
+The quantities that require predefined initial conditions depend on the selected RANS model \citep{wilcox_turbulence_2006}. 
 Since  the $k-\omega-sst$-model is used in this project, it is necessary to define the initial conditions for turbulent kinetic energy $k$, dissipation $\omega$ and velocity $U$. 
 This is achieved by applying an initial field at the inflow which is extracted from the previous \acrshort{dns} simulation of the curved \acrshort{tbl}.
 Therefore, a slice of the fully developed \acrshort{tbl} from the DNS simulation is used.
@@ -363,7 +363,7 @@ Then, the positioning of the \benennung{control points} is explained and additon
 
 
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{optimisation/BOGP_flowchart_horizontal.pdf}
     \caption{Schematic visualisation of the workflow of the optimisation algorithm developed by \citet{morita_applying_2022}}
@@ -401,7 +401,7 @@ These steps are repeated until the residual is converged or the maximum number o
 
 \subsubsection{Positioning of the design points}
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \input{images/optimisation/domain_cps.pgf}
     \caption[Positioning procedure of \benennung{design points} for the Bayesian optimisation]{Positioning procedure of \benennung{design points (DP)} for the Bayesian optimisation;
@@ -468,7 +468,7 @@ As mentioned previously, we started with five \benennung{design points} in all c
 For the R500deg18, this resulted in small residuals.
 This can be explained by the lower curvature in this case which reduces the natural pressure gradient caused by the curvature.
 Therefore, the necessary compensation is much smaller. 
-Additionally, the longer arc length provides more space for pressure changes, resulting in smaller gradients along the domain \fxinfo{(XXQUELLE)}.
+Additionally, the longer arc length provides more space for pressure changes, resulting in smaller gradients along the domain \citep{patel_longitudinal_1997}.
 However, the R500deg18 case also shows a \acrshort{fpg} spike in the curve of the Clauser parameter.
 Therefore, as with R100deg30, we added  two \benennung{design points} in the straight inlet. 
 We fixed the last four out of five points in the curved section reducing the optimisation problem to three dimensions with only the upstream points  free.
@@ -574,7 +574,7 @@ In this section the general workflow followed during this project is presented.
 XX Hier noch allgemeines Vorgehesn beschreiben sonst zu detailiert im folgenden XX
 
 
-\begin{figure}[H]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.85\textwidth]{flowchart_workflow.pdf}
     \caption{Worklow}

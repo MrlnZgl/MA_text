@@ -796,10 +796,10 @@ INPUT images/channel_valid/fluctuations_txt_Re178_bycase.pgf
 INPUT ./images/channel_valid/budget_txt_Re178_k_linestyle.pgf
 INPUT ./images/channel_valid/budget_txt_Re178_k_linestyle.pgf
 INPUT images/channel_valid/budget_txt_Re178_k_linestyle.pgf
-INPUT ./images/mesh.pdf
-INPUT ./images/mesh.pdf
-INPUT ./images/mesh.pdf
-INPUT ./images/mesh.pdf
+INPUT ./images/methods/mesh.pdf
+INPUT ./images/methods/mesh.pdf
+INPUT ./images/methods/mesh.pdf
+INPUT ./images/methods/mesh.pdf
 INPUT ./images/simulation_setups/blasius_profile_poly.pgf
 INPUT ./images/simulation_setups/blasius_profile_poly.pgf
 INPUT images/simulation_setups/blasius_profile_poly.pgf

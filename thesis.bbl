@@ -1,4 +1,4 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,7 +31,7 @@ G.~K. Batchelor.
 
 \bibitem[Blasius(1908)]{blasius_grenzschichtern_1908}
 H.~Blasius.
-\newblock Grenzschichtern in flüssigkeiten mit kleienr reibung.
+\newblock Grenzschichtern in {Flüssigkeiten} mit kleiner {Reibung}.
 \newblock \emph{Zeitschrift für Mathematik und Physik}, 56\penalty0 (Heft 1), 1908.
 
 \bibitem[Bobke et~al.(2017)Bobke, Vinuesa, Örlü, and Schlatter]{bobke_history_2017}
@@ -58,9 +58,16 @@ M.~Deville, P.~F. Fischer, and E.~H. Mund, editors.
 \newblock Number~9 in Cambridge monographs on applied and computational mathematics. Cambridge University Press, Cambridge, UK New York, 2002.
 \newblock ISBN 978-0-521-45309-7 978-0-511-03946-1 978-0-511-05284-2 978-0-511-09197-1 978-0-511-54679-2.
 
+\bibitem[Dong et~al.(2014)Dong, Karniadakis, and Chryssostomidis]{dong_robust_2014}
+S.~Dong, G.~Karniadakis, and C.~Chryssostomidis.
+\newblock A robust and accurate outflow boundary condition for incompressible flow simulations on severely-truncated unbounded domains.
+\newblock \emph{Journal of Computational Physics}, 261:\penalty0 83--105, Mar. 2014.
+\newblock ISSN 00219991.
+\newblock \doi{10.1016/j.jcp.2013.12.042}.
+
 \bibitem[Ganagdhar(2025)]{ganagdhar_bayesian_2025}
 M.~Ganagdhar.
-\newblock Bayesian optimization of free-stram conditions for a target pressure-gradient parameter beta in various boundary layers flows using openfoam, 2025.
+\newblock Bayesian optimization of free-stream conditions for a target pressure-gradient parameter beta in various boundary layers flows using openfoam, 2025.
 
 \bibitem[Gillis and Johnston(1983)]{gillis_turbulent_1983}
 J.~C. Gillis and J.~P. Johnston.
@@ -76,11 +83,9 @@ S.~Hosseini et~al.
 
 \bibitem[Jansson et~al.(2024)Jansson, Karp, Podobas, Markidis, and Schlatter]{jansson_neko_2024}
 N.~Jansson et~al.
-\newblock Neko: {A} modern, portable, and scalable framework for high-fidelity computational fluid dynamics.
-\newblock \emph{Computers \& Fluids}, 275:\penalty0 106243, May 2024.
-\newblock ISSN 00457930.
+\newblock Neko: a modern, portable, and scalable framework for high-fidelity computational fluid dynamics.
+\newblock \emph{Computers \& Fluids}, 275:\penalty0 106243, 2024.
 \newblock \doi{10.1016/j.compfluid.2024.106243}.
-\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0045793024000756}.
 
 \bibitem[Jiménez(2013)]{jimenez_near-wall_2013}
 J.~Jiménez.
@@ -88,23 +93,16 @@ J.~Jiménez.
 \newblock \emph{Physics of Fluids}, 25\penalty0 (10):\penalty0 101302, 2013.
 \newblock \doi{10.1063/1.4824988}.
 
-\bibitem[Johnston et~al.()Johnston, Moffat, and Kays]{johnston_experimental_nodate}
-J.~P. Johnston, R.~J. Moffat, and W.~M. Kays.
-\newblock Experimental data and model for the turbulent boundary layer on a convex, curved surface.
-
 \bibitem[Lee and Moser(2015)]{lee_direct_2015}
 M.~D. Lee and R.~Moser.
-\newblock Direct numerical simulation of turbulent channel flow up to {$Re_\tau$}=5200.
+\newblock Direct numerical simulation of turbulent channel flow up to {Re}\$\_{\textbackslash}tau\$ = 5200.
 \newblock \emph{Journal of Fluid Mechnics}, 11\penalty0 (4):\penalty0 943--945, 2015.
-\newblock ISSN 1070-6631, 1089-7666.
 \newblock \doi{10.1063/1.869966}.
-\newblock URL \url{https://pubs.aip.org/pof/article/11/4/943/253866/Direct-numerical-simulation-of-turbulent-channel}.
 
 \bibitem[Maday and Patera(1989)]{maday_spectral_1989}
 Y.~Maday and A.~T. Patera.
 \newblock Spectral element methods for the incompressible {Navier}-{Stokes} equations.
-\newblock pages 71--143, Jan. 1989.
-\newblock URL \url{https://ui.adsabs.harvard.edu/abs/1989sasc.proc...71M}.
+\newblock \emph{American Society of MEchanical Engineers}, pages 71--143, 1989.
 \newblock ADS Bibcode: 1989sasc.proc...71M.
 
 \bibitem[Mansour et~al.(1988)Mansour, Kim, and Moin]{mansour_reynolds-stress_1988}
@@ -139,11 +137,9 @@ Y.~Morita et~al.
 
 \bibitem[Moukalled et~al.(2016)Moukalled, Mangani, and Darwish]{moukalled_finite_2016}
 F.~Moukalled, L.~Mangani, and M.~Darwish.
-\newblock \emph{The {Finite} {Volume} {Method} in {Computational} {Fluid} {Dynamics}: {An} {Advanced} {Introduction} with {OpenFOAM}® and {Matlab}}, volume 113 of \emph{Fluid {Mechanics} and {Its} {Applications}}.
+\newblock \emph{The finite volume method in computational fluid dynamics: an advanced introduction with openfoam® and matlab}, volume 113 of \emph{Fluid {Mechanics} and {Its} {Applications}}.
 \newblock Springer International Publishing, Cham, 2016.
-\newblock ISBN 978-3-319-16873-9 978-3-319-16874-6.
 \newblock \doi{10.1007/978-3-319-16874-6}.
-\newblock URL \url{https://link.springer.com/10.1007/978-3-319-16874-6}.
 
 \bibitem[Pargal et~al.(2022)Pargal, Wu, Yuan, and Moreau]{pargal_adverse-pressure-gradient_2022}
 S.~Pargal et~al.
@@ -159,11 +155,9 @@ V.~Patel and F.~Sotiropoulos.
 
 \bibitem[Patera(1984)]{patera_spectral_1984}
 A.~T. Patera.
-\newblock A spectral element method for fluid dynamics: {Laminar} flow in a channel expansion.
-\newblock \emph{Journal of Computational Physics}, 54\penalty0 (3):\penalty0 468--488, June 1984.
-\newblock ISSN 00219991.
+\newblock A spectral element method for fluid dynamics: laminar flow in a channel expansion.
+\newblock \emph{Journal of Computational Physics}, 54\penalty0 (3):\penalty0 468--488, 1984.
 \newblock \doi{10.1016/0021-9991(84)90128-1}.
-\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/0021999184901281}.
 
 \bibitem[Pope(2015)]{pope_turbulent_2015}
 S.~B. Pope.
@@ -173,8 +167,8 @@ S.~B. Pope.
 
 \bibitem[Prandtl(1904)]{prandtl_uber_1904}
 L.~Prandtl.
-\newblock Über flüssigkeitsbewegung bei sehr kleiner reibung.
-\newblock Hannover, 1904.
+\newblock Über {Flüssigkeitsbewegung} bei sehr kleiner {Reibung}.
+\newblock In \emph{Verhandlungen des 3. {Internationalen} {Mathematiker}-{Kongresses}}, Hannover, 1904.
 
 \bibitem[Reynolds(1895)]{reynolds_iv_1895}
 O.~Reynolds.
@@ -182,13 +176,9 @@ O.~Reynolds.
 \newblock \emph{Philosophical Transactions of the Royal Society of London. (A.)}, \penalty0 (186):\penalty0 123--164, 1895.
 \newblock \doi{10.1098/rsta.1895.0004}.
 
-\bibitem[Schlatter()]{schlatter_leveraging_nodate}
-P.~Schlatter.
-\newblock Leveraging pre-exascale {GPU} computing to answer two outstanding questions in wall turbulence ({WALL2Q}).
-
 \bibitem[Schlatter(2025)]{schlatter_lecture_2025}
 P.~Schlatter.
-\newblock Lecture notes on {Computational} {Fluid} {Dynamics} {I}.
+\newblock Lecture notes on computational fluid dynamics i.
 \newblock 2025.
 
 \bibitem[Schlatter and Örlü(2010)]{schlatter_assessment_2010}
@@ -196,6 +186,12 @@ P.~Schlatter and R.~Örlü.
 \newblock Assessment of direct numerical simulation data of turbulent boundary layers.
 \newblock \emph{Journal of Fluid Mechanics}, 659:\penalty0 116--126, 2010.
 \newblock \doi{10.1017/S0022112010003113}.
+
+\bibitem[Schlatter and Örlü(2012)]{schlatter_turbulent_2012}
+P.~Schlatter and R.~Örlü.
+\newblock Turbulent boundary layers at moderate reynolds numbers: inflow length and tripping effects.
+\newblock \emph{Journal of Fluid Mechanics}, 710:\penalty0 5--34, 2012.
+\newblock \doi{10.1017/jfm.2012.324}.
 
 \bibitem[Schlichting and Gersten(2017)]{schlichting_boundary-layer_2017}
 H.~Schlichting and K.~Gersten.
@@ -209,13 +205,9 @@ A.~C. Schwarz and M.~W. Plesniak.
 \newblock \emph{Journal of Fluids Engineering}, 118\penalty0 (4):\penalty0 787--794, 1996.
 \newblock \doi{10.1115/1.2835510}.
 
-\bibitem[Slotnick et~al.()Slotnick, Khodadoust, Alonso, Darmofal, Gropp, Lurie, and Mavriplis]{slotnick_cfd_nodate}
-J.~Slotnick et~al.
-\newblock {CFD} vision 2030 study: a path to revolutionary computational aerosciences.
-
 \bibitem[So and Mellor()]{so_experimental_nodate}
 C.~So and L.~Mellor.
-\newblock Experimental investigation turbulent boundary layers g curved surfaces.
+\newblock Experimental investigation turbulent boundary layers along curved surfaces.
 
 \bibitem[So and Mellor(1973)]{so_experiment_1973}
 R.~M.~C. So and G.~L. Mellor.
@@ -248,15 +240,14 @@ R.~Vinuesa et~al.
 
 \bibitem[von Karman(1930)]{von_karman_mechanische_1930}
 T.~von Karman.
-\newblock Mechanische ähnlichkeit und turbulenz, 1930.
+\newblock Mechanische Ähnlichkeit und {Turbulenz}.
+\newblock \emph{Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse}, 1930.
 
 \bibitem[Weller et~al.(1998)Weller, Tabor, Jasak, and Fureby]{weller_tensorial_1998}
 H.~G. Weller et~al.
 \newblock A tensorial approach to computational continuum mechanics using object-oriented techniques.
-\newblock \emph{Computers in Physics}, 12\penalty0 (6):\penalty0 620--631, Nov. 1998.
-\newblock ISSN 0894-1866.
+\newblock \emph{Computers in Physics}, 12\penalty0 (6):\penalty0 620--631, 1998.
 \newblock \doi{10.1063/1.168744}.
-\newblock URL \url{https://pubs.aip.org/cip/article/12/6/620/510187/A-tensorial-approach-to-computational-continuum}.
 
 \bibitem[Wilcox(2006)]{wilcox_turbulence_2006}
 D.~C. Wilcox.
