@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {3.1.2}RANS simulations in OpenFOAM}{12}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Simulation Setups}{14}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Neko simulation setup}{14}{subsection.3.2.1}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{15}{subsubsection*.18}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{15}{subsubsection*.19}%
 \contentsline {subsection}{\numberline {3.2.2}OpenFOAM simulation setup}{17}{subsection.3.2.2}%
 \contentsline {subsubsection}{\nonumberline Mesh generation}{17}{subsubsection*.23}%
 \contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{18}{subsubsection*.26}%
@@ -39,15 +39,14 @@
 \contentsline {subsection}{\numberline {4.1.2}Results and discussion}{25}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Plane turbulent boundary layer}{27}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Simulation setup}{27}{subsection.4.2.1}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{29}{subsubsection*.54}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{29}{subsubsection*.53}%
 \contentsline {subsection}{\numberline {4.2.2}Results and discussion}{31}{subsection.4.2.2}%
 \contentsline {chapter}{\numberline {5}Results}{34}{chapter.5}%
-\contentsline {section}{\numberline {5.1}plane section verification}{34}{section.5.1}%
-\contentsline {section}{\numberline {5.2}optmization tests}{35}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Curved Results}{35}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}R100deg 30}{35}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}R500deg18}{37}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}pressure fluctuation tests}{38}{section.5.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{39}{chapter*.68}%
-\contentsline {chapter}{\numberline {A}Einleitung}{43}{appendix.A}%
+\contentsline {section}{\numberline {5.1}Plane section verification}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Curved turbulent boundary layer results}{36}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}R100deg 30}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}R500deg18}{39}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}pressure fluctuation tests}{40}{section.5.3}%
+\contentsline {chapter}{\nonumberline Bibliography}{41}{chapter*.69}%
+\contentsline {chapter}{\numberline {A}Einleitung}{45}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

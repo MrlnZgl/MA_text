@@ -188,6 +188,14 @@ The mesh is generated in a manner analogous to that employed for the plane  \acr
 The curved segment is created with a circular arc with the corresponding values for the radius and angle.
 In the \acrlong{so} the mesh is coarsened since this part of the domain is not relevant for the study of the curved \acrshort{tbl}. \\
 
+\begin{figure}[H]
+    \centering
+    \input{images/simulation_setups/setup_curved.pgf}
+    \\[-15pt]
+    \caption{Domain setup for simulation of curved \acrshort{tbl} case R100deg30 with applied \benennung{Blasius profile} as \acrshort{ic}.}
+    \label{fig:paraviewDomain}
+\end{figure}
+
 \subsubsection{Boundary and initial conditions}
 The imposed boundary and initial conditions are similar to those of the plane \acrshort{tbl} simulations.
 The initial condition is a \benennung{Blasius profile}, as in the plane \acrshort{tbl} simulations (see \autoref{sec:planeTBL}).
@@ -223,13 +231,13 @@ In the curved part the Blasius profile is rotated so that it builds up in the wa
      & $r$ & 610 & 610 & 3050 \\
     \hline
     \multirow{2}{*}{\textbf{Straight inlet}} & $\times \delta_{0}$ & $53$ & $53$ & $53$ \\
-     & $s_{i}$ & 325 & 325 & 325 \\
+     & $s_{in}$ & 325 & 325 & 325 \\
     \hline
     \multirow{2}{*}{\textbf{Arc length}} & $\times \delta_{0}$ & $53$ & $157$ & $157$ \\
      & $s_c$ & 319 & 958 & 958 \\
     \hline
     \multirow{2}{*}{\textbf{Straight outlet}} & $\times \delta_{0}$ & $27$ & $27$ & $53$ \\
-     & $s_o$ & 162 & 162 & 325 \\
+     & $s_{out}$ & 162 & 162 & 325 \\
     \hline
     \multirow{2}{*}{\textbf{Wall-normal }} & $\times \delta_{0}$ & $4$ & $4$ & $8$ \\
      & $n$ & 162 & 162 & 325 \\
@@ -253,33 +261,10 @@ Therefore, all configurations were simulated once with a $(1,0,0)$ and an optimi
 Additionally, these simulations were used to extract the inflow conditions for the \acrshort{rans} simulations.
 
 
-\comment{
-\begin{table}[!ht]
-    \centering
-    \caption{Overview of the tested curved TBL cases}
-    \label{tab:curved_cases}
-    \begin{tabular}{ c c c c c c c c c c}
-    \hline
-    \textbf{Name} & \textbf{Angle}  & \multicolumn{2}{c}{\textbf{Radius}} & \multicolumn{2}{c}{\textbf{Straight length}} & \multicolumn{2}{c}{\textbf{Arc length}} & \multicolumn{2}{c}{\textbf{Tail length}}\\
-    && $\times \delta_{99}$ & physical  & $\times \delta_{99}$ & physical & $\times \delta_{99}$ & physical&  $\times \delta_{99}$ & physical \\
-    \hline
-    R100deg30 & $30$° & $100$ & 610  & $53$ & 325 & $53$ & 319& $27$ & 162\\ 
-    R100deg90  &$90$° & $100$ & 610 & $53$ & 325 & $157$ & 958&$27$ & 162\\ 
-    R500deg18 &$18$° & $500$ & 3050  & $53$ & 325 & $157$ & 958&$53$ & 325\\ 
-    \hline
-    \end{tabular}
-\end{table}
-}
 
 
 %\\[-20pt]
-\begin{figure}[H]
-    \centering
-    \input{images/simulation_setups/setup_curved.pgf}
-    \\[-15pt]
-    \caption{Domain setup for simulation of curved \acrshort{tbl} case R100deg30 with applied \benennung{Blasius profile} as \acrshort{ic}.}
-    \label{fig:paraviewDomain}
-\end{figure}
+
 
 \subsection{OpenFOAM simulation setup}\label{subsec: methodsOFsetup}
 

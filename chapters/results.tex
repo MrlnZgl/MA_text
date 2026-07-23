@@ -1,95 +1,202 @@
 \chapter{Results}
 
-\section{plane section verification}
+\fxmarlenebmark{Hier Sachen hinzugefügt 23.07. 19:00}
+In this chapter the results of the executed simulations are presented and their relevance discussed.
+First the simulations are verified through a comparison with the results of the plane \acrshort{tbl} simulations.
+Then the results of the three simulated cases R100deg30, R500deg18 and R100deg90 are analysed each comparing its base simulations with the optimised version.
+Finally, the optimised simulations of the three cases are compared with each other.
 
-\begin{figure}[H]
+\comment{
+\section{Optimisation Results}
+
+In the following section 
+
+\begin{figure}[h!]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
     \centering
-    \input{images/R100deg30/comparison_plots/Re700/UplusNearWall_txt_Re700_bycase.pgf}
+    \input{images/optimisation_results/R100_deg30/beta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:optResultR100deg30Beta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/optimisation_results/R100_deg30/delta_wall_pressure_bendmean_vs_s_over_delta0_txt.pgf}
+    \label{fig:optResultR100deg30pmean}
+\end{subfigure}
+\\[-15pt]
+\caption[]{}
+\label{fig:optResultR100deg}
+\end{figure}
+}
+
+
+\section{Plane section verification}
+The following section works as a reliability test of the governed results for the curved \acrshort{tbl} simulations.
+As described in XX we detected pressure flcutuations in the snapshots during the simulations.
+To ensure that these flcutuations leave the long-term statistics unaffected we verified the statistics of the curved \acrshort{tbl} simulations in the straight inlet.
+In order to do this we compare the statistics of case R100deg30 in optimised and base configuration with the ones from the plane \acrfull{tbl} setup and the already introduced reference data for plane \acrshort{tbl} simulations from XX.
+The statistics are taken at $\mathrm{Re}_{\theta} = 700$ in all performed simulations, which corresponds to a position of around $s_{Re_{\theta}= 700} = \frac{1}{2} s_p$.
+Therefore, the impact of the curvature should be negligible at this position and all setups should show similar behaviour.
+Following, the results of this comparison are presented for case R100deg30. 
+In order to circumvent the presentation of repetitive results, analogous analysis for the remaining curved configurations are not shown here.
+%\\[-20pt]
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R100deg30/Re700/UplusNearWall_txt_Re700_bycase.pgf}
     \label{fig:inflowSecVerifU}
 \end{subfigure}
 \hfill
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/Re700/fluctuations_txt_Re700_bycase.pgf}
-    \label{fig:nflowSecVerifFluct}
+    \input{images/R100deg30/Re700/fluctuations_txt_Re700_bycase.pgf}
+    \label{fig:inflowSecVerifFluct}
 \end{subfigure}
-\\[-20pt]
+\\[-30pt]
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/Re700/beta_streamwise_txt.pgf}
-    \label{fig:nflowSecVerifBeta}
+    \input{images/R100deg30/Re700/budget_txt_Re700_k_linestyle.pgf}
+    \label{fig:inflowSecVerifBudget}
 \end{subfigure}
 \hfill
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/Re700/budget_txt_Re700_k_linestyle.pgf}
-    \label{fig:nflowSecVerifBudget}
+    \input{images/R100deg30/Re700/beta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:inflowSecVerifBeta}
 \end{subfigure}
-\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+\\[-15pt]
+\caption[First and second order statistics and Clauser parameter of plane \acrshort{tbl} and R100deg30 base and optimised simulations at $\mathrm{Re}_{\theta} = 700$ with reference data from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 677$]{First and second order statistics of plane \acrshort{tbl} and R100deg30 base and optimised simulations at $\mathrm{Re}_{\theta} = 700$ with reference data taken from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 677$: (a) streamwise velocity profile in viscous scales; (b) Reynolds stresses $\langle u_i' u_j' \rangle$; budget of \acrshort{tke} = $\frac{1}{2} \langle u_i' u_i' \rangle$; (c) budget of \acrshort{tke} = $\frac{1}{2} \langle u_i' u_i' \rangle$:
 Linestyle denotes budget term:
-Production \lswatch[solid]{black},
-Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
-Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
-Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
-Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
-Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
-Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
-\label{fig:inflowSecVerifVerif}
+ \lswatch[solid]{black} production,
+\lswatch[dash pattern=on 5pt off 1pt]{black} convection,
+\lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black} dissipation,
+\lswatch[dash pattern=on 1pt off 1pt]{black} velocity-pressure-gradient correlation,
+\lswatch[dash pattern=on 5pt off 5pt]{black} turbulent transport,
+\lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black} viscous diffusion,
+\lswatch[dash pattern=on 1pt off 5pt]{black} residual; 
+(d) Clauser parameter along non-dimensionalised streamwise coordinate.}
+\label{fig:inflowSecVerif}
 \end{figure}
 
-\section{optmization tests}
+The first and second order statistics of the compared simulations are depicted in \autoref{fig:inflowSecVerif} (a) - (c).
+The streamwise velocity profile in viscous scaling is shown in \autoref{fig:planeTBLverifU}.
+It can be seen, that all profile match each other. 
+As already discussed in \autoref{subsec:planeTBLResults} only the free-stream velocity of the reference data is slightly below the other profiles since they are reported at a lower value of $\mathrm{Re}_{\theta}$.
+Therefore, the boundary layer thickness is smaller which corresponds to a faster achievement of the free-stream velocity.
+In \autoref{fig:inflowSecVerifFluct} the Reynolds tress are visualised. 
+We can observe a good fit of the performed simulations for all components.
+Again, the reference data show a small difference in the outer region of the boundary layer, respectively higher $y^+$ regions.
+This phenomenon can also be implied by the lower Reynolds number.
+The budget of the \acrshort{tke}, visualised in \autoref{fig:inflowSecVerifBudget}, give the same impression.
+In this metrics, the three profiles were found to be highly consistent with one another and the reference data.
+The statistics analysed so far demonstrate no noticeable differences between the plane and the curved \acrshort{tbl} simulations including both, the base and the optimised simulation setup of the R100deg30 case.
+The last discussed quantity is the Clauser parameter $\beta$, represented in \autoref{fig:inflowSecVerifBeta}.
+It is shown here only in the straight region of the domains, since this is the region of interest for this verification.
+The streamwise coordinate is normalised by the reference boundary layer thickness $\delta_0$.
+The trend of all simulations looks similar, meaning $\beta$ is constant near zero, except a small balancing region at the beginning of the domain.
+Along the streamwise direction a slightly growing distance between the plane setup and the curved setups can be observed ending in a maximum distance at the end of the straight section of around $0.1$.
+This trend could already show an impact of the curvature even in the upstream region.
+However, all profiles show quite smooth trends of $\beta$ indicating low to negligible impact of the pressure fluctuations on the mean Clauser parameter.
+Overall, the comparisons obtained show that in the straight region the simulations end up in similar profiles which leads to two mean conclusions.
+First, it generally verifies the curved simulation setup in enabling an undisturbed \acrshort{tbl} development in the straight section.
+And second, the results imply that the observed pressure fluctuations, discussed in XX show now visible manipulation of the statistics.
 
-\section{Curved Results}
+
+
+\section{Curved turbulent boundary layer results}
+
+In the following section the results of the curved \acrshort{tbl} simulations are discussed.
+First the results of each tested case are presented separately to directly compare the optimised configuration with the base configuration.
+Then, the optimised configurations of all cases are compared to study the effect of different geometrical configurations on the optimisation and the development of the \acrshort{tbl}.
 
 \subsection{R100deg 30}
-\begin{figure}[H]
+First, the results of case R100deg30 are presented. 
+This case is analysed with multiple quantities, to ensure a proper evolution of the \acrshort{tbl} along the curvature.
+In the beginning we focus on the first and second order statistics extracted at $\mathrm{Re}_{\theta} = 1200$. 
+This position is located inside the curvature, with some distance to both ends, to avoid interfering effects of the geometry changes.
+Then, the growth of the boundary layer thickness and Reynolds numbers along the streamwise direction are presented. 
+Here, we use as reference data from plane \acrshort{tbl} simulations performed by \citet{jimenez_near-wall_2013} extracted at $\mathrm{Re}_{\theta} = 1100$.
+Finally, we will discuss the pressure-oriented parameters to evaluate the optimisation capability. 
+
+\begin{figure}[h!]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
     \centering
-    \input{images/R100deg30/comparison_plots/Re1200/UplusNearWall_txt_Re1200_bycase.pgf}
+    \input{images/R100deg30/Re1200/UplusNearWall_txt_Re1200_bycase.pgf}
     \label{fig:R100deg30Re1200U}
 \end{subfigure}
 \hfill
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/Re1200/fluctuations_txt_Re1200_bycase.pgf}
+    \input{images/R100deg30/Re1200/fluctuations_txt_Re1200_bycase.pgf}
     \label{fig:R100deg30Re1200Fluct}
 \end{subfigure}
-\\[-20pt]
+\\[-30pt]
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/Retau_Retheta_vs_s_over_delta99ref_txt.pgf}
-    \label{fig:R100deg30Re1200Beta}
+    \input{images/R100deg30/comparison_plots/delta99_theta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R100deg30Re1200Re}
 \end{subfigure}
 \hfill
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/delta99_theta_vs_s_over_delta99ref_txt.pgf}
-    \label{fig:R100deg30Re1200Budget}
+    \input{images/R100deg30/comparison_plots/Retau_Retheta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R100deg30Re1200Thickness}
 \end{subfigure}
-\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
-Linestyle denotes budget term:
-Production \lswatch[solid]{black},
-Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
-Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
-Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
-Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
-Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
-Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\\[-15pt]
+\caption[XXX]{First and second order statistics of R100deg30 base and optimised simulations at $\mathrm{Re}_{\theta} = 1200$ with reference data taken from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 677$: (a) streamwise velocity profile in viscous scales; (b) Reynolds stresses $\langle u_i' u_j' \rangle$; budget of \acrshort{tke} = $\frac{1}{2} \langle u_i' u_i' \rangle$; (c) streamwise boundary layer thickness and momentum thickness development; (d) streamwise development of $\mathrm{Re}_{\theta}$ and $\mathrm{Re}_{\tau}$; (c) and (d) normalised with reference boundary layer thickness $\delta_0$}
 \label{fig:R100deg30Re1200}
 \end{figure}
 
-\begin{figure}[H]
+In \autoref{fig:R100deg30Re1200U} the velocity profile in viscous scales is depicted.
+It can be seen that the base and optimised configuration show no difference in their velocity profiles.
+Both also match the reference profile.
+As already discussed in the previous shown velocity profiles, the only difference at the upper end of the boundary layer occurs because of the different extraction positions, respectively varying values of $\mathrm{Re}_{\theta}$. 
+In addition, it can be seen that the profiles follow the analytical solutions of the \benennung{linear law} and the \benennung{log law}.
+This indicates a correct transformation of the velocity components from fix $xyz$-coordinate system into streamwise and wall-normal components. 
+Since the components in \name{neko} are defined in a fixed coordinate system, all quantities are transformed in the post-processing.
+The correct implementation can be justified by the velocity profiles since in transformed directions the qualitative shape in wall-normal direction should not change in the curvature.
+In \autoref{fig:R100deg30Re1200Fluct} the Reynolds stress components are depicted.
+Similar to the velocity profiles, the differences between the optimised and the base configuration are negligible.
+Also compared to the reference data only small variations in the outer region of the \acrshort{tbl} are visible.
+To analyse the global evolution of the \acrshort{tbl}, the normalised boundary layer and momentum thicknesses are displayed in \autoref{fig:R100deg30Re1200Thickness}.
+Their growth is clearly impacted by the curvature.
+Up to $s/\delta_0 \approx 55$ both quantities constantly grow with increasing streamwise length.
+Then, a sudden drop of both is remarkable. 
+This position coincides with the start of the curvature in the domain which implies that the geometry change impacts the boundary layer growth.
+After a small period in streamwise direction, the profiles recover and increase again. 
+However, both quantities show a reduced slope such that their growth is decelerated in the curvature compared to the straight section.
+This phenomenon is known and was already detected by XX.
+in the curvature the growth rate stays constant until the end of the curvature is reached.
+A sudden change of both quantities is remarkable at $s/\delta_0 \approx 110$ which marks the end of the curvature.
+Reversely to the start of the curvature, here a sudden increase of the growth rate can be detected in all quantities.
+Similar, this region is quite short in streamwise direction until the slope levels at a comparable niveau as in the curvature.
+This observation forces the statement of XX that the curvature effects the growth of a boundary layer.
+Besides this general behaviour for both configurations, some local differences between them can be detected.
+In the straight part the configurations perfectly match each other. 
+Right before the curvature starts, a small negative bump is visible for the optimised configuration.
+The following drop of the thickness measures is similar in the configurations.
+After the recovery of the drop, the profiles start to differ.
+It can be seen that for both measures $\delta_{99}$ and $\theta$ the optimised profile develops with a higher growth rate than the base profile.
+\fxinfo{hat das schonmal wer anderes so detektiert?}
+Assumptions about the reasons for this behaviour are discussed later, once the impact general of the optimisation on the flow evolution is discussed through pressure analysis.
+In the optimised configuration the change of the growth rate due to the end of the curvature is smaller compared to the based profile.
+However, the impact of the curvature start seems to be more downstream, since the slope change starts earlier.
+\fxmarlenebmark{Bis hier 23.07. 19:00}
+
+\begin{figure}[h!]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
@@ -115,7 +222,7 @@ Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/Re1200/budget_txt_Re1200_k_linestyle.pgf}
+    \input{images/R100deg30/Re1200/budget_txt_Re1200_k_linestyle.pgf}
     \label{fig:R100deg30Re1200Budget}
 \end{subfigure}
 \caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
@@ -137,14 +244,14 @@ Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
     \centering
-    \input{images/R500deg18/comparison_plots/Re1200/UplusNearWall_txt_Re1200_bycase.pgf}
+    \input{images/R500deg18/Re1200/UplusNearWall_txt_Re1200_bycase.pgf}
     \label{fig:R100deg30Re1200U}
 \end{subfigure}
 \hfill
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R500deg18/comparison_plots/Re1200/fluctuations_txt_Re1200_bycase.pgf}
+    \input{images/R500deg18/Re1200/fluctuations_txt_Re1200_bycase.pgf}
     \label{fig:R100deg30Re1200Fluct}
 \end{subfigure}
 \\[-20pt]
@@ -200,7 +307,7 @@ Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R500deg18/comparison_plots/Re1200/budget_txt_Re1200_k_linestyle.pgf}
+    \input{images/R500deg18/Re1200/budget_txt_Re1200_k_linestyle.pgf}
     \label{fig:R100deg30Re1200Budget}
 \end{subfigure}
 \caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.

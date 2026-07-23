@@ -193,7 +193,7 @@ All settings in the case file are listed in XXANHANG.
     \label{fig:planeTBL_mesh}
 \end{figure}
 
-\fxmarlenebmark{Hier Sachen hinzugefügt 22.07. 17:30}
+
 \subsubsection{Boundary and initial conditions} 
 
 To set up the \acrshort{tbl} boundary and initial conditions are necessary. 
@@ -285,7 +285,7 @@ As reference data the data from \citet{schlatter_assessment_2010} at $\mathrm{Re
     \label{fig:planeTBLverifDelta}
 \end{subfigure}
 \\[-15pt]
-\caption[First and second order statistics of plane \acrshort{tbl} simulations]{First and second order statistics of plane \acrshort{tbl} simulations: (a) streamwise velocity profile in viscous scales; (b) Reynolds stresses $\langle u_i' u_j' \rangle$; budget of \acrshort{tke} = $\frac{1}{2} \langle u_i' u_i' \rangle$ at $Re_\theta \approx 700$;
+\caption[First and second order statistics of plane \acrshort{tbl} simulations at $\mathrm{Re}_{\theta} = 700$ with reference data from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 677$]{First and second order statistics of plane \acrshort{tbl} simulations at $\mathrm{Re}_{\theta} = 700$ with reference data from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 677$: (a) streamwise velocity profile in viscous scales; (b) Reynolds stresses $\langle u_i' u_j' \rangle$; (c) budget of \acrshort{tke} = $\frac{1}{2} \langle u_i' u_i' \rangle$:
 Linestyle denotes budget term:
  \lswatch[solid]{black} production,
 \lswatch[dash pattern=on 5pt off 1pt]{black} convection,
@@ -301,7 +301,8 @@ Linestyle denotes budget term:
 \autoref{fig:planeTBLverifU} depicts the streamwise velocity profile in viscous scales.
 It can be seen that the profiles of the two tested simulation configurations coincide over the complete height of the \acrshort{tbl}.
 Additionally, the profiles match the reference data.
-The reference profile differs from the two performed simulations only in the region of the outer flow, which can be explained through the lower $Re_{\theta}$ of the reference data.
+The reference profile differs from the two performed simulations only in the region of the outer flow, which can be explained through the lower $\mathrm{Re}_{\theta}$ of the reference data.
+A smaller value of $\mathrm{Re}_{\theta}$ implies a smaller boundary layer thickness such that the free-stream velocity is reached earlier in wall-normal direction.
 Besides from that, no differences between the profiles can be observed.
 Also, the three profiles follow the analytical solutions of the \benennung{linear law} and the \benennung{log law} in the corresponding regions.
 For the Reynolds stress components similar observation holds.
@@ -320,7 +321,7 @@ The derived results approve the general setup of the performed simulations in te
 The consistency with the reference data also implies a sufficiently long evolution time, such that the initial condition does not affect the flow any more.
 Comparing the discussed plots from the plane \acrshort{tbl} simulations with the one performed in a channel, we can approve their qualitative agreement already introduced in \autoref{sec:turbulenceTheory}.
 Here we can directly see that the small-scale turbulent structures are independent of the outer geometry of the flow.
-
+\\[-20pt]
 \begin{figure}[H]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
@@ -336,10 +337,11 @@ Here we can directly see that the small-scale turbulent structures are independe
     \input{images/planeTBL_valid/wall_pressure_normalised_vs_s_txt.pgf}
     \label{fig:planeTBLpress}
 \end{subfigure}
+\\[-15pt]
 \caption[Pressure related parameters of plane \acrshort{tbl} simulations]{Pressure related parameters of plane \acrshort{tbl} simulations: (a) Clauser parameter along non-dimensionalised streamwise coordinate; (b) pressure coefficient $C_p$ along non-dimensionalised streamwise coordinate.}
 \end{figure}
 
-Since in this work the focus lies on manipulation of the pressure and its gradient, we also discuss briefly two relevant parameters, namely the Clauser parameter $\beta$ and the pressure coefficient $2 \cdot C_P$.
+Since in this work the focus lies on manipulation of the pressure and its gradient, we also discuss briefly two relevant parameters, namely the Clauser parameter $\beta$ and the pressure coefficient $2C_P$.
 In \autoref{fig:planeTBLbeta} the Clauser parameter, which is derived by a non-dimesionalisation of the pressure gradient (see XX) is depicted.
 It can be seen that after a short period of small fluctuations, the parameter settles at zero in both simulation setups.
 For the pressure coefficient a similar trend can be observed in \autoref{fig:planeTBLpress}.
@@ -347,6 +349,6 @@ However, the coefficient is constantly zero directly from the start of the domai
 These final validations of the pressure-related quantities confirm that the impact of the different \acrshort{bc} at the top wall on the \acrshort{tbl} are negligible.
 They demonstrate that the \benennung{Dirichlet} condition is a reasonable choice of \acrshort{bc} for the remainder of this work.
 
-\fxmarlenebmark{Bis hier 22.07. 17:30}
+
 
 
