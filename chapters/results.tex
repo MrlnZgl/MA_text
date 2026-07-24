@@ -86,7 +86,7 @@ Linestyle denotes budget term:
 \label{fig:inflowSecVerif}
 \end{figure}
 
-The first and second order statistics of the compared simulations are depicted in \autoref{fig:inflowSecVerif} (a) - (c).
+The first and second order statistics of the compared simulations are depicted in \autoref{fig:inflowSecVerif}a-c.
 The streamwise velocity profile in viscous scaling is shown in \autoref{fig:planeTBLverifU}.
 It can be seen, that all profile match each other. 
 As already discussed in \autoref{subsec:planeTBLResults} only the free-stream velocity of the reference data is slightly below the other profiles since they are reported at a lower value of $\mathrm{Re}_{\theta}$.
@@ -131,7 +131,7 @@ Finally, we will discuss the pressure-oriented parameters to evaluate the optimi
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
     \centering
-    \input{images/R100deg30/Re1200/UplusNearWall_txt_Re1200_bycase.pgf}
+    \input{images/R100deg30/comparison_new/UplusNearWall_txt_Re1200_bycase.pgf}
     \label{fig:R100deg30Re1200U}
 \end{subfigure}
 \hfill
@@ -152,7 +152,7 @@ Finally, we will discuss the pressure-oriented parameters to evaluate the optimi
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/delta99_theta_vs_s_over_delta99ref_txt.pgf}
+    \input{images/R100deg30/comparison_new/delta99_theta_vs_s_over_delta99ref_txt.pgf}
     \label{fig:R100deg30Re1200Thickness}
 \end{subfigure}
 \\[-15pt]
@@ -186,7 +186,7 @@ The trends of all separate terms look quite similar compared to the ones in the 
 In addition, both configurations show similar behaviour.
 The analysed statistics allow some first suggestions about the \acrshort{tbl} behaviour in the curved section:
 First, all profiles show a high qualitative accordance to the profiles in the straight part of this domain and respectively with the ones from the plane \acrshort{tbl}.
-This could imply a small impact of the curvature to the local statistics at this exlpicit position.
+This could imply a small impact of the curvature to the local statistics at this explicit position.
 However, this suggestion is very sensible to the domain geometry and the relative position of the extracted profile and thus cannot be generalised \citep{patel_longitudinal_1997}.
 In the discussed case R100deg30 
 
@@ -222,36 +222,33 @@ As describe before, there a similar effect can be seen.
 This similarity is especially interesting, since it occurs between two different positions of the domain constitution.
 \citet{appelbaum_systematic_2025} observed this difference directly at the first transition of the straight inlet to the curved section, however in this study the effect is remarkable only at the end of the curvature in the transition to the straight outlet.
 This observation can be taken as an indication that the sensitivity of the boundary layer growth to the configuration may be driven more by the change of curvature itself rather than specific direction of the transition. 
-To strengthen this assumption, a detailed analyse within one geometrical setup would be required.
-
-
+To strengthen this assumption, a detailed analysis within one geometrical setup would be required.
 
 \begin{figure}[h!]
 \centering\begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/beta_vs_s_over_delta99ref_txt.pgf}
+    \input{images/R100deg30/comparison_new/beta_vs_s_over_delta99ref_txt.pgf}
     \label{fig:R100deg30Re1200Beta}
 \end{subfigure}
 \hfill
 \begin{subfigure}[t]{0.495\textwidth}
     \subcaption{}
     \centering
-    \input{images/R100deg30/comparison_plots/delta_wall_pressure_bendmean_vs_s_over_delta0_txt.pgf}
+    \input{images/R100deg30/comparison_new/delta_wall_pressure_bendmean_vs_s_over_delta0_txt.pgf}
     \label{fig:R100deg30Re1200p}
 \end{subfigure}
 \\[-20pt]
 \begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
-    \input{images/R100deg30/comparison_plots/Ue_vs_s_over_delta0_txt.pgf}
+    \input{images/R100deg30/comparison_new/Ue_vs_s_over_delta0_txt.pgf}
     \label{fig:R100deg30Re1200Uinf}
 \end{subfigure}
 \\[-15pt]
-\caption{}
+\caption{Pressure analysis quantities: (a) Clauser parameter $\beta$; (b) pressure distribution, visualised as difference between local pressure and mean pressure in the curved section; (c) normalised free-stream velocity; all quantities plotted against normalised streamwise coordinate}
 \label{fig:R100deg30Re1200Prelated}
 \end{figure}
-\fxinfo{XX fig (a) y label von p0 zu pmean o pc ändern}
 
 In \autoref{fig:R100deg30Re1200Prelated} the pressure related quantities are visualised.
 Firstly, we focus on \autoref{fig:R100deg30Re1200Beta} where the Clauser parameter along the normalised streamwise coordinate is shown.
@@ -296,7 +293,7 @@ In both configurations a constant positive trend in the straight part is visible
 Similar to the previous described plot, the two configurations starts two differ once the curvature starts.
 The base configuration shows a negative drop at the start of the curvature, then increases again with the same gradient as before.
 At the end of the curvature the converse behaviour can be observed.
-Overall, the base configuration shows a positive trend with an absolute difference of $\Delta \frac{U(s)}{U_0} \approx 0.08$.
+Overall, the base configuration shows a positive trend with an absolute difference of $\Delta U(s)/U_0 \approx 0.08$.
 In the optimised configuration, instead, a relatively positive spike occurs right before the curvature starts.
 Afterwards the curve stops increasing in the curved section. 
 Instead, a small negative trend can be seen, but with a lower absolute gradient than in the base configuration.

@@ -1,119 +1,128 @@
-
-
-
-
-
-
-%\thispagestyle{empty}
-
-%\printnomenclature
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wenn Symbolverzeichnis automatisch erzeugt werdenn soll
+% Nomenclature / List of Symbols
+% (abbreviations are generated automatically via the glossary,
+%  see \printglossary[type=\acronymtype] in thesis.tex)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifnomenklatur
-%\ifenglish
-%\printnomenclature\addcontentsline{toc}{chapter}{Notation}
-%\else
-%\printnomenclature\addcontentsline{toc}{chapter}{Nomenklatur}
-%\fi
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifenglish
+\chapter*{Nomenclature}\addcontentsline{toc}{chapter}{Nomenclature}
 \else
-%% Wenn man das Symbolverzeichnis selber machen will
-%\ifenglish
-%\chapter*{Notation}\addcontentsline{toc}{chapter}{Notation}
-%\else
-\chapter*{List of Symbols}\addcontentsline{toc}{chapter}{List of Symbols}
-%\fi
-%
-%
-%
-%
-%%\thispagestyle{empty}
-%\ifenglish
-%\section*{Abbrevations}
-%\else
-%\section*{Abkürzungen}
-%\fi
-%
-\begin{longtable}[t]{p{0.1\textwidth}p{0.1\textwidth}p{0.8\textwidth}}
-	\textbf{Variable}  & \textbf{Einheit} & \textbf{Beschreibung}\\
-	\midrule
-	$c_0$ & $m/s$ & Schallgeschwindigkeit in Luft \\
-	$\nabla$ & $1/m$ & Nabla-Operator \\
+\chapter*{Nomenklatur}\addcontentsline{toc}{chapter}{Nomenklatur}
+\fi
 
-	
-	%
+% ---------- Latin symbols ----------
+\ifenglish
+\section*{Latin symbols}
+\else
+\section*{Lateinische Symbole}
+\fi
+\begin{longtable}[t]{@{}p{0.16\textwidth}p{0.80\textwidth}@{}}
+    \textbf{Symbol}  & \textbf{Description}\\
+    \midrule
+    \endhead
+    $B$ & additive constant of the logarithmic law of the wall \\
+    $C_p$ & pressure coefficient \\
+    $D_{ij}$ & viscous diffusion rate (Reynolds-stress budget) \\
+    $k$ & turbulent kinetic energy \\
+    $L$ & characteristic length scale \\
+    $L_x,\,L_y,\,L_z$ & domain size in streamwise, wall-normal and spanwise direction \\
+    $N$ & polynomial order of a spectral element \\
+    $N_{\mathrm{eval}}$ & number of cells inside the optimisation evaluation window \\
+    $n$ & wall-normal coordinate (curvilinear/moving frame) \\
+    $p$ & pressure \\
+    $p'$ & pressure fluctuation / pressure-correction variable \\
+    $p_0$ & free-stream pressure \\
+    $p_w$ & wall pressure \\
+    $\langle p_c\rangle$ & mean wall pressure in the curved section \\
+    $\mathcal{P}_{ij}$ & production rate (Reynolds-stress budget) \\
+    $R$ & residual of the optimisation; curvature radius \\
+    $R_{ij}$ & Reynolds-stress tensor \\
+    $r$ & physical curvature radius \\
+    $s$ & streamwise coordinate (curvilinear/moving frame) \\
+    $s_{c}$ & arc length of the curved section \\
+    $s_{in},\,s_{out}$ & length of the straight inlet and straight outlet \\
+    $T_{ij}$ & turbulent transport rate (Reynolds-stress budget) \\
+    $t$ & time \\
+    $U,\,V,\,W$ & mean velocity components \\
+    $U_0$ & free-stream (reference) velocity \\
+    $U_b$ & bulk velocity \\
+    $U(s)$ & local free-stream velocity \\
+    $u,\,v,\,w$ & velocity components in streamwise, wall-normal and spanwise direction \\
+    $u_i$ & velocity component (index notation) \\
+    $u_i'$ & fluctuating velocity component \\
+    $u_\tau$ & friction velocity \\
+    $u^+$ & velocity in viscous (wall) units \\
+    $x,\,y,\,z$ & Cartesian coordinates (streamwise, wall-normal, spanwise) \\
+    $x_{\theta_i},\,y_{\theta_i}$ & coordinates of design point $\theta_i$ \\
+    $y^+$ & wall-normal coordinate in viscous (wall) units \\
 \end{longtable}
 
-
-%\chapter*{Abkürzungsverzeichnis}\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
-{\let\clearpage\relax \chapter*{List of Abbreviations}}\addcontentsline{toc}{chapter}{List of Abbreviations}
-
-\begin{longtable}[t]{p{0.25\textwidth}p{0.8\textwidth}}
-	\textbf{Abkürzung}  & \textbf{Bedeutung}\\
-	\midrule
-	APE & Aeroacoustic Perturbation Equations \\
-	SST & Shear Stress Transport \\
-	
-	
-	%
+% ---------- Greek symbols ----------
+\ifenglish
+\section*{Greek symbols}
+\else
+\section*{Griechische Symbole}
+\fi
+\begin{longtable}[t]{@{}p{0.16\textwidth}p{0.80\textwidth}@{}}
+    \textbf{Symbol}  & \textbf{Description}\\
+    \midrule
+    \endhead
+    $\beta$ & Clauser pressure-gradient parameter \\
+    $\delta$ & channel half-height \\
+    $\delta_{99}$ & boundary-layer thickness \\
+    $\delta^*$ & displacement thickness \\
+    $\delta_0$ & reference boundary-layer thickness at $\mathrm{Re}_\theta = 1000$ \\
+    $\delta_\nu$ & viscous length scale \\
+    $\Delta x^+,\,\Delta z^+$ & grid spacing in viscous (wall) units \\
+    $\varepsilon$ & turbulent dissipation rate \\
+    $\varepsilon_{ij}$ & dissipation-rate tensor (Reynolds-stress budget) \\
+    $\theta$ & momentum thickness \\
+    $\theta_i$ & design point of the optimisation \\
+    $\kappa$ & von K\'arm\'an constant \\
+    $\mu$ & dynamic viscosity \\
+    $\nu$ & kinematic viscosity \\
+    $\Pi_{ij}$ & velocity pressure-gradient term (Reynolds-stress budget) \\
+    $\rho$ & density \\
+    $\tau$ & total shear stress \\
+    $\tau_w$ & wall shear stress \\
+    $\omega$ & specific turbulent dissipation rate \\
+    $\nabla$ & nabla (del) operator \\
 \end{longtable}
-%%\ifenglish
-%%\section*{Greek letters}
-%%\else
-%\section*{Griechische Buchstaben}
-%%\fi
-%\begin{longtable}[t]{p{0.15\textwidth}p{0.93\textwidth}}
-%%	$\beta_{m,m}$ & Faktor zum Skalieren der Besselfunktion \\
-%\end{longtable}	
-%
-%\ifenglish
-%\section*{Indexes}
-%\else
-%\section*{Indizes}
-%\fi
-%%
-%\begin{longtable}[t]{p{0.15\textwidth}p{0.93\textwidth}}
-%	$ 0 $ & Umgebungsbedingungen \\
-%	$a$ & beliebige Position im Rohr \\
-%	
-%\end{longtable}
-%%
-%
-%
-%\ifenglish
-%\section*{Latin letters}
-%\else
-%\section*{Lateinische Buchstaben}
-%\fi
-%%%\begin{longtable}[l]{ll}
-%\begin{longtable}[t]{p{0.15\textwidth}p{0.93\textwidth}}
-%%
-%$ A $ & Konstante \\
-%
-%%
-%\end{longtable}
-%%
-%
-%
-%
-%%
-%\ifenglish
-%\section*{Operators}
-%\else
-%\section*{Operatoren}
-%\fi
-%\begin{longtable}[t]{p{0.15\textwidth}p{0.93\textwidth}}
-%%
-%$ \triangledown $ & Nabla Operator \\
-%
-%%
-%\end{longtable}
-%%
-%%
 
+% ---------- Dimensionless numbers ----------
+\ifenglish
+\section*{Dimensionless numbers}
+\else
+\section*{Dimensionslose Kennzahlen}
+\fi
+\begin{longtable}[t]{@{}p{0.16\textwidth}p{0.80\textwidth}@{}}
+    \textbf{Symbol}  & \textbf{Description}\\
+    \midrule
+    \endhead
+    $\mathrm{Re}$ & Reynolds number \\
+    $\mathrm{Re}_x$ & Reynolds number based on streamwise position \\
+    $\mathrm{Re}_\theta$ & Reynolds number based on momentum thickness \\
+    $\mathrm{Re}_\tau$ & friction Reynolds number \\
+    $\mathrm{Re}_{\delta_{99}}$ & Reynolds number based on boundary-layer thickness \\
+    $\mathrm{Re}_{\delta^*}$ & Reynolds number based on displacement thickness \\
+    $\mathrm{Re}_b$ & bulk Reynolds number \\
+\end{longtable}
 
-\fi	
+% ---------- Sub-/superscripts and operators ----------
+\ifenglish
+\section*{Subscripts, superscripts and operators}
+\else
+\section*{Indizes, Hochzeichen und Operatoren}
+\fi
+\begin{longtable}[t]{@{}p{0.16\textwidth}p{0.80\textwidth}@{}}
+    \textbf{Symbol}  & \textbf{Description}\\
+    \midrule
+    \endhead
+    $\langle\,\cdot\,\rangle$ & time (Reynolds) average \\
+    $(\,\cdot\,)'$ & fluctuating quantity \\
+    $(\,\cdot\,)^+$ & normalisation in viscous (wall) units \\
+    $(\,\cdot\,)_w$ & quantity evaluated at the wall \\
+    $(\,\cdot\,)_0$ & reference / free-stream quantity \\
+\end{longtable}
+
 \cleardoublepage

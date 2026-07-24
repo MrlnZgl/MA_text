@@ -1,6 +1,8 @@
 This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: chapters/acknowledgement.aux
+A level-1 auxiliary file: chapters/nomenklatur.aux
 A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/theory.aux
 A level-1 auxiliary file: chapters/methods.aux
@@ -20,7 +22,7 @@ Warning--empty year in so_experimental_nodate
 Warning--empty year in so_experimental_nodate
 You've used 44 entries,
             2789 wiz_defined-function locations,
-            913 strings with 13273 characters,
+            915 strings with 13325 characters,
 and the built_in function-call counts, 18832 in all, are:
 = -- 1758
 > -- 937
