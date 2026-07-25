@@ -1,24 +1,85 @@
 \chapter{Introduction}
 \label{chap:introduction}
 
+\acrfull{cfd} is an application with rising importance for multiple engineering fields like aerospace, energy systems and process engineering \citep{versteeg_introduction_2007}.
+The dramatic improvement of \acrshort{cfd} technology enables simulations of exceptional size and accuracy \citep{slotnick_cfd_2014}.
+As a consequence, \acrshort{cfd} facilitates studies of applications where suitable experimental testings are impossible due to their physical size as e.g.~in aerospace applications \citep{slotnick_cfd_2014}.
+In addition, it facilitates insights into underlying physical phenomena through a detailed resolution of the entire flow-field, providing access to quantities that are difficult or impossible to obtain experimentally \citep{versteeg_introduction_2007}.
+
+This possibility is particularly important when phenomena of small physical scales are investigated.
+In circumstances where a fluid comes into contact with a solid object, these small physical scale assume a pivotal role.
+This situation occurs in all technical applications, where a fluid is limited by a wall, e.g.~fluid inside a pipe or around an airfoil \citep{marusic_wall-bounded_2010}.
+In general, these flows are known as \benennung{wall-bounded flows}.
+The processes near the wall are of special interest since they can be responsible for massive losses of energy in the flow \citep{fan_decomposition_2020}.
+They are caused by the friction between the wall and the fluid itself which is determined by multiple factors as wall roughness, geometry, viscosity of the fluid \citep{schlichting_boundary-layer_2017}.
+A reduction of these losses is important for
+The range in which the flow is impacted by the interaction with the wall is usually limited in wall-normal direction.
+This area is named \benennung{boundary layer}, first introduced by \citet{prandtl_uber_1904}.
+In many applications the boundary layer is of turbulent characteristic, which impedes the study of its inner processes.
+To simulate the turbulent structures inside a boundary layer, a high resolution in space and time is essential.
+However, this goes along with high computational costs, which are unsuitable for commercial usage.
+Consequently, simulation methods with such high accuracy are predominantly used in research settings.
+With the so-called \acrfull{dns} all the turbulent scales can be resolved in the simulation to facilitate a full investigation of their interactions and relations.
+In order to study the behaviour of \acrfull{tbl} under various conditions, \acrshort{dns} are vital. \\
+
+Much research has been performed to obtain understanding of the underlying processes in \acrfull{tbl} along a plane wall \citep{pargal_adverse-pressure-gradient_2022}.
+\citet{schlatter_turbulent_2012} studied the effect of inflow conditions and tripping on the development of \acrshort{tbl} along a flat-plate.
+A detailed study of the structures in the \acrshort{tbl} was performed by \citet{jimenez_near-wall_2013}.
+However, only a limited number of studies have concentrated on \acrshort{tbl} along curved surfaces, although this often happens in real-world applications \citep{spalart_direct_2024}.
+\citet{muck_effect_1985} showed that the study of curvature effects are nonetheless important, since their investigations of convey and concave curvature showed fundamental differences in the \acrshort{tbl} development.
+Also, \citet{chiwanga_effect_1993} made some interesting findings regarding the differences between turbulent structures along a flat wall and a convex curved wall.
+Nevertheless, the investigation of curved \acrshort{tbl} holds some intricacies \citep{appelbaum_systematic_2025}.
+\citet{so_experiment_1973} found in their experiments, that a curved geometry provokes a pressure gradient in the entire domain.
+This pressure gradient also impacts the development of the \acrshort{tbl}.
+Hence, the pressure induced changes in the \acrshort{tbl} interfere with the ones caused by the curved geometry.
+In order to isolate the curvature induced effects, it is therefore necessary to manipulate the pressure conditions.
+With this approach it is possible to achieve predictable pressure induced effects.
+The natural choice of the prescribed pressure field has a constant value over the whole domain which results in a \acrfull{zpg} distribution.
+This configuration is preferable since in \acrshort{tbl} along a flat wall this pressure distribution exists naturally and is therefore well-studied.
+Since the pressure field cannot be set directly, an implicit approach is necessary to obtain the desired pressure distribution \citep{appelbaum_systematic_2025}.
+Since this approach requires a non-trivial procedure to determine appropriate \acrfull{bc}, only a few researchers address the investigation of pressure isolated curved \acrshort{tbl}.
+\citet{appelbaum_systematic_2025} tried to isolate curvature effects from pressure effects on a concave \acrshort{tbl}. \\
+
+In this work a new procedure to create \acrshort{zpg} conditions in a curved \acrshort{tbl} domain is tested.
+The approach is tested in three different curved geometries introduced in \autoref{sec:MethodCurvedTBL}.
+The used approach is based on \citet{schlatter_leveraging_2025}.
+The idea is to impose \acrshort{bc} constraining the velocity at the upper wall of the curved domain which modify the pressure field towards a \acrshort{zpg}.
+Hence, these \acrshort{bc} for the velocity field need to be determined.
+This is done with assistant simulations of lower accuracy. 
+In these simulations the curved domain is simulated with a movable upper wall. 
+The realisation of this setup is described in detail in \autoref{sec:OptimisationMethod}.
+Through a number of movable control points the shape of the upper wall can be adjusted in order to obtain a \acrshort{zpg} at the lower wall.
+This procedure is implemented in an optimisation algorithm introduced by \citet{morita_applying_2022}.
+The algorithm optimises the shape of the upper wall to obtain the prescribed target value of the \benennung{Clauser parameter} $\beta$, which is a non-dimensionalised variable for the pressure gradient, along the lower wall.
+From the optimised configuration, we extract the velocity profile at a specific wall-normal height.
+The extracted velocity profile, is then imposed as \acrshort{bc} in a new fully resolved simulation.
+This boundary condition should then induce a similar pressure field as in the optimised simulation, respectively with a \acrshort{zpg} at the lower wall.
+In this simulation, then the effects of the curvature on the \acrshort{tbl} can be studied.
+The aim of this work is to employ this procedure to the three investigated curved geometries and evaluate the capability of the optimisation algorithm in each case.
+In addition, the simulations with the manipulated velocity \acrshort{bc} are studied to extract information about the effect of curvature on the \acrshort{tbl}.
+Here, also the differences between the different geometries are of special interest.\\
+
+In order to present the obtained findings in this work, first the theoretical fundamentals are introduced in \autoref{chap:basics}.
+Following, the employed methods and simulations setups are presented in \autoref{chap:methods}.
+In \autoref{chap:validation} the validation studies are analysed followed by the discussion of results in \autoref{chap:results}.
+Finally, the governed findings are summarised and an outlook for future investigations is given.
+
+
+
+
 \subsection{ToDos}
 
 
 pressure tests: wo einbauen
 
-freitag 21.07.:
-\begin{itemize}
-    \item introduction
-\end{itemize}
-
 \begin{itemize}
     \item 3 Mama korrekturen einarbeiten (done Validation)
-    \item 1 results --> R100deg30 --> reference data suchen
+    \item 1 results --> R100deg30 --> dazuschreiben dass curvature keine effekt auf stats halt
+    \item profile r500deg18 weiter unten rausschreiben, und interpretieren und glätten (beta)
 \end{itemize}
 
 Insgesamt: 
 \begin{itemize}
-    \item einleitung (freitag)
     \item schluss 
     \item pressure flcutuations
     \item results und discussion
@@ -35,4 +96,6 @@ Insgesamt:
     \item graphen neu erzeugen wg x axis limits (done für R100deg30)
     \item realtion beta fluct <--> control points position
 \end{itemize}
+
+
 
