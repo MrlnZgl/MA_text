@@ -304,7 +304,7 @@ In \autoref{fig:R100deg30Re1200Beta} we can observe that the optimisated configu
 Instead of an improved trend in terms of constancy at zero and smoothness, clearly higher fluctuations occur compared to the base configuration.
 A closer look at the positions of the bumps, suggests a connection to the positioning of the \benennung{design points} in the optimisation setup.
 As described in \autoref{subsec:optSetup} the optimisation is based on a finite number of \benennung{design points} whose position is adjusted to reduce the RMS of $\beta$.
-This discrete \benennung{control points} are connected with a spline. 
+These discrete \benennung{control points} are connected with a spline. 
 The adjustment of one \benennung{control point} might lead to a modified pressure gradient in the cross-section where this \benennung{design point} is positioned.
 Here, the pressure gradient is mentioned, since that is the field quantity that is actually impacted by a shape modification of the domain.
 This positioning will change the size of the cross-sectional area will change, which impacts the surrounding area as well.
@@ -313,20 +313,34 @@ This behaviour is enforced, if the \benennung{control points} are distributed sp
 This could lead to relatively high changes of the cross-sectional area through unfavourable course of the spline.
 A dense positioning of \benennung{control points} would prevent this behaviour.
 Transferred to the discussed case, this implies a distribution of \benennung{control points} that is too sparse for a continuous control of the pressure-gradient ending up in visible fluctuations in the Clauser parameter.
+\citet{morita_applying_2022} increased the number of \benennung{control points} in cases, where they expected a higher necessary shape complexity at the upper wall to accomplish the desired $\beta$-distribution.
+Since the setup studied in this work shows more extreme curvature characteristics than the ones already tested with the \acrshort{bo}-\acrshort{gpr}-optimisation, no reference values are available about the number of \benennung{control points}.
+To study the concrete impact of the number of \benennung{control points} on the fluctuations in the Clauser parameter, further investigations would be required.
 However, \autoref{fig:R100deg30Re1200p} shows that the optimisation anyway affects the pressure field.
-Here it can be seen, that the pressure distribution itself is 'improved' by the optimisation.
-Compared to the base configuration a shift towards a more uniform pressure distribution is visible.
-Subtracting the mean pressure in the curvature leads to an around zero pressure level meaning that along the whole curvature a more or less constant pressure occurs.
-However, in the base configuration, the pressure decreases in the curved section similar as in the straight inlet.
+For a detailed discussion of the effects in the pressure field, a split up into \benennung{global} and \benennung{local} optimisation capability is useful.
+In this context, we use global when we analyse the general trend of a quantity over the complete curved section.
+With the local behaviour we describe the short-range deviations of a quantity from this general trend.
+Compared to the base configuration a shift towards a more uniform pressure distribution on a global level is visible.
+Subtracting the mean pressure in the curvature leads to an approximately zero pressure level. 
+This means that along the whole curvature the global pressure level stays constant.
+On the local level, in contrast, fluctuations are visible.
+Their constitution seems comparable to the fluctuations observed in the $\beta$ distribution.
+In the base configuration, the global pressure trend shows a decrease in the curved section similar as in the straight inlet.
 Since the pressure declines with a constant slope, this constitution results in a constant pressure gradient.
-Therefore, the optimisation affects the simulation setup such that the pressure itself shows a more constant distribution.
+However, in the base configuration no local fluctuations occur.
+As a conclusion, the capability of the optimisation algorithm to enforce a constant pressure differs significantly between whether the local or the global level is evaluated.
+On a local level, the optimisation shows issues in enforcing a constant pressure level.
+Here, the base configuration shows a significantly smoother trend.
+Evaluating the global trend of the pressure, an opposite trend can be observed.
+Regarding the global level, the optimisation capability is much higher.
+The almost constant pressure level in the curved domain shows that the optimisation results in a significantly modified pressure field.
 As an enforcing argument \autoref{fig:R100deg30Re1200Uinf} is considered.
 The constantly increasing free-stream velocity in the base configuration is consistent with its decreasing pressure.
 The decreasing pressure provokes a negative pressure-gradient, already introduced as \acrshort{fpg}.
 This \acrshort{fpg} causes an acceleration of the free-stream which is visible in \autoref{fig:R100deg30Re1200Uinf}.
 In contrast, the free-stream velocity in the optimised configuration shows a more constant trend on a global level.
-Also this behaviour corresponds with the observed pressure distribution which tends to zero in the curved section.
-Therefore, the global pressure gradient is smaller, thus resulting in a more uniform free-stream velocity.
+This behaviour corresponds to the observed pressure distribution which tends to zero in the curved section.
+Therefore, the global pressure gradient is smaller, resulting in a more uniform free-stream velocity.
 However, on a local level also the free-stream profile of the optimised configuration shows fluctuations.
 Since all three discussed plots show these fluctuations of similar constitution, it can be suggested that they occur for the same reason.
 To ensure this, a detailed analysis of their positions in relation to the positions of the \benennung{control points} would be necessary.
