@@ -1,0 +1,109 @@
+\chapter{Introduction}
+\label{chap:introduction}
+
+\Acrfull{cfd} is a field of rising importance across a variety of engineering disciplines, including  aerospace, energy systems and process engineering \citep{versteeg_introduction_2007}.
+Recent technological advancements in the field of \acrshort{cfd} have led to paradigm shift in the realm of fluid dynamics simulations, allowing for the exploration of   complex geometries with exceptional precision, as highlighted in \citep{slotnick_cfd_2014}.
+As a consequence, \acrshort{cfd} facilitates studies of applications for which suitable experimental testing is not feasible due to their physical dimensions, as is exemplified in the context of  aerospace applications \citep{slotnick_cfd_2014}.
+In addition, \acrshort{cfd}  facilitates insights into underlying physical phenomena through a detailed resolution of the entire flow field. This provides access to quantities that are difficult or impossible to obtain experimentally \citep{versteeg_introduction_2007}.
+
+The advancements of \acrshort{cfd} simulations are of  particular significance in the context of investigating phenomena operating on small physical scales.
+In circumstances where a fluid comes into contact with a solid object, these small physical scales assume a pivotal role.
+This phenomenon has been observed in all technical applications where a fluid is confined by a wall, such as the fluid within a pipe or the airfoil \citep{marusic_wall-bounded_2010}.
+These flows are known as \benennung{wall-bounded flows}.
+It is imperative to note that the processes occurring in proximity to the wall are of particular significance, as they have the potential to induce substantial
+ energy loss in the flow \citep{fan_decomposition_2020}.
+They are the result of  friction between the wall and the fluid itself. The factors determining this friction are numerous and include  wall roughness, geometry, and viscosity of the fluid \citep{schlichting_boundary-layer_2017}.
+A reduction of these losses is important for \fxinfo{wie geht' der Satz weiter?, dann Absatz?}
+The range in which the flow is impacted by the interaction with the wall is usually limited in the wall-normal direction.
+This area is named \benennung{boundary layer}, and was first introduced by \citet{prandtl_uber_1904}.
+In  a multitude of applications the boundary layer is characterised by turbulence, which hinders the investigation of its internal processes.
+In order to simulate the turbulent structures present within a boundary layer, it is essential to employ a high resolution in both space and time.
+However, this approach is associated with   high computational costs, making it unsuitable for commercial application.
+Consequently, simulation methods with such high accuracy are predominantly used in research settings.
+The so-called \acrfull{dns} facilitates the resolution of all turbulent scales within  the simulation,  thereby enabling a comprehensive investigation  of their interactions and relations.
+In order to study the behaviour of \acrfull{tbl} under a range of conditions, the use of \acrshort{dns} is essential. \\
+
+
+A substantial body of research has been conducted to obtain understanding of the underlying mechanisms  in \acrfull{tbl} along a plane wall, as referenced in \citep{pargal_adverse-pressure-gradient_2022}.
+\citet{schlatter_turbulent_2012} studied the impact of inflow conditions and tripping on the development of \acrshort{tbl} along a flat plate.
+A thorough investigation of the structures in the \acrshort{tbl} was performed by \citet{jimenez_near-wall_2013}.
+Nevertheless, only a limited number of studies have focused on \acrshort{tbl} along curved surfaces, despite the fact that such geometries\fxinfo{??} are common in real-world applications \citep{spalart_direct_2024}.
+Already \citet{muck_effect_1985} demonstrated that the study of curvature effects is  nonetheless important, since in their investigations of convex and concave curvature exhibited fundamental differences in the \acrshort{tbl} development.\fxinfo{prüfen, ob das so Sinn macht}
+Addtionally, \citet{chiwanga_effect_1993} yielded noteworthy insights   regarding the differences between turbulent structures along a flat wall and a convex curved wall.
+Nevertheless, the investigation of curved \acrshort{tbl} presents certain  intricacies \citep{appelbaum_systematic_2025}.
+\citet{so_experiment_1973} found in their experiments that a curved geometry provokes a pressure gradient across the entire domain.
+This pressure gradient also impacts the development of the \acrshort{tbl}.
+Hence, the pressure-induced changes in the \acrshort{tbl} interfere with those caused by the curved geometry.
+In order to isolate the curvature-induced effects, it is therefore necessary to manipulate the pressure conditions.
+This approach has been demonstrated to facilitate the attainment of predictable pressure-induced effects.
+The natural choice of the prescribed pressure field is such that it has a constant value over the entire domain resulting in a \acrfull{zpg} distribution.
+This configuration is preferable since, in case of  a flat wall,  this pressure distribution exists naturally and is therefore well-studied.
+As the pressure field cannot be set directly, an implicit approach is necessary to obtain the desired pressure distribution \citep{appelbaum_systematic_2025}.
+This approach requires a non-trivial procedure to determine appropriate \acrfull{bc}. Consequently, only a limited number of researchers have addressed the investigation of pressure-isolated curved \acrshort{tbl}.
+\citet{appelbaum_systematic_2025}  sought to distinguish the curvature effects from pressure effects on a concave \acrshort{tbl}. \fxchange{Dieser Satz gehört hier iWie nicht mehr hin, oder es braucht mehr Erläuterung}
+
+
+In this thesis we investigate a  novel methodology for the generation of \acrshort{zpg} conditions within a curved \acrshort{tbl} domain.
+The approach is tested in three different curved geometries introduced in \autoref{sec:MethodCurvedTBL}.
+The used approach is founded upon \citet{schlatter_leveraging_2025}.
+The idea is to impose \acrlong{bc} constraining the velocity at the upper wall of the curved domain.  The \acrlong{bc}   serve to modify the pressure field towards a \acrlong{zpg}.
+It is therefore necessary to determine \acrshort{bc} for the velocity field. 
+This is achieved through the utilisation of assistant simulations of lower accuracy. 
+In these simulations, the curved domain is modelled by means of a movable upper wall. 
+The realisation of this setup is described in detail in \autoref{sec:OptimisationMethod}.
+It is possible to adjust the configuration\fxinfo{shape?} of the upper wall by manipulating the position of the movable control points,
+ in order to obtain a \acrshort{zpg} at the lower wall.
+This procedure is implemented in an optimisation algorithm introduced by \citet{morita_applying_2022}.
+The algorithm optimises the shape of the upper wall to obtain the prescribed target value of the \benennung{Clauser parameter}denoted by $\beta$, which is a non-dimensionalised variable for the pressure gradient, along the lower wall.
+From the optimised configuration, we extract the velocity profile at a specific wall-normal height.
+The extracted velocity profile is then imposed as \acrshort{bc} in a new fully resolved simulation.
+This boundary condition should then induce a similar pressure field as in the optimised simulation, respectively, with a \acrlong{zpg} at the lower wall.
+In present simulation enables the effects of the curvature on the \acrshort{tbl} to be studied.
+The objective of this work is to implement this procedure on the three investigated curved geometries and to evaluate the capability of the optimisation algorithm in each case.
+In addition, the simulations with the manipulated velocity \acrshort{bc} are analysed in order to extract information regarding the effect of curvature on the \acrshort{tbl}.
+Here, also the discrepancies between the various geometries are of particular interest.\\
+
+The presentation of the findings obtained in this work is structured as follows: 
+Next, the theoretical fundamentals are introduced in \autoref{chap:basics}.
+Following, the employed methods and simulations setups are presented in \autoref{chap:methods}.
+In \autoref{chap:validation} the validation studies are analysed, followed by the discussion of results in \autoref{chap:results}.
+Finally, the key findings are summarised and an outlook for future investigations is given.
+\fxinfo{das ist knapp ;)}
+
+
+
+
+\subsection{ToDos}
+
+
+pressure tests: wo einbauen
+
+\begin{itemize}
+    \item 3 Mama korrekturen einarbeiten (done Validation)
+    \item 1 results --> R100deg30 --> dazuschreiben dass curvature keine effekt auf stats halt
+    \item profile r500deg18 weiter unten rausschreiben, und interpretieren und glätten (beta)
+    \item stats in Anhang und im TExt nur noch vergleich mit 90° daten (C_f, delta99)
+    \item am ende nochmal optimisation von allen drei vergleichen
+\end{itemize}
+
+Insgesamt: 
+\begin{itemize}
+    \item schluss 
+    \item pressure flcutuations
+    \item results und discussion
+    \item abstract
+    \item acknowledgment (Dummy version vorhanden)
+    \item bib nochmal geradeziehen (erledigt stand 23.07.)
+    \item captions (auch die für LoF) reference data einfügen (fertig bis akutellem schreibstand)
+    \item benennungen consitentn machen
+    \item kapitälchen rausschmeißen (einfach fett schreiben/ oder groß?)
+    \item optimisation theory (optional)
+    \item channel IC neu extrahieren mit großer colobar
+    \item noemklature (mit jonas vergleichen)
+    \item label von bildern und autorefs checken
+    \item graphen neu erzeugen wg x axis limits (done für R100deg30)
+    \item realtion beta fluct <--> control points position
+\end{itemize}
+
+
+
