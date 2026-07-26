@@ -15,3 +15,12 @@ FAU
 RRZE
 Blasius
 optimisation
+cfd
+sem
+gll
+fvSchemes
+ic
+bo
+csv
+uu
+tke

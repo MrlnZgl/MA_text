@@ -7,7 +7,7 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Distribution of GLL points on a curved spectral element}}{14}{figure.caption.20}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Finite-volume method visualised for a $3\times 3$ mesh with collocated arrangement}}{15}{figure.caption.22}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Domain setup for simulation of curved \acrshort {tbl} case R100deg30 with applied \textit {Blasius profile} as \acrshort {ic}.}}{17}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Constitution of the OpenFOAM domain for the case R100deg30 with examplary positioning of the \textit {design points (DP)}}}{19}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Constitution of the OpenFOAM domain for the case R100deg30 with exemplary positioning of the \textit {design points (DP)}}}{19}{figure.caption.27}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Schematic visualisation of the workflow of the optimisation algorithm developed by \citet {morita_applying_2022}}}{21}{figure.caption.32}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Positioning procedure of \textit {design points} for the Bayesian optimisation}}{22}{figure.caption.36}%
 \addvspace {10\p@ }

@@ -105,6 +105,11 @@ J.~Jiménez.
 \newblock \emph{Physics of Fluids}, 25\penalty0 (10):\penalty0 101302, 2013.
 \newblock \doi{10.1063/1.4824988}.
 
+\bibitem[Johnston et~al.(1981)Johnston, Moffat, and Kays]{johnston_experimental_1981}
+J.~P. Johnston, R.~J. Moffat, and W.~M. Kays.
+\newblock Experimental data and model for the turbulent boundary layer on a convex, curved surface.
+\newblock Technical Report 19810010886, NASA, 1981.
+
 \bibitem[Lee and Moser(2015)]{lee_direct_2015}
 M.~D. Lee and R.~Moser.
 \newblock Direct numerical simulation of turbulent channel flow up to {Re}\$\_{\textbackslash}tau\$ = 5200.
@@ -237,10 +242,6 @@ A.~C. Schwarz and M.~W. Plesniak.
 J.~Slotnick et~al.
 \newblock {CFD} vision 2030 study: a path to revolutionary computational aerosciences.
 \newblock Technical Report 20140003093, NASA, 2014.
-
-\bibitem[So and Mellor()]{so_experimental_nodate}
-C.~So and L.~Mellor.
-\newblock Experimental investigation turbulent boundary layers along curved surfaces.
 
 \bibitem[So and Mellor(1973)]{so_experiment_1973}
 R.~M.~C. So and G.~L. Mellor.
