@@ -364,3 +364,47 @@ It is demonstrated that the \benennung{Dirichlet} condition constitutes a reason
 
 
 
+\section{Pressure fluctuations} \label{sec:pressFluc}
+
+In the following section we discuss pressure fluctuations, we obseverd in the simulaitons of the curve \acrshort{tbl}.
+When we performed the simulations of case R100deg30 we detected pressure fluctuations in the recorded snapshots.
+This means that in the presusre fields we saw oscillations along the complete domain.
+These oscillating need a closer investigation since they could impact the simulation results.
+Therefore, we first analyse the pressure fluctuations in time.
+This is depicted in XX.
+It can be seen thath the flcutuations do not damp in time which means that the pressure flcutuations would be unaffected by longer simulation run times.
+Therefore, we investigated the range of the pressure fluctuations in XX.
+There one can see XX.
+It can be seen that the flucutations are largest at the inflow and then collapse to zero at the outflow.
+This behaviour is expected since the \acrshort{bc} at the outflow forces the pressure to zero (see \autoref{subsec:planeTBLSetup}).
+In additiaon we can see that the range of the flucutations at the inflow is much higher than the range in which the mean pressure moves along the domain length.
+The dark line visualised the mean value of the 
+
+
+\begin{itemize}
+    \item figure pressure in ref case 
+    \item figure in opt Finally
+    \item --> geht nicht weg
+    \item verschiedene ansätze vostellen
+    \item zeigen dass es nur eine mode konstante mode its
+    \item verweisen auf 5.1 dass kein problem
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/pressureFluct/reference/wall_pressure_minus_arcmean_band.pgf}
+    \label{fig:pressFluctRef}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/pressureFluct/optimised/wall_pressure_minus_arcmean_band.pgf}
+    \label{fig:pressFluctOpt}
+\end{subfigure}
+\\[-15pt]
+\caption{Pressure fluctuations in snapshots of case R100deg30 for (a) base configuration and (b) optimised configuration.}
+\end{figure}

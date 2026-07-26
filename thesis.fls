@@ -850,6 +850,12 @@ INPUT images/planeTBL_valid/beta_vs_s_over_delta99ref_txt_unfi.pgf
 INPUT ./images/planeTBL_valid/wall_pressure_normalised_vs_s_txt.pgf
 INPUT ./images/planeTBL_valid/wall_pressure_normalised_vs_s_txt.pgf
 INPUT images/planeTBL_valid/wall_pressure_normalised_vs_s_txt.pgf
+INPUT ./images/pressureFluct/reference/wall_pressure_minus_arcmean_band.pgf
+INPUT ./images/pressureFluct/reference/wall_pressure_minus_arcmean_band.pgf
+INPUT images/pressureFluct/reference/wall_pressure_minus_arcmean_band.pgf
+INPUT ./images/pressureFluct/optimised/wall_pressure_minus_arcmean_band.pgf
+INPUT ./images/pressureFluct/optimised/wall_pressure_minus_arcmean_band.pgf
+INPUT images/pressureFluct/optimised/wall_pressure_minus_arcmean_band.pgf
 INPUT ./chapters/results.tex
 INPUT ./chapters/results.tex
 OUTPUT chapters/results.aux
