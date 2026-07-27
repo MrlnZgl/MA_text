@@ -4,6 +4,95 @@
 % see \printglossary[type=\acronymtype] in thesis.tex)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\ifnomenklatur
+
+% Fluid properties
+\nomenclature[F01]{$\mu$}{Dynamic viscosity}
+\nomenclature[F02]{$\nu$}{Kinematic viscosity}
+\nomenclature[F03]{$\rho$}{Density}
+
+% Geometry and coordinates
+\nomenclature[G01]{$L$}{Characteristic length scale}
+\nomenclature[G02]{$L_x,\,L_y,\,L_z$}{Domain size in streamwise, wall-normal and spanwise direction}
+\nomenclature[G03]{$n$}{Wall-normal coordinate (curvilinear/moving frame)}
+\nomenclature[G04]{$r$}{Physical curvature radius}
+\nomenclature[G05]{$R$}{Residual of the optimisation; curvature radius}
+\nomenclature[G06]{$s$}{Streamwise coordinate (curvilinear/moving frame)}
+\nomenclature[G07]{$s_c$}{Arc length of the curved section}
+\nomenclature[G08]{$s_{in},\,s_{out}$}{Length of the straight inlet and straight outlet}
+\nomenclature[G09]{$t$}{Time}
+\nomenclature[G10]{$x,\,y,\,z$}{Cartesian coordinates (streamwise, wall-normal, spanwise)}
+\nomenclature[G11]{$x_{\theta_i},\,y_{\theta_i}$}{Coordinates of design point $\theta_i$}
+\nomenclature[G12]{$\theta_i$}{Design point of the optimisation}
+\nomenclature[G13]{$\delta$}{Channel half-height}
+\nomenclature[G14]{$\delta_{99}$}{Boundary-layer thickness}
+\nomenclature[G15]{$\delta^*$}{Displacement thickness}
+\nomenclature[G16]{$\delta_0$}{Reference boundary-layer thickness at $\mathrm{Re}_\theta = 1000$}
+\nomenclature[G17]{$\delta_\nu$}{Viscous length scale}
+
+% Flow quantities, turbulence statistics and dimensionless numbers
+\nomenclature[K01]{$B$}{Additive constant of the logarithmic law of the wall}
+\nomenclature[K02]{$C_p$}{Pressure coefficient}
+\nomenclature[K03]{$D_{ij}$}{Viscous diffusion rate (Reynolds-stress budget)}
+\nomenclature[K04]{$k$}{Turbulent kinetic energy}
+\nomenclature[K05]{$p$}{Pressure}
+\nomenclature[K06]{$p'$}{Pressure fluctuation / pressure-correction variable}
+\nomenclature[K07]{$p_0$}{Free-stream pressure}
+\nomenclature[K08]{$p_w$}{Wall pressure}
+\nomenclature[K09]{$\langle p_c\rangle$}{Mean wall pressure in the curved section}
+\nomenclature[K10]{$\mathcal{P}_{ij}$}{Production rate (Reynolds-stress budget)}
+\nomenclature[K11]{$R_{ij}$}{Reynolds-stress tensor}
+\nomenclature[K12]{$T_{ij}$}{Turbulent transport rate (Reynolds-stress budget)}
+\nomenclature[K13]{$U,\,V,\,W$}{Mean velocity components}
+\nomenclature[K14]{$U_0$}{Free-stream (reference) velocity}
+\nomenclature[K15]{$U_b$}{Bulk velocity}
+\nomenclature[K16]{$U(s)$}{Local free-stream velocity}
+\nomenclature[K17]{$u,\,v,\,w$}{Velocity components in streamwise, wall-normal and spanwise direction}
+\nomenclature[K18]{$u_i$}{Velocity component (index notation)}
+\nomenclature[K19]{$u_i'$}{Fluctuating velocity component}
+\nomenclature[K20]{$u_\tau$}{Friction velocity}
+\nomenclature[K21]{$u^+$}{Velocity in viscous (wall) units}
+\nomenclature[K22]{$y^+$}{Wall-normal coordinate in viscous (wall) units}
+\nomenclature[K23]{$\beta$}{Clauser pressure-gradient parameter}
+\nomenclature[K24]{$\varepsilon$}{Turbulent dissipation rate}
+\nomenclature[K25]{$\varepsilon_{ij}$}{Dissipation-rate tensor (Reynolds-stress budget)}
+\nomenclature[K26]{$\theta$}{Momentum thickness}
+\nomenclature[K27]{$\kappa$}{von K\'arm\'an constant}
+\nomenclature[K28]{$\Pi_{ij}$}{Velocity pressure-gradient term (Reynolds-stress budget)}
+\nomenclature[K29]{$\tau$}{Total shear stress}
+\nomenclature[K30]{$\tau_w$}{Wall shear stress}
+\nomenclature[K31]{$\omega$}{Specific turbulent dissipation rate}
+\nomenclature[K32]{$\mathrm{Re}$}{Reynolds number}
+\nomenclature[K33]{$\mathrm{Re}_x$}{Reynolds number based on streamwise position}
+\nomenclature[K34]{$\mathrm{Re}_\theta$}{Reynolds number based on momentum thickness}
+\nomenclature[K35]{$\mathrm{Re}_\tau$}{Friction Reynolds number}
+\nomenclature[K36]{$\mathrm{Re}_{\delta_{99}}$}{Reynolds number based on boundary-layer thickness}
+\nomenclature[K37]{$\mathrm{Re}_{\delta^*}$}{Reynolds number based on displacement thickness}
+\nomenclature[K38]{$\mathrm{Re}_b$}{Bulk Reynolds number}
+
+% Numerical and simulation parameters
+\nomenclature[S01]{$N$}{Polynomial order of a spectral element}
+\nomenclature[S02]{$N_{\mathrm{eval}}$}{Number of cells inside the optimisation evaluation window}
+\nomenclature[S03]{$\Delta x^+,\,\Delta z^+$}{Grid spacing in viscous (wall) units}
+
+% Operators and notation
+\nomenclature[O01]{$\langle\,\cdot\,\rangle$}{Time (Reynolds) average}
+\nomenclature[O02]{$(\,\cdot\,)'$}{Fluctuating quantity}
+\nomenclature[O03]{$(\,\cdot\,)^+$}{Normalisation in viscous (wall) units}
+\nomenclature[O04]{$(\,\cdot\,)_w$}{Quantity evaluated at the wall}
+\nomenclature[O05]{$(\,\cdot\,)_0$}{Reference / free-stream quantity}
+\nomenclature[O06]{$\nabla$}{Nabla (del) operator}
+
+\ifenglish
+\renewcommand{\nomname}{Nomenclature}
+\else
+\renewcommand{\nomname}{Nomenklatur}
+\fi
+\addcontentsline{toc}{chapter}{\nomname}
+\printnomenclature
+
+\else
+
 \ifenglish
 \chapter*{Nomenclature}\addcontentsline{toc}{chapter}{Nomenclature}
 \else
@@ -124,5 +213,7 @@
     $(\,\cdot\,)_w$ & quantity evaluated at the wall \\
     $(\,\cdot\,)_0$ & reference / free-stream quantity \\
 \end{longtable}
+
+\fi
 
 \cleardoublepage

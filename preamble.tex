@@ -191,31 +191,31 @@
 %% define nomenclature groups
 \ifenglish
 \renewcommand{\nomgroup}[1]{\vspace{0.5cm}
-	\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek letters}]}{%
-		\ifthenelse{\equal{#1}{L}}{\item[\textbf{Latin letters}]}{%
-			\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indexes}]}{%
-				\ifthenelse{\equal{#1}{A}}{\item[\textbf{Abbreviations}]}{%
-					\ifthenelse{\equal{#1}{O}}{\item[\textbf{Operators}]}{}
+	\ifthenelse{\equal{#1}{F}}{\item[\textbf{Fluid properties}]}{%
+		\ifthenelse{\equal{#1}{G}}{\item[\textbf{Geometry and coordinates}]}{%
+			\ifthenelse{\equal{#1}{K}}{\item[\textbf{Flow quantities and turbulence statistics}]}{%
+				\ifthenelse{\equal{#1}{S}}{\item[\textbf{Numerical and simulation parameters}]}{%
+					\ifthenelse{\equal{#1}{O}}{\item[\textbf{Operators and notation}]}{}
 				}
 			}
 		}
 	}
-	\hspace*{-\leftmargin}\vspace{0.25cm} 
+	\hspace*{-\leftmargin}\vspace{0.25cm}
 }
 
 \else
 
 \renewcommand{\nomgroup}[1]{\vspace{0.5cm}
-	\ifthenelse{\equal{#1}{G}}{\item[\textbf{Griechische Symbole}]}{%
-		\ifthenelse{\equal{#1}{L}}{\item[\textbf{Lateinische Symbole}]}{%
-			\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indizes}]}{%
-				\ifthenelse{\equal{#1}{A}}{\item[\textbf{Abkürzungen}]}{%
-					\ifthenelse{\equal{#1}{O}}{\item[\textbf{Operatoren}]}{}
+	\ifthenelse{\equal{#1}{F}}{\item[\textbf{Fluideigenschaften}]}{%
+		\ifthenelse{\equal{#1}{G}}{\item[\textbf{Geometrie und Koordinaten}]}{%
+			\ifthenelse{\equal{#1}{K}}{\item[\textbf{Strömungsgrößen und Turbulenzstatistik}]}{%
+				\ifthenelse{\equal{#1}{S}}{\item[\textbf{Numerische und Simulationsparameter}]}{%
+					\ifthenelse{\equal{#1}{O}}{\item[\textbf{Operatoren und Notation}]}{}
 				}
 			}
 		}
 	}
-	\hspace*{-\leftmargin}\vspace{0.25cm} 
+	\hspace*{-\leftmargin}\vspace{0.25cm}
 }
 \fi
 

@@ -1,0 +1,76 @@
+
+\begin{thenomenclature} 
+\nomgroup{F}
+  \item [{$\mu$}]\begingroup Dynamic viscosity\nomeqref {0.0}\nompageref{VI}
+  \item [{$\nu$}]\begingroup Kinematic viscosity\nomeqref {0.0}\nompageref{VI}
+  \item [{$\rho$}]\begingroup Density\nomeqref {0.0}\nompageref{VI}
+\nomgroup{G}
+  \item [{$L$}]\begingroup Characteristic length scale\nomeqref {0.0}\nompageref{VI}
+  \item [{$L_x,\,L_y,\,L_z$}]\begingroup Domain size in streamwise, wall-normal and spanwise direction\nomeqref {0.0}\nompageref{VI}
+  \item [{$n$}]\begingroup Wall-normal coordinate (curvilinear/moving frame)\nomeqref {0.0}\nompageref{VI}
+  \item [{$r$}]\begingroup Physical curvature radius\nomeqref {0.0}\nompageref{VI}
+  \item [{$R$}]\begingroup Residual of the optimisation; curvature radius\nomeqref {0.0}\nompageref{VI}
+  \item [{$s$}]\begingroup Streamwise coordinate (curvilinear/moving frame)\nomeqref {0.0}\nompageref{VI}
+  \item [{$s_c$}]\begingroup Arc length of the curved section\nomeqref {0.0}\nompageref{VI}
+  \item [{$s_{in},\,s_{out}$}]\begingroup Length of the straight inlet and straight outlet\nomeqref {0.0}\nompageref{VI}
+  \item [{$t$}]\begingroup Time\nomeqref {0.0}\nompageref{VI}
+  \item [{$x,\,y,\,z$}]\begingroup Cartesian coordinates (streamwise, wall-normal, spanwise)\nomeqref {0.0}\nompageref{VI}
+  \item [{$x_{\theta_i},\,y_{\theta_i}$}]\begingroup Coordinates of design point $\theta_i$\nomeqref {0.0}\nompageref{VI}
+  \item [{$\theta_i$}]\begingroup Design point of the optimisation\nomeqref {0.0}\nompageref{VI}
+  \item [{$\delta$}]\begingroup Channel half-height\nomeqref {0.0}\nompageref{VI}
+  \item [{$\delta_{99}$}]\begingroup Boundary-layer thickness\nomeqref {0.0}\nompageref{VI}
+  \item [{$\delta^*$}]\begingroup Displacement thickness\nomeqref {0.0}\nompageref{VI}
+  \item [{$\delta_0$}]\begingroup Reference boundary-layer thickness at $\mathrm{Re}_\theta = 1000$\nomeqref {0.0}\nompageref{VI}
+  \item [{$\delta_\nu$}]\begingroup Viscous length scale\nomeqref {0.0}\nompageref{VI}
+\nomgroup{K}
+  \item [{$B$}]\begingroup Additive constant of the logarithmic law of the wall\nomeqref {0.0}\nompageref{VI}
+  \item [{$C_p$}]\begingroup Pressure coefficient\nomeqref {0.0}\nompageref{VI}
+  \item [{$D_{ij}$}]\begingroup Viscous diffusion rate (Reynolds-stress budget)\nomeqref {0.0}\nompageref{VI}
+  \item [{$k$}]\begingroup Turbulent kinetic energy\nomeqref {0.0}\nompageref{VI}
+  \item [{$p$}]\begingroup Pressure\nomeqref {0.0}\nompageref{VI}
+  \item [{$p'$}]\begingroup Pressure fluctuation / pressure-correction variable\nomeqref {0.0}\nompageref{VI}
+  \item [{$p_0$}]\begingroup Free-stream pressure\nomeqref {0.0}\nompageref{VI}
+  \item [{$p_w$}]\begingroup Wall pressure\nomeqref {0.0}\nompageref{VI}
+  \item [{$\langle p_c\rangle$}]\begingroup Mean wall pressure in the curved section\nomeqref {0.0}\nompageref{VI}
+  \item [{$\mathcal{P}_{ij}$}]\begingroup Production rate (Reynolds-stress budget)\nomeqref {0.0}\nompageref{VI}
+  \item [{$R_{ij}$}]\begingroup Reynolds-stress tensor\nomeqref {0.0}\nompageref{VI}
+  \item [{$T_{ij}$}]\begingroup Turbulent transport rate (Reynolds-stress budget)\nomeqref {0.0}\nompageref{VI}
+  \item [{$U,\,V,\,W$}]\begingroup Mean velocity components\nomeqref {0.0}\nompageref{VI}
+  \item [{$U_0$}]\begingroup Free-stream (reference) velocity\nomeqref {0.0}\nompageref{VI}
+  \item [{$U_b$}]\begingroup Bulk velocity\nomeqref {0.0}\nompageref{VI}
+  \item [{$U(s)$}]\begingroup Local free-stream velocity\nomeqref {0.0}\nompageref{VI}
+  \item [{$u,\,v,\,w$}]\begingroup Velocity components in streamwise, wall-normal and spanwise direction\nomeqref {0.0}\nompageref{VI}
+  \item [{$u_i$}]\begingroup Velocity component (index notation)\nomeqref {0.0}\nompageref{VI}
+  \item [{$u_i'$}]\begingroup Fluctuating velocity component\nomeqref {0.0}\nompageref{VI}
+  \item [{$u_\tau$}]\begingroup Friction velocity\nomeqref {0.0}\nompageref{VI}
+  \item [{$u^+$}]\begingroup Velocity in viscous (wall) units\nomeqref {0.0}\nompageref{VI}
+  \item [{$y^+$}]\begingroup Wall-normal coordinate in viscous (wall) units\nomeqref {0.0}\nompageref{VI}
+  \item [{$\beta$}]\begingroup Clauser pressure-gradient parameter\nomeqref {0.0}\nompageref{VI}
+  \item [{$\varepsilon$}]\begingroup Turbulent dissipation rate\nomeqref {0.0}\nompageref{VI}
+  \item [{$\varepsilon_{ij}$}]\begingroup Dissipation-rate tensor (Reynolds-stress budget)\nomeqref {0.0}\nompageref{VI}
+  \item [{$\theta$}]\begingroup Momentum thickness\nomeqref {0.0}\nompageref{VI}
+  \item [{$\kappa$}]\begingroup von K\'arm\'an constant\nomeqref {0.0}\nompageref{VI}
+  \item [{$\Pi_{ij}$}]\begingroup Velocity pressure-gradient term (Reynolds-stress budget)\nomeqref {0.0}\nompageref{VI}
+  \item [{$\tau$}]\begingroup Total shear stress\nomeqref {0.0}\nompageref{VI}
+  \item [{$\tau_w$}]\begingroup Wall shear stress\nomeqref {0.0}\nompageref{VI}
+  \item [{$\omega$}]\begingroup Specific turbulent dissipation rate\nomeqref {0.0}\nompageref{VI}
+  \item [{$\mathrm{Re}$}]\begingroup Reynolds number\nomeqref {0.0}\nompageref{VI}
+  \item [{$\mathrm{Re}_x$}]\begingroup Reynolds number based on streamwise position\nomeqref {0.0}\nompageref{VI}
+  \item [{$\mathrm{Re}_\theta$}]\begingroup Reynolds number based on momentum thickness\nomeqref {0.0}\nompageref{VI}
+  \item [{$\mathrm{Re}_\tau$}]\begingroup Friction Reynolds number\nomeqref {0.0}\nompageref{VI}
+  \item [{$\mathrm{Re}_{\delta_{99}}$}]\begingroup Reynolds number based on boundary-layer thickness\nomeqref {0.0}\nompageref{VI}
+  \item [{$\mathrm{Re}_{\delta^*}$}]\begingroup Reynolds number based on displacement thickness\nomeqref {0.0}\nompageref{VI}
+  \item [{$\mathrm{Re}_b$}]\begingroup Bulk Reynolds number\nomeqref {0.0}\nompageref{VI}
+\nomgroup{O}
+  \item [{$\langle\,\cdot\,\rangle$}]\begingroup Time (Reynolds) average\nomeqref {0.0}\nompageref{VI}
+  \item [{$(\,\cdot\,)'$}]\begingroup Fluctuating quantity\nomeqref {0.0}\nompageref{VI}
+  \item [{$(\,\cdot\,)^+$}]\begingroup Normalisation in viscous (wall) units\nomeqref {0.0}\nompageref{VI}
+  \item [{$(\,\cdot\,)_w$}]\begingroup Quantity evaluated at the wall\nomeqref {0.0}\nompageref{VI}
+  \item [{$(\,\cdot\,)_0$}]\begingroup Reference / free-stream quantity\nomeqref {0.0}\nompageref{VI}
+  \item [{$\nabla$}]\begingroup Nabla (del) operator\nomeqref {0.0}\nompageref{VI}
+\nomgroup{S}
+  \item [{$N$}]\begingroup Polynomial order of a spectral element\nomeqref {0.0}\nompageref{VI}
+  \item [{$N_{\mathrm{eval}}$}]\begingroup Number of cells inside the optimisation evaluation window\nomeqref {0.0}\nompageref{VI}
+  \item [{$\Delta x^+,\,\Delta z^+$}]\begingroup Grid spacing in viscous (wall) units\nomeqref {0.0}\nompageref{VI}
+
+\end{thenomenclature}

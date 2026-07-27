@@ -8,6 +8,7 @@ A level-1 auxiliary file: chapters/theory.aux
 A level-1 auxiliary file: chapters/methods.aux
 A level-1 auxiliary file: chapters/validation.aux
 A level-1 auxiliary file: chapters/results.aux
+A level-1 auxiliary file: chapters/summary.aux
 A level-1 auxiliary file: chapters/literaturverzeichnis.aux
 The style file: abbrvnat_lstm.bst
 A level-1 auxiliary file: chapters/anhang1.aux
@@ -17,7 +18,7 @@ Warning--empty journal in sabbah_filtering_2001
 Warning--empty note in schlatter_lecture_2025
 You've used 52 entries,
             2789 wiz_defined-function locations,
-            963 strings with 15032 characters,
+            964 strings with 15052 characters,
 and the built_in function-call counts, 22601 in all, are:
 = -- 2103
 > -- 1186

@@ -430,15 +430,15 @@ Since we wanted to enforce a \acrshort{zpg} already at the start of the curvatur
 First, the current best setup was copied and its \benennung{design parameters} stored. 
 In the new optimisation setup, the focus is on the part near the start of the curvature only.
 In order to manipulate the pressure gradient in this region, it was necessary to position additional \benennung{design parameters} in the straight part. 
-We decided to add two more \benennung{design parameters}.\fxinfo{Gibt es nen Grund dafür?}
+We decided to add two more \benennung{control points} to obtain more control in the transition region and simultaneously ensure the sensitivity of all \benennung{control points}.
 One of these is positioned directly at the transition from the straight to the curved segment.
 The second one is positioned at $\frac{2}{3}s_p$ behind the inflow.
 These additional points extend the optimisation range along the lower wall beyond the beginning of the curvature which is depicted in green in \autoref{fig:OF_designPOints}. 
 Since the length of this inflow region is quite small relative to the total length of the optimisation along the curvature, adding these points without changing the optimisation settings would not significantly affect the progression of $\beta$.
 
 This is because this region only has a low impact on the mean value of $\beta$, which is the only value optimised.
-Additionally, this would\fxunsure{verstehe ich nicht: Gerade wurde doch gesagt, dass diese 2 Punkte jetzt dazugenommen werden, jetzt doch nicht - fehlt hier ein Satz was man sonst so machen würde??} increase the optimisation dimension by two, which would significantly slow down the optimisation process.
-Therefore, we chose a different method. 
+Additionally, this increases the optimisation dimension by two, which significantly slows down the optimisation process.
+Therefore, we add these two points but modified the configuration in a way that the increase in the computational effort is prevented.
 Since the optimisation performed for the curved segment only already produced quite good results, we adopted the optimised design parameters from there in the new setup. 
 We fixed the six downstream parameters of these eight parameters since they were already it a good position.
 Moreover, we assumed that the inflow modification would not significantly impact the pressure field near the end of the curvature.
@@ -460,7 +460,13 @@ We fixed the last four out of five points in the curved section reducing the opt
 With this configuration, it was possible to achieve a fairly good optimisation of the $\beta$ distribution.
 
 
-\fxchange{For R100deg90 XXXX}
+For case R100deg90 we to add several points in between the five initial \benennung{control points}.
+Because of the small radius and the high curvature in this case the natural pressure gradient is larger than in the other two cases.
+Therefore, the optimisation has to compensate a higher pressure gradient.
+To reach a proper level of the Clauser parameter we added a \benennung{control point} in between each of the initially set ones ending up with 10 \benennung{control points} in the curvature.
+Similar to the other cases, we then added two \benennung{control points} in the transition region.
+Again only the two new and their two neighbouring \benennung{control points} are optimised in this run.
+The other eight \benennung{control points} are fixed at their converged positions.
 
 
 \subsubsection{Optimisation parameters}

@@ -64,7 +64,7 @@ Simulations are performed with this setup.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.65\textwidth]{simulation_setups/channel_IC.pdf}
+    \includegraphics[width=0.65\textwidth]{channel_valid/channelIC.pdf}
     \caption{Setup of the domain for channel simulation with applied \acrshort{ic} for the velocity profile showing variations of perturbations}
     \label{fig:channel_IC}
 \end{figure}
@@ -117,7 +117,6 @@ After transitioning into the log-law region, the profiles run parallel to the an
 However, their absolute value is slightly higher than that of the analytical solution.
 A similar trend was observed in \citep{lee_direct_2015} when they compared velocity profiles with different $\mathrm{Re}_{\tau}$.
 The simulation with $\mathrm{Re}_{\tau} = 180$ had the smallest $\mathrm{Re}_{\tau}$ and showed slightly higher values of $U^+$ in the log-law region.
-XXWARUM?
 
 The components of the Reynolds stress tensor $\langle u_i'u_j'\rangle ^+$ are depicted in \autoref{fig:channelFluct}.
 Similarly, as for the velocity profile, it can be observed that the reference data and the recorded simulation data coincide for all terms.
@@ -175,7 +174,7 @@ It should be noted that the growth of the \acrshort{tbl} causes variations of th
 This is due to the reduction of $u_{tau}$ downstream, which leads to an increase of $\delta_{\nu} = \nu u_{\tau}$.
 With a constant physical $\Delta x$, this implies that $\Delta x^+ = \Delta x/\delta_{\nu}$ decreases downstream.
 So the resolution requirement is most restrictive at the upstream end of the domain.
-Therefore, $u_{\tau}$ at the reference position $s_0$ is used to derive the viscous dimensions since this coincides with the upstream end of the domain. \fxinfo{nicht so wirklich aber nacja, liegt bei 85prozent der domain länge}
+Therefore, $u_{\tau}$ at the reference position $s_0$ is used to derive the viscous dimensions since this coincides with the upstream end of the domain. 
 The resolutions are adopted from the channel setup (see \autoref{sec:channel}).
 This is valid since, as stated in \autoref{sec:turbulenceTheory}, the turbulent structures in the near-wall region are independent of the Reynolds number and the flow geometry.
 The streamwise and spanwise resolutions are adopted directly from the channel simulation ($x^+= 12$ and $z^+ = 6$). 
@@ -186,12 +185,12 @@ The small bend between this slice and the upper wall has an increased resolution
 The mesh is created using \name{gmsh}. 
 First, a 2D mesh is constructed in the $x\text{-}y$-plane is created. 
 Using the mesh transform tool in \name{Neko}, it is then extended in the spanwise direction. 
-\fxinfo{XX checken ob das hier dauzpasst}
-The additional settings for the simulation are definded in the CASE-file. 
+
+
+The additional settings for the simulation are defined in the \verb|case|-file. 
 The polynomial order used for the simulations is 7 and the time order is 3.
 To enable shorter simulations times, the simulations first are started with lower polynomial order during the developing time of the \acrshort{tbl}.
-When the \acrshort{tbl} is stable the polynomial order is increased for higher result accuracy.
-All settings in the case file are listed in XXANHANG.
+When the \acrshort{tbl} is statistically stable the polynomial order is increased for higher result accuracy.
 
 
 \begin{figure}[h!]

@@ -1,0 +1,67 @@
+\nomenclatureentry{F01$\mu$@[{$\mu$}]\begingroup Dynamic viscosity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{F02$\nu$@[{$\nu$}]\begingroup Kinematic viscosity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{F03$\rho$@[{$\rho$}]\begingroup Density\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G01$L$@[{$L$}]\begingroup Characteristic length scale\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G02$L_x,\,L_y,\,L_z$@[{$L_x,\,L_y,\,L_z$}]\begingroup Domain size in streamwise, wall-normal and spanwise direction\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G03$n$@[{$n$}]\begingroup Wall-normal coordinate (curvilinear/moving frame)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G04$r$@[{$r$}]\begingroup Physical curvature radius\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G05$R$@[{$R$}]\begingroup Residual of the optimisation; curvature radius\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G06$s$@[{$s$}]\begingroup Streamwise coordinate (curvilinear/moving frame)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G07$s_c$@[{$s_c$}]\begingroup Arc length of the curved section\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G08$s_{in},\,s_{out}$@[{$s_{in},\,s_{out}$}]\begingroup Length of the straight inlet and straight outlet\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G09$t$@[{$t$}]\begingroup Time\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G10$x,\,y,\,z$@[{$x,\,y,\,z$}]\begingroup Cartesian coordinates (streamwise, wall-normal, spanwise)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G11$x_{\theta_i},\,y_{\theta_i}$@[{$x_{\theta_i},\,y_{\theta_i}$}]\begingroup Coordinates of design point $\theta_i$\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G12$\theta_i$@[{$\theta_i$}]\begingroup Design point of the optimisation\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G13$\delta$@[{$\delta$}]\begingroup Channel half-height\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G14$\delta_{99}$@[{$\delta_{99}$}]\begingroup Boundary-layer thickness\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G15$\delta^*$@[{$\delta^*$}]\begingroup Displacement thickness\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G16$\delta_0$@[{$\delta_0$}]\begingroup Reference boundary-layer thickness at $\mathrm{Re}_\theta = 1000$\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G17$\delta_\nu$@[{$\delta_\nu$}]\begingroup Viscous length scale\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K01$B$@[{$B$}]\begingroup Additive constant of the logarithmic law of the wall\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K02$C_p$@[{$C_p$}]\begingroup Pressure coefficient\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K03$D_{ij}$@[{$D_{ij}$}]\begingroup Viscous diffusion rate (Reynolds-stress budget)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K04$k$@[{$k$}]\begingroup Turbulent kinetic energy\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K05$p$@[{$p$}]\begingroup Pressure\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K06$p'$@[{$p'$}]\begingroup Pressure fluctuation / pressure-correction variable\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K07$p_0$@[{$p_0$}]\begingroup Free-stream pressure\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K08$p_w$@[{$p_w$}]\begingroup Wall pressure\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K09$\langle p_c\rangle$@[{$\langle p_c\rangle$}]\begingroup Mean wall pressure in the curved section\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K10$\mathcal{P}_{ij}$@[{$\mathcal{P}_{ij}$}]\begingroup Production rate (Reynolds-stress budget)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K11$R_{ij}$@[{$R_{ij}$}]\begingroup Reynolds-stress tensor\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K12$T_{ij}$@[{$T_{ij}$}]\begingroup Turbulent transport rate (Reynolds-stress budget)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K13$U,\,V,\,W$@[{$U,\,V,\,W$}]\begingroup Mean velocity components\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K14$U_0$@[{$U_0$}]\begingroup Free-stream (reference) velocity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K15$U_b$@[{$U_b$}]\begingroup Bulk velocity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K16$U(s)$@[{$U(s)$}]\begingroup Local free-stream velocity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K17$u,\,v,\,w$@[{$u,\,v,\,w$}]\begingroup Velocity components in streamwise, wall-normal and spanwise direction\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K18$u_i$@[{$u_i$}]\begingroup Velocity component (index notation)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K19$u_i'$@[{$u_i'$}]\begingroup Fluctuating velocity component\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K20$u_\tau$@[{$u_\tau$}]\begingroup Friction velocity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K21$u^+$@[{$u^+$}]\begingroup Velocity in viscous (wall) units\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K22$y^+$@[{$y^+$}]\begingroup Wall-normal coordinate in viscous (wall) units\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K23$\beta$@[{$\beta$}]\begingroup Clauser pressure-gradient parameter\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K24$\varepsilon$@[{$\varepsilon$}]\begingroup Turbulent dissipation rate\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K25$\varepsilon_{ij}$@[{$\varepsilon_{ij}$}]\begingroup Dissipation-rate tensor (Reynolds-stress budget)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K26$\theta$@[{$\theta$}]\begingroup Momentum thickness\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K27$\kappa$@[{$\kappa$}]\begingroup von K\'arm\'an constant\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K28$\Pi_{ij}$@[{$\Pi_{ij}$}]\begingroup Velocity pressure-gradient term (Reynolds-stress budget)\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K29$\tau$@[{$\tau$}]\begingroup Total shear stress\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K30$\tau_w$@[{$\tau_w$}]\begingroup Wall shear stress\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K31$\omega$@[{$\omega$}]\begingroup Specific turbulent dissipation rate\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K32$\mathrm{Re}$@[{$\mathrm{Re}$}]\begingroup Reynolds number\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K33$\mathrm{Re}_x$@[{$\mathrm{Re}_x$}]\begingroup Reynolds number based on streamwise position\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K34$\mathrm{Re}_\theta$@[{$\mathrm{Re}_\theta$}]\begingroup Reynolds number based on momentum thickness\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K35$\mathrm{Re}_\tau$@[{$\mathrm{Re}_\tau$}]\begingroup Friction Reynolds number\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K36$\mathrm{Re}_{\delta_{99}}$@[{$\mathrm{Re}_{\delta_{99}}$}]\begingroup Reynolds number based on boundary-layer thickness\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K37$\mathrm{Re}_{\delta^*}$@[{$\mathrm{Re}_{\delta^*}$}]\begingroup Reynolds number based on displacement thickness\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K38$\mathrm{Re}_b$@[{$\mathrm{Re}_b$}]\begingroup Bulk Reynolds number\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{S01$N$@[{$N$}]\begingroup Polynomial order of a spectral element\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{S02$N_{\mathrm{eval}}$@[{$N_{\mathrm{eval}}$}]\begingroup Number of cells inside the optimisation evaluation window\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{S03$\Delta x^+,\,\Delta z^+$@[{$\Delta x^+,\,\Delta z^+$}]\begingroup Grid spacing in viscous (wall) units\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{O01$\langle\,\cdot\,\rangle$@[{$\langle\,\cdot\,\rangle$}]\begingroup Time (Reynolds) average\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{O02$(\,\cdot\,)'$@[{$(\,\cdot\,)'$}]\begingroup Fluctuating quantity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{O03$(\,\cdot\,)^+$@[{$(\,\cdot\,)^+$}]\begingroup Normalisation in viscous (wall) units\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{O04$(\,\cdot\,)_w$@[{$(\,\cdot\,)_w$}]\begingroup Quantity evaluated at the wall\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{O05$(\,\cdot\,)_0$@[{$(\,\cdot\,)_0$}]\begingroup Reference / free-stream quantity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{O06$\nabla$@[{$\nabla$}]\begingroup Nabla (del) operator\nomeqref {0.0}|nompageref}{VI}
