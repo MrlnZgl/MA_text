@@ -13,46 +13,47 @@ The style file: abbrvnat_lstm.bst
 A level-1 auxiliary file: chapters/anhang1.aux
 Database file #1: bibliography_MA.bib
 Warning--there's a number but no volume in reynolds_iv_1895
+Warning--empty journal in sabbah_filtering_2001
 Warning--empty note in schlatter_lecture_2025
-You've used 51 entries,
+You've used 52 entries,
             2789 wiz_defined-function locations,
-            958 strings with 14831 characters,
-and the built_in function-call counts, 22173 in all, are:
-= -- 2067
-> -- 1155
+            963 strings with 15032 characters,
+and the built_in function-call counts, 22601 in all, are:
+= -- 2103
+> -- 1186
 < -- 36
-+ -- 383
-- -- 331
-* -- 1799
-:= -- 3425
-add.period$ -- 195
-call.type$ -- 51
-change.case$ -- 278
-chr.to.int$ -- 50
-cite$ -- 104
-duplicate$ -- 1021
-empty$ -- 1847
-format.name$ -- 423
-if$ -- 4654
++ -- 393
+- -- 340
+* -- 1835
+:= -- 3494
+add.period$ -- 199
+call.type$ -- 52
+change.case$ -- 284
+chr.to.int$ -- 51
+cite$ -- 107
+duplicate$ -- 1041
+empty$ -- 1878
+format.name$ -- 433
+if$ -- 4741
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 54
-newline$ -- 304
-num.names$ -- 205
-pop$ -- 493
+missing$ -- 55
+newline$ -- 310
+num.names$ -- 209
+pop$ -- 506
 preamble$ -- 1
-purify$ -- 231
+purify$ -- 236
 quote$ -- 0
-skip$ -- 759
+skip$ -- 774
 stack$ -- 0
-substring$ -- 774
+substring$ -- 776
 swap$ -- 63
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 511
-warning$ -- 2
-while$ -- 197
+type$ -- 522
+warning$ -- 3
+while$ -- 200
 width$ -- 0
-write$ -- 752
-(There were 2 warnings)
+write$ -- 765
+(There were 3 warnings)

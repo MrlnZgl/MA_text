@@ -1,4 +1,4 @@
-\begin{thebibliography}{51}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -204,6 +204,12 @@ O.~Reynolds.
 \newblock {IV}. on the dynamical theory of incompressible viscous fluids and the determination of the criterion.
 \newblock \emph{Philosophical Transactions of the Royal Society of London. (A.)}, \penalty0 (186):\penalty0 123--164, 1895.
 \newblock \doi{10.1098/rsta.1895.0004}.
+
+\bibitem[Sabbah et~al.(2001)Sabbah, Forestier, and Pasquetti]{sabbah_filtering_2001}
+C.~Sabbah, M.~Y. Forestier, and R.~Pasquetti.
+\newblock Filtering of the pressure spurious modes in {PN}–{PN} spectral approximations of the {Stokes} system.
+\newblock 2001.
+\newblock \doi{10.1016/S0045-7930(01)00081-0}.
 
 \bibitem[Schlatter(2025{\natexlab{a}})]{schlatter_lecture_2025}
 P.~Schlatter.
