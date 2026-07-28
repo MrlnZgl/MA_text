@@ -1,18 +1,18 @@
 
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Contents}{I}{section*.4}%
-\contentsline {chapter}{\nonumberline List of Figures}{III}{chapter*.6}%
-\contentsline {chapter}{\nonumberline List of Tables}{V}{chapter*.7}%
-\contentsline {chapter}{Nomenclature}{VI}{chapter*.7}%
-\contentsline {chapter}{Acronyms}{1}{section*.9}%
+\contentsline {chapter}{Contents}{I}{section*.5}%
+\contentsline {chapter}{\nonumberline List of Figures}{III}{chapter*.7}%
+\contentsline {chapter}{\nonumberline List of Tables}{V}{chapter*.8}%
+\contentsline {chapter}{Nomenclature}{VI}{chapter*.8}%
+\contentsline {chapter}{Acronyms}{1}{section*.10}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {subsection}{\numberline {1.0.1}ToDos}{4}{subsection.1.0.1}%
 \contentsline {chapter}{\numberline {2}Governing equations}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Wall-bounded turbulence}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Turbulent boundary layer theory}{6}{subsection.2.1.1}%
-\contentsline {subsubsection}{\nonumberline Non-dimensionalisation}{8}{subsubsection*.14}%
-\contentsline {subsubsection}{\nonumberline Reynolds stresses}{9}{subsubsection*.17}%
+\contentsline {subsubsection}{\nonumberline Non-dimensionalisation}{8}{subsubsection*.15}%
+\contentsline {subsubsection}{\nonumberline Reynolds stresses}{9}{subsubsection*.18}%
 \contentsline {subsection}{\numberline {2.1.2}Clauser parameter in turbulent boundary layers}{9}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Curved turbulent boundary layers}{10}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Methods and Setup}{13}{chapter.3}%
@@ -21,33 +21,33 @@
 \contentsline {subsection}{\numberline {3.1.2}RANS simulations in OpenFOAM}{14}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Simulation Setups}{16}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Neko simulation setup}{16}{subsection.3.2.1}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{17}{subsubsection*.23}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{17}{subsubsection*.24}%
 \contentsline {subsection}{\numberline {3.2.2}OpenFOAM simulation setup}{19}{subsection.3.2.2}%
-\contentsline {subsubsection}{\nonumberline Mesh generation}{19}{subsubsection*.27}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{20}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline Mesh generation}{19}{subsubsection*.28}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{20}{subsubsection*.30}%
 \contentsline {section}{\numberline {3.3}Optimisation method}{20}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Optimisation algorithm}{21}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Optimisation setup}{22}{subsection.3.3.2}%
-\contentsline {subsubsection}{\nonumberline Positioning of the design points}{22}{subsubsection*.33}%
-\contentsline {subsubsection}{\nonumberline Optimisation parameters}{23}{subsubsection*.36}%
-\contentsline {subsubsection}{\nonumberline Data extraction}{24}{subsubsection*.38}%
+\contentsline {subsubsection}{\nonumberline Positioning of the design points}{22}{subsubsection*.34}%
+\contentsline {subsubsection}{\nonumberline Optimisation parameters}{23}{subsubsection*.37}%
+\contentsline {subsubsection}{\nonumberline Data extraction}{24}{subsubsection*.39}%
 \contentsline {section}{\numberline {3.4}Optimised Neko simulation setup}{24}{section.3.4}%
-\contentsline {paragraph}{\nonumberline Velocity integration}{24}{paragraph*.40}%
+\contentsline {paragraph}{\nonumberline Velocity integration}{24}{paragraph*.41}%
 \contentsline {chapter}{\numberline {4}Validation}{26}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Channel simulations}{26}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Simulation setup}{26}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Results and discussion}{27}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Plane turbulent boundary layer}{29}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Simulation setup}{29}{subsection.4.2.1}%
-\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{30}{subsubsection*.46}%
+\contentsline {subsubsection}{\nonumberline Boundary and initial conditions}{30}{subsubsection*.47}%
 \contentsline {subsection}{\numberline {4.2.2}Results and discussion}{32}{subsection.4.2.2}%
 \contentsline {section}{\numberline {4.3}Pressure fluctuations}{34}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Results}{38}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Plane section verification}{38}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Curved turbulent boundary layer results}{40}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}R100deg 30}{40}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Curvature comparison}{45}{subsection.5.2.2}%
-\contentsline {chapter}{\numberline {6}Conclusion and outlook}{48}{chapter.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{50}{chapter*.60}%
-\contentsline {chapter}{\numberline {A}Einleitung}{54}{appendix.A}%
+\contentsline {subsection}{\numberline {5.2.2}Curvature comparison R100deg90 and R500deg18}{45}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Conclusion and outlook}{50}{chapter.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{52}{chapter*.63}%
+\contentsline {chapter}{\numberline {A}Einleitung}{56}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

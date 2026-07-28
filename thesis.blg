@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: chapters/acknowledgement.aux
+A level-1 auxiliary file: chapters/abstract.aux
 A level-1 auxiliary file: chapters/nomenklatur.aux
 A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/theory.aux
@@ -18,7 +19,7 @@ Warning--empty journal in sabbah_filtering_2001
 Warning--empty note in schlatter_lecture_2025
 You've used 52 entries,
             2789 wiz_defined-function locations,
-            964 strings with 15052 characters,
+            965 strings with 15073 characters,
 and the built_in function-call counts, 22601 in all, are:
 = -- 2103
 > -- 1186

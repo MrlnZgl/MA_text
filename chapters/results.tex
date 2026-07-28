@@ -329,9 +329,91 @@ In conclusion, the findings indicate that while the optimisation created a $\bet
 
 
 
-\subsection{Curvature comparison}
+\subsection{Curvature comparison R100deg90 and R500deg18}
 
 \citet{so_experiment_1973}: turb energy and production in curvature convex shows no differences compared to flat tbl data.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R500deg18_R100deg90_comparison/Re_2000/UplusNearWall_Re2000_bycase.pgf}
+    \label{fig:R500deg18R100deg90_U}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18_R100deg90_comparison/Re_2000/fluctuations_Re2000_bycase.pgf}
+    \label{fig:R500deg18R100deg90_fluct}
+\end{subfigure}
+\\[-20pt]
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18_R100deg90_comparison/Re_2000/budget_Re2000_k_linestyle.pgf}
+    \label{fig:R500deg18R100deg90_bud}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18_R100deg90_comparison/streamwise_plots/delta99_theta_vs_s_over_delta99ref.pgf}
+    \label{fig:R500deg18R100deg90_delta99}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:R500deg18R100deg90_Re2000}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R500deg18_R100deg90_comparison/streamwise_plots/beta_vs_s_over_delta99ref.pgf}
+    \label{fig:R500deg18R100deg90_beta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18_R100deg90_comparison/streamwise_plots/cf_vs_sref.pgf}
+    \label{fig:R500deg18R100deg90_cf}
+\end{subfigure}
+\\[-20pt]
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18_R100deg90_comparison/streamwise_plots/delta_wall_pressure_bendmean_vs_s_over_delta0.pgf}
+    \label{fig:R500deg18R100deg90_pres}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18_R100deg90_comparison/streamwise_plots/Ue_vs_s_over_delta0.pgf}
+    \label{fig:R500deg18R100deg90_Ue}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:R500deg18R100deg90}
+\end{figure}
 
 \begin{figure}[H]
 \centering

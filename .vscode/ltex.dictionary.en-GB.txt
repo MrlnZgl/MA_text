@@ -24,3 +24,4 @@ bo
 csv
 uu
 tke
+Schlatter
