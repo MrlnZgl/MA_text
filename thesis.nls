@@ -7,10 +7,8 @@
 \nomgroup{G}
   \item [{$L$}]\begingroup Characteristic length scale\nomeqref {0.0}\nompageref{VI}
   \item [{$L_x,\,L_y,\,L_z$}]\begingroup Domain size in streamwise, wall-normal and spanwise direction\nomeqref {0.0}\nompageref{VI}
-  \item [{$n$}]\begingroup Wall-normal coordinate (curvilinear/moving frame)\nomeqref {0.0}\nompageref{VI}
-  \item [{$r$}]\begingroup Physical curvature radius\nomeqref {0.0}\nompageref{VI}
+  \item [{$n$, $s$}]\begingroup Curvilinear coordinates (wall-normal, streamwise)\nomeqref {0.0}\nompageref{VI}
   \item [{$R$}]\begingroup Residual of the optimisation; curvature radius\nomeqref {0.0}\nompageref{VI}
-  \item [{$s$}]\begingroup Streamwise coordinate (curvilinear/moving frame)\nomeqref {0.0}\nompageref{VI}
   \item [{$s_c$}]\begingroup Arc length of the curved section\nomeqref {0.0}\nompageref{VI}
   \item [{$s_{in},\,s_{out}$}]\begingroup Length of the straight inlet and straight outlet\nomeqref {0.0}\nompageref{VI}
   \item [{$t$}]\begingroup Time\nomeqref {0.0}\nompageref{VI}
@@ -28,15 +26,16 @@
   \item [{$D_{ij}$}]\begingroup Viscous diffusion rate (Reynolds-stress budget)\nomeqref {0.0}\nompageref{VI}
   \item [{$k$}]\begingroup Turbulent kinetic energy\nomeqref {0.0}\nompageref{VI}
   \item [{$p$}]\begingroup Pressure\nomeqref {0.0}\nompageref{VI}
-  \item [{$p'$}]\begingroup Pressure fluctuation / pressure-correction variable\nomeqref {0.0}\nompageref{VI}
-  \item [{$p_0$}]\begingroup Free-stream pressure\nomeqref {0.0}\nompageref{VI}
+  \item [{$p'$}]\begingroup Pressure-correction variable\nomeqref {0.0}\nompageref{VI}
+  \item [{$p_{\infty}$}]\begingroup Free-stream pressure\nomeqref {0.0}\nompageref{VI}
   \item [{$p_w$}]\begingroup Wall pressure\nomeqref {0.0}\nompageref{VI}
   \item [{$\langle p_c\rangle$}]\begingroup Mean wall pressure in the curved section\nomeqref {0.0}\nompageref{VI}
   \item [{$\mathcal{P}_{ij}$}]\begingroup Production rate (Reynolds-stress budget)\nomeqref {0.0}\nompageref{VI}
   \item [{$R_{ij}$}]\begingroup Reynolds-stress tensor\nomeqref {0.0}\nompageref{VI}
   \item [{$T_{ij}$}]\begingroup Turbulent transport rate (Reynolds-stress budget)\nomeqref {0.0}\nompageref{VI}
   \item [{$U,\,V,\,W$}]\begingroup Mean velocity components\nomeqref {0.0}\nompageref{VI}
-  \item [{$U_0$}]\begingroup Free-stream (reference) velocity\nomeqref {0.0}\nompageref{VI}
+  \item [{$U_{\infty}$}]\begingroup Free-stream velocity\nomeqref {0.0}\nompageref{VI}
+  \item [{$U_0$}]\begingroup Free-stream velocity at the reference position (curved \acrshort{tbl} cases)\nomeqref {0.0}\nompageref{VI}
   \item [{$U_b$}]\begingroup Bulk velocity\nomeqref {0.0}\nompageref{VI}
   \item [{$U(s)$}]\begingroup Local free-stream velocity\nomeqref {0.0}\nompageref{VI}
   \item [{$u,\,v,\,w$}]\begingroup Velocity components in streamwise, wall-normal and spanwise direction\nomeqref {0.0}\nompageref{VI}
@@ -61,13 +60,6 @@
   \item [{$\mathrm{Re}_{\delta_{99}}$}]\begingroup Reynolds number based on boundary-layer thickness\nomeqref {0.0}\nompageref{VI}
   \item [{$\mathrm{Re}_{\delta^*}$}]\begingroup Reynolds number based on displacement thickness\nomeqref {0.0}\nompageref{VI}
   \item [{$\mathrm{Re}_b$}]\begingroup Bulk Reynolds number\nomeqref {0.0}\nompageref{VI}
-\nomgroup{O}
-  \item [{$\langle\,\cdot\,\rangle$}]\begingroup Time (Reynolds) average\nomeqref {0.0}\nompageref{VI}
-  \item [{$(\,\cdot\,)'$}]\begingroup Fluctuating quantity\nomeqref {0.0}\nompageref{VI}
-  \item [{$(\,\cdot\,)^+$}]\begingroup Normalisation in viscous (wall) units\nomeqref {0.0}\nompageref{VI}
-  \item [{$(\,\cdot\,)_w$}]\begingroup Quantity evaluated at the wall\nomeqref {0.0}\nompageref{VI}
-  \item [{$(\,\cdot\,)_0$}]\begingroup Reference / free-stream quantity\nomeqref {0.0}\nompageref{VI}
-  \item [{$\nabla$}]\begingroup Nabla (del) operator\nomeqref {0.0}\nompageref{VI}
 \nomgroup{S}
   \item [{$N$}]\begingroup Polynomial order of a spectral element\nomeqref {0.0}\nompageref{VI}
   \item [{$N_{\mathrm{eval}}$}]\begingroup Number of cells inside the optimisation evaluation window\nomeqref {0.0}\nompageref{VI}

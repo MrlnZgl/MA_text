@@ -165,7 +165,7 @@ The analysed statistics allow some first suggestions about the \acrshort{tbl} be
 First, all profiles show a high qualitative accordance to the profiles in the straight part of this domain and respectively with the ones from the plane \acrshort{tbl}.
 This could imply a small impact of the curvature to the local statistics at this explicit position.
 However, this suggestion is very sensible to the domain geometry and the relative position of the extracted profile and thus cannot be generalised \citep{patel_longitudinal_1997}.
-In the discussed case R100deg30 
+
 
 To analyse the global evolution of the \acrshort{tbl}, the normalised boundary layer and momentum thicknesses are displayed in \autoref{fig:R100deg30Re1200Thickness}.
 Their growth is clearly impacted by the curvature.
@@ -242,9 +242,7 @@ A similar, albeit negative, bump is positioned right before the curved segment s
 At first glance, this behaviour appears to be counterintuitive. The Clauser parameter represents the optimised quantity, and thus an improvement of $\beta$ in the optimised configuration relative to the base one is anticipated.
 To understand this behaviour in a boarder context, we first need to take two more plots into account.
 In \autoref{fig:R100deg30Re1200p}, the wall pressure distribution within the domain is depicted.
-The streamwise direction is once more normalised with the reference boundary layer thickness. The pressure is visualised as a difference between the local pressure at the wall $p(s)$ and the mean pressure at the wall within the curved segment of the domain $\langle p_c \rangle$.
-This kind of visualisation facilitates the analysis of the pressure distribution along the streamwise direction. For the purpose of simplification, the term 'pressure' or 'pressure distribution' is employed in the following analysis.
-However, it should be noted that this refers to the visualised difference between the local and mean pressure in the curvature. 
+The streamwise direction is once more normalised with the reference boundary layer thickness. The pressure is visualised as a difference between the local pressure at the wall $p_w$ and the mean pressure at the wall within the curved segment of the domain $\langle p_c \rangle$.
 In the first segment, where the domain is straight, both configurations exhibit a constantly decreasing pressure distribution with a similar gradient.
 They remain parallel to each other in the straight section, but with the optimised configuration exhibits a lower absolute level.
 Once the curvature starts, there is a substantial divergence in the behaviour of the two configurations.
@@ -253,7 +251,7 @@ Subsequent to this decline, the pressure recovers such that it decreases further
 A similar behaviour in the opposite direction can be observed at the end of the curvature.
 A positive pressure jump can be detected in this area.
 Afterwards, the pressure decreases with a constant gradient again.
-Throughout the entire domain a pressure decrease of $\Delta(p(s)-\langle p_c \rangle) \approx 0.09$ is visible.
+Throughout the entire domain a pressure decrease of $\Delta(p_w-\langle p_c \rangle) \approx 0.09$ is visible.
 The optimised configuration shows a different trend in the curved segment.
 Once the curvature starts, the pressure trend changes from decreasing to a constant level with a minor positive trend.
 Minor fluctuations in the curve can be noticed throughout the entire curved segment.
@@ -268,8 +266,8 @@ In both configurations, a constant positive trend is evident in the straight par
 As previously outlined, the two configurations diverge once the curvature starts.
 The base configuration shows a negative drop at the start of the curvature, followed by an increase with the same gradient as observed before.
 At the end of the curvature, a converse behaviour is observed.
-Overall, the base configuration shows a positive trend with an absolute difference of $\Delta U(s)/U_0 \approx 0.08$.
-In the optimised configuration, conversely, a relatively positive spike occurs immediately prior to the start of the curvature..
+Overall, the base configuration shows a positive trend with an absolute difference of $\Delta U/U_0 \approx 0.08$.
+In the optimised configuration, conversely, a relatively positive spike occurs immediately prior to the start of the curvature.
 Thereafter, the curve ceases to increase in the curved section. 
 Instead, a minor negative trend is evident, but with a lower absolute gradient compared to the base configuration.
 In addition, fluctuations are observable in the curved segment, similar as described in \autoref{fig:R100deg30Re1200p}.
@@ -283,9 +281,6 @@ In \autoref{fig:R100deg30Re1200Beta} we have observed that the optimised configu
 Instead of an improved trend in terms of constancy at zero and smoothness, it is evident that higher fluctuations occur in comparison to the base configuration.
 A closer look at the positions of the bumps suggests indicates a correlation with the positioning of the \benennung{design points} in the optimisation setup.
 As described in \autoref{subsec:optSetup}, the optimisation is based on a finite number of \benennung{design points} whose position is adjusted with the objective of reducing the \acrfull{rms} of $\beta$.
-These discrete \benennung{control points} are connected by means of a spline. 
-The adjustment of a single \benennung{control point} may result in a modified pressure gradient in the cross-section at the designated \benennung{design point}.
-Here, the pressure gradient is highlighted, since the pressure gradient is the field quantity that is actually influenced by a shape modification of the domain.
 The positioning of a \benennung{design point} will modify the size of the cross-sectional area, which impacts the surrounding area as well.
 In accordance with the principle of mass conservation, this will result in a modification to the local velocity, consequently leading to an alteration in the momentum balance and, by extension, the local pressure gradient.
 This behaviour is enforced if the \benennung{control points} are distributed sparsely along the arc.
@@ -312,7 +307,6 @@ In contrast, fluctuations are visible on the local level.
 Their constitution reveals a striking similarity \fxunsure{stimmt das?} to the fluctuations observed in the $\beta$ distribution.
 In the base configuration, the global pressure trend shows a decrease in the curved section, analogous to in the straight inlet.
 Since the pressure declines with a constant slope, this constitution results in a constant pressure gradient.
-However, in the base configuration, local fluctuations are not observed.
 In conclusion, the optimisation algorithm's capability to enforce a constant pressure differs significantly between the local and the global level when evaluated.
 At the local level, the optimisation has been found to be ineffective in enforcing a constant pressure level.
 In this instance, the base configuration shows a substantially more pronounced trend of smoothness.
@@ -335,7 +329,9 @@ In conclusion, the findings indicate that while the optimisation created a $\bet
 
 
 
-\subsection{R500deg18}
+\subsection{Curvature comparison}
+
+\citet{so_experiment_1973}: turb energy and production in curvature convex shows no differences compared to flat tbl data.
 
 \begin{figure}[H]
 \centering

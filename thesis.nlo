@@ -3,10 +3,8 @@
 \nomenclatureentry{F03$\rho$@[{$\rho$}]\begingroup Density\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{G01$L$@[{$L$}]\begingroup Characteristic length scale\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{G02$L_x,\,L_y,\,L_z$@[{$L_x,\,L_y,\,L_z$}]\begingroup Domain size in streamwise, wall-normal and spanwise direction\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{G03$n$@[{$n$}]\begingroup Wall-normal coordinate (curvilinear/moving frame)\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{G04$r$@[{$r$}]\begingroup Physical curvature radius\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{G03$n$, $s$@[{$n$, $s$}]\begingroup Curvilinear coordinates (wall-normal, streamwise)\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{G05$R$@[{$R$}]\begingroup Residual of the optimisation; curvature radius\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{G06$s$@[{$s$}]\begingroup Streamwise coordinate (curvilinear/moving frame)\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{G07$s_c$@[{$s_c$}]\begingroup Arc length of the curved section\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{G08$s_{in},\,s_{out}$@[{$s_{in},\,s_{out}$}]\begingroup Length of the straight inlet and straight outlet\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{G09$t$@[{$t$}]\begingroup Time\nomeqref {0.0}|nompageref}{VI}
@@ -23,15 +21,16 @@
 \nomenclatureentry{K03$D_{ij}$@[{$D_{ij}$}]\begingroup Viscous diffusion rate (Reynolds-stress budget)\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K04$k$@[{$k$}]\begingroup Turbulent kinetic energy\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K05$p$@[{$p$}]\begingroup Pressure\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{K06$p'$@[{$p'$}]\begingroup Pressure fluctuation / pressure-correction variable\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{K07$p_0$@[{$p_0$}]\begingroup Free-stream pressure\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K06$p'$@[{$p'$}]\begingroup Pressure-correction variable\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K07$p_{\infty}$@[{$p_{\infty}$}]\begingroup Free-stream pressure\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K08$p_w$@[{$p_w$}]\begingroup Wall pressure\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K09$\langle p_c\rangle$@[{$\langle p_c\rangle$}]\begingroup Mean wall pressure in the curved section\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K10$\mathcal{P}_{ij}$@[{$\mathcal{P}_{ij}$}]\begingroup Production rate (Reynolds-stress budget)\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K11$R_{ij}$@[{$R_{ij}$}]\begingroup Reynolds-stress tensor\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K12$T_{ij}$@[{$T_{ij}$}]\begingroup Turbulent transport rate (Reynolds-stress budget)\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K13$U,\,V,\,W$@[{$U,\,V,\,W$}]\begingroup Mean velocity components\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{K14$U_0$@[{$U_0$}]\begingroup Free-stream (reference) velocity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K13a$U_{\infty}$@[{$U_{\infty}$}]\begingroup Free-stream velocity\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{K14$U_0$@[{$U_0$}]\begingroup Free-stream velocity at the reference position (curved \acrshort{tbl} cases)\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K15$U_b$@[{$U_b$}]\begingroup Bulk velocity\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K16$U(s)$@[{$U(s)$}]\begingroup Local free-stream velocity\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{K17$u,\,v,\,w$@[{$u,\,v,\,w$}]\begingroup Velocity components in streamwise, wall-normal and spanwise direction\nomeqref {0.0}|nompageref}{VI}
@@ -59,9 +58,3 @@
 \nomenclatureentry{S01$N$@[{$N$}]\begingroup Polynomial order of a spectral element\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{S02$N_{\mathrm{eval}}$@[{$N_{\mathrm{eval}}$}]\begingroup Number of cells inside the optimisation evaluation window\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{S03$\Delta x^+,\,\Delta z^+$@[{$\Delta x^+,\,\Delta z^+$}]\begingroup Grid spacing in viscous (wall) units\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{O01$\langle\,\cdot\,\rangle$@[{$\langle\,\cdot\,\rangle$}]\begingroup Time (Reynolds) average\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{O02$(\,\cdot\,)'$@[{$(\,\cdot\,)'$}]\begingroup Fluctuating quantity\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{O03$(\,\cdot\,)^+$@[{$(\,\cdot\,)^+$}]\begingroup Normalisation in viscous (wall) units\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{O04$(\,\cdot\,)_w$@[{$(\,\cdot\,)_w$}]\begingroup Quantity evaluated at the wall\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{O05$(\,\cdot\,)_0$@[{$(\,\cdot\,)_0$}]\begingroup Reference / free-stream quantity\nomeqref {0.0}|nompageref}{VI}
-\nomenclatureentry{O06$\nabla$@[{$\nabla$}]\begingroup Nabla (del) operator\nomeqref {0.0}|nompageref}{VI}

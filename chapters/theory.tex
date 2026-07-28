@@ -11,7 +11,7 @@ The following chapter introduces the foundational theory and simulation techniqu
 % - wall shear stress not know a priori
 % - behaviour in inner layer ess. same as in channel flow
 % - equation for pressure gradient
-% %--> U_0 = const pressure gradient = 0
+% %--> U_{\infty} = const pressure gradient = 0
 % - definition of boundary layer thickness, displ. thickness, momentum thickness
 % - corresponding Reynolds numbers
 % - shape factor
@@ -80,7 +80,7 @@ Since this work focuses on boundary layers developing along a wall, the definiti
 Boundary layers occur when fluids with non-zero viscosity stream over a stationary wall. 
 In these setups, the so called \benennung{no-slip} boundary condition affects the flow behaviour significantly.
 The \benennung{no-slip} boundary condition asserts that the velocity components of the fluid in the wall-normal and streamwise directions must be zero directly at the wall since there is no relative movement between the wall and the fluid \citep{schlichting_boundary-layer_2017}. 
-The velocity sufficiently distant from the wall, known as the \benennung{free-stream velocity} $U_0$, is usually much higher than zero. This observation indicates the presence of a transition region where an acceleration of the fluid occurs \citep{prandtl_uber_1904}.
+The velocity sufficiently distant from the wall, known as the \benennung{free-stream velocity} $U_{\infty}$, is usually much higher than zero. This observation indicates the presence of a transition region where an acceleration of the fluid occurs \citep{prandtl_uber_1904}.
 This so-called \benennung{boundary layer} is placed close to the wall. 
 The thickness of the boundary layer is known to vary depending on the Reynolds number. In general, the boundary layer decreases with increasing Reynolds number \cite{schlichting_boundary-layer_2017}. 
 The flow in the boundary layer may behave laminar or turbulent. In this thesis we will focus on \acrfull{tbl}.
@@ -88,7 +88,7 @@ The flow in the boundary layer may behave laminar or turbulent. In this thesis w
 The boundary layer grows in the streamwise direction. It can be described via multiple characteristic quantities. 
 The introduction of these quantities requires a consistent coordinate system: 
 The streamwise direction is denoted by $x$ with the corresponding velocity $u$. The wall-normal direction is denoted by $y$ and the associated velocity $v$. $z$ denotes the spanwise direction and is associated with the velocity component $w$.
-In the free stream, distant from the wall, we assume $U_0$ being the dominant velocity component. 
+In the free stream, distant from the wall, we assume $U_{\infty}$ being the dominant velocity component. 
 The streamwise velocity component inside the boundary layer is denoted $u(x,y)$.
 Often, the thickness of the boundary layer is modelled using three different parameters \citep{schlichting_boundary-layer_2017}: 
 the \emph{boundary-layer thickness} $\delta_{99}(x)$ describing the distance from the wall at which the velocity $u(x,y)$ derives $99\%$ of the free-stream velocity;
@@ -96,9 +96,9 @@ the \emph{displacement thickness} $\delta^*$, which defines the displacement of 
 and the \emph{momentum thickness} denoted by $\theta$ is employed to define the displacement of an inviscid fluid in order to fulfil the conservation of momentum.
 The following equations can be used to derive these quantities:
 \begin{gather}\label{eq: tblThickness}
-    u (x, \delta_{99}(x)) = 0.99 \cdot U_0 \\[1ex]
-    \delta^*(x) = \int_0^\infty \left( 1 - \frac{u(x,y)}{U_0} \right) \mathrm{d}y \hspace{0.8cm}
-     \theta(x) = \int_0^\infty \frac{u(x,y)}{U_0} \left( 1 - \frac{u(x,y)}{U_0} \right) \mathrm{d}y
+    u (x, \delta_{99}(x)) = 0.99 \cdot U_{\infty} \\[1ex]
+    \delta^*(x) = \int_0^\infty \left( 1 - \frac{u(x,y)}{U_{\infty}} \right) \mathrm{d}y \hspace{0.8cm}
+     \theta(x) = \int_0^\infty \frac{u(x,y)}{U_{\infty}} \left( 1 - \frac{u(x,y)}{U_{\infty}} \right) \mathrm{d}y
 \end{gather}
 
 
@@ -109,11 +109,10 @@ The boundary-layer is related to the Reynolds number,
 with different Reynolds numbers being defined based on the introduced displacement measures:
 
 \begin{gather}
-    \mathrm{Re}_x = \frac{U_0 x}{\nu}, \quad
-    \mathrm{Re}_{\delta_{99}} = \frac{U_0 \delta_{99}}{\nu}, \quad
-    \mathrm{Re}_{\delta^*} = \frac{U_0 \delta^*}{\nu}, \quad
-    \mathrm{Re}_\theta = \frac{U_0 \theta}{\nu}. \\
-    \nu : \text{viscosity} \nonumber
+    \mathrm{Re}_x = \frac{U_{\infty} x}{\nu}, \quad
+    \mathrm{Re}_{\delta_{99}} = \frac{U_{\infty} \delta_{99}}{\nu}, \quad
+    \mathrm{Re}_{\delta^*} = \frac{U_{\infty} \delta^*}{\nu}, \quad
+    \mathrm{Re}_\theta = \frac{U_{\infty} \theta}{\nu}.
 \end{gather}
 
 In order to measure velocities in a turbulent flow the velocities are decomposed in a time averaged component denoted by $\langle \rangle$ and fluctuations denoted by $u_i'$. 
@@ -181,13 +180,13 @@ Based on the wall shear stress $\tau_w$, $\rho$ and $\delta_{99}$, the friction 
 With these quantities, the original length and velocity scales can be non-dimensionalised in wall units, also called plus units, as shown in \citep{moin_fundamentals_2024}:
 \begin{equation}
     y^+ = \frac{y}{\delta_v} = \frac{y u_\tau}{\nu}, \qquad
-    u^+ = \frac{U}{u_\tau}.
+    U^+ = \frac{U}{u_\tau}.
 \end{equation}
 
 The merits of these non-dimensional scales are twofold.  
 Firstly, they are universal for all wall-bounded flows enabling the comparison between flows of different physical dimensions \citep{von_karman_mechanische_1930}.
 Moreover, the non-dimensionalisation facilitates a detailed investigation of the velocity profile inside the \acrshort{tbl}.
-\citet{prandtl_uber_1904} observed that the \acrshort{tbl} contains an inner part where the mean velocity profiles are independent of the free-stream quantities $U_0$ and $\delta_{99}$ such that the mean velocity profile can be fully described by the plus units.
+\citet{prandtl_uber_1904} observed that the \acrshort{tbl} contains an inner part where the mean velocity profiles are independent of the free-stream quantities $U_{\infty}$ and $\delta_{99}$ such that the mean velocity profile can be fully described by the plus units.
 In the region closest to the wall – the \benennung{viscous sublayer} – $U^+$ is a linear function of $y^+$. 
 With increasing wall distance, the velocity profile transitions such that it follows a logarithmic function.
 This so-called \benennung{log law} is defined as 
@@ -211,7 +210,7 @@ In the context of this work the values introduced by \citet{pope_turbulent_2015}
 As can be seen, all profiles follow the same path in the inner region of the boundary layer up to $y^+ \approx 70$.
 In this region, it can also be seen that the profiles first follow the linear law perfectly and then transition onto the log law curve.
 Beyond $y^+ \approx 70$ the profiles diverge due to their different $\mathrm{Re}_{\theta}$ values.
-Different $\mathrm{Re}_{\theta}$ correspond to different \acrshort{tbl} thicknesses (assuming that the free-stream velocity $U_0$ and the viscosity $\nu$ remain unchanged), which becomes apparent at the value of $U^+$ at which the profile flattens into the free-stream velocity.
+Different $\mathrm{Re}_{\theta}$ correspond to different \acrshort{tbl} thicknesses (assuming that the free-stream velocity $U_{\infty}$ and the viscosity $\nu$ remain unchanged), which becomes apparent at the value of $U^+$ at which the profile flattens into the free-stream velocity.
 
 
 \subsubsection{Reynolds stresses}
@@ -283,7 +282,7 @@ From the \acrshort{nse} one can derive that the pressure for a \acrshort{tbl} is
 In the streamwise direction, however, it does not necessarily have to be constant.
 Bernoulli's equation establishes a correlation between the free-stream pressure and the free-stream velocity. Consequently, the gradient in the streamwise direction can be expressed as follows:
 \begin{equation}\label{eq:bernoulli}
-    -\frac{\mathrm{d}p_0}{\mathrm{d}x} = \rho\, U_0 \frac{\mathrm{d}U_0}{\mathrm{d}x}.
+    -\frac{\mathrm{d}p_{\infty}}{\mathrm{d}x} = \rho\, U_{\infty} \frac{\mathrm{d}U_{\infty}}{\mathrm{d}x}.
 \end{equation}
 This equation shows that an acceleration of the flow results in a negative pressure gradient, which is also referred to as \benennung{\acrfull{fpg}}. 
 In the other hand, an increase of the velocity yields a positive or \benennung{\acrfull{apg}}. 

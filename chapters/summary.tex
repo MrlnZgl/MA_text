@@ -36,5 +36,33 @@ With these base simulations the effect of the optimisation can be studied.
 In addition, the optimisation capability for the different curvature cases is compared.
 The results show, that the optimisation capability differs for the \benennung{local} and \benennung{global} trend of the pressure distribution.
 On a \benennung{global} level the optimised for all three cases have a more constant pressure distribution in the curvature compared to their base cases.
-However, \benennung{locally} fluctuations in the pressure distribution arise which are also present in the distribution of the Clauser parameter.
+However, fluctuations in the pressure distribution arise  \benennung{locally} which are also present in the distribution of the Clauser parameter.
 The effects of different curvatures are studied through a comparison of case R100deg90 and R500deg18.
+XXX curvature effects 
+XXX optimisation for different cases
+
+
+In this thesis, the workflow, introduced in \citet{schlatter_leveraging_2025}, to generate a curved \acrshort{tbl} domain with \acrshort{zpg} was tested.
+The results presented in \autoref{chap:results} show, that the application of the optimisation algorithm presented by \citet{morita_applying_2022} was possible in all three curvature configurations.
+The \benennung{global} trend of the pressure field was successfully manipulated towards a constant value in the curved segment.
+However, \benennung{local} fluctuations in the pressure distribution were detected.
+The positioning of the fluctuations suggest a connection with the position of the \benennung{control points} used in the optimisation.
+The studies performed by \citet{ganagdhar_bayesian_2025} about the optimisation capability captured a case with significantly lower curvature compared to the boundary layer thickness.
+Therefore, only rare knowledge exists about the capability of the optimisation algorithm for the here tested geometric properties.
+In order to eliminate the \benennung{local} fluctuations in the pressure distribution, a detailed study of the optimisation algorithm with various settings and geometries is required.
+In addition, the number and positioning of the \benennung{control points} should be investigated to obtain an optimal relation between a smooth $\beta$ distribution and a reasonable computational effort for the optimisation.
+
+
+In the \acrshort{dns} of the curved \acrshort{tbl} we visibly detected fluctuations in between the instantaneous pressure fields.
+Because of their characteristics, analysed in \autoref{sec:pressFluc}, we assume that they are non-physical artefact caused by the outer constrains of the domain.
+Similar pressure modes were detected by \citet{maday_spectral_1989} and \citet{sabbah_filtering_2001} who in introduced methods to eliminate them.
+We performed various tests with different configurations to localise potential causes for the fluctuations.
+However, with these tests we were not able to clearly identify the causes of the fluctuations.
+Here, further tests are necessary to find the original source of these fluctuations.
+Nevertheless, we verified the reliability of the statistical results to ensure that the statistics unaffected by the fluctuations.
+To do this, we extracted data in the straight section and compared them to the earlier performed simulations of a plane \acrshort{tbl} as well as with reference data of plane \acrshort{tbl} simulations.
+This verification is presented in \autoref{sec:planeTBLVerif}, where it can be seen that the statistical quantities are undisturbed and hence similar to the reference data.
+In order to obtain a better understanding of the fluctuations further tests need to be done.
+This also helps for future improvements of the domain setups or the comparisons of different setups.
+
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  27 JUL 2026 23:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  28 JUL 2026 17:42
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1396,11 +1396,14 @@ Overfull \hbox (8.97066pt too wide) in paragraph at lines 23--23
 [6
 
 
-]
+])
 
-[7])
+[7]
 
-[8]) (./thesis.acr)
+[8
+
+
+]) (./thesis.acr)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -1412,20 +1415,14 @@ l.252 \include{chapters/introduction}
 
 
 
-
-
 ]
 \openout2 = `chapters/introduction.aux'.
 
  (./chapters/introduction.tex
 chapter 1.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 16.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--42
+Underfull \hbox (badness 10000) in paragraph at lines 17--25
 
  []
 
@@ -1435,12 +1432,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--42
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.42 
+l.44 
       [2
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 43--61
+Underfull \hbox (badness 10000) in paragraph at lines 46--66
 
  []
 
@@ -1453,8 +1450,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74     \item a
-                nmerkungen einarbeiten [3])
+l.72 \fxinfo{das ist knapp ;)}
+                               [3])
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
@@ -1491,7 +1488,7 @@ l.98 \begin{gather}
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \begin{gather}
+l.174 \begin{gather}
                      [7] (./images/theory/Uplus_referenceOnly_txt.pgf
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 115.
 
@@ -1574,21 +1571,21 @@ LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <4.5815> not available
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.215 
+l.214 
        [8]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \begin{equation}
+l.284 \begin{equation}
                       \label{eq:bernoulli} [9]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.332 
+l.331 
        [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1602,8 +1599,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  (./chapters/methods.tex
 chapter 3.
 (./images/methods/gll_points.pgf)
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 68.
-
 
 [13
 
@@ -1676,12 +1671,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--190
 
 
 [16] (./images/simulation_setups/setup_curved.pgf
-<images/simulation_setups/setup_curved-img0.png, id=919, interpolate=true, 1127.21124pt x 269.005pt>
+<images/simulation_setups/setup_curved-img0.png, id=923, interpolate=true, 1127.21124pt x 269.005pt>
 File: images/simulation_setups/setup_curved-img0.png Graphic file (type png)
 <use images/simulation_setups/setup_curved-img0.png>
 Package pdftex.def Info: images/simulation_setups/setup_curved-img0.png  used on input line 57.
 (pdftex.def)             Requested size: 405.79575pt x 96.84172pt.
-<images/simulation_setups/setup_curved-img1.png, id=921, interpolate=true, 373.395pt x 25.09375pt>
+<images/simulation_setups/setup_curved-img1.png, id=925, interpolate=true, 373.395pt x 25.09375pt>
 File: images/simulation_setups/setup_curved-img1.png Graphic file (type png)
 <use images/simulation_setups/setup_curved-img1.png>
 Package pdftex.def Info: images/simulation_setups/setup_curved-img1.png  used on input line 303.
@@ -1705,7 +1700,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [18]
 
 [19]
-<images/optimisation/BOGP_flowchart_horizontal.pdf, id=992, 432.20018pt x 268.35226pt>
+<images/optimisation/BOGP_flowchart_horizontal.pdf, id=996, 432.20018pt x 268.35226pt>
 File: images/optimisation/BOGP_flowchart_horizontal.pdf Graphic file (type pdf)
 <use images/optimisation/BOGP_flowchart_horizontal.pdf>
 Package pdftex.def Info: images/optimisation/BOGP_flowchart_horizontal.pdf  used on input line 368.
@@ -1735,7 +1730,7 @@ chapter 4.
 
 
 ]
-<images/channel_valid/channelIC.pdf, id=1108, 1390.59625pt x 679.50432pt>
+<images/channel_valid/channelIC.pdf, id=1112, 1390.59625pt x 679.50432pt>
 File: images/channel_valid/channelIC.pdf Graphic file (type pdf)
 <use images/channel_valid/channelIC.pdf>
 Package pdftex.def Info: images/channel_valid/channelIC.pdf  used on input line 67.
@@ -1754,7 +1749,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [28]
 
 [29]
-<images/methods/mesh.pdf, id=1166, 2871.78708pt x 1905.1175pt>
+<images/methods/mesh.pdf, id=1170, 2871.78708pt x 1905.1175pt>
 File: images/methods/mesh.pdf Graphic file (type pdf)
 <use images/methods/mesh.pdf>
 Package pdftex.def Info: images/methods/mesh.pdf  used on input line 198.
@@ -1762,12 +1757,12 @@ Package pdftex.def Info: images/methods/mesh.pdf  used on input line 198.
 
 
 [30 <./images/methods/mesh.pdf>] (./images/simulation_setups/blasius_profile_poly.pgf) (./images/simulation_setups/setup_plane.pgf
-<images/setup_plane-img0.png, id=1198, interpolate=true, 1056.94875pt x 120.45pt>
+<images/setup_plane-img0.png, id=1202, interpolate=true, 1056.94875pt x 120.45pt>
 File: images/setup_plane-img0.png Graphic file (type png)
 <use images/setup_plane-img0.png>
 Package pdftex.def Info: images/setup_plane-img0.png  used on input line 57.
 (pdftex.def)             Requested size: 380.50125pt x 43.36195pt.
-<images/setup_plane-img1.png, id=1199, interpolate=true, 368.37625pt x 28.105pt>
+<images/setup_plane-img1.png, id=1203, interpolate=true, 368.37625pt x 28.105pt>
 File: images/setup_plane-img1.png Graphic file (type png)
 <use images/setup_plane-img1.png>
 Package pdftex.def Info: images/setup_plane-img1.png  used on input line 167.
@@ -1792,21 +1787,17 @@ Underfull \vbox (badness 3503) has occurred while \output is active []
 [33]
 
 [34] (./images/pressureFluct/reference/wall_pressure_pair.pgf
-<images/wall_pressure_pair-img0.png, id=1263, interpolate=true, 479.7925pt x 259.97125pt>
+<images/wall_pressure_pair-img0.png, id=1266, interpolate=true, 479.7925pt x 264.99pt>
 File: images/wall_pressure_pair-img0.png Graphic file (type png)
 <use images/wall_pressure_pair-img0.png>
 Package pdftex.def Info: images/wall_pressure_pair-img0.png  used on input line 1421.
-(pdftex.def)             Requested size: 172.72516pt x 93.58957pt.
-<images/wall_pressure_pair-img1.png, id=1264, interpolate=true, 478.78876pt x 195.73125pt>
+(pdftex.def)             Requested size: 172.72516pt x 95.39632pt.
+<images/wall_pressure_pair-img1.png, id=1267, interpolate=true, 478.78876pt x 218.8175pt>
 File: images/wall_pressure_pair-img1.png Graphic file (type png)
 <use images/wall_pressure_pair-img1.png>
-Package pdftex.def Info: images/wall_pressure_pair-img1.png  used on input line 3118.
-(pdftex.def)             Requested size: 172.36382pt x 70.46318pt.
+Package pdftex.def Info: images/wall_pressure_pair-img1.png  used on input line 3112.
+(pdftex.def)             Requested size: 172.36382pt x 78.77423pt.
 )
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 
 [35 <./images/wall_pressure_pair-img0.png> <./images/wall_pressure_pair-img1.png>]
 
@@ -1859,13 +1850,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [43]
-Underfull \vbox (badness 3601) has occurred while \output is active []
+Underfull \vbox (badness 1515) has occurred while \output is active []
 
 
 
-[44]
+[44] (./images/R500deg18/Re1200/UplusNearWall_txt_Re1200_bycase.pgf) (./images/R500deg18/Re1200/fluctuations_txt_Re1200_bycase.pgf) (./images/R500deg18/comparison_plots/Retau_Retheta_vs_s_over_delta99ref_txt.pgf) (./images/R500deg18/comparison_plots/delta99_theta_vs_s_over_delta99ref_txt.pgf)
 
-[45] (./images/R500deg18/Re1200/UplusNearWall_txt_Re1200_bycase.pgf) (./images/R500deg18/Re1200/fluctuations_txt_Re1200_bycase.pgf) (./images/R500deg18/comparison_plots/Retau_Retheta_vs_s_over_delta99ref_txt.pgf) (./images/R500deg18/comparison_plots/delta99_theta_vs_s_over_delta99ref_txt.pgf) (./images/R500deg18/comparison_plots/delta_wall_pressure_bendmean_vs_s_over_delta0_txt.pgf) (./images/R500deg18/comparison_plots/Ue_vs_s_over_delta0_txt.pgf) (./images/R500deg18/comparison_plots/beta_vs_s_over_delta99ref_txt.pgf) (./images/R500deg18/Re1200/budget_txt_Re1200_k_linestyle.pgf)
+[45] (./images/R500deg18/comparison_plots/delta_wall_pressure_bendmean_vs_s_over_delta0_txt.pgf) (./images/R500deg18/comparison_plots/Ue_vs_s_over_delta0_txt.pgf) (./images/R500deg18/comparison_plots/beta_vs_s_over_delta99ref_txt.pgf) (./images/R500deg18/Re1200/budget_txt_Re1200_k_linestyle.pgf)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1877,21 +1868,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  (./chapters/summary.tex
 chapter 6.
-)
+
 
 [48
 
 
 
 
-]
+])
+
+[49]
 \openout2 = `chapters/literaturverzeichnis.aux'.
 
  (./chapters/literaturverzeichnis.tex (./thesis.bbl
 chapter without number
 
 
-[49
+[50
 
 
 
@@ -1908,11 +1901,11 @@ Underfull \hbox (badness 2617) in paragraph at lines 103--107
 
 
 
-[50]
+[51]
 
-[51]))
+[52]))
 
-[52]
+[53]
 
 Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrreprt)              You should note, that `\appendix' is a mostly globally
@@ -1933,7 +1926,7 @@ Class scrreprt Warning: You are using `\begin{appendix}...\end{appendix}'.
 chapter A.
 )
 
-[53
+[54
 
 
 
@@ -1952,18 +1945,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 53073 strings out of 473190
- 1222555 string characters out of 5715800
- 2359837 words of memory out of 5000000
- 74948 multiletter control sequences out of 15000+600000
+ 53070 strings out of 473190
+ 1222513 string characters out of 5715800
+ 2357485 words of memory out of 5000000
+ 74944 multiletter control sequences out of 15000+600000
  597888 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,17n,109p,10986b,1111s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (71 pages, 8181206 bytes).
+Output written on thesis.pdf (72 pages, 8198148 bytes).
 PDF statistics:
- 1845 PDF objects out of 2073 (max. 8388607)
- 1618 compressed objects within 17 object streams
- 255 named destinations out of 1000 (max. 500000)
- 398 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1872 PDF objects out of 2073 (max. 8388607)
+ 1644 compressed objects within 17 object streams
+ 256 named destinations out of 1000 (max. 500000)
+ 390 words of extra memory for PDF output out of 10000 (max. 10000000)
 

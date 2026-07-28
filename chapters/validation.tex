@@ -362,59 +362,60 @@ These final validations of the pressure-related quantities confirm that the impa
 It is demonstrated that the \benennung{Dirichlet} condition constitutes a reasonable choice of \acrshort{bc} for the remainder of this work.
 
 
-\fxmarlenebmark{Stand 27.07. 19:00}
 \section{Pressure fluctuations} \label{sec:pressFluc}
 
-In the following section we discuss pressure fluctuations, we observed in the simulations of the curve \acrshort{tbl}.
-Performing the simulations of case R100deg30 we noted visual differences in the pressure fields throughout the snapshots. 
-In order to make profound studies about their importance, we employed some quantitative investigations.
+
+In the following section we discuss pressure fluctuations  that were observed in the simulations of the curve \acrshort{tbl}.
+Performing the simulations of case R100deg30, we noted visual differences in the pressure fields throughout the snapshots. 
+In order to undertake a comprehensive investigation into their significance, we conducted a series of quantitative experiments.
 First, we extracted the pressure in every snapshot and plotted it against the normalised domain length.
-Since we are mostly interested about the pressure at the wall, we extracted the pressure there.
-In addition, we averaged the pressure at the wall in spanwise direction, since we wanted to get a single value at every streamwise location.
+Given our primary interest in the pressure at the wall, we extracted this pressure.
+In addition, the pressure at the wall in the spanwise direction was averaged, with the objective of obtaining a single value at every streamwise location.
 The resulting figure is shown in \autoref{fig:pressFluctRef}.
-The coloured lines represent the instantaneous pressure fields taken from the snapshots.
-The black line represents the temporal mean value of these discrete pressure distributions.
-It can be seen, that the pressure distributions of the snapshots vary over a large scope.
-Especially at the inflow the range between the two outermost snapshots is around 0.25.
+The coloured lines represent the instantaneous pressure fields derived from the snapshots.
+The black line in the figure represents the temporal mean value of these discrete pressure distributions.
+It is evident that the pressure distributions of the snapshots exhibit significant variations over a considerable range.
+Particularly at the inflow, the range between the two outermost snapshots is approximately $0.25$.
 At the outflow, all snapshots collapse to zero.
-This behaviour is expected since the \acrshort{bc} at the outflow forces the pressure to zero (see \autoref{subsec:planeTBLSetup}).
+It is anticipated that this behaviour will occur, since the \acrshort{bc} at the outflow forces the pressure to zero (see \autoref{subsec:planeTBLSetup}).
 However, we can observe similarities in all pressure distributions throughout the domain.
-It can be seen that in all snapshot two locations exist where the pressure shows a short drift from its general trend.
-These two positions mark the beginning and the end of the curvature.
-The meaning of these drifts will be discussed in detail in section \autoref{subsec:R100deg30}.
-Besides these two drifts, all snapshots show a linear course throughout the domain.
+It is apparent from the analysis of the data that there are two positions in the snapshot series where there is a short deviation from the general trend in the pressure readings.
+These two positions mark the beginning and the termination of the curvature.
+The interpretation of these drifts will be discussed in detail in \autoref{subsec:R100deg30}.
+Besides these two deviations, all snapshots demonstrate a linear trajectory throughout the domain.
 The colouring of the instantaneous pressure distributions contains information about the temporal development of the pressure field.
-In this case no temporal trend can be observed, since there is no clustering of colours is visible.
-This observation leads to the assumption, that the fluctuations do not damp over time, which makes longer simulations run times as a possible solution worthless.
-Therefore, we performed some further investigations about the properties of the fluctuations.
-Since we are interested mainly in the curved segment of the domain, we tried to get some more information about the pressure behaviour there.
+In this case, no temporal trend can be discerned due to the absence of any discernible clustering of colours.
+This observation suggests the hypothesis that the fluctuations do not diminish over time, thereby rendering extended simulation run times as a potential solution ineffective.
+Consequently, we performed additional investigations into the properties of the fluctuations.
+Given our primary interest in the curved segment of the domain, we sought to obtain further information regarding the pressure behaviour in this area.
 
 \begin{figure}[h!]
 \centering
+%\includegraphics{pressureFluct/reference/wall_pressure_pair.pdf }
 \input{images/pressureFluct/reference/wall_pressure_pair.pgf}
 \caption{Pressure fluctuations in snapshots of case R100deg30 (a) pressure at the wall averaged in spanwise direction; (b) difference of pressure at the wall and its spatial mean in the curved segment both averaged in spanwise direction, (a) and (b) plotted along normalised streamwise coordinate, temporal mean in black, snapshots in temporal order from yellow to purple}
 \label{fig:pressFluctRef}
 \end{figure}
 
 
-To do this, we subtract the spatial pressure mean of the curved segment for every snapshot. 
-This results in the plots depicted in \autoref{fig:pressFluctRef}.
-Here, we can see the pressure distributions levelled around the mean value of the curved section.
-It can be seen that after this subtraction, the pressure distributions of the snapshots oscillate uniform around the temporal mean.
-Thereby, the qualitative shape of the curves stays unaffected, only their slope seems to vary.
-This behaviour suggests a kind of artefact that is not induced by the physical behaviour of the flow. 
-To evaluate this hypothesis we analysed the statistics of the flow.
+To accomplish this, it is necessary to subtract the spatial pressure mean of the curved segment for each snapshot. 
+The results of this process are illustrated in the plots in \autoref{fig:pressFluctRef}.
+It can be observed that the pressure distributions levels around the mean value of the curved section.
+After the subtraction, the pressure distributions of the snapshots oscillate uniformly around the temporal mean.
+Thereby, the qualitative shape of the curves remains unaltered; it is the slope that appears to vary.
+This behaviour suggests the presence of an artefact that is not induced by the physical behaviour of the flow. 
+To evaluate this hypothesis, we analysed the statistics of the flow.
 We verified the statistics of the simulation with reference data from \citet{schlatter_assessment_2010}.
-We extracted profiles in the straight section, such that we have no impact of the curvature and thus ensure a proper comparison with flat-plate \acrshort{tbl} data.
+In order to ensure a valid comparison with flat-plate \acrshort{tbl} data, it was necessary to extract profiles in the straight section, thus ensuring that the curvature did not have an impact.
 These results are discussed in detail in \autoref{sec:planeTBLVerif}.
-They show, that the statistics are unaffected since they look similar as the reference data.
+The findings show that the statistical data remains unaltered, as evidenced by the observation that they bear a strong resemblance to the reference data.
 This observation strengthens the hypothesis of a non-physical artefact.
 \citet{maday_spectral_1989} already pointed out the existence of such pressure modes and introduced a modified \acrshort{sem} to eliminate them.
-Also, \citet{sabbah_filtering_2001} stated these pressure modes as a well-known phenomenon in simulations based on \acrshort{sem}.
-Therefore, we assume that the fluctuations are of systematic nature caused by some outer constraints we imposed.
-In order to receive more information about their source, we tested multiple configurations, where we changed different outer constraints of the domain.
-The applied tests are listed in \autoref{tab:presFluctTests}.
-To fasten the testing process, we performed the simulations with a coarser mesh.
+In addition, \citet{sabbah_filtering_2001} asserted that these pressure modes are recognised as a well-known phenomenon in simulations based on \acrshort{sem}.
+Consequently, we assume that the observed fluctuations are of a systematic nature caused by external constraints we imposed.
+In order to ascertain the source in greater detail, we tested multiple configurations, whereby we modified different external constraints of the domain.
+The  tests applied  are listed in \autoref{tab:presFluctTests}.
+To accelerate the testing process, we performed the simulations with a coarser mesh.
 
 \begin{table}[h!]
     \centering
@@ -441,36 +442,40 @@ To fasten the testing process, we performed the simulations with a coarser mesh.
 \end{table}
 
 
-In the first two test configurations we deactivate the tripping, to test the impact of the induced turbulence.
-The pressure distributions showed no significant difference compare to the original setup.
+In the initial two test configurations we deactivated the tripping to test the impact of the induced turbulence.
+The pressure distributions exhibited no substantial discrepancy when compared to the original setup.
 This observation indicates that the turbulence in the boundary layer has no impact on the pressure fluctuations.
-In the second test we additionally fixed the time step size in the \verb|case|-file to a very small value.
-Both simulations showed similar pressure fluctuations as the original setup.
-The test setup with the fixed time steps needs more time per time step but did not improve the pressure distribution.
-In the next test we apply the \benennung{outflow+Dong} condition we already use at the outflow at the upper wall.
-With this condition we allow the fluid to leave the domain through this wall.
-Due to the unconstrained normal velocity component, the pressure field should be less constrained than before \citep{dong_robust_2014}.
-However, also there the fluctuations showed no measurable decrease.
+In the second experiment, we additionally fixed the time step size in the \verb|case|-file to a very small value.
+The simulations exhibited comparable pressure fluctuations to the original configuration.
+The setup with the fixed time steps demanded more computation time per time step while failing to improve the pressure distribution.
+In the next experiment, we applied the \benennung{outflow+Dong} condition which is already used at the outflow at the upper wall.
+In the context of this condition, the fluid is permitted to leave the domain through this wall.
+Due to the unconstrained normal velocity component, the pressure field should be less constrained than it was previously \citep{dong_robust_2014}.
+However, in this instance too, the fluctuations demonstrated no measurable decrease.
 
-In the next two tests we adjusted the tolerance for pressure residual.
-First, we raised the tolerance in order to give the pressure a bigger range to balance. 
-Since this lead to even higher pressure fluctuations, we then tried the opposite and set a lower tolerance for the pressure residual.
-This setting had two effects:
-The computational time per time step increased significantly, since more iterations are necessary to satisfy the lower residual.
-And the computational time per time steps depends mainly on the number of pressure iterations.
-In addition, the pressure fluctuations reduced which is a consistent outcome if the residual is constrained tighter.
-Since the fluctuations only reduce in the range of the residual modification, the actual cause of the fluctuations seems to be unaffected.
-As a last test we applied a \benennung{sponge region} in the straight outlet region. 
-In a sponge region a linear forcing term is added to the \acrshort{nse}.
-This term reduces the fluctuations in the \acrshort{tbl}, such that the boundary layer relaminarises \citep{schlatter_turbulent_2012}.
-Consequently, the pressure fluctuations should also be damped, since the pressure is linked to the velocity fluctuations through the Poisson equation.
-The results of this configuration showed reduced fluctuations along the whole domain.
+
+
+In the next two experiments, the tolerance for pressure residual was modified.
+Initially, we raised the tolerance in order to allow for greater pressure range and balancing. 
+This led to even higher pressure fluctuations.
+Consequently, we then tried the opposite and set a lower tolerance for the pressure residual.
+This setting gave rise to two effects:
+The computation time per time step increased significantly, since more iterations are necessary to satisfy the lower residual, and the computation time per time step mainly depends on the number of pressure iterations.
+In addition, the pressure fluctuations decreased, which is a consistent outcome if the residual is constrained tighter.
+However, the fluctuations decreased only in the range of the residual modification.
+This observation suggests that the underlying cause of the fluctuations remains unaltered.
+As a final test, we applied a \benennung{sponge region} in the straight outlet region. 
+
+
+In a sponge region a linear forcing term was added to the \acrshort{nse}.
+This term reduces the fluctuations in the \acrshort{tbl}, thereby the boundary layer relaminarises \citep{schlatter_turbulent_2012}.
+Consequently, the pressure fluctuations should also be damped, since the pressure is linked to the velocity fluctuations through the Poisson equation (XXQUELLE).
+The simulation results of this configuration demonstrated a reduction in fluctuations across the entire domain.
 As a consequence, the application of this numerical stabilisation method requires further investigations in these simulation setups.
-Nevertheless, this configuration handles the pressure fluctuations on a symptomatic level, since the underlying sources of the fluctuations stay unaffected.
-Therefore, the source of these pressure fluctuations is undetected up to now and requires further studies. 
+Nevertheless, this configuration handles the pressure fluctuations on a symptomatic level, since the underlying sources of the fluctuations remain unaltered.
+Therefore, the source of these pressure fluctuations remains undetected up to now and requires further studies in future. 
 
-However, the statistical results are not affected of these fluctuations as the profiles in \autoref{sec:planeTBLVerif} show.
-Therefore, the following simulations were performed with the original setup.
+However, the statistical outcomes remain unaffected by these fluctuations, as evidenced by the profiles in \autoref{sec:planeTBLVerif}.
+Therefore, the following simulations were performed utilising the original setup.
 
 
-\fxmarlenebmark{bis hier 27.07. 19:00}
