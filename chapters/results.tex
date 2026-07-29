@@ -10,9 +10,9 @@ Finally, a comparative analysis is performed on the optimised simulations of the
 
 \section{Plane section verification}\label{sec:planeTBLVerif}
 The following section is employed as a reliability test of the governed results for the curved \acrshort{tbl} simulations.
-As described in XX, we detected pressure fluctuations in the snapshots during the course of the simulations.
+As described in \autoref{sec:pressFluc}, we detected pressure fluctuations in the snapshots during the course of the simulations.
 To ensure that these fluctuations leave the long-term statistics unaffected, we verified the statistics of the curved \acrshort{tbl} simulations in the straight inlet.
-In order to undertake this task, we compare the statistics of case R100deg30 in optimised and base configurations with the ones from the plane \acrfull{tbl} setup and the reference data for plane \acrshort{tbl} simulations from XX, which has previously been introduced.
+In order to undertake this task, we compare the statistics of case R100deg30 in optimised and base configurations with the ones from the plane \acrfull{tbl} setup and the reference data for plane \acrshort{tbl} simulations from \citet{schlatter_assessment_2010}, which has previously been introduced.
 The statistics are taken at $\mathrm{Re}_{\theta} = 700$ in all simulations performed. This corresponds to a position of around $s_{Re_{\theta}= 700} = \frac{1}{2} s_p$.
 Consequently, the impact of the curvature should be negligible at this position, and all setups should demonstrate analogous behaviour.
 Following this, the results of this comparison are presented for case R100deg30. 
@@ -174,12 +174,12 @@ Then, a sudden drop of both is remarkable.
 This position coincides with the start of the curvature in the domain which implies that the geometry change impacts the boundary layer growth.
 After a small period in streamwise direction, the profiles recover and increase again. 
 However, both quantities show a reduced slope such that their growth is decelerated in the curvature compared to the straight section.
-This phenomenon is known and was already detected by XX.
-in the curvature the growth rate stays constant until the end of the curvature is reached.
+This phenomenon is known and was already detected by \citet{gillis_turbulent_1983}.
+In the curvature the growth rate stays constant until the end of the curvature is reached.
 A sudden change of both quantities is remarkable at $s/\delta_0 \approx 110$ which marks the end of the curvature.
 Reversely to the start of the curvature, here a sudden increase of the growth rate can be detected in all quantities.
 Similar, this region is quite short in streamwise direction until the slope levels at a comparable niveau as in the curvature.
-This observation forces the statement of XX that the curvature effects the growth of a boundary layer.
+This observation forces the statement that the curvature effects the growth of a boundary layer.
 Besides this general behaviour for both configurations, some local differences between them can be detected.
 In the straight part the configurations perfectly match each other. 
 Right before the curvature starts, a small negative bump is visible for the optimised configuration.
@@ -426,17 +426,17 @@ This divergence induces a difference in the qualitative impact of the optimisati
 \begin{figure}[H]
 \centering
 \begin{subfigure}[t]{0.495\textwidth}
-    \subcaption{}
-    \centering
-    \input{images/R500deg18_R100deg90_comparison/streamwise_plots/beta_vs_s_over_delta99ref.pgf}
-    \label{fig:R500deg18R100deg90_beta}
-\end{subfigure}
-\hfill
-\begin{subfigure}[t]{0.495\textwidth}
     \centering
     \subcaption{}
     \input{images/R500deg18_R100deg90_comparison/streamwise_plots/cf_vs_sref.pgf}
     \label{fig:R500deg18R100deg90_cf}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R500deg18_R100deg90_comparison/streamwise_plots/beta_vs_s_over_delta99ref.pgf}
+    \label{fig:R500deg18R100deg90_beta}
 \end{subfigure}
 \\[-20pt]
 \begin{subfigure}[t]{0.495\textwidth}

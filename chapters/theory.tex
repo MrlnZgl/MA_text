@@ -275,7 +275,7 @@ For incompressible flows the non-dimensionalised transport equations can be stat
 
 
 
-\subsection{Clauser parameter in turbulent boundary layers}
+\subsection{Clauser parameter in turbulent boundary layers} \label{subsec:clauser}
 
 In boundary layers the free-stream pressure gradient plays a crucial role since it has a significant impact on the flow behaviour \citep{clauser_turbulent_1954}.
 From the \acrshort{nse} one can derive that the pressure for a \acrshort{tbl} is constant along a flat wall in the wall-normal direction.
@@ -361,7 +361,6 @@ The objective of this project is to implement and evaluate a novel workflow for 
 The project is founded on the preceding research from \citet{morita_applying_2022} who introduced an algorithm to achieve specific $\beta$-distributions.
 The capability of the algorithm on curved domains was tested by \citet{ganagdhar_bayesian_2025}.
 Nonetheless, the results are only partly transferable to the investigations from this study, since the curvature studied by \citet{ganagdhar_bayesian_2025} has a considerably lower $\delta/R$ ratio. 
-A detailed discussion about the transferability of other results is conducted in chapter XX.
 The algorithm performs a shape optimisation of the upper wall in an \name{OpenFOAM} simulation with the objective of fitting a prescribed $\beta$ distribution at the lower wall.
 In order to perform \acrshort{dns} simulations, it is necessary to transfer the result of the optimisation.
 The present study investigates simulations based on the optimised \acrshort{dns} domains utilising diverse curvature configurations.   

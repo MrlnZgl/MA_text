@@ -1,68 +1,68 @@
 \chapter{Conclusion and outlook} \label{chap:summary}
 
-In this final chapter the studied project and its findings are summarised.
-Then, an outlook about further investigations of remaining uncertainties are given.
+In this final chapter the project under study and its main findings are summarised.
+Then, the limitations of the study are outlined and directions for future work are suggested. 
 
-In this thesis \acrshort{tbl} along curved walls are investigated.
-The studies are performed with simulations based on \acrshort{dns} and \acrshort{rans}.
-With these simulations effects of convex curvatures on the development of the \acrshort{tbl} are studied.
-However, in flows along a curvature a pressure gradient arises naturally induced by the geometry.
-This pressure gradient also affects the \acrshort{tbl}.
-In order to study the effect of the curvature separately, the effect of the pressure gradient needs to be known.
-Therefore, a manipulation of the pressure field is required.
-In this work we manipulate the pressure such that a \acrshort{zpg} develops.
-This is a favourable pressure distribution, since \acrshort{tbl} along flat plate walls also have a \acrshort{zpg} as long as no pressure gradient is imposed.
-Therefore, \acrshort{tbl} under \acrshort{zpg} conditions are well-studied and provide an established reference setup.
-In order to create a \acrshort{zpg} in a curved simulation domain an optimisation is employed.
-The optimisation algorithm introduced by \citet{morita_applying_2022} performs a shape optimisation in a \acrshort{rans} simulation.
-The upper wall is defined by several \benennung{control points} which are connected through a spline.
-The position of these \benennung{control points} is optimised such that the Clauser parameter $\beta$ at the lower wall fits its target value.
-The Clauser parameter corresponds to a non-dimensionalisation of the pressure gradient.
-Through the adaptation of the \benennung{control points} the shape of the domain changes, which implicitly affects the pressure distribution.
-When the optimisation is converged, the result is imposed on a domain for a \acrshort{dns}.
-To do this, the velocities along a specific wall-normal height are extracted.
-This height corresponds to the height of the upper wall of the domain used for \acrshort{dns}.
-There the extracted velocities are imposed as a \benennung{Dirichlet} \acrshort{bc}.
-With this optimised \acrshort{bc} three different curved setups are simulated.
-Two setups have a radius of $100\delta_0$ with curvatures of $30$° and $90$°.
-The third setup has a curvature of $500 \delta_0$ and $18$° curvature.
-All setups have a straight inflow region before the curvature starts to ensure a proper development of the \acrshort{tbl}.
-The \acrshort{tbl} is generated with an induced tripping of a laminar Blasius boundary layer near the inflow.
-At the end of the curvature a straight outlet region in tangential direction is added as a rebalancing zone.
-With these setups two simulations for each curved case are performed.
-One simulation is performed with the optimised velocity \acrshort{bc} at the upper wall.
-As a base configuration, all cases are also simulated with a \benennung{Dirichlet} \acrshort{bc} of $(1,0,0)$ velocity profile at the upper wall.
-With these base simulations the effect of the optimisation can be studied.
-In addition, the optimisation capability for the different curvature cases is compared.
-The results show, that the optimisation capability differs for the \benennung{local} and \benennung{global} trend of the pressure distribution.
-On a \benennung{global} level the optimised for all three cases have a more constant pressure distribution in the curvature compared to their base cases.
-However, fluctuations in the pressure distribution arise  \benennung{locally} which are also present in the distribution of the Clauser parameter.
+In this thesis, \acrlong{tbl}s (TBL) along curved walls were investigated.
+The studies were performed using simulations based on \acrfull{dns} and \acrfull{rans}.
+Based on these simulations, an analysis of the impact of convex curvatures on the development of the \acrlong{tbl} was provided.
+However, in flows along a curvature, a pressure gradient naturally arises, induced by the geometry.
+The pressure gradient also affects the \acrlong{tbl}.
+In order to study the effect of the curvature separately,  it is necessary to know the effect of the pressure gradient.
+Consequently, a manipulation of the pressure field is required.
+In our approach we manipulated the pressure such that a \acrfull{zpg} develops.
+This is a benificial pressure distribution, since \acrlong{tbl} along flat plate walls under \acrlong{zpg} conditions are well-studied and provide an established reference setup.
+
+
+The generation of a \acrshort{zpg} in a curved simulation domain was achieved through an optimisation process.
+We adopted the optimisation algorithm introduced by \citet{morita_applying_2022} that performs a shape optimisation in a \acrshort{rans} simulation.
+The upper wall is characterised by multiple \benennung{control points}, which are interconnected by a spline.
+The position of these \benennung{control points} is optimised such that the Clauser parameter $\beta$ at the lower wall fits a prescribed target value.
+The Clauser parameter corresponds to the non-dimensionalisation of the pressure gradient.
+Once the optimisation has converged, the result was applied on a domain for a \acrshort{dns}.
+In order to accomplish this objective, the velocities along a designated wall-normal height were extracted.
+In this context, the extracted velocities were imposed as \benennung{Dirichlet} \acrlong{bc}.
+%
+
+The optimised \acrlong{bc} were employed to simulate three distinct curved setups.
+Two setups are characterised by a radius of $100\delta_0$ with curvatures of $30$° and $90$°.
+The third setup exhibits a radius of $500 \delta_0$ and an $18$° curvature.
+All setups are characterised by the presence of a straight inflow region prior to the onset of curvature. This ensures the adequate development of the \acrshort{tbl}.
+The \acrshort{tbl} was generated with an induced tripping of a laminar Blasius boundary layer in the proximity of the inflow.
+At the termination of the curvature, a straight outlet region was  incorporated in the tangential direction, serving as a rebalancing zone.
+Two simulations were performed for each curved case using these setups. 
+As a base configuration, all cases were simulated with a \benennung{Dirichlet} \acrlong{bc} of $(1,0,0)$ velocity profile at the upper wall.
+Then, simulations were performed with the optimised velocity \acrlong{bc} at the upper wall.
+With the base simulations as a reference, the effect of the optimisation was studied.
+In addition, the optimisation capability was compared for the three curvature cases.
+
+The results of our study show that the optimisation capability differs for the local and global trends of the pressure distribution.
+On a global level, the optimised versions for the cases R100deg30 and R500deg18 demonstrate a more uniform pressure distribution in the curvature when compared to their respective base cases.
+Nonetheless, fluctuations in the pressure distribution manifest locally, and are also present in the distribution of the Clauser parameter.
+XX optimisation R100deg90 
 The effects of different curvatures are studied through a comparison of case R100deg90 and R500deg18.
-XXX curvature effects 
-XXX optimisation for different cases
+XX curvature effects
+
+%In this thesis, the workflow, introduced in \citet{schlatter_leveraging_2025}, to generate a curved \acrshort{tbl} domain with \acrshort{zpg} was tested.
+%\fxunsure{Jetzt bin ich verwirrt: das hatten wir doch gerade schon..., ich lösch den Satz}
+The findings of this study provide evidence that the application of the optimisation algorithm presented by \citet{morita_applying_2022} is feasible in two out of three curvature configurations.
+The global trend of the pressure field was successfully manipulated towards a constant value in the curved segment in the cases R100deg30 and R500deg18.
+However, local fluctuations in the pressure distribution were detected.
+The positioning of the fluctuations suggests a correlation with the location  of the \benennung{control points} used during the optimisation.
+The studies conducted by \citet{ganagdhar_bayesian_2025} examined the optimisation capability and identified a case characterised by a substantially diminished curvature in comparison to the boundary layer thickness. \fxinfo{wieso ist das hier irgendwie ein (nicht) vergleichbarer Fall?}
+Therefore, to our knowledge there is only limited knowledge  on the capability of the optimisation algorithm in relation to the geometric properties examined here.
+In order to eliminate the local fluctuations in the pressure distribution, a detailed study of the optimisation algorithm with various settings and geometries is required.
+Furthermore, an investigation into the number and positioning of the \benennung{control points} is necessary in order to establish an optimal relation between a smooth $\beta$ distribution and a reasonable computational effort for the optimisation.
 
 
-In this thesis, the workflow, introduced in \citet{schlatter_leveraging_2025}, to generate a curved \acrshort{tbl} domain with \acrshort{zpg} was tested.
-The results presented in \autoref{chap:results} show, that the application of the optimisation algorithm presented by \citet{morita_applying_2022} was possible in all three curvature configurations.
-The \benennung{global} trend of the pressure field was successfully manipulated towards a constant value in the curved segment.
-However, \benennung{local} fluctuations in the pressure distribution were detected.
-The positioning of the fluctuations suggest a connection with the position of the \benennung{control points} used in the optimisation.
-The studies performed by \citet{ganagdhar_bayesian_2025} about the optimisation capability captured a case with significantly lower curvature compared to the boundary layer thickness.
-Therefore, only rare knowledge exists about the capability of the optimisation algorithm for the here tested geometric properties.
-In order to eliminate the \benennung{local} fluctuations in the pressure distribution, a detailed study of the optimisation algorithm with various settings and geometries is required.
-In addition, the number and positioning of the \benennung{control points} should be investigated to obtain an optimal relation between a smooth $\beta$ distribution and a reasonable computational effort for the optimisation.
-
-
-In the \acrshort{dns} of the curved \acrshort{tbl} we visibly detected fluctuations in between the instantaneous pressure fields.
-Because of their characteristics, analysed in \autoref{sec:pressFluc}, we assume that they are non-physical artefact caused by the outer constrains of the domain.
-Similar pressure modes were detected by \citet{maday_spectral_1989} and \citet{sabbah_filtering_2001} who in introduced methods to eliminate them.
-We performed various tests with different configurations to localise potential causes for the fluctuations.
-However, with these tests we were not able to clearly identify the causes of the fluctuations.
-Here, further tests are necessary to find the original source of these fluctuations.
-Nevertheless, we verified the reliability of the statistical results to ensure that the statistics unaffected by the fluctuations.
-To do this, we extracted data in the straight section and compared them to the earlier performed simulations of a plane \acrshort{tbl} as well as with reference data of plane \acrshort{tbl} simulations.
-This verification is presented in \autoref{sec:planeTBLVerif}, where it can be seen that the statistical quantities are undisturbed and hence similar to the reference data.
-In order to obtain a better understanding of the fluctuations further tests need to be done.
-This also helps for future improvements of the domain setups or the comparisons of different setups.
-
-
+In the \acrshort{dns} of the curved \acrshort{tbl}, temporal differences in between the instantaneous pressure fields were detected.
+Due to their characteristics analysed in \autoref{sec:pressFluc}, we hypothesised that these are non-physical artefacts caused by the external constraints of the domain.
+Similar pressure modes were observed by \citet{maday_spectral_1989} and \citet{sabbah_filtering_2001} who introduced methods to eliminate them.
+We performed a series of tests with diverse configurations with the objective of identifying the underlying causes of the observed fluctuations.
+However, the conducted tests did not allow for the clear identification of  the causes of the fluctuations.
+In order to determine the root cause of these fluctuations, further tests are required.
+Nevertheless, we verified the reliability of the statistical results to ensure that the statistics are unaffected by the fluctuations.
+In order to accomplish this objective, we extracted data from the straight section and compared them with the earlier performed simulations of a plane \acrshort{tbl} as well as with reference data from plane \acrshort{tbl} simulations.
+This verification was presented in \autoref{sec:planeTBLVerif}. It proves  that the statistical quantities are undisturbed and hence similar to the reference data.
+In order to obtain a more profound of the pressure fluctuations, further tests are required in future research.
+This will also help for future enhancement to the domain setups, as well as facilitating the comparison of different setups.
