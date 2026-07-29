@@ -1,0 +1,13 @@
+\chapter*{Abstract}
+
+In this thesis, simulations of \acrfull{tbl} over curved walls under \acrfull{zpg} conditions were performed to enable an isolated investigation of curvature-induced effects in the \acrshort{tbl}.
+In curved geometries, a streamwise pressure gradient naturally develops, causing pressure-gradient effects to superimpose on those induced by wall curvature complicating their independent assessment. To isolate the influence of curvature, the pressure field was manipulated to establish \acrshort{zpg} conditions throughout 
+ the entire simulated domain.
+This work evaluates a novel approach for constructing a curved simulation setup under \acrshort{zpg} conditions.
+THe method is based on the optimisation algorithm proposed by \citet{morita_applying_2022}, which performs a shape optimisation  of the upper wall of the simulated domain in order to match a prescribed distribution of the Clauser parameter $\beta$ at the lower wall.
+The resulting velocity field is extracted and imposed as a \benennung{Dirichlet} boundary condition on the upper wall of a \acrlong{dns} setup.
+Using this methodology,  \acrlong{dns} of \acrlong{tbl} are carried out for three convex curved geometries with different curvature characteristics.
+The results are compared with simulations of curved boundary layers under reference conditions as well as with reference data from flat-plate \acrlong{tbl} simulations.
+The results demonstrate that the optimisation algorithm effectively controls  the pressure field and achieves an approximately uniform\fxinfo{constant?} pressure-gradient distribution on a global scale. 
+However, its performance is limited in cases with strong curvature, such as a 90° bend, where the target \acrshort{zpg} conditions cannot be maintained throughout the entire domain.
+
