@@ -1,2 +1,127 @@
-\chapter{Einleitung}
+\chapter{Attachment} \label{chap:attachment}
 
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R100deg90/Re_2000/UplusNearWall_Re2000_bycase.pgf}
+    \label{fig:R100deg90_U}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg90/Re_2000/fluctuations_Re2000_bycase.pgf}
+    \label{fig:R100deg90_fluct}
+\end{subfigure}
+\\[-20pt]
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R100deg90/Re_2000/budget_Re2000_k_linestyle.pgf}
+    \label{fig:R100deg90_bud}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18_R100deg90_comparison/streamwise_plots/delta99_theta_vs_s_over_delta99ref.pgf}
+    \label{fig:R100deg90_delta99}
+\end{subfigure}
+\\[-15pt]
+\caption[First and second order statistics of R100deg90 at $\mathrm{Re}_{\theta} = 2000$ with reference data taken from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 2000$, and streamwise boundary layer thickness development normalised with reference boundary layer thickness $\delta_0$]{First and second order statistics of R100deg90 at $\mathrm{Re}_{\theta} = 2000$ with reference data taken from \citet{schlatter_assessment_2010} at $\mathrm{Re}_{\theta} = 2000$: (a) streamwise velocity profile in viscous scales; (b) Reynolds stresses $\langle u_i' u_j' \rangle$; (c) budget of \acrshort{tke} = $\frac{1}{2} \langle u_i' u_i' \rangle$:
+line style denotes budget term:
+\lswatch[solid]{black} production,
+\lswatch[dash pattern=on 5pt off 1pt]{black} convection,
+\lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black} dissipation,
+\lswatch[dash pattern=on 1pt off 1pt]{black} velocity-pressure-gradient correlation,
+\lswatch[dash pattern=on 5pt off 5pt]{black} turbulent transport,
+\lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black} viscous diffusion,
+\lswatch[dash pattern=on 1pt off 5pt]{black} residual; (d) streamwise boundary layer thickness normalised with reference boundary layer thickness $\delta_0$}
+\label{fig:R100deg90_stats}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R500deg18/Re1200/UplusNearWall_txt_Re1200_bycase.pgf}
+    \label{fig:R500deg18Re1200U}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/Re1200/fluctuations_txt_Re1200_bycase.pgf}
+    \label{fig:R500deg18Re1200Fluct}
+\end{subfigure}
+\\[-20pt]
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/Retau_Retheta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R500deg18Re1200Delta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/delta99_theta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R500deg18Re1200Treynolds}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:R100deg30Re1200}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.495\textwidth}
+    \subcaption{}
+    \centering
+    \input{images/R500deg18/comparison_plots/delta_wall_pressure_bendmean_vs_s_over_delta0_txt.pgf}
+    \label{fig:R500deg18Re1200p}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/Ue_vs_s_over_delta0_txt.pgf}
+    \label{fig:R500deg18Re1200Uinf}
+\end{subfigure}
+\\[-20pt]
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/comparison_plots/beta_vs_s_over_delta99ref_txt.pgf}
+    \label{fig:R500deg18Re1200Beta}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+    \centering
+    \subcaption{}
+    \input{images/R500deg18/Re1200/budget_txt_Re1200_k_linestyle.pgf}
+    \label{fig:R500deg18Re1200Budget}
+\end{subfigure}
+\caption{Budget of $\langle u_i' u_j' \rangle$ (component: uu) at $Re_\theta \approx 700$.
+Linestyle denotes budget term:
+Production \lswatch[solid]{black},
+Convection \lswatch[dash pattern=on 5pt off 1pt]{black},
+Dissipation \lswatch[dash pattern=on 3pt off 1pt on 1pt off 1pt]{black},
+Vel-Press.\ \lswatch[dash pattern=on 1pt off 1pt]{black},
+Turb.\ Trans.\ \lswatch[dash pattern=on 5pt off 5pt]{black},
+Visc.\ Diff.\ \lswatch[dash pattern=on 3pt off 5pt on 1pt off 5pt]{black},
+Residual \lswatch[dash pattern=on 1pt off 5pt]{black}.}
+\label{fig:R500deg18Re1200}
+\end{figure}
