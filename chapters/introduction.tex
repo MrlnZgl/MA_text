@@ -8,12 +8,13 @@ In addition, \acrshort{cfd} facilitates insights into underlying physical phenom
 
 The advancements of \acrshort{cfd} simulations are of particular significance in the context of investigating phenomena operating on small physical scales.
 In circumstances where a fluid comes into contact with a solid object, these small physical scales assume a pivotal role.
-This phenomenon has been observed in all technical applications where a fluid is confined by a wall, such as the fluid within a pipe or around an airfoil \citep{marusic_wall-bounded_2010}.
+This phenomenon can be observed in all technical applications where a fluid is confined by a wall, such as the fluid within a pipe or around an airfoil \citep{marusic_wall-bounded_2010}.
 These flows are known as \benennung{wall-bounded flows}.
 It is imperative to note that the processes occurring in proximity to the wall are of particular significance, as they have the potential to induce substantial energy loss in the flow \citep{fan_decomposition_2020}.
-They are the result of  friction between the wall and the fluid itself.
-The factors determining this friction are numerous and include  wall roughness, geometry, and viscosity of the fluid \citep{schlichting_boundary-layer_2017}.
-A reduction of these losses is important for \fxinfo{wie geht' der Satz weiter?, dann Absatz?}
+They are the result of friction between the wall and the fluid itself.
+The factors determining this friction are numerous and include wall roughness, geometry, and viscosity of the fluid \citep{schlichting_boundary-layer_2017}.
+
+
 The range in which the flow is impacted by the interaction with the wall is usually limited in the wall-normal direction.
 This area is named \benennung{boundary layer}, and was first introduced by \citet{prandtl_uber_1904}.
 In a multitude of applications the boundary layer is characterised by turbulence, which hinders the investigation of its internal processes.
@@ -24,12 +25,12 @@ The so-called \acrfull{dns} facilitates the resolution of all turbulent scales w
 In order to study the behaviour of \acrfull{tbl} under a range of conditions, the use of \acrshort{dns} is essential. \\
 
 
-A substantial body of research has been conducted to obtain understanding of the underlying mechanisms in \acrfull{tbl} along a plane wall, as referenced in \citep{pargal_adverse-pressure-gradient_2022}.
-\citet{schlatter_turbulent_2012} studied the impact of inflow conditions and tripping on the development of \acrshort{tbl} along a flat plate.
+A substantial body of research has been conducted to obtain understanding of the underlying mechanisms in \acrfull{tbl} over a flate plate, as referenced in \citep{pargal_adverse-pressure-gradient_2022}.
+\citet{schlatter_turbulent_2012} studied the impact of inflow conditions and tripping on the development of \acrshort{tbl} over a flat plate.
 A thorough investigation of the structures in the \acrshort{tbl} was performed by \citet{jimenez_near-wall_2013}.
-Nevertheless, only a limited number of studies have focused on \acrshort{tbl} along curved surfaces, despite the fact that curved geometries are common in real-world applications \citep{spalart_direct_2024}.
+Nevertheless, only a limited number of studies have focused on \acrshort{tbl} over curved surfaces, despite the fact that curved geometries are common in real-world applications \citep{spalart_direct_2024}.
 Already \citet{muck_effect_1985} demonstrated that the study of curvature effects is nonetheless important, since their investigations of convex and concave curvature exhibited fundamental differences in the \acrshort{tbl} development.
-Additionally, \citet{chiwanga_effect_1993} yielded noteworthy insights regarding the differences between turbulent structures along a flat wall and a convex curved wall.
+Additionally, \citet{chiwanga_effect_1993} yielded noteworthy insights regarding the differences between turbulent structures over a flat wall and a convex curved wall.
 Nevertheless, the investigation of curved \acrshort{tbl} presents certain intricacies \citep{appelbaum_systematic_2025}.
 \citet{so_experiment_1973} found in their experiments that a curved geometry provokes a pressure gradient across the entire domain.
 This pressure gradient also impacts the development of the \acrshort{tbl}.
@@ -48,14 +49,13 @@ The approach is tested in three different curved geometries introduced in \autor
 The used approach is founded upon \citet{schlatter_leveraging_2025}.
 The idea is to impose \acrlong{bc} constraining the velocity at the upper wall of the curved domain.
 The \acrlong{bc} serve to modify the pressure field towards a \acrlong{zpg}.
-It is therefore necessary to determine \acrshort{bc} for the velocity field. 
-This is achieved through the utilisation of assistant simulations of lower accuracy. 
+The required velocity \acrshort{bc} is determined by using assistant simulations of lower accuracy.
 In these simulations, the curved domain is modelled by means of a movable upper wall. 
 The realisation of this setup is described in detail in \autoref{sec:OptimisationMethod}.
-It is possible to adjust the shape of the upper wall by manipulating the position of the movable control points,
-In order to obtain a \acrshort{zpg} at the lower wall.
+It is possible to adjust the shape of the upper wall by manipulating the position of the \benennung{design points},
+in order to obtain a \acrshort{zpg} at the lower wall.
 This procedure is implemented in an optimisation algorithm introduced by \citet{morita_applying_2022}.
-The algorithm optimises the shape of the upper wall to obtain the prescribed target value of the \benennung{Clauser parameter} denoted by $\beta$, which is a non-dimensionalised variable for the pressure gradient, along the lower wall.
+The algorithm optimises the shape of the upper wall to obtain the prescribed target value of the \benennung{Clauser parameter} denoted by $\beta$, which is a non-dimensionalised variable for the pressure gradient, over the lower wall.
 From the optimised configuration, we extract the velocity profile at a specific wall-normal height.
 The extracted velocity profile is then imposed as \acrshort{bc} in a new fully resolved simulation.
 This boundary condition should then induce a similar pressure field as in the optimised simulation, respectively, with a \acrlong{zpg} at the lower wall.
@@ -77,27 +77,16 @@ Finally, the key findings are summarised and an outlook for future investigation
 \subsection{ToDos}
 
 \begin{itemize}
-    \item anmerkungen einarbeiten ( results)
     \item delta99 fixen in R100deg90 wiggles rausmachen
     \item R100deg30 cf plot einbauen
+    \item labels. von plane zu flat ändern
 \end{itemize}
 
-\begin{itemize}
-    \item 1 results --> R100deg30 --> dazuschreiben dass curvature keine effekt auf stats halt, bildbeschreibungen kürzen
-\end{itemize}
 
 Insgesamt: 
 \begin{itemize}
-    \item schluss (Angefangen)
     \item acknowledgment (Dummy version vorhanden)
-    \item bib nochmal geradeziehen (erledigt stand 23.07.)
-    \item captions (auch die für LoF) reference data einfügen (fertig bis akutellem schreibstand)
-    \item benennungen consitentn machen (claude fragen)
-    \item kapitälchen rausschmeißen (einfach fett schreiben/ oder groß?) (done)
-    \item optimisation theory (optional)
-    \item label von bildern und autorefs checken (done)
-    \item captions auf reynolds stress shading eingehen
-    \item tabelle mit line styles von budget terms
+    \item captions im Anahng
 \end{itemize}
 
 

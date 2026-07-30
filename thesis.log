@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  29 JUL 2026 23:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  30 JUL 2026 18:21
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1381,11 +1381,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 [2] (./thesis.lof
-Overfull \hbox (8.97066pt too wide) in paragraph at lines 23--23
- [][] [][][]\T1/cmr/m/n/10.95 First and sec-ond or-der statis-tics and Clauser pa-ram-e-ter of plane [][][]TBL[][] and R100deg30 |
- []
-
-
 Underfull \vbox (badness 3460) has occurred while \output is active []
 
 
@@ -1421,7 +1416,17 @@ Underfull \vbox (badness 3460) has occurred while \output is active []
 [8
 
 
-]) (./thesis.acr)
+]) (./thesis.acr
+
+Package glossaries Warning: Glossary entry `so' has not been defined on input line 85.
+
+
+Package glossaries Warning: Glossary entry `so' has not been defined on input line 85.
+
+
+Package glossaries Warning: Glossary entry `so' has not been defined on input line 85.
+
+)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -1438,9 +1443,8 @@ l.252 \include{chapters/introduction}
 
  (./chapters/introduction.tex
 chapter 1.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 16.
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--25
+Underfull \hbox (badness 10000) in paragraph at lines 18--26
 
  []
 
@@ -1450,15 +1454,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--25
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 
+l.45 
       [2
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 46--66
+Underfull \hbox (badness 10000) in paragraph at lines 47--66
 
  []
 
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 72.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1487,8 +1492,8 @@ chapter 2.
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.54 \begin{equation}
-                      [5
+l.55 \end{equation}
+                    [5
 
 
 
@@ -1499,14 +1504,14 @@ l.54 \begin{equation}
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 \begin{gather}
+l.96 \begin{gather}
                    \label{eq: tblThickness} [6]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.174 \begin{gather}
+l.152 \begin{gather}
                      [7] (./images/theory/Uplus_referenceOnly_txt.pgf
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 115.
 
@@ -1534,54 +1539,54 @@ LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
 (Font)              size <5> substituted on input line 115.
 
-LaTeX Font Info:    Calculating math sizes for size <9.163> on input line 2685.
+LaTeX Font Info:    Calculating math sizes for size <9.163> on input line 2705.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.41406> not available
-(Font)              size <6> substituted on input line 2685.
+(Font)              size <6> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.5815> not available
-(Font)              size <5> substituted on input line 2685.
+(Font)              size <5> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.41406> not available
-(Font)              size <6> substituted on input line 2685.
+(Font)              size <6> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.5815> not available
-(Font)              size <5> substituted on input line 2685.
+(Font)              size <5> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.41406> not available
-(Font)              size <6> substituted on input line 2685.
+(Font)              size <6> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.5815> not available
-(Font)              size <5> substituted on input line 2685.
+(Font)              size <5> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <6.41406> not available
-(Font)              size <6> substituted on input line 2685.
+(Font)              size <6> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <4.5815> not available
-(Font)              size <5> substituted on input line 2685.
+(Font)              size <5> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <6.41406> not available
-(Font)              size <6> substituted on input line 2685.
+(Font)              size <6> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <4.5815> not available
-(Font)              size <5> substituted on input line 2685.
+(Font)              size <5> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <6.41406> not available
-(Font)              size <6> substituted on input line 2685.
+(Font)              size <6> substituted on input line 2705.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <4.5815> not available
-(Font)              size <5> substituted on input line 2685.
+(Font)              size <5> substituted on input line 2705.
 
 )
 
@@ -1589,21 +1594,21 @@ LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <4.5815> not available
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.214 
+l.191 
        [8]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.284 \begin{equation}
+l.251 \begin{equation}
                       \label{eq:bernoulli} [9]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.331 
+l.296 
        [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1613,7 +1618,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.368 
+l.331 
        [11])
 
 
@@ -1626,14 +1631,14 @@ l.253 \include{chapters/theory}
 
  (./chapters/methods.tex
 chapter 3.
-(./images/methods/gll_points.pgf)
+
 
 [13
 
 
 
 
-]
+] (./images/methods/gll_points.pgf)
 
 [14] (./images/methods/fvm_stencil.pgf
 
@@ -1692,25 +1697,25 @@ LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <6.5> not available
 )
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 182--190
+Underfull \hbox (badness 10000) in paragraph at lines 156--163
 
  []
 
 
 
 [16] (./images/simulation_setups/setup_curved.pgf
-<images/simulation_setups/setup_curved-img0.png, id=961, interpolate=true, 1127.21124pt x 269.005pt>
+<images/simulation_setups/setup_curved-img0.png, id=953, interpolate=true, 1127.21124pt x 269.005pt>
 File: images/simulation_setups/setup_curved-img0.png Graphic file (type png)
 <use images/simulation_setups/setup_curved-img0.png>
 Package pdftex.def Info: images/simulation_setups/setup_curved-img0.png  used on input line 57.
 (pdftex.def)             Requested size: 405.79575pt x 96.84172pt.
-<images/simulation_setups/setup_curved-img1.png, id=963, interpolate=true, 373.395pt x 25.09375pt>
+<images/simulation_setups/setup_curved-img1.png, id=955, interpolate=true, 373.395pt x 25.09375pt>
 File: images/simulation_setups/setup_curved-img1.png Graphic file (type png)
 <use images/simulation_setups/setup_curved-img1.png>
 Package pdftex.def Info: images/simulation_setups/setup_curved-img1.png  used on input line 303.
 (pdftex.def)             Requested size: 134.42209pt x 9.03374pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 204--219
+Underfull \hbox (badness 10000) in paragraph at lines 176--191
 
  []
 
@@ -1721,18 +1726,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--219
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [18]
 
 [19]
-<images/optimisation/BOGP_flowchart_horizontal.pdf, id=1035, 432.20018pt x 268.35226pt>
+<images/optimisation/BOGP_flowchart_horizontal.pdf, id=1042, 432.20018pt x 268.35226pt>
 File: images/optimisation/BOGP_flowchart_horizontal.pdf Graphic file (type pdf)
 <use images/optimisation/BOGP_flowchart_horizontal.pdf>
-Package pdftex.def Info: images/optimisation/BOGP_flowchart_horizontal.pdf  used on input line 368.
+Package pdftex.def Info: images/optimisation/BOGP_flowchart_horizontal.pdf  used on input line 321.
 (pdftex.def)             Requested size: 455.24408pt x 282.66673pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 
 [20]
@@ -1740,6 +1746,9 @@ Package pdftex.def Info: images/optimisation/BOGP_flowchart_horizontal.pdf  used
 [21 <./images/optimisation/BOGP_flowchart_horizontal.pdf>] (./images/optimisation/domain_cps.pgf)
 
 [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [23]
 
@@ -1758,12 +1767,16 @@ chapter 4.
 
 
 ]
-<images/channel_valid/channelIC.pdf, id=1151, 1390.59625pt x 679.50432pt>
+<images/channel_valid/channelIC.pdf, id=1168, 1390.59625pt x 679.50432pt>
 File: images/channel_valid/channelIC.pdf Graphic file (type pdf)
 <use images/channel_valid/channelIC.pdf>
 Package pdftex.def Info: images/channel_valid/channelIC.pdf  used on input line 67.
 (pdftex.def)             Requested size: 295.90587pt x 144.58716pt.
- (./images/channel_valid/UplusNearWall_txt_Re178_bycase.pgf) (./images/channel_valid/fluctuations_txt_Re178_bycase.pgf) (./images/channel_valid/budget_txt_Re178_k_linestyle.pgf)
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./images/channel_valid/UplusNearWall_txt_Re178_bycase.pgf) (./images/channel_valid/fluctuations_txt_Re178_bycase.pgf) (./images/channel_valid/budget_txt_Re178_k_linestyle.pgf)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1777,50 +1790,54 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [28]
 
 [29]
-<images/methods/mesh.pdf, id=1209, 2871.78708pt x 1905.1175pt>
+<images/methods/mesh.pdf, id=1231, 2871.78708pt x 1905.1175pt>
 File: images/methods/mesh.pdf Graphic file (type pdf)
 <use images/methods/mesh.pdf>
-Package pdftex.def Info: images/methods/mesh.pdf  used on input line 198.
+Package pdftex.def Info: images/methods/mesh.pdf  used on input line 214.
 (pdftex.def)             Requested size: 273.14922pt x 181.19153pt.
 
 
-[30 <./images/methods/mesh.pdf>] (./images/simulation_setups/blasius_profile_poly.pgf) (./images/simulation_setups/setup_plane.pgf
-<images/setup_plane-img0.png, id=1241, interpolate=true, 1056.94875pt x 120.45pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[30] (./images/simulation_setups/blasius_profile_poly.pgf)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[31 <./images/methods/mesh.pdf>] (./images/simulation_setups/setup_plane.pgf
+<images/setup_plane-img0.png, id=1269, interpolate=true, 1056.94875pt x 120.45pt>
 File: images/setup_plane-img0.png Graphic file (type png)
 <use images/setup_plane-img0.png>
 Package pdftex.def Info: images/setup_plane-img0.png  used on input line 57.
 (pdftex.def)             Requested size: 380.50125pt x 43.36195pt.
-<images/setup_plane-img1.png, id=1242, interpolate=true, 368.37625pt x 28.105pt>
+<images/setup_plane-img1.png, id=1270, interpolate=true, 368.37625pt x 28.105pt>
 File: images/setup_plane-img1.png Graphic file (type png)
 <use images/setup_plane-img1.png>
 Package pdftex.def Info: images/setup_plane-img1.png  used on input line 167.
 (pdftex.def)             Requested size: 132.61534pt x 10.11778pt.
-)
-
-[31] (./images/planeTBL_valid/Re_700/UplusNearWall_txt_Re700_bycase.pgf) (./images/planeTBL_valid/Re_700/fluctuations_txt_Re700_bycase.pgf) (./images/planeTBL_valid/Re_700/budget_txt_Re700_k_linestyle.pgf) (./images/planeTBL_valid/delta99_theta_vs_s_over_delta99ref_txt.pgf)
+) (./images/planeTBL_valid/Re_700/UplusNearWall_txt_Re700_bycase.pgf) (./images/planeTBL_valid/Re_700/fluctuations_txt_Re700_bycase.pgf) (./images/planeTBL_valid/Re_700/budget_txt_Re700_k_linestyle.pgf) (./images/planeTBL_valid/delta99_theta_vs_s_over_delta99ref_txt.pgf)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[32 <./images/setup_plane-img0.png> <./images/setup_plane-img1.png>] (./images/planeTBL_valid/beta_vs_s_over_delta99ref_txt_unfi.pgf) (./images/planeTBL_valid/wall_pressure_normalised_vs_s_txt.pgf)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 3503) has occurred while \output is active []
+[32 <./images/setup_plane-img0.png> <./images/setup_plane-img1.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[33]
+[33] (./images/planeTBL_valid/beta_vs_s_over_delta99ref_txt_unfi.pgf) (./images/planeTBL_valid/wall_pressure_normalised_vs_s_txt.pgf)
 
 [34] (./images/pressureFluct/reference/wall_pressure_pair.pgf
-<images/wall_pressure_pair-img0.png, id=1305, interpolate=true, 479.7925pt x 264.99pt>
+<images/wall_pressure_pair-img0.png, id=1328, interpolate=true, 479.7925pt x 264.99pt>
 File: images/wall_pressure_pair-img0.png Graphic file (type png)
 <use images/wall_pressure_pair-img0.png>
 Package pdftex.def Info: images/wall_pressure_pair-img0.png  used on input line 1421.
 (pdftex.def)             Requested size: 172.72516pt x 95.39632pt.
-<images/wall_pressure_pair-img1.png, id=1306, interpolate=true, 478.78876pt x 218.8175pt>
+<images/wall_pressure_pair-img1.png, id=1329, interpolate=true, 478.78876pt x 218.8175pt>
 File: images/wall_pressure_pair-img1.png Graphic file (type png)
 <use images/wall_pressure_pair-img1.png>
 Package pdftex.def Info: images/wall_pressure_pair-img1.png  used on input line 3112.
@@ -1859,7 +1876,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [40]
-Underfull \vbox (badness 7099) has occurred while \output is active []
+Underfull \vbox (badness 4391) has occurred while \output is active []
 
 
 
@@ -1868,7 +1885,7 @@ Underfull \vbox (badness 7099) has occurred while \output is active []
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 2922) has occurred while \output is active []
+Underfull \vbox (badness 2913) has occurred while \output is active []
 
 
 
@@ -1878,28 +1895,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [43]
-Underfull \vbox (badness 1515) has occurred while \output is active []
+Underfull \vbox (badness 1231) has occurred while \output is active []
 
 
 
 [44]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [45] (./images/R500deg18_R100deg90_comparison/Re_2000/UplusNearWall_Re2000_bycase.pgf) (./images/R500deg18_R100deg90_comparison/Re_2000/fluctuations_Re2000_bycase.pgf) (./images/R500deg18_R100deg90_comparison/Re_2000/budget_Re2000_k_linestyle.pgf) (./images/R500deg18_R100deg90_comparison/streamwise_plots/delta99_theta_vs_s_over_delta99ref.pgf)
 
-[46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[46] (./images/R500deg18_R100deg90_comparison/streamwise_plots/cf_vs_sref.pgf) (./images/R500deg18_R100deg90_comparison/streamwise_plots/beta_vs_s_over_delta99ref.pgf) (./images/R500deg18_R100deg90_comparison/streamwise_plots/delta_wall_pressure_bendmean_vs_s_over_delta0.pgf) (./images/R500deg18_R100deg90_comparison/streamwise_plots/Ue_vs_s_over_delta0.pgf)
+
+[47]
+Underfull \vbox (badness 1348) has occurred while \output is active []
 
 
-
-[47] (./images/R500deg18_R100deg90_comparison/streamwise_plots/cf_vs_sref.pgf) (./images/R500deg18_R100deg90_comparison/streamwise_plots/beta_vs_s_over_delta99ref.pgf) (./images/R500deg18_R100deg90_comparison/streamwise_plots/delta_wall_pressure_bendmean_vs_s_over_delta0.pgf) (./images/R500deg18_R100deg90_comparison/streamwise_plots/Ue_vs_s_over_delta0.pgf)
 
 [48]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [49])
 
@@ -1995,18 +2006,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 53220 strings out of 473190
- 1229510 string characters out of 5715800
- 2388676 words of memory out of 5000000
- 75041 multiletter control sequences out of 15000+600000
+ 53155 strings out of 473190
+ 1228314 string characters out of 5715800
+ 2385945 words of memory out of 5000000
+ 74983 multiletter control sequences out of 15000+600000
  597888 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,17n,109p,10986b,1193s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,109p,10986b,1117s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (79 pages, 8357490 bytes).
+Output written on thesis.pdf (79 pages, 8354109 bytes).
 PDF statistics:
- 1989 PDF objects out of 2073 (max. 8388607)
- 1747 compressed objects within 18 object streams
- 268 named destinations out of 1000 (max. 500000)
+ 2027 PDF objects out of 2073 (max. 8388607)
+ 1777 compressed objects within 18 object streams
+ 261 named destinations out of 1000 (max. 500000)
  390 words of extra memory for PDF output out of 10000 (max. 10000000)
 

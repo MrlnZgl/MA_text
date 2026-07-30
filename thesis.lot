@@ -3,9 +3,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Overview of the geometric parameters of the performed simulations of curved turbulent boundary layers with assigned naming}}{18}{table.caption.25}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Overview of the geometric parameters of the performed simulations of \acrshort {tbl} over curved walls with assigned naming}}{18}{table.caption.24}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces List of tested configurations of the setup of case R100deg30 to eliminate pressure fluctuations detected in the snapshots}}{36}{table.caption.54}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Line styles used to denote the budget terms in \acrshort {tke} plots throughout this thesis}}{28}{table.caption.41}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces List of tested configurations of the setup of case R100deg30 to eliminate pressure fluctuations detected in the snapshots}}{36}{table.caption.51}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

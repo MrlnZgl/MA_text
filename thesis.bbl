@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{53}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -251,7 +251,7 @@ J.~Slotnick et~al.
 
 \bibitem[So and Mellor(1973)]{so_experiment_1973}
 R.~M.~C. So and G.~L. Mellor.
-\newblock Experiment on convex curvature effects in turbulent boundary layers.
+\newblock Experiments on convex curvature effects in turbulent boundary layers.
 \newblock \emph{Journal of Fluid Mechanics}, 60\penalty0 (1):\penalty0 43--62, 1973.
 \newblock \doi{10.1017/S0022112073000030}.
 
@@ -259,6 +259,11 @@ R.~M.~C. So and G.~L. Mellor.
 P.~Spalart, K.~Jansen, and G.~Coleman.
 \newblock Direct numerical simulation of two boundary layers with the same pressure distribution but different surface curvatures, 2024.
 \newblock arXiv:2409.00555 [physics.flu-dyn].
+
+\bibitem[Talnikar et~al.(2014)Talnikar, Blonigan, Bodart, and Wang]{talnikar_parallel_2014}
+C.~Talnikar et~al.
+\newblock Parallel optimization for large eddy simulations, 2014.
+\newblock arXiv:1410.8859 [physics.flu-dyn].
 
 \bibitem[Tanarro et~al.(2020)Tanarro, Vinuesa, and Schlatter]{tanarro_effect_2020}
 A.~Tanarro, R.~Vinuesa, and P.~Schlatter.
