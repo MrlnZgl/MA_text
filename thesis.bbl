@@ -7,7 +7,7 @@
 
 \bibitem[Alfonsi(2009)]{alfonsi_reynolds-averaged_2009}
 G.~Alfonsi.
-\newblock Reynolds-averaged navier–stokes equations for turbulence modeling.
+\newblock Reynolds-averaged {Navier}--{Stokes} equations for turbulence modeling.
 \newblock \emph{Applied Mechanics Reviews}, 62\penalty0 (4):\penalty0 040802, 2009.
 \newblock \doi{10.1115/1.3124648}.
 
@@ -19,7 +19,7 @@ J.~Appelbaum, M.~Kloker, and C.~Wenzel.
 
 \bibitem[Balasubramanian et~al.(2023)Balasubramanian, Guastoni, Schlatter, and Vinuesa]{balasubramanian_direct_2023}
 A.~G. Balasubramanian et~al.
-\newblock Direct numerical simulation of a zero-pressure-gradient turbulent boundary layer with passive scalars up to prandtl number \textit{{Pr}} = 6.
+\newblock Direct numerical simulation of a zero-pressure-gradient turbulent boundary layer with passive scalars up to {Prandtl} number \textit{{Pr}} = 6.
 \newblock \emph{Journal of Fluid Mechanics}, 974:\penalty0 A49, 2023.
 \newblock \doi{10.1017/jfm.2023.803}.
 
@@ -31,7 +31,7 @@ G.~K. Batchelor.
 
 \bibitem[Blasius(1908)]{blasius_grenzschichtern_1908}
 H.~Blasius.
-\newblock Grenzschichtern in {Flüssigkeiten} mit kleiner {Reibung}.
+\newblock Grenzschichten in {Flüssigkeiten} mit kleiner {Reibung}.
 \newblock \emph{Zeitschrift für Mathematik und Physik}, 56\penalty0 (Heft 1), 1908.
 
 \bibitem[Bobke et~al.(2017)Bobke, Vinuesa, Örlü, and Schlatter]{bobke_history_2017}
@@ -79,7 +79,7 @@ Y.~Fan et~al.
 
 \bibitem[Ganagdhar(2025)]{ganagdhar_bayesian_2025}
 M.~Ganagdhar.
-\newblock Bayesian optimization of free-stream conditions for a target pressure-gradient parameter beta in various boundary layers flows using openfoam, 2025.
+\newblock Bayesian optimization of free-stream conditions for a target pressure-gradient parameter beta in various boundary layers flows using {OpenFOAM}, 2025.
 
 \bibitem[Gillis and Johnston(1983)]{gillis_turbulent_1983}
 J.~C. Gillis and J.~P. Johnston.
@@ -89,7 +89,7 @@ J.~C. Gillis and J.~P. Johnston.
 
 \bibitem[Hosseini et~al.(2016)Hosseini, Vinuesa, Schlatter, Hanifi, and Henningson]{hosseini_direct_2016}
 S.~Hosseini et~al.
-\newblock Direct numerical simulation of the flow around a wing section at moderate reynolds number.
+\newblock Direct numerical simulation of the flow around a wing section at moderate {Reynolds} number.
 \newblock \emph{International Journal of Heat and Fluid Flow}, 61:\penalty0 117--128, 2016.
 \newblock \doi{10.1016/j.ijheatfluidflow.2016.02.001}.
 
@@ -130,7 +130,7 @@ N.~N. Mansour, J.~Kim, and P.~Moin.
 
 \bibitem[Marusic et~al.(2010)Marusic, McKeon, Monkewitz, Nagib, Smits, and Sreenivasan]{marusic_wall-bounded_2010}
 I.~Marusic et~al.
-\newblock Wall-bounded turbulent flows at high reynolds numbers: recent advances and key issues.
+\newblock Wall-bounded turbulent flows at high {Reynolds} numbers: recent advances and key issues.
 \newblock \emph{Physics of Fluids}, 22\penalty0 (6):\penalty0 065103, 2010.
 \newblock \doi{10.1063/1.3453711}.
 
@@ -154,13 +154,13 @@ P.~Moin and W.~H.~R. Chan.
 
 \bibitem[Morita et~al.(2022)Morita, Rezaeiravesh, Tabatabaei, Vinuesa, Fukagata, and Schlatter]{morita_applying_2022}
 Y.~Morita et~al.
-\newblock Applying bayesian optimization with gaussian process regression to computational fluid dynamics problems.
+\newblock Applying {Bayesian} optimization with {Gaussian} process regression to computational fluid dynamics problems.
 \newblock \emph{Journal of Computational Physics}, 449:\penalty0 110788, 2022.
 \newblock \doi{10.1016/j.jcp.2021.110788}.
 
 \bibitem[Moukalled et~al.(2016)Moukalled, Mangani, and Darwish]{moukalled_finite_2016}
 F.~Moukalled, L.~Mangani, and M.~Darwish.
-\newblock \emph{The finite volume method in computational fluid dynamics: an advanced introduction with openfoam® and matlab}, volume 113 of \emph{Fluid {Mechanics} and {Its} {Applications}}.
+\newblock \emph{The finite volume method in computational fluid dynamics: an advanced introduction with {OpenFOAM}\textregistered{} and {MATLAB}}, volume 113 of \emph{Fluid {Mechanics} and {Its} {Applications}}.
 \newblock Springer International Publishing, Cham, 2016.
 \newblock \doi{10.1007/978-3-319-16874-6}.
 
@@ -228,7 +228,7 @@ P.~Schlatter and R.~Örlü.
 
 \bibitem[Schlatter and Örlü(2012)]{schlatter_turbulent_2012}
 P.~Schlatter and R.~Örlü.
-\newblock Turbulent boundary layers at moderate reynolds numbers: inflow length and tripping effects.
+\newblock Turbulent boundary layers at moderate {Reynolds} numbers: inflow length and tripping effects.
 \newblock \emph{Journal of Fluid Mechanics}, 710:\penalty0 5--34, 2012.
 \newblock \doi{10.1017/jfm.2012.324}.
 

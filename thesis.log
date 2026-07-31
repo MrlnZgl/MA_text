@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  31 JUL 2026 04:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.30)  31 JUL 2026 04:48
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1431,17 +1431,7 @@ Underfull \vbox (badness 3460) has occurred while \output is active []
 
 ]) (./thesis.acr
 
-[14]
-
-Package glossaries Warning: Glossary entry `so' has not been defined on input line 85.
-
-
-Package glossaries Warning: Glossary entry `so' has not been defined on input line 85.
-
-
-Package glossaries Warning: Glossary entry `so' has not been defined on input line 85.
-
-)
+[14])
 
 [15
 
@@ -1685,12 +1675,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--160
 
 
 [15] (./images/simulation_setups/setup_curved.pgf
-<images/simulation_setups/setup_curved-img0.png, id=967, interpolate=true, 1127.21124pt x 269.005pt>
+<images/simulation_setups/setup_curved-img0.png, id=966, interpolate=true, 1127.21124pt x 269.005pt>
 File: images/simulation_setups/setup_curved-img0.png Graphic file (type png)
 <use images/simulation_setups/setup_curved-img0.png>
 Package pdftex.def Info: images/simulation_setups/setup_curved-img0.png  used on input line 57.
 (pdftex.def)             Requested size: 405.79575pt x 96.84172pt.
-<images/simulation_setups/setup_curved-img1.png, id=969, interpolate=true, 373.395pt x 25.09375pt>
+<images/simulation_setups/setup_curved-img1.png, id=968, interpolate=true, 373.395pt x 25.09375pt>
 File: images/simulation_setups/setup_curved-img1.png Graphic file (type png)
 <use images/simulation_setups/setup_curved-img1.png>
 Package pdftex.def Info: images/simulation_setups/setup_curved-img1.png  used on input line 303.
@@ -1711,7 +1701,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [17]
 
 [18]
-<images/optimisation/BOGP_flowchart_horizontal.pdf, id=1057, 432.20018pt x 268.35226pt>
+<images/optimisation/BOGP_flowchart_horizontal.pdf, id=1056, 432.20018pt x 268.35226pt>
 File: images/optimisation/BOGP_flowchart_horizontal.pdf Graphic file (type pdf)
 <use images/optimisation/BOGP_flowchart_horizontal.pdf>
 Package pdftex.def Info: images/optimisation/BOGP_flowchart_horizontal.pdf  used on input line 319.
@@ -1745,7 +1735,7 @@ chapter 4.
 
 
 ]
-<images/channel_valid/channelIC.pdf, id=1187, 1390.59625pt x 679.50432pt>
+<images/channel_valid/channelIC.pdf, id=1186, 1390.59625pt x 679.50432pt>
 File: images/channel_valid/channelIC.pdf Graphic file (type pdf)
 <use images/channel_valid/channelIC.pdf>
 Package pdftex.def Info: images/channel_valid/channelIC.pdf  used on input line 65.
@@ -1768,7 +1758,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [27]
 
 [28]
-<images/methods/mesh.pdf, id=1248, 2871.78708pt x 1905.1175pt>
+<images/methods/mesh.pdf, id=1247, 2871.78708pt x 1905.1175pt>
 File: images/methods/mesh.pdf Graphic file (type pdf)
 <use images/methods/mesh.pdf>
 Package pdftex.def Info: images/methods/mesh.pdf  used on input line 205.
@@ -1779,12 +1769,12 @@ Underfull \vbox (badness 2376) has occurred while \output is active []
 
 
 [29 <./images/methods/mesh.pdf>] (./images/simulation_setups/setup_plane.pgf
-<images/setup_plane-img0.png, id=1276, interpolate=true, 1056.94875pt x 120.45pt>
+<images/setup_plane-img0.png, id=1275, interpolate=true, 1056.94875pt x 120.45pt>
 File: images/setup_plane-img0.png Graphic file (type png)
 <use images/setup_plane-img0.png>
 Package pdftex.def Info: images/setup_plane-img0.png  used on input line 57.
 (pdftex.def)             Requested size: 380.50125pt x 43.36195pt.
-<images/setup_plane-img1.png, id=1277, interpolate=true, 368.37625pt x 28.105pt>
+<images/setup_plane-img1.png, id=1276, interpolate=true, 368.37625pt x 28.105pt>
 File: images/setup_plane-img1.png Graphic file (type png)
 <use images/setup_plane-img1.png>
 Package pdftex.def Info: images/setup_plane-img1.png  used on input line 167.
@@ -1805,12 +1795,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [32] (./images/planeTBL_valid/beta_vs_s_over_delta99ref_txt_unfi.pgf) (./images/planeTBL_valid/wall_pressure_normalised_vs_s_txt.pgf)
 
 [33] (./images/pressureFluct/reference/wall_pressure_pair.pgf
-<images/wall_pressure_pair-img0.png, id=1352, interpolate=true, 479.7925pt x 264.99pt>
+<images/wall_pressure_pair-img0.png, id=1350, interpolate=true, 479.7925pt x 264.99pt>
 File: images/wall_pressure_pair-img0.png Graphic file (type png)
 <use images/wall_pressure_pair-img0.png>
 Package pdftex.def Info: images/wall_pressure_pair-img0.png  used on input line 1421.
 (pdftex.def)             Requested size: 172.72516pt x 95.39632pt.
-<images/wall_pressure_pair-img1.png, id=1353, interpolate=true, 478.78876pt x 218.8175pt>
+<images/wall_pressure_pair-img1.png, id=1351, interpolate=true, 478.78876pt x 218.8175pt>
 File: images/wall_pressure_pair-img1.png Graphic file (type png)
 <use images/wall_pressure_pair-img1.png>
 Package pdftex.def Info: images/wall_pressure_pair-img1.png  used on input line 3112.
@@ -1974,18 +1964,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 53077 strings out of 473190
- 1224816 string characters out of 5715800
- 2350692 words of memory out of 5000000
+ 53076 strings out of 473190
+ 1224810 string characters out of 5715800
+ 2349686 words of memory out of 5000000
  74915 multiletter control sequences out of 15000+600000
  597888 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,17n,109p,10986b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis.pdf (79 pages, 8254465 bytes).
+Output written on thesis.pdf (79 pages, 8254620 bytes).
 PDF statistics:
- 2046 PDF objects out of 2073 (max. 8388607)
- 1794 compressed objects within 18 object streams
- 263 named destinations out of 1000 (max. 500000)
+ 2045 PDF objects out of 2073 (max. 8388607)
+ 1793 compressed objects within 18 object streams
+ 262 named destinations out of 1000 (max. 500000)
  382 words of extra memory for PDF output out of 10000 (max. 10000000)
 
