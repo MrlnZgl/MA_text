@@ -3,49 +3,49 @@
 In this final chapter the project under study and its main findings are summarised.
 Then, the limitations of the study are outlined and directions for future work are suggested. 
 
-In this thesis, \acrlong{tbl}s (TBL) over curved walls were investigated.
+In this thesis, \acrlong{tbl} (TBL) over curved walls were investigated.
 The studies were performed using simulations based on \acrfull{dns} and \acrfull{rans} simulations.
-Based on these simulations, an analysis of the impact of convex curvatures on the development of the \acrlong{tbl} was provided.
-However, in flows over a curvature, a pressure gradient naturally arises, induced by the geometry.
+Based on these simulations, an analysis of the impact of convex curvatures on the development of \acrshort{tbl} was provided.
+However, in flows over a curved wall, a pressure gradient naturally arises, induced by the geometry.
 The pressure gradient also affects the \acrlong{tbl}.
-In order to study the effect of the curvature separately,  it is necessary to know the effect of the pressure gradient.
+In order to study the effect of the curvature separately, it is necessary to know the effect of the pressure gradient.
 Consequently, a manipulation of the pressure field is required.
 In our approach we manipulated the pressure such that a \acrfull{zpg} develops.
-This is a benificial pressure distribution, since \acrlong{tbl} over flat plate walls under \acrlong{zpg} conditions are well-studied and provide an established reference setup.
+This is a beneficial pressure distribution, since flat \acrshort{tbl} under \acrshort{zpg} conditions are well-studied and provide an established reference setup.
 
 
 The generation of a \acrshort{zpg} in a curved simulation domain was achieved through an optimisation process.
 We adopted the optimisation algorithm introduced by \citet{morita_applying_2022} that performs a shape optimisation in a \acrshort{rans} simulation.
 The upper wall of the domain is characterised by multiple design points, which are interconnected by a spline.
-The position of these design points is optimised such that the Clauser parameter $\beta$ at the lower wall fits a prescribed target value.
+The position of these design points is optimised such that the Clauser parameter $\beta$ at the lower wall fits a prescribed objective function.
 The Clauser parameter corresponds to the non-dimensionalisation of the pressure gradient.
 Once the optimisation has converged, the velocities over a designated wall-normal height were extracted.
-In this context, the extracted velocities were imposed as \benennung{Dirichlet} \acrlong{bc}.
+In this context, the extracted velocities were imposed as \benennung{Dirichlet} \acrfull{bc}.
 %
 
-The optimised \acrlong{bc} were employed to simulate three distinct curved setups.
-Two setups are characterised by a radius of $100\delta_0$ with curvatures of $30$° and $90$°.
-The third setup exhibits a radius of $500 \delta_0$ and a $18$° curvature.
-All setups are characterised by the presence of a straight inflow region prior to the onset of curvature. This ensures the adequate development of the \acrshort{tbl}.
+The optimised \acrshort{bc} were employed to simulate three distinct curved-wall setups.
+Two setups are characterised by a radius of $100\delta_0$ with bends of $30$° and $90$°.
+The third setup exhibits a radius of $500 \delta_0$ and an $18$° bend.
+All setups are characterised by the presence of a straight inflow region prior to the onset of curved section. This ensures the adequate development of the \acrshort{tbl}.
 The \acrshort{tbl} was generated with an induced tripping of a laminar Blasius boundary layer in the proximity of the inflow.
-At the termination of the curvature, a straight outlet region was  incorporated in the tangential direction, serving as a rebalancing zone.
-Two simulations were performed for each curved case using these setups. 
+At the termination of the curved segment, a straight outlet region was incorporated in the tangential direction, serving as a rebalancing zone.
+Two simulations were performed for each wall-curved setup. 
 As a base configuration, all cases were simulated with a \benennung{Dirichlet} \acrlong{bc} of $(1,0,0)$ velocity profile at the upper wall.
-Then, simulations were performed with the optimised velocity \acrlong{bc} at the upper wall.
+Then, simulations were performed with the optimised velocity \acrshort{bc} at the upper wall.
 With the base simulations as a reference, the effect of the optimisation was studied.
-In addition, the optimisation capability was compared for the three curvature cases.
+In addition, the optimisation capability was compared for the three cases.
 
 The results of our study show that the optimisation capability differs for the local and global trends of the pressure distribution.
-On a global level, the optimised versions for the cases R100deg30 and R500deg18 demonstrate a more uniform pressure distribution in the curvature when compared to their respective base cases.
+On a global level, the optimised versions for the cases R100deg30 and R500deg18 demonstrate a more uniform pressure distribution in the curved segment when compared to their respective base cases.
 The change of the pressure distribution also affects other quantities like the boundary layer thickness and the friction coefficient.
 The observed effects were compared to the findings of \citet{appelbaum_systematic_2025} who studied a pressure-optimised concave-curved \acrshort{tbl}.
 They observed the opposite effects on the boundary layer growth and the friction coefficient caused by the optimisation.
-In the case R100deg90 the optimisation algorithm had difficulty finding a correct pressure distribution.
+In the case R100deg90 the optimisation algorithm had difficulties finding a correct pressure distribution.
 The combination of the small radius and the high curvature results in a larger initial pressure gradient meaning the algorithm has to make extensive modifications to the pressure field.
 The results indicate that no established \acrshort{zpg} conditions were identified using the employed settings.
 
-The effects of different curvatures are studied through a comparison of case R100deg90 and R500deg18.
-The analysed statistics show that the effect of the curvature is negligible in the setups of R100deg30 and R500deg18.
+The effects of different curvatures are studied through a comparison of the cases R100deg90 and R500deg18.
+The analysed statistics show that the effect of the wall curvature is negligible in the setups of the cases R100deg30 and R500deg18.
 Only in the case R100deg90 effects of the curvature are visible.
 Here, the stabilising effect of convex geometries on \acrlong{tbl} is evident in the reduced peak of the streamwise component of the Reynolds stresses.
 Additionally, the curved geometry reduces the growth of the \acrlong{tbl}.
@@ -60,7 +60,7 @@ In order to eliminate the local fluctuations in the pressure distribution, a det
 Furthermore, an investigation into the number and positioning of the design points is necessary in order to establish an optimal relation between a smooth $\beta$ distribution and a reasonable computational effort for the optimisation.
 
 
-In the \acrshort{dns} of the curved \acrshort{tbl}, temporal differences in between the instantaneous pressure fields were detected.
+In the \acrshort{dns} of \acrshort{tbl} over a curved wall, temporal differences in between the instantaneous pressure fields were detected.
 Due to their characteristics analysed in \autoref{sec:pressFluc}, we hypothesised that these are non-physical artefacts caused by the external constraints of the domain.
 Similar pressure modes were observed by \citet{maday_spectral_1989} and \citet{sabbah_filtering_2001} who introduced methods to eliminate them.
 We performed a series of tests with diverse configurations with the objective of identifying the underlying causes of the observed fluctuations.

@@ -42,8 +42,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PDF-Erstellung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\hypersetup{pdftitle = {Titel der Arbeit},
-pdfauthor = {Vorname Nachname}}
+\hypersetup{pdftitle = {Direct numerical simulation of turbulent boundary layers with curvature},
+pdfauthor = {Marlene Ziegler}}
 
 \hypersetup{
 	draft=false,
@@ -169,7 +169,8 @@ pdfauthor = {Vorname Nachname}}
 
 \thispagestyle{empty}
 \cleardoublepage
-
+\pagenumbering{Roman}
+\setcounter{page}{1}
 \ifenglish
 \chapter*{Declaration}
 
@@ -196,7 +197,6 @@ Erlangen, den DATUM \hspace{4cm} \rule{5cm}{0.02mm}
 \include{chapters/acknowledgement}
 
 \thispagestyle{empty}
-%\cleardoublepage
 \cleardoublepage
 
 \include{chapters/abstract}
@@ -207,8 +207,7 @@ Erlangen, den DATUM \hspace{4cm} \rule{5cm}{0.02mm}
 \thispagestyle{empty}
 \cleardoublepage
 \pagestyle{plain}
-\pagenumbering{Roman}
-\setcounter{page}{1}
+
 
 
 
@@ -228,27 +227,13 @@ Erlangen, den DATUM \hspace{4cm} \rule{5cm}{0.02mm}
 \listoffigures
 
 \listoftables
-
+\clearpage
+\thispagestyle{empty}
+\mbox{}
+\clearpage
 %=============================================================================%
 \include{chapters/nomenklatur}
-%=============================================================================%
-%----------------------------------------------
-% Glossaries
-%----------------------------------------------
-\printglossary[type=\acronymtype]
-
-%\thispagestyle{empty}
-%\pagestyle{headings}
-%\cleardoublepage
 \pagenumbering{arabic}
-%
-%\cleardoublepage
-%
-%\include{kapitel/auslegung}
-%\include{kapitel/konstruktion}
-%\include{kapitel/inbetriebnahme}
-%
-%\include{kapitel/abstract}
 \include{chapters/introduction}
 \include{chapters/theory}
 \include{chapters/methods}

@@ -62,32 +62,17 @@ This boundary condition should then induce a similar pressure field as in the op
 The present simulation enables the effects of the curvature on the \acrshort{tbl} to be studied.
 The objective of this work is to implement this procedure on the three investigated curved geometries and to evaluate the capability of the optimisation algorithm in each case.
 In addition, the simulations with the manipulated velocity \acrshort{bc} are analysed in order to extract information regarding the effect of curvature on the \acrshort{tbl}.
-Here, also the discrepancies between the various geometries are of particular interest.\\
+Here, also the discrepancies between the various geometries are of particular interest.\newpage
+
 
 The presentation of the findings obtained in this work is structured as follows: 
-Next, the theoretical fundamentals are introduced in \autoref{chap:basics}.
-Following, the employed methods and simulations setups are presented in \autoref{chap:methods}.
-In \autoref{chap:validation} the validation studies are analysed, followed by the discussion of results in \autoref{chap:results}.
-Finally, the key findings are summarised and an outlook for future investigations is given.
-\fxinfo{das ist knapp ;)}
+Next, the theoretical fundamentals are introduced in \autoref{chap:basics}, covering the governing equations of wall-bounded turbulence, the characteristic quantities used to describe a \acrshort{tbl}, and a review of the relevant literature on \acrshort{tbl} over curved walls.
+Following, the employed methods and simulations setups are presented in \autoref{chap:methods}, including the \acrshort{dns} setup in \name{Neko}, the \acrshort{rans} setup in \name{OpenFOAM}, and the Bayesian optimisation procedure used to generate the \acrshort{zpg} boundary condition.
+In \autoref{chap:validation} the validation studies are analysed, comprising the channel and flat \acrshort{tbl} simulations as well as the investigation of the pressure fluctuations detected in the curved domain, which together confirm the reliability of the simulation setup.
+Building on this, \autoref{chap:results} discusses the results of the curved-wall \acrshort{tbl} simulations, first verifying the statistics in the straight section before analysing the optimisation capability for the three investigated wall-curvature configurations.
+Finally, the key findings are summarised and an outlook for future investigations is given in \autoref{chap:summary}.
 
 
-
-
-\subsection{ToDos}
-
-\begin{itemize}
-    \item delta99 fixen in R100deg90 wiggles rausmachen
-    \item R100deg30 cf plot einbauen
-    \item labels. von plane zu flat ändern
-\end{itemize}
-
-
-Insgesamt: 
-\begin{itemize}
-    \item acknowledgment (Dummy version vorhanden)
-    \item captions im Anahng
-\end{itemize}
 
 
 
